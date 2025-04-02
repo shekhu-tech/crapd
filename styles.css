@@ -1,0 +1,533 @@
+<style>
+    /* Home Section */
+     #home {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    background-size: cover;
+    background-position: center;
+    transition: background-image 1s ease-in-out;
+ }
+
+
+ .home-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: black;
+ }
+
+ .home-content p {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+     color: black;
+ }
+
+ .home-content .btn {
+    display: inline-block;
+    background-color: #25D366;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: 0.3s ease;
+    font-size: 1.2rem;
+ }
+
+ .home-content .btn:hover {
+    background-color: #e04e1d;
+    transform: scale(1.1);
+ }
+
+
+ /* Sidebar Menu yaha se change hoga */
+ .sidebar {
+    position: fixed;
+    left: -250px;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    background: gray;
+    padding-top: 60px;
+    transition: left 0.3s ease-in-out;
+ }
+
+ .sidebar.active {
+    left: 0;
+ }
+
+ .sidebar ul {
+    list-style: none;
+    padding: 0;
+ }
+
+ .sidebar ul li {
+    padding: 15px;
+    text-align: center;
+ }
+
+ .sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: auto;
+    transition: 0.3s;
+ }
+
+ /* Close Button */
+ .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+ } 
+
+
+
+ /*HEADEAR KE LIYE FINAL CODE */
+
+        header {
+    background-color: #FFFFFF73;
+    color: #FF5722;
+    padding: 15px 0; /* Left aur right se padding hata di */
+    display: flex;
+    box-shadow: 5px;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100vw; /* Pura viewport cover karega */
+    left: 0;
+    top: 0;
+    z-index: 1000;
+ }
+
+ .menu-btn {
+    position: absolute;
+    right: 30px; /* Yeh toggle button ko right side le jayega */
+    top: 15px;
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1100; /* Ensure ke yeh upar dikhe */
+ }
+
+ /* FOOTER FINAL  */
+       /* Ensure full-width footer */
+ footer {
+    background-color: #222;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    width: 100vw; /* Full viewport width */
+    margin: 0;
+    position: relative; /* Ensure it stays within the layout */
+ }
+
+ /* Footer container fix */
+ .footer-container {
+    width: 100%; /* Make sure it spans full width */
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+ }
+
+ /* Fixing any unwanted horizontal scrolling */
+ html, body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    overflow-x: hidden; /* This prevents right-side gap */
+ }
+
+  /* Debugging extra spacing issues */
+  * {
+    box-sizing: border-box;
+  }
+
+ /* Debugging body/container issues */
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+   }
+
+        .footer-section {
+            flex: 1;
+            min-width: 250px;
+        }
+
+        .footer-section h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: #f8f9fa;
+        }
+
+        .footer-section p {
+            font-size: 0.7rem;
+            color: #ddd;
+        }
+
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 5px;
+        }
+
+        .footer-section ul li a {
+            text-decoration: none;
+            color: #bbb;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section ul li a:hover {
+            color: #007bff;
+        }
+
+        /* Full Responsive Footer */
+        @media (max-width: 768px) {
+            .footer-container {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+        }
+
+        /* Ensure Proper Scroll Behavior on Small Devices */
+        @media (max-width: 480px) {
+            .form-container {
+                max-height: none; /* Allows full form to be seen */
+                overflow-y: auto;
+        .footer-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 15px 0;
+    background-color: #222;
+  }
+
+  .footer-icons a img {
+    width: 30px; /* Adjust icon size */
+    height: 30px;
+    transition: transform 0.3s ease-in-out, opacity 0.3s;
+ }
+
+  .footer-icons a:hover img {
+    transform: scale(1.2);
+    opacity: 0.8;
+  }
+
+ footer p {
+    text-align: center;
+    color: #ccc;
+    font-size: 14px;
+    margin-top: 10px;
+   }
+
+                
+            }
+        }
+ #home {
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+   }
+   @media (max-width: 768px) {
+    #home {
+        height: 40vh;
+    }
+  }
+   html, body {
+    overflow-x: hidden; /* Right side ka unwanted scroll hata dega */
+   }
+   .footer-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 15px 0;
+    background-color: #222;
+   }
+
+   .footer-icons a img {
+    width: 30px; /* Adjust icon size */
+    height: 30px;
+    transition: transform 0.3s ease-in-out, opacity 0.3s;
+   } 
+
+  .footer-icons a:hover img {
+    transform: scale(1.2);
+    opacity: 0.8;
+ }
+
+  footer p {
+    text-align: center;
+    color: #ccc;
+    font-size: 14px;
+    margin-top: 10px;
+  }
+
+  /* Magneto Font Import (Agar Custom File Hai, To Use Karein) */
+  @font-face {
+    font-family: 'Magneto';
+    src: url('Magneto.ttf') format('truetype'); /* Make sure file is in same folder */
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  /* Header Font Fix */
+  h1, .header-title {
+    font-family: 'Magneto', sans-serif !important;
+    font-weight: 700 !important;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    -webkit-text-stroke: 0.3px;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* Mobile-Specific Fix */
+  @media (max-width: 768px) {
+    h1, .header-title {
+        font-family: 'Magneto', sans-serif !important;
+        font-weight: 700 !important;
+        letter-spacing: 1px;
+        -webkit-text-stroke: 0.2px;
+        font-size: 22px !important; /* Mobile ke liye size adjust */
+    }
+  }
+  /* toggle in box */
+  .menu-btn {
+    background-color: gray; /* Button color */
+    color: white;
+    border: 0px solid #ff4500; /* Border around the button */
+    padding: 0px 7px;
+    font-size: 25px;
+    cursor: pointer;
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Attractive shadow effect */
+    transition: all 0.3s ease-in-out;
+  }
+
+  .menu-btn:hover {
+    background-color: #ff4500;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.4);
+  }
+  @font-face {
+    font-family: 'Magneto';
+    src: url('/magnetob.ttf') format('truetype'),
+        
+    font-weight: normal;
+    font-style: normal;
+  }
+  /* logo yaha se change hoga */ 
+  .logo a {
+    font-family: 'Magneto', sans-serif;
+    font-size: 23px;
+    color: gray;
+    align: center;
+    text-decoration: none;
+     text: center; /* Centers the text inside */
+  }
+  .logo a {
+     flex-grow: 1; /* Allows the logo to take up available space */
+     
+
+  }
+
+
+   /* Import Google Font */
+   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+   /* Card Container */
+   .card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+   }
+   /* WHO WE ARE SECTION */
+  .who-we-are {
+    background: linear-gradient(to right, #1e3c72, #2a5298); /* Beautiful gradient background */
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* YE   Content Box */
+  .who-we-are .content {
+    max-width: 1700px;
+    padding: 20px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1); /* Transparent White Effect */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+
+  /* Hover Effect */
+  .who-we-are .content:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+  }
+
+  /* Heading Style */
+  .who-we-are h2 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+ 
+  /* Paragraph Style */
+  .who-we-are p {
+    font-size: 18px;
+    line-height: 1.6;
+    font-weight: 300; 
+  }
+  /* Import Google Font */
+  @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+  /* CARD CONTAINER */
+  .card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 50px 20px;
+    perspective: 1000px;
+   }
+
+  /* CARD DESIGN */
+  .card {
+    position: relative;
+    height: 270px;
+    border-radius: 15px;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+    transform-style: preserve-3d;
+  }
+
+   /* Glowing Effect */
+   .glow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, rgba(0, 0, 0, 0.9) 100%);
+    transition: opacity 0.5s ease-in-out;
+    opacity: 0;
+   }
+
+   /* CARD CONTENT */ 
+   .card-content {
+    position: absolute;
+    bottom: 20px;
+    width: 80%;
+    padding: 20px;
+    text-align: center;
+    color: white;
+    font-family: 'Orbitron', sans-serif;
+    z-index: 2;
+    border-radius: 10px;
+    backdrop-filter: blur(12px);
+    background: rgba(255, 255, 255, 0.15);
+    transition: transform 0.4s ease-in-out;
+    transform: translateY(50px);
+    opacity: 0;
+  }
+
+   /* Heading */
+   .card-content h2 {
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+   }
+
+   /* Paragraph */
+   .card-content p {
+    font-size: 12px;
+    font-weight: 400;
+    margin-bottom: 15px;
+   }
+
+   /* BUTTON */
+   .card-content button {
+    padding: 12px 24px;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    background: #25D366;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out, transform 0.3s ease-in-out;
+   }
+
+   .card-content button:hover {
+    background: rgba(255, 255, 255, 0.5);
+    transform: scale(1.1);
+   }
+
+   /* HOVER EFFECTS */
+   .card:hover {
+    transform: rotateY(5deg) scale(1.05);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+   }
+
+   .card:hover .glow {
+    opacity: 1;
+   }
+
+   .card:hover .card-content {
+    transform: translateY(0);
+    opacity: 1;
+   }
+       
+       .floating-btn {
+            position: fixed;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: #25D366;
+            color: white;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+        .floating-btn:hover {
+            background-color: #1EBE5D;
+        }
+        .floating-btn img {
+            width: 35px;
+            height: 35px;
+        }
