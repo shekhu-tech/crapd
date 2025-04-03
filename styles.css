@@ -110,7 +110,7 @@
 
  .menu-btn {
     position: absolute;
-    right: 30px; /* Yeh toggle button ko right side le jayega */
+    right: 20px; /* Yeh toggle button ko right side le jayega */
     top: 15px;
     background: transparent;
     border: none;
@@ -362,7 +362,7 @@
   .who-we-are {
     background: linear-gradient(to right, #1e3c72, #2a5298); /* Beautiful gradient background */
     color: white;
-    padding: 60px 20px;
+    padding: 20px 15px;
     text-align: center;
     display: flex;
     align-items: center;
@@ -387,7 +387,7 @@
 
   /* Heading Style */
   .who-we-are h2 {
-    font-size: 32px;
+    font-size: 18px;
     font-weight: bold;
     margin-bottom: 15px;
     text-transform: uppercase;
@@ -396,7 +396,7 @@
  
   /* Paragraph Style */
   .who-we-are p {
-    font-size: 18px;
+    font-size: 15px;
     line-height: 1.6;
     font-weight: 300; 
   }
