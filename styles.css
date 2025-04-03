@@ -283,7 +283,7 @@
   /* Magneto Font Import (Agar Custom File Hai, To Use Karein) */
   @font-face {
     font-family: 'Magneto';
-    src: url('Magneto.ttf') format('truetype'); /* Make sure file is in same folder */
+    src: url('Magnetob.ttf') format('truetype'); /* Make sure file is in same folder */
     font-weight: normal;
     font-style: normal;
   }
