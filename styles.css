@@ -343,10 +343,24 @@
   }
   .logo a {
      flex-grow: 1; /* Allows the logo to take up available space */
+       @font-face {
+    font-family: 'Magneto';
+    src: url('fonts/Magnetob.woff2') format('woff2'),
+         url('fonts/Magneto.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    font-family: 'Magneto', sans-serif !important;
+}
+
+.logo {
+    font-family: 'Magneto', sans-serif !important;
+    font-size: 24px;
+    color: red; /* Check karne ke liye */
+}
      
-
-  }
-
 
    /* Import Google Font */
    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
@@ -531,20 +545,4 @@
             width: 35px;
             height: 35px;
         }
-            @font-face {
-    font-family: 'Magneto';
-    src: url('fonts/Magnetob.woff2') format('woff2'),
-         url('fonts/Magneto.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-* {
-    font-family: 'Magneto', sans-serif !important;
-}
-
-.logo {
-    font-family: 'Magneto', sans-serif !important;
-    font-size: 24px;
-    color: red; /* Check karne ke liye */
-}
+           
