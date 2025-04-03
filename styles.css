@@ -350,16 +350,7 @@
     font-weight: normal;
     font-style: normal;
 }
-
-* {
-    font-family: 'Magneto', sans-serif !important;
-}
-
-.logo {
-    font-family: 'Magneto', sans-serif !important;
-    font-size: 24px;
-    color: red; /* Check karne ke liye */
-}
+  }
      
 
    /* Import Google Font */
