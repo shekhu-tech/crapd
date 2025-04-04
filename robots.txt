@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://shekhu-tech.github.io/shekhartyagi-portfolio/sitemap.xml
