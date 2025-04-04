@@ -90,3 +90,34 @@
         var whatsappLink = "https://wa.me/" + phoneNumber + "?text=" + encodeURIComponent(message);
         window.open(whatsappLink, '_blank');
     }
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyAmTDmDfFm7ochTgoSBVUutw6bXrcmkSSU",
+  authDomain: "portfolio-19b3b.firebaseapp.com",
+  projectId: "portfolio-19b3b",
+  storageBucket: "portfolio-19b3b.firebasestorage.app",
+  messagingSenderId: "664897980826",
+  appId: "1:664897980826:web:90a47bfd9e6b308f75d223"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+
+async function loadHeroSection() {
+  const querySnapshot = await getDocs(collection(db, "hero"));
+  querySnapshot.forEach((doc) => {
+    const data = doc.data();
+    document.querySelector(".hero-title").textContent = data.title;
+    document.querySelector(".hero-subtitle").textContent = data.subtitle;
+    document.querySelector(".hero-btn").textContent = data.buttonText;
+  });
+}
+
+window.addEventListener("DOMContentLoaded", () => {
+  loadHeroSection();
+});
