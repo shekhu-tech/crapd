@@ -1,6 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+     <script type="module">
+  // Step 1: Firebase ko page me load karo
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-app.js";
+  import { getFirestore, collection, getDocs } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-firestore.js";
+
+  const firebaseConfig = {
+    apiKey: "YOUR_API_KEY",
+    authDomain: "YOUR_PROJECT.firebaseapp.com",
+    projectId: "YOUR_PROJECT_ID",
+    storageBucket: "YOUR_PROJECT.appspot.com",
+    messagingSenderId: "SENDER_ID",
+    appId: "APP_ID"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const db = getFirestore(app);
+
+  // Step 2: Firestore se data laao
+  async function loadSections() {
+    const querySnapshot = await getDocs(collection(db, "sections"));
+    querySnapshot.forEach((doc) => {
+      const data = doc.data();
+
+      if (doc.id === "hero") {
+        document.getElementById("hero-title").textContent = data.title;
+        document.getElementById("hero-subtitle").textContent = data.subtitle;
+      }
+
+      if (doc.id === "services") {
+        document.getElementById("service-title").textContent = data.title;
+      }
+
+      // Aur bhi sections ke liye same tarah se...
+    });
+  }
+
+  loadSections();
+</script>
+
      <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
           <!-- SEO Meta Tags -->
