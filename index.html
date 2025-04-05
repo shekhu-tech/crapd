@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ShekhuTech Golden Store</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #1f1c2c, #928DAB);
+      color: white;
+      overflow-x: hidden;
+    }
+
+    header {
+      background: rgba(255, 215, 0, 0.15);
+      backdrop-filter: blur(20px);
+      padding: 1rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 0 20px gold;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      font-size: 1.8rem;
+      background: linear-gradient(to right, #FFD700, #FFA500, #fff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0 0 10px gold;
+    }
+
+    .nav {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .nav a {
+      color: #FFD700;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 0.3rem 0.8rem;
+      border: 1px solid gold;
+      border-radius: 5px;
+      background: rgba(255, 215, 0, 0.1);
+      transition: all 0.3s ease;
+    }
+
+    .nav a:hover {
+      background: gold;
+      color: black;
+      box-shadow: 0 0 10px gold;
+    }
+
+    .toggle-btn {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+    }
+
+    .toggle-btn div {
+      width: 25px;
+      height: 3px;
+      background: gold;
+      transition: all 0.4s ease;
+      border-radius: 2px;
+    }
+
+    .nav-mobile {
+      display: none;
+      flex-direction: column;
+      gap: 1rem;
+      position: absolute;
+      top: 70px;
+      right: 2rem;
+      background: rgba(255, 215, 0, 0.1);
+      backdrop-filter: blur(10px);
+      padding: 1rem;
+      border-radius: 15px;
+      box-shadow: 0 0 20px gold;
+      z-index: 999;
+    }
+
+    .nav-mobile a {
+      color: #FFD700;
+      font-weight: bold;
+      text-decoration: none;
+      border-bottom: 1px solid gold;
+      padding-bottom: 0.3rem;
+    }
+
+    @media (max-width: 768px) {
+      .nav {
+        display: none;
+      }
+
+      .toggle-btn {
+        display: flex;
+      }
+
+      .nav-mobile.active {
+        display: flex;
+      }
+
+      .toggle-btn.open div:nth-child(1) {
+        transform: rotate(45deg) translate(4px, 4px);
+      }
+
+      .toggle-btn.open div:nth-child(2) {
+        opacity: 0;
+      }
+
+      .toggle-btn.open div:nth-child(3) {
+        transform: rotate(-45deg) translate(4px, -4px);
+      }
+    }
+
+    
+
+   /* Card Container */
+   .card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+   }
+   /* WHO WE ARE SECTION */
+  .who-we-are {
+    background: linear-gradient(to right, #1e3c72, #2a5298); /* Beautiful gradient background */
+    color: white;
+    padding: 20px 15px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* YE   Content Box */
+  .who-we-are .content {
+    max-width: 1700px;
+    padding: 20px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1); /* Transparent White Effect */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+
+  /* Hover Effect */
+  .who-we-are .content:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+  }
+
+  /* Heading Style */
+  .who-we-are h2 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 0px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+ 
+  /* Paragraph Style */
+  .who-we-are p {
+    font-size: 15px;
+    line-height: 1.6;
+    font-weight: 300; 
+  }
+  /* Import Google Font */
+  @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+  /* CARD CONTAINER */
+  .card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 50px 20px;
+    perspective: 1000px;
+   }
+
+  /* CARD DESIGN */
+  .card {
+    position: relative;
+    height: 270px;
+    border-radius: 15px;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+    transform-style: preserve-3d;
+  }
+
+   /* Glowing Effect */
+   .glow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, rgba(0, 0, 0, 0.9) 100%);
+    transition: opacity 0.5s ease-in-out;
+    opacity: 0;
+   }
+
+   /* CARD CONTENT */ 
+   .card-content {
+    position: absolute;
+    bottom: 20px;
+    width: 80%;
+    padding: 20px;
+    text-align: center;
+    color: white;
+    font-family: 'Orbitron', sans-serif;
+    z-index: 2;
+    border-radius: 10px;
+    backdrop-filter: blur(12px);
+    background: rgba(255, 255, 255, 0.15);
+    transition: transform 0.4s ease-in-out;
+    transform: translateY(50px);
+    opacity: 0;
+  }
+
+   /* Heading */
+   .card-content h2 {
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+   }
+
+   /* Paragraph */
+   .card-content p {
+    font-size: 12px;
+    font-weight: 400;
+    margin-bottom: 15px;
+   }
+
+   /* BUTTON */
+   .card-content button {
+    padding: 12px 24px;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    background: #25D366;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out, transform 0.3s ease-in-out;
+   }
+
+   .card-content button:hover {
+    background: rgba(255, 255, 255, 0.5);
+    transform: scale(1.1);
+   }
+
+   /* HOVER EFFECTS */
+   .card:hover {
+    transform: rotateY(5deg) scale(1.05);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+   }
+
+   .card:hover .glow {
+    opacity: 1;
+   }
+
+   .card:hover .card-content {
+    transform: translateY(0);
+    opacity: 1;
+   }
+
+    /* whatsap vala connecting button */
+       
+       .floating-btn {
+            position: fixed;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: #25D366;
+            color: white;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+        .floating-btn:hover {
+            background-color: #1EBE5D;
+        }
+        .floating-btn img {
+            width: 35px;
+            height: 35px;
+        }
+
+
+
+    footer {
+      background: rgba(255, 215, 0, 0.1);
+      padding: 2rem;
+      text-align: center;
+      backdrop-filter: blur(15px);
+      color: gold;
+      border-top: 1px solid rgba(255, 215, 0, 0.2);
+      box-shadow: 0 0 20px gold;
+      margin-top: 3rem;
+    }
+
+   .footer-icons a img {
+    width: 30px; /* Adjust icon size */
+    height: 30px;
+    transition: transform 0.3s ease-in-out, opacity 0.3s;
+   } 
+
+  .footer-icons a:hover img {
+    transform: scale(1.2);
+    opacity: 0.8;
+ }
+
+  footer p {
+    text-align: center;
+    color: #ccc;
+    font-size: 14px;
+    margin-top: 10px;
+  }
+
+  /* Magneto Font Import (Agar Custom File Hai, To Use Karein) */
+  @font-face {
+    font-family: 'Magneto';
+    src: url('/Magnetob.ttf') format('truetype'); /* Make sure file is in same folder */
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Shekhar Tyagi</h1>
+    <div class="nav">
+      <a href="#">Home</a>
+      <a href="#">Products</a>
+      <a href="#">Offers</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </div>
+    <div class="toggle-btn" id="toggleBtn">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <div class="nav-mobile" id="mobileNav">
+      <a href="#">Home</a>
+      <a href="#">Products</a>
+      <a href="#">Offers</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </div>
+  </header>
+
+  <section class="who-we-are">
+                        <div class="content">
+                    <h2>Who Am I</h2>
+                <p>
+            I am passionate and dedicated to delivering the best solutions.My mission is to innovate, inspire, and transform ideas into reality. With years of experience and a customer-focused approach, we ensure excellence in everything we do.  
+            </p>
+        </div>
+    </section>
+        <section>
+            <div class="card-container">
+                <div class="card" style="background-image: url('ONE.jpg');">
+                    <div class="glow"></div>
+                       <div class="card-content">
+                          <h2>Graphic Designing</h2>
+                              <p>FGraphic designing combines creativity, colors, and typography to craft visually stunning, impactful designs.</p>
+                                <a href="gd.html"></a>
+                                  <button onclick="window.location.href='gd.html'">Know More</button>
+                               </div>
+                            </div>
+                        <div class="card" style="background-image: url('TWO.jpg');">
+                    <div class="glow"></div>
+                <div class="card-content">
+            <h2>Video Editing</h2>
+        <p>Video editing blends footage, effects, and sound to create engaging, polished, and dynamic stories.</p>
+     <button onclick="window.location.href='ve.html'">Discover</button>
+        </div>
+            </div>
+               <div class="card" style="background-image: url('THREE.jpg');">
+                  <div class="glow"></div>
+                     <div class="card-content">
+                        <h2>Websites Designing</h2>
+                           <p>Website designing combines layout, colors, and functionality to create user-friendly, visually appealing websites.</p>
+                               <button onclick="window.location.href='wd.html'">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+            <div class="card-container">
+        <div class="card" style="background-image: url('FOUR.jpg');">
+    <div class="glow"></div>
+        <div class="card-content">
+           <h2>Office Related Work</h2>
+              <p>offers powerful tools for creating documents, spreadsheets, presentations, and data management efficiently.</p>
+                 <button onclick="window.location.href='orw.html'">Explore</button>
+                   </div>
+                       </div>
+                    <div class="card" style="background-image: url('FIVE.jpg');">
+                <div class="glow"></div>
+            <div class="card-content">
+        <h2>Article Writting</h2>
+    <p>Article writing involves crafting engaging, informative content with clear structure and compelling language.</p>
+        <button onclick="window.location.href='aw.html'">Discover</button>
+            </div>
+                </div>
+                    <div class="card" style="background-image: url('SIX.jpg');">
+                       <div class="glow"></div>
+                    <div class="card-content">
+                <h2>Digital Marketing</h2>
+            <p>uses online channels, content, and strategies to promote brands and engage audiences.</p>
+         <button onclick="window.location.href='dm.html'">Learn More</button>
+     </div>
+        </div>
+           </div>
+              </section>
+               <div class="floating-btn" onclick="openWhatsApp()">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+    </div>
+<!-- FOOTER -->
+
+  <footer>
+
+        <div class="footer-container">
+            <div class="footer-section">
+                <p>Very Dedicated to Connecting According The Needs Of Clients</p>
+                <div class="footer-icons">
+        <!-- Navigation Icons -->
+       <a href="index.html" title="Home"><img src="H1.jpg" alt=""></a>
+        <a href="gd.html" title="Graphic Designing"><img src="H2.jpg" alt=""></a>
+        <a href="ve.html" title="Video Editing"><img src="H3.jpg" alt=""></a>
+        <a href="wd.html" title="Web Designing"><img src="H4.jpg" alt=""></a>
+         <a href="orw.html" title="Office Related Work"><img src="H5.jpg" alt=""></a>
+          <a href="aw.html" title="Artical Writting"><img src="H6.jpg" alt=""></a>
+           <a href="dm.html" title="Digital Marketing"><img src="H7.jpg" alt=""></a>
+         </div>
+
+        <!-- Social Media Icons 
+         <div class="footer-icons">
+        <a href="#" title="Instagram"><img src="S1.jpg" alt="Instagram"></a>
+        <a href="#" title="Facebook"><img src="S2.jpg" alt="Facebook"></a>
+        <a href="#" title="X Accout"><img src="S3.jpg" alt="X Accout"></a>
+        <a href="#" title="Youtube"><img src="S4.jpg" alt="Youtube"></a>
+        <a href="#" title="Nokri.Com"><img src="S5.jpg" alt="Nokri.Com"></a>
+        <a href="#" title="Shine.Com"><img src="S6.jpg" alt="Shine.Com"></a>
+        <a href="#" title="LinkedIn.Com"><img src="S7.jpg" alt="LinkedIn.Com"></a>
+
+    </div>-->
+            </div>
+        </div>
+        <p>&copy; 2025   Shekhar Tyagi All Rights Reserved. </p>   
+    </footer>
+    
+  <script>
+    // Toggle Menu Script
+    const toggleBtn = document.getElementById("toggleBtn");
+    const mobileNav = document.getElementById("mobileNav");
+
+    toggleBtn.addEventListener("click", () => {
+      toggleBtn.classList.toggle("open");
+      mobileNav.classList.toggle("active");
+    });
+
+    
+  </script>
+</body>
+</html>
