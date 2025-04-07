@@ -342,3 +342,13 @@
     font-weight: normal;
     font-style: normal;
   }
+  .logo a {
+      color: #FFD700;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 0.3rem 0.8rem;
+      border: 1px solid gold;
+      border-radius: 5px;
+      background: rgba(255, 215, 0, 0.1);
+      transition: all 0.3s ease;
+    }
