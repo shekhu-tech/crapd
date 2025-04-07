@@ -32,6 +32,13 @@
       -webkit-text-fill-color: transparent;
       text-shadow: 0 0 10px gold;
     }
+    header logo {
+      font-size: 1.8rem;
+      background: linear-gradient(to right, #FFD700, #FFA500, #fff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0 0 10px gold;
+    }
 
     .nav {
       display: flex;
@@ -342,13 +349,4 @@
     font-weight: normal;
     font-style: normal;
   }
-  .logo a {
-      color: #FFD700;
-      text-decoration: none;
-      font-weight: bold;
-      padding: 0.3rem 0.8rem;
-      border: 1px solid gold;
-      border-radius: 5px;
-      background: rgba(255, 215, 0, 0.1);
-      transition: all 0.3s ease;
-    }
+  
