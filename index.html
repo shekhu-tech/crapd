@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shekhar Tyagi 11D Design</title>
+  <style>
+    :root {
+      --main-color: #f9d867;
+      --dark-color: #1e1e1e;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, var(--dark-color) 50%, var(--main-color) 50%);
+      overflow-x: hidden;
+      color: #fff;
+      transition: background 1s ease-in-out;
+    }
+
+    video.bg-video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      z-index: -2;
+      opacity: 0.08;
+    }
+
+    header {
+      width: 90%;
+      margin: 40px auto;
+      padding: 20px 40px;
+      background: linear-gradient(135deg, #fdf5d6, var(--main-color));
+      border: 1px solid #fff5c4;
+      border-radius: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 0 30px gold;
+      transition: background 1s ease-in-out;
+    }
+
+    .logo {
+      font-size: 2.5rem;
+      font-weight: 900;
+      white-space: nowrap;
+      color: #000;
+      text-shadow: 0 0 10px gold, 0 0 15px white;
+      animation: glow 1.5s infinite alternate;
+    }
+
+    @keyframes glow {
+      0% { text-shadow: 0 0 10px gold; }
+      100% { text-shadow: 0 0 20px white, 0 0 25px gold; }
+    }
+
+    nav {
+      display: flex;
+      gap: 40px;
+    }
+
+    nav a {
+      position: relative;
+      text-decoration: none;
+      color: #000;
+      font-size: 1.1rem;
+      font-weight: 600;
+    }
+
+    nav a:hover {
+      color: goldenrod;
+    }
+
+    nav a.active::after {
+      content: '';
+      position: absolute;
+      bottom: -6px;
+      left: 0;
+      height: 3px;
+      width: 100%;
+      background: goldenrod;
+      border-radius: 2px;
+    }
+
+    .toggle {
+      display: none;
+      width: 45px;
+      height: 45px;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      cursor: pointer;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+
+    .bar {
+      position: absolute;
+      width: 24px;
+      height: 2px;
+      background: black;
+      transition: 0.3s;
+    }
+
+    .bar:nth-child(1) { top: 14px; }
+    .bar:nth-child(2) { top: 21px; }
+    .bar:nth-child(3) { top: 28px; }
+
+    .toggle.active .bar:nth-child(1) {
+      transform: rotate(45deg); top: 21px;
+    }
+
+    .toggle.active .bar:nth-child(2) { opacity: 0; }
+    .toggle.active .bar:nth-child(3) {
+      transform: rotate(-45deg); top: 21px;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        position: absolute;
+        top: 90px;
+        right: 20px;
+        flex-direction: column;
+        width: 250px;
+        padding: 30px;
+        background: #fff8ce;
+        border-radius: 15px;
+        box-shadow: 0 0 30px gold;
+        transform: translateX(120%);
+        opacity: 0;
+        pointer-events: none;
+        transition: 0.5s;
+      }
+
+      nav.active {
+        transform: translateX(0%);
+        opacity: 1;
+        pointer-events: auto;
+      }
+
+      .toggle { display: flex; }
+    }
+
+    .services {
+      padding: 60px 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 40px;
+    }
+
+    .services h2 {
+      font-size: 2.5rem;
+      color: white;
+      text-shadow: 0 0 5px #000;
+    }
+
+    .services-list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      width: 100%;
+      max-width: 1200px;
+    }
+
+    @media (max-width: 992px) {
+      .services-list {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .services-list {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .service {
+      height: 250px;
+      border-radius: 20px;
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      font-weight: bold;
+      color: white;
+      text-shadow: 0 0 5px black;
+      transition: transform 0.4s ease;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+    }
+
+    .service:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 30px rgba(255, 255, 255, 0.4);
+    }
+
+    .service a {
+      display: block;
+      width: 100%;
+      height: 100%;
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    footer {
+      padding: 60px 40px;
+      background: rgba(0, 0, 0, 0.8);
+      color: white;
+      text-align: center;
+      font-size: 1.2rem;
+      margin-top: 50px;
+      border-top: 2px solid gold;
+      box-shadow: 0 -5px 30px rgba(255, 215, 0, 0.3);
+    }
+
+    .about {
+      margin-top: 30px;
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #ccc;
+    }
+  </style>
+</head>
+<body>
+  <video class="bg-video" autoplay loop muted>
+    <source src="https://cdn.pixabay.com/vimeo/769444452/Color%20Explosion%20Background%20(720p).mp4?width=1280&hash=4264b93d8a345" type="video/mp4">
+  </video>
+
+  <header>
+    <div class="logo">Shekhar Tyagi</div>
+    <nav id="nav">
+      <a href="#" class="active">Home</a>
+      <a href="#">Vision</a>
+      <a href="#">Projects</a>
+      <a href="#">Contact</a>
+    </nav>
+    <div class="toggle" onclick="toggleMenu()" id="toggleBtn">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+  </header>
+
+  <section class="services">
+    <h2>Top Featured Services</h2>
+    <div class="services-list">
+      <div class="service" style="background-image: url('one.png');"><a href="#">Graphics Pro</a></div>
+      <div class="service" style="background-image: url('two.png');"><a href="#">Video Master</a></div>
+      <div class="service" style="background-image: url('three.png');"><a href="#">Web Wizard</a></div>
+      <div class="service" style="background-image: url('four.png');"><a href="#">Office Expert</a></div>
+      <div class="service" style="background-image: url('five.png');"><a href="#">Writer Pro</a></div>
+      <div class="service" style="background-image: url('six.png');"><a href="#">Marketing King</a></div>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Shekhar Tyagi - All Rights Reserved | Designed with 💙
+    <div class="about">
+      I'm Shekhar Tyagi – a multi-skilled creator focused on design, development, and digital magic. This website is crafted in 11D style to showcase the best of tech + art fusion.
+    </div>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById('nav');
+      const toggleBtn = document.getElementById('toggleBtn');
+      nav.classList.toggle('active');
+      toggleBtn.classList.toggle('active');
+    }
+
+    const bgColors = [
+      "#f1c40f", "#e67e22", "#9b59b6", "#1abc9c", "#3498db", "#e74c3c", "#2ecc71", "#ff6f61"
+    ];
+
+    const darkShades = [
+      "#111", "#1e1e1e", "#222", "#141414", "#191919", "#0f0f0f", "#171717", "#1a1a1a"
+    ];
+
+    let i = 0;
+    setInterval(() => {
+      const color1 = darkShades[i % darkShades.length];
+      const color2 = bgColors[i % bgColors.length];
+      document.body.style.background = `linear-gradient(135deg, ${color1} 50%, ${color2} 50%)`;
+      document.documentElement.style.setProperty('--main-color', color2);
+      document.documentElement.style.setProperty('--dark-color', color1);
+      i++;
+    }, 20000);
+  </script>
+</body>
+</html>
