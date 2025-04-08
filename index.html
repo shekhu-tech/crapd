@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shekhar Tyagi 11D Design</title>
+  <style>
+    :root {
+      --main-color: #f9d867;
+      --dark-color: #1e1e1e;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, var(--dark-color) 50%, var(--main-color) 50%);
+      overflow-x: hidden;
+      color: #fff;
+      transition: background 1s ease-in-out;
+    }
+
+    video.bg-video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      z-index: -2;
+      opacity: 0.08;
+    }
+
+    header {
+      width: 90%;
+      margin: 40px auto;
+      padding: 20px 40px;
+      background: linear-gradient(135deg, #fdf5d6, var(--main-color));
+      border: 1px solid #fff5c4;
+      border-radius: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 0 30px gold;
+      transition: background 1s ease-in-out;
+    }
+
+    .logo {
+      font-size: 1.2rem;
+      font-weight: 900;
+      white-space: nowrap;
+      color: #000;
+      text-shadow: 0 0 10px gold, 0 0 15px white;
+      animation: glow 1.5s infinite alternate;
+    }
+
+    @keyframes glow {
+      0% { text-shadow: 0 0 10px gold; }
+      100% { text-shadow: 0 0 20px white, 0 0 25px gold; }
+    }
+
+    nav {
+      display: flex;
+      gap: 40px;
+    }
+
+    nav a {
+      position: relative;
+      text-decoration: none;
+      color: #000;
+      font-size: 1.1rem;
+      font-weight: 600;
+    }
+
+    nav a:hover {
+      color: goldenrod;
+    }
+
+    nav a.active::after {
+      content: '';
+      position: absolute;
+      bottom: -6px;
+      left: 0;
+      height: 3px;
+      width: 100%;
+      background: goldenrod;
+      border-radius: 2px;
+    }
+
+    .toggle {
+      display: none;
+      width: 45px;
+      height: 45px;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      cursor: pointer;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+
+    .bar {
+      position: absolute;
+      width: 24px;
+      height: 2px;
+      background: black;
+      transition: 0.3s;
+    }
+
+    .bar:nth-child(1) { top: 14px; }
+    .bar:nth-child(2) { top: 21px; }
+    .bar:nth-child(3) { top: 28px; }
+
+    .toggle.active .bar:nth-child(1) {
+      transform: rotate(45deg); top: 21px;
+    }
+
+    .toggle.active .bar:nth-child(2) { opacity: 0; }
+    .toggle.active .bar:nth-child(3) {
+      transform: rotate(-45deg); top: 21px;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        position: absolute;
+        top: 90px;
+        right: 20px;
+        flex-direction: column;
+        width: 250px;
+        padding: 30px;
+        background: #fff8ce;
+        border-radius: 15px;
+        box-shadow: 0 0 30px gold;
+        transform: translateX(120%);
+        opacity: 0;
+        pointer-events: none;
+        transition: 0.5s;
+      }
+
+      nav.active {
+        transform: translateX(0%);
+        opacity: 1;
+        pointer-events: auto;
+      }
+
+      .toggle { display: flex; }
+    }
+
+    .services {
+      padding: 60px 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 40px;
+    }
+
+    .services h2 {
+      font-size: 2.5rem;
+      color: white;
+      text-shadow: 0 0 5px #000;
+    }
+
+    .services-list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      width: 100%;
+      max-width: 1200px;
+    }
+
+    @media (max-width: 992px) {
+      .services-list {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .services-list {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .service {
+      height: 250px;
+      border-radius: 20px;
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      font-weight: bold;
+      color: white;
+      text-shadow: 0 0 5px black;
+      transition: transform 0.4s ease;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+    }
+
+    .service:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 30px rgba(255, 255, 255, 0.4);
+    }
+
+    .service a {
+      display: block;
+      width: 100%;
+      height: 100%;
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Card Container */
+   .card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+   }
+   /* WHO WE ARE SECTION */
+  .who-we-are {
+    background: linear-gradient(to right, #1e3c72, #2a5298); /* Beautiful gradient background */
+    color: white;
+    padding: 20px 15px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* YE   Content Box */
+  .who-we-are .content {
+    max-width: 1700px;
+    padding: 20px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1); /* Transparent White Effect */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+
+  /* Hover Effect */
+  .who-we-are .content:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+  }
+
+  /* Heading Style */
+  .who-we-are h2 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 0px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+ 
+  /* Paragraph Style */
+  .who-we-are p {
+    font-size: 15px;
+    line-height: 1.6;
+    font-weight: 300; 
+  }
+  /* Import Google Font */
+  @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+  /* CARD CONTAINER */
+  .card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 50px 20px;
+    perspective: 1000px;
+   }
+
+  /* CARD DESIGN */
+  .card {
+    position: relative;
+    height: 270px;
+    border-radius: 15px;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+    transform-style: preserve-3d;
+  }
+
+   /* Glowing Effect */
+   .glow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, rgba(0, 0, 0, 0.9) 100%);
+    transition: opacity 0.5s ease-in-out;
+    opacity: 0;
+   }
+
+   /* CARD CONTENT */ 
+   .card-content {
+    position: absolute;
+    bottom: 20px;
+    width: 80%;
+    padding: 20px;
+    text-align: center;
+    color: white;
+    font-family: 'Orbitron', sans-serif;
+    z-index: 2;
+    border-radius: 10px;
+    backdrop-filter: blur(12px);
+    background: rgba(255, 255, 255, 0.15);
+    transition: transform 0.4s ease-in-out;
+    transform: translateY(50px);
+    opacity: 0;
+  }
+
+   /* Heading */
+   .card-content h2 {
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+   }
+
+   /* Paragraph */
+   .card-content p {
+    font-size: 12px;
+    font-weight: 400;
+    margin-bottom: 15px;
+   }
+
+   /* BUTTON */
+   .card-content button {
+    padding: 12px 24px;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    background: #25D366;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out, transform 0.3s ease-in-out;
+   }
+
+   .card-content button:hover {
+    background: rgba(255, 255, 255, 0.5);
+    transform: scale(1.1);
+   }
+
+   /* HOVER EFFECTS */
+   .card:hover {
+    transform: rotateY(5deg) scale(1.05);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+   }
+
+   .card:hover .glow {
+    opacity: 1;
+   }
+
+   .card:hover .card-content {
+    transform: translateY(0);
+    opacity: 1;
+   }
+
+    /* whatsap vala connecting button */
+       
+       .floating-btn {
+            position: fixed;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: #25D366;
+            color: white;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+        .floating-btn:hover {
+            background-color: #1EBE5D;
+        }
+        .floating-btn img {
+            width: 35px;
+            height: 35px;
+        }
+
+
+
+    footer {
+      background: rgba(255, 215, 0, 0.1);
+      padding: 2rem;
+      text-align: center;
+      backdrop-filter: blur(15px);
+      color: gold;
+      border-top: 1px solid rgba(255, 215, 0, 0.2);
+      box-shadow: 0 0 20px gold;
+      margin-top: 3rem;
+    }
+
+   .footer-icons a img {
+    width: 30px; /* Adjust icon size */
+    height: 30px;
+    transition: transform 0.3s ease-in-out, opacity 0.3s;
+   } 
+
+  .footer-icons a:hover img {
+    transform: scale(1.2);
+    opacity: 0.8;
+ }
+
+  footer p {
+    text-align: center;
+    color: #ccc;
+    font-size: 14px;
+    margin-top: 10px;
+  }
+
+  /* Magneto Font Import (Agar Custom File Hai, To Use Karein) */
+  @font-face {
+    font-family: 'Magneto';
+    src: url('/Magnetob.ttf') format('truetype'); /* Make sure file is in same folder */
+    font-weight: normal;
+    font-style: normal;
+  }
+  </style>
+</head>
+<body>
+ 
+
+  <header>
+    <div class="logo">Shekhar Tyagi</div>
+    <nav id="nav">
+      <a href="index.html" class="active">Home</a>
+              <a href="gd.html">Graphics Desining </a>
+                <a href="ve.html">Video Editing</a>
+                <a href="wd.html">Website Designing</a>
+                <a href="orw.html">Office Related Work</a>
+                <a href="aw.html">Artical Writting</a>
+                <a href="dm.html">Degital Marketing</a>
+    </nav>
+    <div class="toggle" onclick="toggleMenu()" id="toggleBtn">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+  </header>
+     <section class="who-we-are">
+                        <div class="content">
+                    <h2>Who Am I</h2>
+                <p>
+            I am passionate and dedicated to delivering the best solutions.My mission is to innovate, inspire, and transform ideas into reality. With years of experience and a customer-focused approach, we ensure excellence in everything we do.  
+            </p>
+        </div>
+    </section>
+        <section>
+            <div class="card-container">
+                <div class="card" style="background-image: url('ONE.png');">
+                    <div class="glow"></div>
+                       <div class="card-content">
+                          <h2>Graphic Designing</h2>
+                              <p>FGraphic designing combines creativity, colors, and typography to craft visually stunning, impactful designs.</p>
+                                <a href="gd.html"></a>
+                                  <button onclick="window.location.href='gd.html'">Know More</button>
+                               </div>
+                            </div>
+                        <div class="card" style="background-image: url('TWO.png');">
+                    <div class="glow"></div>
+                <div class="card-content">
+            <h2>Video Editing</h2>
+        <p>Video editing blends footage, effects, and sound to create engaging, polished, and dynamic stories.</p>
+     <button onclick="window.location.href='ve.html'">Discover</button>
+        </div>
+            </div>
+               <div class="card" style="background-image: url('THREE.png');">
+                  <div class="glow"></div>
+                     <div class="card-content">
+                        <h2>Websites Designing</h2>
+                           <p>Website designing combines layout, colors, and functionality to create user-friendly, visually appealing websites.</p>
+                               <button onclick="window.location.href='wd.html'">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+            <div class="card-container">
+        <div class="card" style="background-image: url('FOUR.png');">
+    <div class="glow"></div>
+        <div class="card-content">
+           <h2>Office Related Work</h2>
+              <p>offers powerful tools for creating documents, spreadsheets, presentations, and data management efficiently.</p>
+                 <button onclick="window.location.href='orw.html'">Explore</button>
+                   </div>
+                       </div>
+                    <div class="card" style="background-image: url('FIVE.png');">
+                <div class="glow"></div>
+            <div class="card-content">
+        <h2>Article Writting</h2>
+    <p>Article writing involves crafting engaging, informative content with clear structure and compelling language.</p>
+        <button onclick="window.location.href='aw.html'">Discover</button>
+            </div>
+                </div>
+                    <div class="card" style="background-image: url('SIX.png');">
+                       <div class="glow"></div>
+                    <div class="card-content">
+                <h2>Digital Marketing</h2>
+            <p>uses online channels, content, and strategies to promote brands and engage audiences.</p>
+         <button onclick="window.location.href='dm.html'">Learn More</button>
+     </div>
+        </div>
+           </div>
+              </section>
+               <div class="floating-btn" onclick="openWhatsApp()">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+    </div>
+<footer>
+
+        <div class="footer-container">
+            <div class="footer-section">
+                <p>Very Dedicated to Connecting According The Needs Of Clients</p>
+                <div class="footer-icons">
+        <!-- Navigation Icons -->
+       <a href="index.html" title="Home"><img src="H1.jpg" alt=""></a>
+        <a href="gd.html" title="Graphic Designing"><img src="H2.jpg" alt=""></a>
+        <a href="ve.html" title="Video Editing"><img src="H3.jpg" alt=""></a>
+        <a href="wd.html" title="Web Designing"><img src="H4.jpg" alt=""></a>
+         <a href="orw.html" title="Office Related Work"><img src="H5.jpg" alt=""></a>
+          <a href="aw.html" title="Artical Writting"><img src="H6.jpg" alt=""></a>
+           <a href="dm.html" title="Digital Marketing"><img src="H7.jpg" alt=""></a>
+         </div>
+
+        <!-- Social Media Icons 
+         <div class="footer-icons">
+        <a href="#" title="Instagram"><img src="S1.jpg" alt="Instagram"></a>
+        <a href="#" title="Facebook"><img src="S2.jpg" alt="Facebook"></a>
+        <a href="#" title="X Accout"><img src="S3.jpg" alt="X Accout"></a>
+        <a href="#" title="Youtube"><img src="S4.jpg" alt="Youtube"></a>
+        <a href="#" title="Nokri.Com"><img src="S5.jpg" alt="Nokri.Com"></a>
+        <a href="#" title="Shine.Com"><img src="S6.jpg" alt="Shine.Com"></a>
+        <a href="#" title="LinkedIn.Com"><img src="S7.jpg" alt="LinkedIn.Com"></a>
+
+    </div>-->
+            </div>
+        </div>
+        <p>&copy; 2025   Shekhar Tyagi All Rights Reserved. </p>   
+    </footer>
+
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById('nav');
+      const toggleBtn = document.getElementById('toggleBtn');
+      nav.classList.toggle('active');
+      toggleBtn.classList.toggle('active');
+    }
+
+    const bgColors = [
+      "#f1c40f", "#e67e22", "#9b59b6", "#1abc9c", "#3498db", "#e74c3c", "#2ecc71", "#ff6f61"
+    ];
+
+    const darkShades = [
+      "#111", "#1e1e1e", "#222", "#141414", "#191919", "#0f0f0f", "#171717", "#1a1a1a"
+    ];
+
+    let i = 0;
+    setInterval(() => {
+      const color1 = darkShades[i % darkShades.length];
+      const color2 = bgColors[i % bgColors.length];
+      document.body.style.background = `linear-gradient(135deg, ${color1} 50%, ${color2} 50%)`;
+      document.documentElement.style.setProperty('--main-color', color2);
+      document.documentElement.style.setProperty('--dark-color', color1);
+      i++;
+    }, 20000);
+  </script>
+</body>
+</html>
