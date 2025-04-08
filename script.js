@@ -13,21 +13,24 @@ function openWhatsApp() {
     }
 
     const bgColors = [
-      "#f1c40f", "#e67e22", "#9b59b6", "#1abc9c", "#3498db", "#e74c3c", "#2ecc71", "#ff6f61"
-    ];
+     "#ff6f61", "#6b5b95", "#88b04b", "#f7cac9", "#92a8d1", "#955251", "#b565a7",
+    "#009b77", "#dd4124", "#d65076", "#45b8ac", "#e15d44", "#7fcdcd", "#bc243c",
+    "#c3447a", "#98b4d4", "#b7b8b6", "#f7786b", "#6b5b95", "#deeaee", "#763568",
+    "#f0e68c", "#8fbc8f", "#e9967a", "#dda0dd", "#ffb6c1", "#4682b4", "#9acd32",
+    "#ff8c00", "#6495ed", "#20b2aa", "#db7093", "#cd5c5c", "#40e0d0", "#ff1493",
+    "#483d8b", "#00fa9a", "#8a2be2", "#00ced1", "#dc143c", "#9932cc", "#ff6347",
+    "#00bfff", "#f5deb3", "#adff2f", "#9370db", "#ff4500", "#ffd700", "#7fffd4",
+    "#ba55d3"
+  ];
 
-    const darkShades = [
-      "#111", "#1e1e1e", "#222", "#141414", "#191919", "#0f0f0f", "#171717", "#1a1a1a"
-    ];
-
-    let i = 0;
-    const whoWeAre = document.querySelector('.who-we-are'); // Add this
-
-setInterval(() => {
-  currentColorIndex = (currentColorIndex + 1) % colors.length;
-  const newColor = colors[currentColorIndex];
-  dynamicBg.style.backgroundColor = newColor;
-  if (whoWeAre) {
-    whoWeAre.style.backgroundColor = newColor; // You can change this to style.color for text
+  function changeBgColor() {
+    const randomColor = colors[Math.floor(Math.random() * colors.length)];
+    const whoSection = document.querySelector(".who-we-are");
+    if (whoSection) {
+      whoSection.style.backgroundColor = randomColor;
+    }
+    document.body.style.backgroundColor = randomColor;
   }
-}, 20000);
+
+  changeBgColor(); // Initial
+  setInterval(changeBgColor, 20000); // Every 20 seconds
