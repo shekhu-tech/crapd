@@ -3,13 +3,46 @@
       --dark-color: #1e1e1e;
     }
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Segoe UI', sans-serif;
+   * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html, body {
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  body * {
+    max-width: 100vw;
+  }
+
+  .section {
+    padding: 20px;
+    transition: background-color 1s ease;
+  }
+
+  .who-we-are {
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    border-radius: 12px;
+    transition: background-color 1s ease;
+  }
+
+  @media screen and (max-width: 768px) {
+    .who-we-are {
+      font-size: 1.5rem;
+      padding: 16px;
     }
 
+    .section {
+      padding: 15px;
+    }
+  }
     body {
       background: linear-gradient(135deg, var(--dark-color) 50%, var(--main-color) 50%);
       overflow-x: hidden;
@@ -460,45 +493,3 @@ html, body {
   }
 }
 /* Apply global reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* Prevent horizontal scroll */
-html, body {
-  width: 100%;
-  overflow-x: hidden;
-}
-
-/* Prevent any element from overflowing */
-body * {
-  max-width: 100vw;
-}
-
-/* Responsive tweaks */
-@media screen and (max-width: 768px) {
-  header {
-    padding: 20px 10px;
-  }
-
-  section {
-    padding: 20px 10px;
-  }
-
-  .content {
-    padding: 10px;
-    font-size: 1rem;
-  }
-
-  /* Optional: Hide overflow on custom sidebar/slide-ins */
-  .sidebar,
-  .menu,
-  .slider,
-  .panel {
-    overflow-x: hidden;
-      transform: translateX(120%);
-  }
-}
-
