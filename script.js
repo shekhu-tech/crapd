@@ -12,25 +12,31 @@ function openWhatsApp() {
       toggleBtn.classList.toggle('active');
     }
 
-    const bgColors = [
-     "#ff6f61", "#6b5b95", "#88b04b", "#f7cac9", "#92a8d1", "#955251", "#b565a7",
-    "#009b77", "#dd4124", "#d65076", "#45b8ac", "#e15d44", "#7fcdcd", "#bc243c",
-    "#c3447a", "#98b4d4", "#b7b8b6", "#f7786b", "#6b5b95", "#deeaee", "#763568",
-    "#f0e68c", "#8fbc8f", "#e9967a", "#dda0dd", "#ffb6c1", "#4682b4", "#9acd32",
-    "#ff8c00", "#6495ed", "#20b2aa", "#db7093", "#cd5c5c", "#40e0d0", "#ff1493",
-    "#483d8b", "#00fa9a", "#8a2be2", "#00ced1", "#dc143c", "#9932cc", "#ff6347",
-    "#00bfff", "#f5deb3", "#adff2f", "#9370db", "#ff4500", "#ffd700", "#7fffd4",
-    "#ba55d3"
-  ];
+    const colors = [
+      "#FF5733", "#33FF57", "#3357FF", "#FF33A6", "#A633FF",
+      "#33FFF6", "#F6FF33", "#FF8C33", "#6E33FF", "#FF3364",
+      "#33FFB5", "#B5FF33", "#3385FF", "#A633FF", "#FF5733",
+      "#33FF57", "#5733FF", "#FF33F0", "#33C1FF", "#FFC133",
+      "#C133FF", "#33FF8C", "#FF3364", "#33FFD9", "#D933FF",
+      "#3364FF", "#FFB533", "#6EFF33", "#FF3385", "#33FF57",
+      "#5757FF", "#FF33C1", "#33A6FF", "#FF6E33", "#C1FF33",
+      "#33FFEC", "#EC33FF", "#336EFF", "#FFD933", "#8CFF33",
+      "#FF33A6", "#33FFC1", "#C1FF33", "#3364FF", "#FFA633",
+      "#33FF57", "#57FF33", "#FF33B5", "#33FF85", "#FF33F6"
+    ];
 
-  function changeBgColor() {
-    const randomColor = colors[Math.floor(Math.random() * colors.length)];
-    const whoSection = document.querySelector(".who-we-are");
-    if (whoSection) {
-      whoSection.style.backgroundColor = randomColor;
+    function changeColor() {
+      const color = colors[Math.floor(Math.random() * colors.length)];
+      document.body.style.backgroundColor = color;
+
+      const bg = document.querySelector('.background-shape');
+      if (bg) bg.style.backgroundColor = color;
+
+      const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6, p');
+      headings.forEach(el => {
+        el.style.color = '#fff';
+      });
     }
-    document.body.style.backgroundColor = randomColor;
-  }
 
-  changeBgColor(); // Initial
-  setInterval(changeBgColor, 20000); // Every 20 seconds
+    changeColor();
+    setInterval(changeColor, 20000);
