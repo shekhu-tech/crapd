@@ -489,4 +489,49 @@ html, body {
     font-size: 1rem;
   }
 }
-/* Apply global reset */
+
+.motion-text {
+  width: 100%;
+  overflow: hidden;
+  background: linear-gradient(90deg, #ff8c00, #ff0080, #8a2be2, #00ffff);
+  background-size: 400% 400%;
+  animation: bgShift 10s ease infinite;
+  padding: 12px 0;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+  position: relative;
+  z-index: 999;
+}
+
+.motion-text p {
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 900;
+  font-size: 1.1rem;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  white-space: nowrap;
+  animation: scroll-left 15s linear infinite;
+  text-shadow: 0 0 10px #fff, 0 0 20px #ff00cc, 0 0 30px #00ffff;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes bgShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
