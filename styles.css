@@ -492,43 +492,21 @@ html, body {
 
 
 
-.motion-text {
-  width: 100%;
-  overflow: hidden;
-  background: #fff; /* white background for black text */
-  padding: 12px 0;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-  position: relative;
-  z-index: 999;
-}
-
-.motion-track {
-  display: inline-block;
-  white-space: nowrap;
-  animation: scroll-left 15s linear infinite;
-}
-
-.motion-text p {
-  display: inline-block;
-  font-family: 'Orbitron', sans-serif;
-  font-weight: 900;
-  font-size: 1.2rem;
-  color: #000; /* black text */
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  padding-left: 100%;
-}
-
-@keyframes scroll-left {
-  0% {
-    transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-}
-
-
-.motion-text:hover .motion-track {
-  animation-play-state: paused;
-}
+ .offer-bar {
+      background: #ff0080;
+      color: white;
+      font-weight: bold;
+      text-align: center;
+      padding: 0.5rem;
+      overflow: hidden;
+      position: relative;
+    }
+    .offer-text {
+      white-space: nowrap;
+      display: inline-block;
+      animation: scroll 10s linear infinite;
+    }
+    @keyframes scroll {
+      0% { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
+    }
