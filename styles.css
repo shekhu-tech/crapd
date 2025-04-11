@@ -514,59 +514,199 @@ html, body {
 
 
 /* All buttons */
-.floating-buttons-group {
+
+/* WhatsApp Floating Button Styles */
+#whatsapp-button {
   position: fixed;
-  top: 50%;
+  top: 40%;
   right: 7px;
   transform: translateY(-50%);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 18px; /* spacing between buttons */
-  z-index: 9999;
-}
-
-.floating-btn {
   width: 40px;
   height: 40px;
+  background-color: #25D366;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-  text-decoration: none;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  z-index: 9999;
+  cursor: pointer;
+  transition: transform 0.3s ease;
 }
 
-.floating-btn img {
+#whatsapp-button img {
   width: 28px;
   height: 28px;
 }
 
-.floating-btn:hover {
-  transform: scale(1.15);
+#whatsapp-button:hover {
+  transform: translateY(-50%) scale(1.1);
 }
 
-/* Different Colors */
-.whatsapp-btn {
-  background-color: #25d366;
-}
-.call-btn {
-  background-color: #007bff;
-}
-.message-btn {
-  background-color: #ff6d00;
+/* Call Button Style */
+#call-button {
+  position: fixed;
+  top: calc(37.8% + 70px); /* 70px below WhatsApp */
+  right: 7px;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  background-color: #007BFF; /* professional blue */
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  z-index: 9999;
+  cursor: pointer;
+  transition: transform 0.3s ease;
 }
 
-/* Mobile Responsive */
-@media screen and (max-width: 768px) {
-  .floating-btn {
-    width: 40px;
-    height: 40px;
+#call-button img {
+  width: 26px;
+  height: 26px;
+}
+
+#call-button:hover {
+  transform: translateY(-50%) scale(1.1);
+}
+
+/* Message Button */
+/* Message Button (Orange with Glow) */
+#message-button {
+  position: fixed;
+  top: calc(35.8% + 140px);
+  right: 7px;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, #ff6d00, #ff9900);
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgba(255, 109, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  cursor: pointer;
+  border: none;
+  transition: all 0.4s ease;
+  backdrop-filter: blur(10px);
+}
+
+#message-button img {
+  width: 26px;
+  height: 26px;
+  filter: drop-shadow(0 0 3px white);
+}
+
+#message-button:hover {
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 0 0 25px rgba(255, 109, 0, 0.9);
+}
+
+/* Popup Form: Ultra Glassy & Futuristic */
+#popupForm {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(6px);
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+}
+
+.popup-content {
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 40px rgba(0, 255, 255, 0.2);
+  border-radius: 20px;
+  padding: 35px 30px;
+  width: 90%;
+  max-width: 420px;
+  color: #fff;
+  animation: popupZoom 0.4s ease;
+  backdrop-filter: blur(20px);
+  position: relative;
+  overflow: hidden;
+}
+
+.popup-content::before {
+  content: "";
+  position: absolute;
+  top: -20%;
+  left: -20%;
+  width: 160%;
+  height: 160%;
+  background: linear-gradient(45deg, rgba(255,255,255,0.1), rgba(255,255,255,0));
+  transform: rotate(25deg);
+  pointer-events: none;
+}
+
+.popup-content h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 26px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #00ffff;
+  text-shadow: 0 0 10px #00ffff;
+}
+
+.popup-content input,
+.popup-content textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 12px 0;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  border-radius: 10px;
+  outline: none;
+  font-size: 16px;
+  backdrop-filter: blur(4px);
+}
+
+.popup-content button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  background: linear-gradient(135deg, #00ff95, #00ffd5);
+  color: black;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 0 12px rgba(0, 255, 170, 0.4);
+  transition: 0.3s ease;
+}
+
+.popup-content button:hover {
+  background: linear-gradient(135deg, #00c77a, #00d9ff);
+}
+
+.popup-close {
+  position: absolute;
+  top: 12px;
+  right: 20px;
+  font-size: 28px;
+  color: #fff;
+  cursor: pointer;
+  text-shadow: 0 0 10px white;
+}
+
+@keyframes popupZoom {
+  from {
+    opacity: 0;
+    transform: scale(0.85);
   }
-  .floating-btn img {
-    width: 22px;
-    height: 22px;
+  to {
+    opacity: 1;
+    transform: scale(1);
   }
 }
 
