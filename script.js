@@ -1,10 +1,4 @@
 
-function openWhatsApp() {
-        var phoneNumber = "918395913829"; // Apna number daaliye
-        var message = "Hello, I am interested in services.";
-        var whatsappLink = "https://wa.me/" + phoneNumber + "?text=" + encodeURIComponent(message);
-        window.open(whatsappLink, '_blank');
-    }
  function toggleMenu() {
       const nav = document.getElementById('nav');
       const toggleBtn = document.getElementById('toggleBtn');
