@@ -512,11 +512,20 @@ html, body {
     }
 
 
-.call-button {
+
+.floating-buttons-group {
   position: fixed;
-  bottom: 20px;
+  top: 50%;
   right: 20px;
-  background-color: #25d366; /* WhatsApp green, but can be any color */
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  z-index: 9999;
+}
+
+.floating-btn {
+  background-color: #25d366;
   width: 60px;
   height: 60px;
   border-radius: 50%;
@@ -524,16 +533,15 @@ html, body {
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1000;
   text-decoration: none;
   transition: transform 0.3s ease;
 }
 
-.call-button:hover {
+.floating-btn:hover {
   transform: scale(1.1);
 }
 
-.call-button img {
+.floating-btn img {
   width: 28px;
   height: 28px;
   filter: invert(1); /* make icon white */
