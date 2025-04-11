@@ -35,3 +35,68 @@
 
     changeColor();
     setInterval(changeColor, 20000);
+ // Create WhatsApp Button Dynamically
+  const whatsappButton = document.createElement('a');
+  whatsappButton.href = 'https://wa.me/918395913829'; // Replace with your number
+  whatsappButton.target = '_blank';
+  whatsappButton.id = 'whatsapp-button';
+  whatsappButton.title = 'Chat on WhatsApp';
+
+  // Create and add icon
+  const icon = document.createElement('img');
+  icon.src = 'https://img.icons8.com/ios-filled/50/ffffff/whatsapp.png';
+  icon.alt = 'WhatsApp';
+
+  whatsappButton.appendChild(icon);
+  document.body.appendChild(whatsappButton);
+
+  const callButton = document.createElement('a');
+  callButton.href = 'tel:+918395913829'; // Replace with your number
+  callButton.id = 'call-button';
+  callButton.title = 'Call Now';
+
+  // Icon
+  const callIcon = document.createElement('img');
+  callIcon.src = 'https://img.icons8.com/ios-filled/50/ffffff/phone.png';
+  callIcon.alt = 'Call';
+
+  callButton.appendChild(callIcon);
+  document.body.appendChild(callButton);
+
+   // Create Message Button
+  const msgBtn = document.createElement('button');
+  msgBtn.id = 'message-button';
+  msgBtn.title = 'Message Us';
+
+  const msgIcon = document.createElement('img');
+  msgIcon.src = 'https://img.icons8.com/ios-filled/50/ffffff/sms.png';
+  msgIcon.alt = 'Message';
+  msgBtn.appendChild(msgIcon);
+  document.body.appendChild(msgBtn);
+
+  // Create Popup
+  const popupOverlay = document.createElement('div');
+  popupOverlay.id = 'popupForm';
+  popupOverlay.innerHTML = `
+    <div class="popup-content">
+      <span class="popup-close" onclick="closePopup()">×</span>
+      <h2>Send Message</h2>
+      <form onsubmit="event.preventDefault(); closePopup(); alert('Message Sent!');">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea rows="4" placeholder="Your Message" required></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </div>
+  `;
+  document.body.appendChild(popupOverlay);
+
+  // Open Popup
+  msgBtn.onclick = () => {
+    document.getElementById('popupForm').style.display = 'flex';
+  }
+
+  // Close function
+  function closePopup() {
+    document.getElementById('popupForm').style.display = 'none';
+  }
