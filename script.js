@@ -83,7 +83,9 @@
       <h2>Send Message</h2>
       <form onsubmit="event.preventDefault(); closePopup(); alert('Message Sent!');">
         <input type="text" placeholder="Your Name" required>
+          <input type="numbert" placeholder="Your Number" required>
         <input type="email" placeholder="Your Email" required>
+          <input type="text" placeholder="Where Sre You From" required>
         <textarea rows="4" placeholder="Your Message" required></textarea>
         <button type="submit">Send</button>
       </form>
