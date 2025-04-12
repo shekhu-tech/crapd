@@ -75,33 +75,69 @@
   document.body.appendChild(msgBtn);
 
   // Create Popup
-  const popupOverlay = document.createElement('div');
-  popupOverlay.id = 'popupForm';
-  popupOverlay.innerHTML = `
-    <div class="popup-content">
-      <span class="popup-close" onclick="closePopup()">×</span>
-      <h2>Send Message</h2>
-      <form onsubmit="event.preventDefault(); closePopup(); alert('Message Sent!');">
-        <input type="text" placeholder="Your Name" required>
-          <input type="numbert" placeholder="Your Number" required>
-        <input type="email" placeholder="Your Email" required>
-          <input type="text" placeholder="Where Sre You From" required>
-        <textarea rows="4" placeholder="Your Message" required></textarea>
-        <button type="submit">Send</button>
-      </form>
-    </div>
-  `;
-  document.body.appendChild(popupOverlay);
+const popupOverlay = document.createElement('div');
+popupOverlay.id = 'popupForm';
+popupOverlay.innerHTML = `
+  <div class="popup-content">
+    <span class="popup-close" onclick="closePopup()">×</span>
+    <h2>tell Us </h2>
+    <form id="contactForm">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="tel" name="phone" placeholder="Your Number" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <input type="text" name="location" placeholder="Where Are You From" required>
+      <textarea rows="4" name="message" placeholder="Your Message" required></textarea>
 
-  // Open Popup
-  msgBtn.onclick = () => {
-    document.getElementById('popupForm').style.display = 'flex';
-  }
+      <!-- Optional hidden fields -->
+      <input type="hidden" name="_subject" value="New Message from Portfolio!">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="table">
+      
+      <button type="submit">Submit</button>
+    </form>
+    <div id="successMsg" style="display:none; margin-top:10px; color:green;">✅ Message Sent!</div>
+  </div>
+`;
+document.body.appendChild(popupOverlay);
 
-  // Close function
-  function closePopup() {
-    document.getElementById('popupForm').style.display = 'none';
-  }
+// Open Popup
+msgBtn.onclick = () => {
+  document.getElementById('popupForm').style.display = 'flex';
+}
+
+// Close function
+function closePopup() {
+  document.getElementById('popupForm').style.display = 'none';
+  document.getElementById('successMsg').style.display = 'none';
+}
+
+// Handle form submission
+document.getElementById('contactForm').addEventListener('submit', function (e) {
+  e.preventDefault();
+
+  const form = e.target;
+  const data = new FormData(form);
+
+  fetch('https://formsubmit.co/crapdindia@gmail.com', {
+    method: 'POST',
+    body: data
+  })
+  .then(response => {
+    if (response.ok) {
+      form.reset();
+      document.getElementById('successMsg').style.display = 'block';
+
+      // Close after 3 seconds
+      setTimeout(closePopup, 3000);
+    } else {
+      alert('Failed to send. Try again.');
+    }
+  })
+  .catch(error => {
+    alert('Error: ' + error.message);
+  });
+});
+
 
  const motionBar = document.createElement('div');
   motionBar.id = 'motion-bar';
