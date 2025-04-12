@@ -118,7 +118,7 @@ document.getElementById('contactForm').addEventListener('submit', function (e) {
   const form = e.target;
   const data = new FormData(form);
 
-  fetch('https://formsubmit.co/crapdindia@gmail.com', {
+ fetch('https://formsubmit.co/crapdindia@gmail.com', {
     method: 'POST',
     body: data
   })
