@@ -742,7 +742,7 @@ html, body {
 }
 
 
-@media (max-width: 380px) {
+ @media (max-width: 380px) {
     #popupForm {
       display: none;
       position: fixed;
@@ -760,6 +760,7 @@ html, body {
 
     .popup-content {
       background: #fff;
+      color: #000; /* ✅ Ensure all text inside is black */
       padding: 18px;
       width: 100%;
       max-width: 340px;
@@ -769,10 +770,12 @@ html, body {
       box-sizing: border-box;
     }
 
-    .popup-content h2 {
-      font-size: 20px;
-      text-align: center;
-      margin-bottom: 12px;
+    .popup-content h2,
+    .popup-content label,
+    #contactForm input,
+    #contactForm textarea,
+    #successMsg {
+      color: #000 !important; /* ✅ Force black text for form content */
     }
 
     .popup-close {
@@ -782,6 +785,7 @@ html, body {
       font-size: 22px;
       font-weight: bold;
       cursor: pointer;
+      color: #000 !important; /* Close button black */
     }
 
     #contactForm {
@@ -798,6 +802,7 @@ html, body {
       border: 1px solid #ccc;
       border-radius: 8px;
       box-sizing: border-box;
+      color: #000 !important; /* Input and textarea text black */
     }
 
     #contactForm textarea {
@@ -820,6 +825,6 @@ html, body {
       font-size: 15px;
       text-align: center;
       margin-top: 10px;
-      color: green;
+      color: green !important;
     }
   }
