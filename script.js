@@ -148,3 +148,46 @@ document.getElementById('contactForm').addEventListener('submit', function (e) {
 
   motionBar.appendChild(motionText);
   document.body.appendChild(motionBar);
+
+
+
+
+ // Handle Popup Open
+  document.querySelectorAll('.talk-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const service = btn.getAttribute('data-service');
+      document.querySelector('input[name="serviceType"]').value = service;
+      document.getElementById('popupForm').style.display = 'flex';
+    });
+  });
+
+  // Handle Popup Close
+  function closePopup() {
+    document.getElementById('popupForm').style.display = 'none';
+    document.getElementById('successMsg').style.display = 'none';
+  }
+
+  // Form Submission
+  document.getElementById('contactForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+    const form = e.target;
+    const data = new FormData(form);
+
+    // ✅ Replace this with your formsubmit email
+    fetch('https://formsubmit.co/YOUR_EMAIL@gmail.com', {
+      method: 'POST',
+      body: data
+    })
+    .then(response => {
+      if (response.ok) {
+        form.reset();
+        document.getElementById('successMsg').style.display = 'block';
+        setTimeout(closePopup, 2500);
+      } else {
+        alert('Something went wrong. Try again!');
+      }
+    })
+    .catch(error => {
+      alert('Error: ' + error.message);
+    });
+  });
