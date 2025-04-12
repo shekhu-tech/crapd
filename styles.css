@@ -988,3 +988,25 @@ html, body {
         width: 90%;
       }
     }
+
+    /* ✅ Safari support for backdrop-filter */
+.card-content {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px); /* Safari-specific */
+}
+
+/* ✅ Smooth animations fix */
+.card, .card-content {
+  will-change: transform, opacity; /* Helps Safari handle transitions better */
+}
+
+/* ✅ Safari fallback for animations */
+@media not all and (min-resolution:.001dpcm) {
+  @supports (-webkit-appearance:none) {
+    .card-content {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+}
+
