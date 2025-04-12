@@ -740,3 +740,86 @@ html, body {
     transform: translateX(-100%);
   }
 }
+
+
+@media (max-width: 380px) {
+    #popupForm {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(4px);
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+      padding: 10px;
+      overflow-y: auto;
+    }
+
+    .popup-content {
+      background: #fff;
+      padding: 18px;
+      width: 100%;
+      max-width: 340px;
+      border-radius: 14px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      position: relative;
+      box-sizing: border-box;
+    }
+
+    .popup-content h2 {
+      font-size: 20px;
+      text-align: center;
+      margin-bottom: 12px;
+    }
+
+    .popup-close {
+      position: absolute;
+      top: 10px;
+      right: 12px;
+      font-size: 22px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    #contactForm {
+      max-height: 70vh;
+      overflow-y: auto;
+    }
+
+    #contactForm input,
+    #contactForm textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      font-size: 15px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      box-sizing: border-box;
+    }
+
+    #contactForm textarea {
+      resize: none;
+    }
+
+    #contactForm button {
+      width: 100%;
+      background-color: #0072ff;
+      color: #fff;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      margin-top: 10px;
+      cursor: pointer;
+    }
+
+    #successMsg {
+      font-size: 15px;
+      text-align: center;
+      margin-top: 10px;
+      color: green;
+    }
+  }
