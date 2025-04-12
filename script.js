@@ -174,7 +174,7 @@ document.getElementById('contactForm').addEventListener('submit', function (e) {
     const data = new FormData(form);
 
     // ✅ Replace this with your formsubmit email
-    fetch('https://formsubmit.co/YOUR_EMAIL@gmail.com', {
+    fetch('https://formsubmit.co/crapdindia@gmail.com', {
       method: 'POST',
       body: data
     })
