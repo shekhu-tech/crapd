@@ -382,12 +382,12 @@
   /* Responsive: 2 cards on tablet */
   @media (max-width: 992px) {
     .card-container {
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(1, 1fr);
     }
   }
 
   /* Responsive: 1 card per row on mobile */
-  @media (max-width: 600px) {
+  @media (max-width: 375px) {
     .card-container {
       grid-template-columns: 1fr;
     }
