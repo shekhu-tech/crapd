@@ -1002,34 +1002,50 @@ html, body {
 
     
 /* iphon fix 1. Flex-wrap and size fix for small devices */
+/* Container Styling */
 .cards-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: stretch;
+  align-items: flex-start;
   gap: 20px;
-}
-
-/* 2. Make cards flexible */
-.card {
-  flex: 1 1 300px; /* min width 300px */
-  max-width: 90vw;
+  padding: 20px;
   box-sizing: border-box;
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
 }
 
-/* 3. Fix Safari rendering */
-html, body {
-  -webkit-text-size-adjust: 100%; /* Prevent font zooming */
-  -webkit-tap-highlight-color: transparent; /* Remove tap highlight */
-  overflow-x: hidden;
+/* Card Styling */
+.card {
+  flex: 1 1 calc(33.33% - 40px); /* 3 cards per row - gap adjust */
+  max-width: calc(33.33% - 40px);
+  box-sizing: border-box;
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  transition: transform 0.3s;
 }
 
-/* 4. Responsive fix for iPhone 12 Mini */
-@media screen and (max-width: 400px) {
+/* Responsive Fix for Safari and iPhone (narrow widths) */
+@media screen and (max-width: 1024px) {
   .card {
-    flex: 1 1 100%;
+    flex: 1 1 calc(50% - 40px); /* 2 cards per row */
+    max-width: calc(50% - 40px);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .card {
+    flex: 1 1 100%; /* Full width card */
     max-width: 100%;
   }
 }
 
-   
+/* Safari Specific - Prevent Overflow */
+html, body {
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  -webkit-text-size-adjust: none;
+}
+
