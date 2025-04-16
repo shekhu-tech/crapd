@@ -1000,4 +1000,36 @@ html, body {
       }
     }
 
+    
+/* iphon fix 1. Flex-wrap and size fix for small devices */
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  gap: 20px;
+}
+
+/* 2. Make cards flexible */
+.card {
+  flex: 1 1 300px; /* min width 300px */
+  max-width: 90vw;
+  box-sizing: border-box;
+}
+
+/* 3. Fix Safari rendering */
+html, body {
+  -webkit-text-size-adjust: 100%; /* Prevent font zooming */
+  -webkit-tap-highlight-color: transparent; /* Remove tap highlight */
+  overflow-x: hidden;
+}
+
+/* 4. Responsive fix for iPhone 12 Mini */
+@media screen and (max-width: 400px) {
+  .card {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}
+
    
