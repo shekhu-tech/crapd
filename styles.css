@@ -285,137 +285,237 @@
   /* Import Google Font */
   @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
 
-  /* CARD CONTAINER */
-  /* CARD CONTAINER */
+ /* CARD CONTAINER */
 .card-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr), minmax(1fr));
+ grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Show 3 cards in a row on PC */
   gap: 20px;
   padding: 50px 20px;
   perspective: 1000px;
+  max-width: 1900px;
+  margin: auto;
 }
 
-  /* CARD DESIGN */
-  .card {
-    position: relative;
-    height: 270px;
-    border-radius: 15px;
-    overflow: hidden;
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
-    transform-style: preserve-3d;
+/* CARD DESIGN */
+.card {
+  position: relative;
+  height: 270px;
+  border-radius: 15px;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+  transform-style: preserve-3d;
+  cursor: pointer;
+}
+
+/* Glowing Effect */
+.glow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, rgba(0, 0, 0, 0.9) 100%);
+  transition: opacity 0.5s ease-in-out;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* CARD CONTENT */
+.card-content {
+  position: absolute;
+  bottom: 20px;
+  width: 80%;
+  padding: 20px;
+  text-align: center;
+  color: white;
+  font-family: 'Orbitron', sans-serif;
+  z-index: 2;
+  border-radius: 10px;
+  backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.15);
+  transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+  transform: translateY(50px);
+  opacity: 0;
+}
+
+/* Heading */
+.card-content h2 {
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+/* Paragraph */
+.card-content p {
+  font-size: 12px;
+  font-weight: 400;
+  margin-bottom: 15px;
+}
+
+/* BUTTON */
+.card-content button {
+  padding: 12px 24px;
+  font-size: 14px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  background: #25D366;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.card-content button:hover {
+  background: rgba(255, 255, 255, 0.5);
+  transform: scale(1.1);
+}
+
+/* CARD HOVER EFFECTS */
+.card:hover {
+  transform: rotateY(5deg) scale(1.05);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+.card:hover .glow {
+  opacity: 1;
+}
+
+.card:hover .card-content {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* FLOATING BUTTONS */
+#whatsapp-button,
+#call-button,
+#message-button {
+  position: fixed;
+  right: 20px;
+  background-color: #222;
+  border-radius: 50%;
+  padding: 12px;
+  z-index: 9999;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+  border: none;
+  cursor: pointer;
+}
+
+#whatsapp-button {
+  bottom: 180px;
+}
+
+#call-button {
+  bottom: 140px;
+}
+
+#message-button {
+  bottom: 100px;
+}
+
+#whatsapp-button img,
+#call-button img,
+#message-button img {
+  width: 32px;
+  height: 32px;
+}
+
+/* POPUP */
+#popupForm {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9998;
+}
+
+.popup-content {
+  background: #fff;
+  padding: 30px;
+  max-width: 400px;
+  width: 90%;
+  border-radius: 10px;
+  position: relative;
+  text-align: center;
+  animation: popupFadeIn 0.3s ease-in-out;
+}
+
+.popup-content input,
+.popup-content textarea {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.popup-content button {
+  padding: 10px 20px;
+  background: #25D366;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.popup-close {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+@keyframes popupFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+  .card-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .card-container {
+    grid-template-columns: 1fr;
   }
 
-   /* Glowing Effect */
-   .glow {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, rgba(0, 0, 0, 0.9) 100%);
-    transition: opacity 0.5s ease-in-out;
-    opacity: 0;
-   }
-
-   /* CARD CONTENT */ 
-   .card-content {
-    position: absolute;
-    bottom: 20px;
-    width: 80%;
-    padding: 20px;
-    text-align: center;
-    color: white;
-    font-family: 'Orbitron', sans-serif;
-    z-index: 2;
-    border-radius: 10px;
-    backdrop-filter: blur(12px);
-    background: rgba(255, 255, 255, 0.15);
-    transition: transform 0.4s ease-in-out;
-    transform: translateY(50px);
-    opacity: 0;
+  #whatsapp-button,
+  #call-button,
+  #message-button {
+    right: 10px;
+    padding: 10px;
   }
 
-   /* Heading */
-   .card-content h2 {
-    font-size: 15px;
-    font-weight: 700;
-    margin-bottom: 10px;
-    text-transform: uppercase;
-   }
+  #whatsapp-button img,
+  #call-button img,
+  #message-button img {
+    width: 28px;
+    height: 28px;
+  }
+}
 
-   /* Paragraph */
-   .card-content p {
-    font-size: 12px;
-    font-weight: 400;
-    margin-bottom: 15px;
-   }
-
-   /* BUTTON */
-   .card-content button {
-    padding: 12px 24px;
-    font-size: 14px;
-    font-weight: bold;
-    border: none;
-    border-radius: 5px;
-    background: #25D366;
-    color: white;
-    cursor: pointer;
-    transition: background 0.3s ease-in-out, transform 0.3s ease-in-out;
-   }
-
-   .card-content button:hover {
-    background: rgba(255, 255, 255, 0.5);
-    transform: scale(1.1);
-   }
-
-   /* HOVER EFFECTS */
-   .card:hover {
-    transform: rotateY(5deg) scale(1.05);
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
-   }
-
-   .card:hover .glow {
-    opacity: 1;
-   }
-
-   .card:hover .card-content {
-    transform: translateY(0);
-    opacity: 1;
-   }
-
-    /* whatsap vala connecting button */
-       
-       .floating-btn {
-            position: fixed;
-            left: 20px;
-            top: 50%;
-            transform: translateY(-50%);
-            background-color: #25D366;
-            color: white;
-            width: 45px;
-            height: 45px;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            cursor: pointer;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-            transition: all 0.3s ease;
-            z-index: 1000;
-        }
-        .floating-btn:hover {
-            background-color: #1EBE5D;
-        }
-        .floating-btn img {
-            width: 35px;
-            height: 35px;
-        }
 
 
 
