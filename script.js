@@ -73,6 +73,10 @@
   msgIcon.alt = 'Message';
   msgBtn.appendChild(msgIcon);
   document.body.appendChild(msgBtn);
+setTimeout(() => {
+  document.getElementById('message-button').classList.add('attention');
+}, 7000);
+
 
   // Create Popup
 const popupOverlay = document.createElement('div');
