@@ -1095,15 +1095,29 @@ html, body {
   cursor: pointer;
   z-index: 9999;
   transition: transform 0.3s ease, box-shadow 0.5s ease;
+  animation: electricPulse 5s infinite; /* Add continuous electric effect */
 }
 
 /* Electric Hover Effect for the Button */
 #message-button:hover {
-  animation: electric 0.5s infinite alternate;
   transform: scale(1.2); /* Zoom effect on hover */
+  animation: electric 0.5s infinite alternate; /* Animation for electric glow */
 }
 
-/* Ultra Pro Max Electric Glow Animation */
+/* Electric Pulse Animation (Continuous glow effect) */
+@keyframes electricPulse {
+  0% {
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.6), 0 0 30px rgba(0, 255, 255, 1), 0 0 45px rgba(0, 255, 255, 1);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(0, 255, 255, 1), 0 0 40px rgba(0, 255, 255, 1), 0 0 60px rgba(0, 255, 255, 1);
+  }
+  100% {
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.6), 0 0 30px rgba(0, 255, 255, 1), 0 0 45px rgba(0, 255, 255, 1);
+  }
+}
+
+/* Electric Glow Effect (Hover) */
 @keyframes electric {
   0% {
     box-shadow: 0 0 15px rgba(0, 255, 255, 0.6), 0 0 30px rgba(0, 255, 255, 1), 0 0 45px rgba(0, 255, 255, 1);
