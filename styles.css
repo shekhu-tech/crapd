@@ -1084,21 +1084,52 @@ html, body {
     
 /* Message Button Style */
 #message-button {
+  position: fixed;
+  bottom: 120px;
+  right: 20px;
+  background-color: #00c3ff;
+  border: none;
+  border-radius: 50%;
+  padding: 16px;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.6);
+  cursor: pointer;
+  z-index: 9999;
+  transition: transform 0.3s ease, box-shadow 0.5s ease;
+}
 
-/* Bounce + Glow Animation */
-@keyframes pulseBounce {
+/* Electric Hover Effect for the Button */
+#message-button:hover {
+  animation: electric 0.5s infinite alternate;
+  transform: scale(1.2); /* Zoom effect on hover */
+}
+
+/* Ultra Pro Max Electric Glow Animation */
+@keyframes electric {
   0% {
-    transform: scale(1);
-    box-shadow: 0 0 15px rgba(0, 255, 255, 0.6);
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.6), 0 0 30px rgba(0, 255, 255, 1), 0 0 45px rgba(0, 255, 255, 1);
+    transform: rotate(0deg);
   }
   50% {
-    transform: scale(1.15) translateY(-5px);
-    box-shadow: 0 0 30px rgba(0, 255, 255, 1);
+    box-shadow: 0 0 25px rgba(0, 255, 255, 1), 0 0 40px rgba(0, 255, 255, 1), 0 0 60px rgba(0, 255, 255, 1);
+    transform: rotate(10deg);
   }
   100% {
-    transform: scale(1);
-    box-shadow: 0 0 15px rgba(0, 255, 255, 0.6);
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.6), 0 0 30px rgba(0, 255, 255, 1), 0 0 45px rgba(0, 255, 255, 1);
+    transform: rotate(0deg);
   }
+}
+
+/* Cartoon Hint Style */
+#cartoon-hint {
+  position: fixed;
+  bottom: 160px; /* Just above the message button */
+  right: 55px; /* Position near button */
+  font-size: 24px;
+  opacity: 0;
+  animation: none;
+  pointer-events: none;
+  z-index: 9998;
+  transition: opacity 0.3s ease;
 }
 
 /* Cartoon wave animation */
@@ -1108,4 +1139,3 @@ html, body {
   50% { transform: rotate(-15deg); }
   75% { transform: rotate(10deg); }
 }
-
