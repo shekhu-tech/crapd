@@ -191,7 +191,9 @@ document.getElementById('contactForm').addEventListener('submit', function (e) {
       alert('Error: ' + error.message);
     });
   });
-function openCard(cardElement) {
-  // Class toggle or animation ya layout open yahan handle karo
-  cardElement.classList.toggle('open'); // Example: Add class to show details
-}
+
+document.querySelectorAll('.card').forEach(card => {
+  card.addEventListener('click', () => {
+    card.classList.toggle('open'); // Or call your custom layout open function
+  });
+});
