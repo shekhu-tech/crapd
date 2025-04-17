@@ -137,16 +137,6 @@ document.getElementById('contactForm').addEventListener('submit', function (e) {
     alert('Error: ' + error.message);
   });
 });
-
-const motionBar = document.createElement('div');
-  motionBar.id = 'motion-bar';
-
-  const motionText = document.createElement('div');
-  motionText.id = 'motion-bar-text';
-  motionText.textContent = "🔥 Contact Anytime For Any Of these Work , Website,Graphics,Designing, Video Editing,  Digital Marketing, And Artical Writting🔥,                         🔥इनमें से किसी भी काम के लिए कभी भी संपर्क करें, वेबसाइट, ग्राफिक्स, डिजाइनिंग, वीडियो एडिटिंग, डिजिटल मार्केटिंग और आर्टिकल राइटिंग🔥";
-
-  motionBar.appendChild(motionText);
-  document.body.appendChild(motionBar);
  // Handle Popup Open
   document.querySelectorAll('.talk-btn').forEach(btn => {
     btn.addEventListener('click', () => {
@@ -193,4 +183,12 @@ document.querySelectorAll('.card').forEach(card => {
   });
 });
 
+const motionBar = document.createElement('div');
+  motionBar.id = 'motion-bar';
 
+  const motionText = document.createElement('div');
+  motionText.id = 'motion-bar-text';
+  motionText.textContent = "🔥 Contact Anytime For Any Of these Work , Website,Graphics,Designing, Video Editing,  Digital Marketing, And Artical Writting🔥,                         🔥इनमें से किसी भी काम के लिए कभी भी संपर्क करें, वेबसाइट, ग्राफिक्स, डिजाइनिंग, वीडियो एडिटिंग, डिजिटल मार्केटिंग और आर्टिकल राइटिंग🔥";
+
+  motionBar.appendChild(motionText);
+  document.body.appendChild(motionBar);
