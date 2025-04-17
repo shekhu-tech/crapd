@@ -55,6 +55,12 @@
   motionBar.appendChild(motionText);
   document.body.appendChild(motionBar);
 
+document.querySelectorAll('.card').forEach(card => {
+  card.addEventListener('click', () => {
+    card.classList.toggle('open'); // Or call your custom layout open function
+  });
+});
+
 
 
 
