@@ -1064,3 +1064,15 @@ html, body {
   width: 90%;
   border-radius: 12px;
 }
+   .card {
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+  position: relative;
+  z-index: 1;
+}
+
+/* Inner elements ko click-block na karne do */
+.card * {
+  pointer-events: none;
+}
