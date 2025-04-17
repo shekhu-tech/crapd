@@ -1059,20 +1059,16 @@ html, body {
 }
 
 .card {
-  padding: 10px;
-  margin: 10px auto;
-  width: 90%;
-  border-radius: 12px;
-}
-   .card {
+  position: relative;
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
   touch-action: manipulation;
-  position: relative;
   z-index: 1;
 }
 
-/* Inner elements ko click-block na karne do */
-.card * {
-  pointer-events: none;
+.card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 2;
 }
