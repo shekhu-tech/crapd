@@ -1049,3 +1049,18 @@ html, body {
   font-size: 14px;
   line-height: 1.6;
 }
+.card {
+  position: relative;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+  z-index: 1;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+}
+
