@@ -73,23 +73,7 @@
   msgIcon.alt = 'Message';
   msgBtn.appendChild(msgIcon);
   document.body.appendChild(msgBtn);
-  // Create Cartoon Hint Element (Small cartoon next to button)
-const cartoon = document.createElement('div');
-cartoon.id = 'cartoon-hint';
-cartoon.innerHTML = '👉'; // You can change this to other emojis or cartoon images
-document.body.appendChild(cartoon);
-
-// Show cartoon every 5 seconds with wave animation
-setInterval(() => {
-  cartoon.style.opacity = '1';
-  cartoon.style.animation = 'wave 1s ease';
-
-  // Hide after 2 seconds
-  setTimeout(() => {
-    cartoon.style.opacity = '0';
-    cartoon.style.animation = 'none';
-  }, 2000);
-}, 5000);
+  
 
   // Create Popup
 const popupOverlay = document.createElement('div');
