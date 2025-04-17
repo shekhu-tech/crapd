@@ -1049,3 +1049,18 @@ html, body {
   -webkit-text-size-adjust: none;
 }
 
+@media screen and (max-width: 400px) {
+  .card {
+    background-position: center center; /* ensures perfect centering */
+    background-size: cover; /* ensures image fills the card */
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+  }
+}
+
+.card {
+  padding: 10px;
+  margin: 10px auto;
+  width: 90%;
+  border-radius: 12px;
+}
