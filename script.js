@@ -73,21 +73,7 @@
   msgIcon.alt = 'Message';
   msgBtn.appendChild(msgIcon);
   document.body.appendChild(msgBtn);
-   // Colors to cycle through
-  const colors = ['white', 'orange', 'green', 'yellow', 'red'];
-  let current = 0;
-
-  const icon = document.getElementById('message-icon');
-
-  // Function to change color
-  function changeIconColor() {
-    icon.style.filter = `drop-shadow(0 0 5px ${colors[current]}) brightness(0) saturate(100%) sepia(100%) hue-rotate(${Math.random() * 360}deg)`;
-    icon.style.transition = 'filter 0.5s ease';
-    current = (current + 1) % colors.length;
-  }
-
-  // Start changing every 3 seconds
-  setInterval(changeIconColor, 3000);
+  
 
   // Create Popup
 const popupOverlay = document.createElement('div');
