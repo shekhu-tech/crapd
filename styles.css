@@ -1082,6 +1082,7 @@ html, body {
 
 
     
+/* Message Button Style */
 #message-button {
   position: fixed;
   bottom: 120px;
@@ -1103,6 +1104,20 @@ html, body {
   pointer-events: none;
 }
 
+/* Cartoon Hint Style */
+#cartoon-hint {
+  position: fixed;
+  bottom: 160px; /* Just above the message button */
+  right: 55px; /* Position near button */
+  font-size: 24px; /* Smaller size for cartoon */
+  opacity: 0;
+  animation: none;
+  pointer-events: none;
+  z-index: 9998;
+  transition: opacity 0.3s ease;
+}
+
+/* Bounce + Glow Animation */
 @keyframes pulseBounce {
   0% {
     transform: scale(1);
@@ -1117,13 +1132,12 @@ html, body {
     box-shadow: 0 0 15px rgba(0, 255, 255, 0.6);
   }
 }
-    @keyframes attentionShake {
-  0%, 100% { transform: translateX(0); }
-  25% { transform: translateX(-4px); }
-  50% { transform: translateX(4px); }
-  75% { transform: translateX(-4px); }
+
+/* Cartoon wave animation */
+@keyframes wave {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(15deg); }
+  50% { transform: rotate(-15deg); }
+  75% { transform: rotate(10deg); }
 }
 
-#message-button.attention {
-  animation: attentionShake 0.5s ease infinite;
-}
