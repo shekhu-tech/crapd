@@ -1083,22 +1083,6 @@ html, body {
 
     
 /* Message Button Style */
-#message-button {
-  position: fixed;
-  bottom: 120px;
-  right: 20px;
-  background-color: #00c3ff;
-  border: none;
-  border-radius: 50%;
-  padding: 16px;
-  box-shadow: 0 0 15px rgba(0, 255, 255, 0.6);
-  cursor: pointer;
-  z-index: 9999;
-  transition: transform 0.3s ease, box-shadow 0.5s ease;
-  animation: electricPulse 5s infinite; /* Add continuous electric effect */
-}
-
-/* Electric Hover Effect for the Button */
 /* Message Button Style */
 #message-button {
   position: fixed;
@@ -1111,38 +1095,38 @@ html, body {
   box-shadow: 0 0 15px rgba(0, 255, 255, 0.6);
   cursor: pointer;
   z-index: 9999;
-  transition: transform 0.3s ease, box-shadow 0.5s ease;
-  animation: electricPulse 5s infinite, zoomEffect 5s infinite; /* Continuous Electric and Zoom Effect */
+  animation: electricPulse 5s infinite, zoomEffect 5s infinite; /* Continuous Electric and Massive Zoom Effect */
+  will-change: transform, box-shadow; /* Ensures smoother animation */
 }
 
-/* Zoom Effect Animation */
+/* Massive Zoom Effect Animation */
 @keyframes zoomEffect {
   0% {
     transform: scale(1); /* Normal size */
   }
   50% {
-    transform: scale(1.2); /* Zoom in */
+    transform: scale(1.5); /* Zoom in massively */
   }
   100% {
     transform: scale(1); /* Return to normal size */
   }
 }
 
-/* Electric Pulse Animation (Continuous Glow) */
+/* Strong Electric Pulse Animation (Intense Glow) */
 @keyframes electricPulse {
   0% {
-    box-shadow: 0 0 15px rgba(0, 255, 255, 0.6), 0 0 30px rgba(0, 255, 255, 1), 0 0 45px rgba(0, 255, 255, 1);
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.6), 0 0 40px rgba(0, 255, 255, 1), 0 0 60px rgba(0, 255, 255, 1);
   }
   50% {
-    box-shadow: 0 0 25px rgba(0, 255, 255, 1), 0 0 40px rgba(0, 255, 255, 1), 0 0 60px rgba(0, 255, 255, 1);
+    box-shadow: 0 0 40px rgba(0, 255, 255, 1), 0 0 80px rgba(0, 255, 255, 1), 0 0 120px rgba(0, 255, 255, 1);
   }
   100% {
-    box-shadow: 0 0 15px rgba(0, 255, 255, 0.6), 0 0 30px rgba(0, 255, 255, 1), 0 0 45px rgba(0, 255, 255, 1);
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.6), 0 0 40px rgba(0, 255, 255, 1), 0 0 60px rgba(0, 255, 255, 1);
   }
 }
 
 /* Additional Style for the Message Button Icon */
 #message-button img {
-  width: 32px;
-  height: 32px;
+  width: 52px;
+  height: 52px;
 }
