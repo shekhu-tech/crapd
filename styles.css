@@ -1079,3 +1079,51 @@ html, body {
   inset: 0;
   z-index: 2;
 }
+
+
+    
+#message-button {
+  position: fixed;
+  bottom: 120px;
+  right: 20px;
+  background-color: #00c3ff;
+  border: none;
+  border-radius: 50%;
+  padding: 16px;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.6);
+  cursor: pointer;
+  z-index: 9999;
+  animation: pulseBounce 2s infinite;
+  transition: transform 0.3s ease;
+}
+
+#message-button img {
+  width: 24px;
+  height: 24px;
+  pointer-events: none;
+}
+
+@keyframes pulseBounce {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.6);
+  }
+  50% {
+    transform: scale(1.15) translateY(-5px);
+    box-shadow: 0 0 30px rgba(0, 255, 255, 1);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.6);
+  }
+}
+    @keyframes attentionShake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-4px); }
+  50% { transform: translateX(4px); }
+  75% { transform: translateX(-4px); }
+}
+
+#message-button.attention {
+  animation: attentionShake 0.5s ease infinite;
+}
