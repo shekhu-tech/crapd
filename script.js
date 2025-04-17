@@ -1,4 +1,3 @@
-
  function toggleMenu() {
       const nav = document.getElementById('nav');
       const toggleBtn = document.getElementById('toggleBtn');
@@ -42,10 +41,149 @@
   whatsappButton.id = 'whatsapp-button';
   whatsappButton.title = 'Chat on WhatsApp';
 
- 
+  // Create and add icon
+  const icon = document.createElement('img');
+  icon.src = 'https://img.icons8.com/ios-filled/50/ffffff/whatsapp.png';
+  icon.alt = 'WhatsApp';
 
+  whatsappButton.appendChild(icon);
+  document.body.appendChild(whatsappButton);
 
- const motionBar = document.createElement('div');
+  const callButton = document.createElement('a');
+  callButton.href = 'tel:+918395913829'; // Replace with your number
+  callButton.id = 'call-button';
+  callButton.title = 'Call Now';
+
+  // Icon
+  const callIcon = document.createElement('img');
+  callIcon.src = 'https://img.icons8.com/ios-filled/50/ffffff/phone.png';
+  callIcon.alt = 'Call';
+
+  callButton.appendChild(callIcon);
+  document.body.appendChild(callButton);
+
+   // Create Message Button
+  const msgBtn = document.createElement('button');
+  msgBtn.id = 'message-button';
+  msgBtn.title = 'Message Us';
+
+  const msgIcon = document.createElement('img');
+  msgIcon.src = 'https://img.icons8.com/ios-filled/50/ffffff/sms.png';
+  msgIcon.alt = 'Message';
+  msgBtn.appendChild(msgIcon);
+  document.body.appendChild(msgBtn);
+  
+
+  // Create Popup
+const popupOverlay = document.createElement('div');
+popupOverlay.id = 'popupForm';
+popupOverlay.innerHTML = 
+  <div class="popup-content">
+    <span class="popup-close" onclick="closePopup()">×</span>
+    <h2>tell Us </h2>
+    <form id="contactForm">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="tel" name="phone" placeholder="Your Number" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <input type="text" name="location" placeholder="Where Are You From" required>
+      <textarea rows="4" name="message" placeholder="Your Message" required></textarea>
+
+      <!-- Optional hidden fields -->
+      <input type="hidden" name="_subject" value="New Message from Portfolio!">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="table">
+      
+      <button type="submit">Submit</button>
+    </form>
+    <div id="successMsg" style="display:none; margin-top:10px; color:green;">✅ Message Sent!</div>
+  </div>
+;
+document.body.appendChild(popupOverlay);
+
+// Open Popup
+msgBtn.onclick = () => {
+  document.getElementById('popupForm').style.display = 'flex';
+}
+
+// Close function
+function closePopup() {
+  document.getElementById('popupForm').style.display = 'none';
+  document.getElementById('successMsg').style.display = 'none';
+}
+
+// Handle form submission
+document.getElementById('contactForm').addEventListener('submit', function (e) {
+  e.preventDefault();
+
+  const form = e.target;
+  const data = new FormData(form);
+
+ fetch('https://formsubmit.co/crapdindia@gmail.com', {
+    method: 'POST',
+    body: data
+  })
+  .then(response => {
+    if (response.ok) {
+      form.reset();
+      document.getElementById('successMsg').style.display = 'block';
+
+      // Close after 3 seconds
+      setTimeout(closePopup, 3000);
+    } else {
+      alert('Failed to send. Try again.');
+    }
+  })
+  .catch(error => {
+    alert('Error: ' + error.message);
+  });
+});
+ // Handle Popup Open
+  document.querySelectorAll('.talk-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const service = btn.getAttribute('data-service');
+      document.querySelector('input[name="serviceType"]').value = service;
+      document.getElementById('popupForm').style.display = 'flex';
+    });
+  });
+
+  // Handle Popup Close
+  function closePopup() {
+    document.getElementById('popupForm').style.display = 'none';
+    document.getElementById('successMsg').style.display = 'none';
+  }
+
+  // Form Submission
+  document.getElementById('contactForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+    const form = e.target;
+    const data = new FormData(form);
+
+    // ✅ Replace this with your formsubmit email
+    fetch('https://formsubmit.co/crapdindia@gmail.com', {
+      method: 'POST',
+      body: data
+    })
+    .then(response => {
+      if (response.ok) {
+        form.reset();
+        document.getElementById('successMsg').style.display = 'block';
+        setTimeout(closePopup, 2500);
+      } else {
+        alert('Something went wrong. Try again!');
+      }
+    })
+    .catch(error => {
+      alert('Error: ' + error.message);
+    });
+  });
+
+document.querySelectorAll('.card').forEach(card => {
+  card.addEventListener('click', () => {
+    card.classList.toggle('open'); // Or call your custom layout open function
+  });
+});
+
+const motionBar = document.createElement('div');
   motionBar.id = 'motion-bar';
 
   const motionText = document.createElement('div');
@@ -54,13 +192,3 @@
 
   motionBar.appendChild(motionText);
   document.body.appendChild(motionBar);
-
-document.querySelectorAll('.card').forEach(card => {
-  card.addEventListener('click', () => {
-    card.classList.toggle('open'); // Or call your custom layout open function
-  });
-});
-
-
-
-
