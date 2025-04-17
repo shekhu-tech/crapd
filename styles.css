@@ -1099,12 +1099,36 @@ html, body {
 }
 
 /* Electric Hover Effect for the Button */
-#message-button:hover {
-  transform: scale(1.2); /* Zoom effect on hover */
-  animation: electric 0.5s infinite alternate; /* Animation for electric glow */
+/* Message Button Style */
+#message-button {
+  position: fixed;
+  bottom: 120px;
+  right: 20px;
+  background-color: #00c3ff;
+  border: none;
+  border-radius: 50%;
+  padding: 16px;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.6);
+  cursor: pointer;
+  z-index: 9999;
+  transition: transform 0.3s ease, box-shadow 0.5s ease;
+  animation: electricPulse 5s infinite, zoomEffect 5s infinite; /* Continuous Electric and Zoom Effect */
 }
 
-/* Electric Pulse Animation (Continuous glow effect) */
+/* Zoom Effect Animation */
+@keyframes zoomEffect {
+  0% {
+    transform: scale(1); /* Normal size */
+  }
+  50% {
+    transform: scale(1.2); /* Zoom in */
+  }
+  100% {
+    transform: scale(1); /* Return to normal size */
+  }
+}
+
+/* Electric Pulse Animation (Continuous Glow) */
 @keyframes electricPulse {
   0% {
     box-shadow: 0 0 15px rgba(0, 255, 255, 0.6), 0 0 30px rgba(0, 255, 255, 1), 0 0 45px rgba(0, 255, 255, 1);
@@ -1117,39 +1141,8 @@ html, body {
   }
 }
 
-/* Electric Glow Effect (Hover) */
-@keyframes electric {
-  0% {
-    box-shadow: 0 0 15px rgba(0, 255, 255, 0.6), 0 0 30px rgba(0, 255, 255, 1), 0 0 45px rgba(0, 255, 255, 1);
-    transform: rotate(0deg);
-  }
-  50% {
-    box-shadow: 0 0 25px rgba(0, 255, 255, 1), 0 0 40px rgba(0, 255, 255, 1), 0 0 60px rgba(0, 255, 255, 1);
-    transform: rotate(10deg);
-  }
-  100% {
-    box-shadow: 0 0 15px rgba(0, 255, 255, 0.6), 0 0 30px rgba(0, 255, 255, 1), 0 0 45px rgba(0, 255, 255, 1);
-    transform: rotate(0deg);
-  }
-}
-
-/* Cartoon Hint Style */
-#cartoon-hint {
-  position: fixed;
-  bottom: 160px; /* Just above the message button */
-  right: 55px; /* Position near button */
-  font-size: 24px;
-  opacity: 0;
-  animation: none;
-  pointer-events: none;
-  z-index: 9998;
-  transition: opacity 0.3s ease;
-}
-
-/* Cartoon wave animation */
-@keyframes wave {
-  0%, 100% { transform: rotate(0deg); }
-  25% { transform: rotate(15deg); }
-  50% { transform: rotate(-15deg); }
-  75% { transform: rotate(10deg); }
+/* Additional Style for the Message Button Icon */
+#message-button img {
+  width: 32px;
+  height: 32px;
 }
