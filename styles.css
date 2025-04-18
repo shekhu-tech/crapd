@@ -1181,3 +1181,108 @@ html, body {
   z-index: 2;
 }
 
+
+
+.aabout-text {
+      flex: 1 1 550px;
+    }
+
+    .aabout-text h1 {
+      font-size: 3rem;
+      font-weight: bold;
+      margin-bottom: 20px;
+      color: #ffffff;
+    }
+
+    .aabout-text p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: #e0e0e0;
+    }
+
+    .highlight {
+      color: #00ffe5;
+      font-weight: 600;
+    }
+
+    .aabout-image {
+      flex: 1 1 350px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .aabout-image img {
+      width: 100%;
+      max-width: 300px;
+      border-radius: 20px;
+      box-shadow: 0 0 25px rgba(255, 255, 255, 0.2);
+      transition: transform 0.3s ease;
+    }
+
+    .aabout-image img:hover {
+      transform: scale(1.06);
+    }
+
+    /* Social Media Section */
+    .social-section {
+      text-align: center;
+      margin-top: 70px;
+    }
+
+    .social-section h2 {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #ffffff;
+      margin-bottom: 25px;
+    }
+
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 25px;
+    }
+
+    .social {
+      font-size: 1.5rem;
+      color: white;
+      width: 45px;
+      height: 45px;
+      background: rgba(255, 255, 255, 0.1);
+      border: 2px solid transparent;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: 0.4s;
+      box-shadow: 0 0 8px rgba(0,255,255,0.2);
+    }
+
+    .social:hover {
+      transform: scale(1.1);
+      border-color: #00fff0;
+      box-shadow: 0 0 12px #00fff0, 0 0 20px #00fff0 inset;
+    }
+
+    .social.instagram { color: #e4405f; }
+    .social.twitter { color: #1da1f2; }
+    .social.linkedin { color: #0077b5; }
+    .social.youtube { color: #ff0000; }
+
+    @media (max-width: 600px) {
+      .aabout-container {
+        flex-direction: column;
+        padding: 30px 20px;
+      }
+
+      .aabout-text h1 {
+        font-size: 2.2rem;
+      }
+
+      .aabout-image img {
+        max-width: 85%;
+      }
+
+      .social { width: 50px; height: 50px; font-size: 1.3rem; }
+    }
