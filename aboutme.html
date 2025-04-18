@@ -1,10 +1,8 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
  <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="google-site-verification" content="googlee66db6648703d4c9" />
 <title> Website Designer | Video Editor | Graphic Designer | Artical Writting | Degital Marketing </title>
 <meta name="keywords" content="Web Developer in India, Frontend Developer Portfolio, Freelance Web Designer, JavaScript Developer Portfolio, HTML CSS Developer, React JS Developer, Custom Website Designer, Personal Portfolio Website, Beginner Frontend Developer, Portfolio Website for Developers, Best personal portfolio website for developers, Frontend web developer available for hire, Responsive web developer portfolio design, Freelance frontend developer in India, JavaScript-based portfolio website design, Interactive portfolio using HTML CSS JS, Best portfolio design for freshers, Creative personal website design for developers, Web developer for portfolio website projects, Modern animated portfolio website, Hire web developer for personal website, Custom website design for portfolio, Website redesign for personal branding, Developer portfolio website creation services, Creative website for personal brand identity, Affordable freelance web designer in India, Modern UI/UX portfolio design, Creative frontend web design, Stylish HTML CSS portfolio template, Animated personal portfolio, Responsive developer website, One-page portfolio website, 3D effect website design, Eye-catching developer profile website, HTML CSS JavaScript portfolio, Firebase connected portfolio, React JS personal website, GitHub hosted website, Frontend developer using Firebase, Portfolio with WhatsApp integration, Canva Designing Services, Canva Banner Designer, Canva Logo Designer, Freelance Canva Designer, Canva Social Media Post Design, Custom Canva Templates, Canva Design Expert India, Social Media Graphics with Canva, Canva Business Card Design, Canva Resume Designer, Canva YouTube Thumbnail Designer, Web design inspiration, UI UX portfolio, Web developer GitHub portfolio, Best portfolio website example, Stylish frontend portfolio, Digital portfolio for web developer, Portfolio with contact form, WhatsApp integrated portfolio website, 11D effect portfolio website">
@@ -56,19 +54,19 @@
 <body>
      <section>
  <header>
-    <div class="logo">
+     <div class="logo">
   <a href="aboutme.html">
     <img src="STI.png" alt="S.T.I Logo" style="height: 25px;">
   </a>
 </div>
     <nav id="nav">
-      <a href="index.html" class="active" >Home</a>
+      <a href="index.html"  >Home</a>
               <a href="gd.html"  >Graphics Desining </a>
                 <a href="ve.html">Video Editing</a>
                 <a href="wd.html">Website Designing</a>
                 <a href="orw.html">Office Related Work</a>
-                <a href="aw.html">Artical Writting</a>
-                <a href="dm.html">Degital Marketing</a>
+                <a href="aw.html"  >Artical Writting</a>
+                <a href="dm.html" class="active" >Degital Marketing</a>
     </nav>
     <div class="toggle" onclick="toggleMenu()" id="toggleBtn">
       <div class="bar"></div>
@@ -77,36 +75,157 @@
     </div>
   </header>
      </section>
-    
+          <section class="who-we-are">
+          <div class="content">
+                  <h2>Who we Are</h2>               
+           <h3> WE are C.R.A.P.D</h3> 
+       <h4>C = Create, R = Real , A = Amazing , P =  Projects , D = Daily</h4>
+   <p>We help brands grow with powerful website design, video editing, graphic design, article writing & more. Let’s work together!, Iam a Graphic Designer, Video Editor, Website Developer, Freelance Designer India, Article Writter, Digital Marketing,  
+            </p>
+        </div>
+    </section>
 
- 
-<!-- About Me Section -->
-  <div class="aabout-container">
-    <div class="aabout-text">
-      <h1>Who Am I?</h1>
-      <p>
-        I’m <span class="highlight">Shekhar Tyagi</span>, a passionate web developer and designer. I create
-        <span class="highlight">responsive</span>, <span class="highlight">interactive</span>, and visually appealing websites that leave a lasting impression.
-        <br><br>
-        My focus is delivering high-quality, modern designs that are both functional and beautiful, helping clients stand out in the digital world.
-      </p>
-    </div>
-    <div class="aabout-image">
-      <img src="GD3.png" alt="Shekhar Tyagi" />
-    </div>
-  </div>
-   <!-- Social Media Section -->
-<div class="social-section">
-    <h2>Let's Get Social</h2>
-    <div class="footer-icons">
-      <a href="#" title="Instagram"><img src="S1.jpg" alt="Instagram"></a>
-        <a href="#" title="Facebook"><img src="S2.jpg" alt="Facebook"></a>
-        <a href="#" title="X Accout"><img src="S3.jpg" alt="X Accout"></a>
-        <a href="#" title="Youtube"><img src="S4.jpg" alt="Youtube"></a>         
-</div>
- </div>
 
-  
+    <style>
+        /* General Reset */
+       body, h1, h2, p, button {
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+    }
+
+    #card-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 30px;
+      margin: 50px auto;
+      width: 100%;
+    }
+
+    .team-card {
+      width: 100%;
+      max-width: 1500px;
+      height: 600px;
+      background: transparent;
+      border-radius: 30px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      padding: 30px;
+      text-align: center;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .team-card:hover {
+      transform: translateY(-12px);
+      box-shadow: 0 18px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    .team-card h1 {
+      font-size: 2.5rem;
+      color: white;
+      text-transform: uppercase;
+      font-weight: bold;
+      letter-spacing: 2px;
+      text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
+    }
+
+    .team-card h2 {
+      color: #fff;
+      font-size: 1.8rem;
+      margin-top: 10px;
+    }
+
+    .team-card p {
+      font-size: 1.2rem;
+      color: #f0f0f0;
+      margin: 15px 0;
+      line-height: 1.6;
+    }
+
+    .btn {
+      background: linear-gradient(135deg, #ff416c, #ff4b2b);
+      color: white;
+      font-size: 1.2rem;
+      padding: 14px 36px;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .btn:hover {
+      background: linear-gradient(135deg, #e94057, #f27121);
+      transform: scale(1.07);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    .card-img {
+      width: 100%;
+      height: 300px;
+      border-radius: 20px;
+      object-fit: cover;
+      margin-bottom: 20px;
+    }
+
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 15px;
+    }
+
+    .social-icons img {
+      width: 35px;
+      height: 35px;
+      transition: transform 0.3s;
+      border-radius: 50%;
+    }
+
+    .social-icons img:hover {
+      transform: scale(1.25);
+    }
+
+    @media (max-width: 768px) {
+      .team-card {
+        height: auto;
+        max-width: 95%;
+        padding: 15px;
+      }
+
+      .card-img {
+        max-height: 220px;
+      }
+
+      .team-card h1 {
+        font-size: 1.8rem;
+      }
+
+      .team-card h2 {
+        font-size: 1.4rem;
+      }
+
+      .team-card p {
+        font-size: 1rem;
+      }
+
+      .btn {
+        font-size: 1rem;
+        padding: 10px 22px;
+      }
+    }
+    </style>
+
+
+    <!-- Card Container -->
+    <div id="card-container"></div> <!-- The card will be generated here dynamically -->
+
+            
+
 <footer>
         <div class="footer-container">
             <div class="footer-section">
@@ -122,7 +241,7 @@
            <a href="dm.html" title="Digital Marketing"><img src="H7.jpg" alt=""></a>
          </div>
 
-       Social Media Icons 
+        <!-- Social Media Icons 
          <div class="footer-icons">
         <a href="#" title="Instagram"><img src="S1.jpg" alt="Instagram"></a>
         <a href="#" title="Facebook"><img src="S2.jpg" alt="Facebook"></a>
@@ -132,11 +251,83 @@
         <a href="#" title="Shine.Com"><img src="S6.jpg" alt="Shine.Com"></a>
         <a href="#" title="LinkedIn.Com"><img src="S7.jpg" alt="LinkedIn.Com"></a>
 
-    </div>
+    </div>-->
             </div>
         </div>
         <p>&copy; 2025   Shekhar Tyagi All Rights Reserved. </p>   
     </footer>
+     <script>
+ document.addEventListener("DOMContentLoaded", function () {
+      const cardContainer = document.getElementById("card-container");
+      const teamMembers = [
+        {
+          name: "Shekhar Tyagi Insha",
+          role: "Founder",
+          image: "mp.png",
+          description:
+            "John is the driving force behind the team, with exceptional leadership and organizational skills.",
+          buttonText: "Connect with John",
+        },
+        {
+          name: "Jane Smith",
+          role: "Lead Designer",
+          image: "https://via.placeholder.com/1500x300?text=Jane",
+          description:
+            "Jane crafts visually stunning designs that leave a lasting impression on clients.",
+          buttonText: "See her work",
+        },
+        {
+          name: "Alex Brown",
+          role: "Developer",
+          image: "https://via.placeholder.com/1500x300?text=Alex",
+          description:
+            "Alex builds robust and scalable systems that ensure everything works smoothly.",
+          buttonText: "Explore projects",
+        },
+      ];
+
+      teamMembers.forEach((member) => {
+        const card = document.createElement("div");
+        card.classList.add("team-card");
+
+        const img = document.createElement("img");
+        img.src = member.image;
+        img.alt = member.name;
+        img.classList.add("card-img");
+
+        const cardTitle = document.createElement("h1");
+        cardTitle.textContent = member.name;
+
+        const cardRole = document.createElement("h2");
+        cardRole.textContent = member.role;
+
+        const cardDescription = document.createElement("p");
+        cardDescription.textContent = member.description;
+
+        const button = document.createElement("button");
+        button.classList.add("btn");
+        button.textContent = member.buttonText;
+
+        const socialIcons = document.createElement("div");
+        socialIcons.classList.add("social-icons");
+        socialIcons.innerHTML = `
+          <a href="#"><img src="S1.jpg" alt="Instagram"></a>
+          <a href="#"><img src="S2.jpg" alt="Facebook"></a>
+          <a href="#"><img src="S3.jpg" alt="X"></a>
+          <a href="#"><img src="S4.jpg" alt="YouTube"></a>
+        `;
+
+        card.appendChild(img);
+        card.appendChild(cardTitle);
+        card.appendChild(cardRole);
+        card.appendChild(cardDescription);
+        card.appendChild(button);
+        card.appendChild(socialIcons);
+
+        cardContainer.appendChild(card);
+      });
+    });
+</script>
  <script src="script.js" defer></script>
 </body>
  
