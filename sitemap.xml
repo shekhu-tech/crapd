@@ -7,6 +7,12 @@
     <priority>1.0</priority>
   </url>
   
+  <!-- Website Designing Page -->
+  <url>
+    <loc>https://www.crapd.in/wd.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
   <!-- Graphic Designing Page -->
   <url>
     <loc>https://www.crapd.in/gd.html</loc>
@@ -20,14 +26,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-
-  <!-- Website Designing Page -->
-  <url>
-    <loc>https://www.crapd.in/wd.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
+  
   <!-- Office Related Work Page -->
   <url>
     <loc>https://www.crapd.in/orw.html</loc>
