@@ -1,8 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Home Page -->
   <url>
-    <loc>https://shekhu-tech.github.io/shekhartyagi-portfolio/</loc>
+    <loc>https://www.crapd.in/index.html</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+  </url>
+  
+  <!-- Graphic Designing Page -->
+  <url>
+    <loc>https://www.crapd.in/gd.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Video Editing Page -->
+  <url>
+    <loc>https://www.crapd.in/ve.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Website Designing Page -->
+  <url>
+    <loc>https://www.crapd.in/wd.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Office Related Work Page -->
+  <url>
+    <loc>https://www.crapd.in/orw.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Article Writing Page -->
+  <url>
+    <loc>https://www.crapd.in/aw.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Digital Marketing Page -->
+  <url>
+    <loc>https://www.crapd.in/dm.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- About Me Page -->
+  <url>
+    <loc>https://www.crapd.in/aboutme.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Privacy Policy Page -->
+  <url>
+    <loc>https://www.crapd.in/privacy.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
 </urlset>
