@@ -13,33 +13,45 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <!-- Subpages Under Website Designing Page -->
+  <url>
+  <loc>https://www.crapd.in/gd-allweb.html</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.7</priority>
+</url>
+
+
+
+  
   <!-- Graphic Designing Page -->
   <url>
     <loc>https://www.crapd.in/gd.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+   <!-- Subpages Under Graphic Designing Page -->
+  <url>
+  <loc>https://www.crapd.in/gd-allgd.html</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.7</priority>
+</url>
 
+
+  
   <!-- Video Editing Page -->
   <url>
     <loc>https://www.crapd.in/ve.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-  
-  <!-- Office Related Work Page -->
+   <!-- Subpages Under Video Editing Page -->
   <url>
-    <loc>https://www.crapd.in/orw.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
+  <loc>https://www.crapd.in/gd-allved.html</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.7</priority>
+</url>
 
-  <!-- Article Writing Page -->
-  <url>
-    <loc>https://www.crapd.in/aw.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
+
 
   <!-- Digital Marketing Page -->
   <url>
@@ -47,6 +59,40 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+      <!-- Subpages Under Digital Marketing Page -->
+  <url>
+  <loc>https://www.crapd.in/gd-dgtmktng.html</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.7</priority>
+   </url>
+
+  
+  
+  <!-- Portal Handling -->
+  <url>
+    <loc>https://www.crapd.in/portals.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+    <!-- Subpages Under Portal Handling Page -->
+    <url>
+  <loc>https://www.crapd.in/portals-jobprtls.html</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.7</priority>
+   </url>
+  <url>
+  <loc>https://www.crapd.in/portals-ecmrcprtl.html</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.7</priority>
+   </url>
+  
+<!-- Mehandi page -->
+ <url>
+    <loc>https://www.crapd.in/https://shekhu-tech.github.io/tamannaSharmaSonipat/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
 
   <!-- About Me Page -->
   <url>
