@@ -17,7 +17,7 @@
   </url>
   <!-- Subpages Under Website Designing Page -->
   <url>
-  <loc>https://www.crapd.in/gd-allweb.html</loc>
+  <loc>https://www.crapd.in/wd/allweb.html</loc>
   <changefreq>monthly</changefreq>
   <priority>0.7</priority>
 </url>
@@ -33,7 +33,7 @@
   </url>
    <!-- Subpages Under Graphic Designing Page -->
   <url>
-  <loc>https://www.crapd.in/gd-allgd.html</loc>
+  <loc>https://www.crapd.in/gd/allgd.html</loc>
   <changefreq>monthly</changefreq>
   <priority>0.7</priority>
 </url>
@@ -48,7 +48,7 @@
   </url>
    <!-- Subpages Under Video Editing Page -->
   <url>
-  <loc>https://www.crapd.in/gd-allved.html</loc>
+  <loc>https://www.crapd.in/ve/allved.html</loc>
   <changefreq>monthly</changefreq>
   <priority>0.7</priority>
 </url>
@@ -63,7 +63,7 @@
   </url>
       <!-- Subpages Under Digital Marketing Page -->
   <url>
-  <loc>https://www.crapd.in/gd-dgtmktng.html</loc>
+  <loc>https://www.crapd.in/dm/dgtmktng.html</loc>
   <changefreq>monthly</changefreq>
   <priority>0.7</priority>
    </url>
@@ -78,12 +78,12 @@
   </url>
     <!-- Subpages Under Portal Handling Page -->
     <url>
-  <loc>https://www.crapd.in/portals-jobprtls.html</loc>
+  <loc>https://www.crapd.in/portals/jobprtls.html</loc>
   <changefreq>monthly</changefreq>
   <priority>0.7</priority>
    </url>
   <url>
-  <loc>https://www.crapd.in/portals-ecmrcprtl.html</loc>
+  <loc>https://www.crapd.in/portals/ecmrcprtl.html</loc>
   <changefreq>monthly</changefreq>
   <priority>0.7</priority>
    </url>
