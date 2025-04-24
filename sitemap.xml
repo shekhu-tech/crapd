@@ -3,72 +3,72 @@
 
   <!-- Home Page -->
   <url>
-    <loc>https://www.crapd.in/</loc>
+    <loc>https://crapd.in/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
   <!-- Website Designing -->
   <url>
-    <loc>https://www.crapd.in/wd.html</loc>
+    <loc>https://crapd.in/wd.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.crapd.in/wd/allweb.html</loc>
+    <loc>https://crapd.in/wd/allweb.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <!-- Graphic Designing -->
   <url>
-    <loc>https://www.crapd.in/gd.html</loc>
+    <loc>https://crapd.in/gd.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.crapd.in/gd/allgd.html</loc>
+    <loc>https://crapd.in/gd/allgd.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <!-- Video Editing -->
   <url>
-    <loc>https://www.crapd.in/ve.html</loc>
+    <loc>https://crapd.in/ve.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.crapd.in/ve/allved.html</loc>
+    <loc>https://crapd.in/ve/allved.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <!-- Digital Marketing -->
   <url>
-    <loc>https://www.crapd.in/dm.html</loc>
+    <loc>https://crapd.in/dm.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.crapd.in/dm/dgtmktng.html</loc>
+    <loc>https://crapd.in/dm/dgtmktng.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <!-- Portal Handling -->
   <url>
-    <loc>https://www.crapd.in/portals.html</loc>
+    <loc>https://crapd.in/portals.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.crapd.in/portals/jobprtls.html</loc>
+    <loc>https://crapd.in/portals/jobprtls.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.crapd.in/portals/ecmrcprtl.html</loc>
+    <loc>https://crapd.in/portals/ecmrcprtl.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -82,14 +82,14 @@
 
   <!-- About Me Page -->
   <url>
-    <loc>https://www.crapd.in/aboutme.html</loc>
+    <loc>https://crapd.in/aboutme.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <!-- Privacy Policy -->
   <url>
-    <loc>https://www.crapd.in/privacy.html</loc>
+    <loc>https://crapd.in/privacy.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
