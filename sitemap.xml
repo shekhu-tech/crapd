@@ -1,100 +1,85 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <link rel="canonical" href="https://www.crapd.in/" />
 
   <!-- Home Page -->
   <url>
-    <loc>https://www.crapd.in/index.html</loc>
+    <loc>https://www.crapd.in/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
-  
-  <!-- Website Designing Page -->
+
+  <!-- Website Designing -->
   <url>
     <loc>https://www.crapd.in/wd.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-  <!-- Subpages Under Website Designing Page -->
   <url>
-  <loc>https://www.crapd.in/wd/allweb.html</loc>
-  <changefreq>monthly</changefreq>
-  <priority>0.7</priority>
-</url>
+    <loc>https://www.crapd.in/wd/allweb.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 
-
-
-  
-  <!-- Graphic Designing Page -->
+  <!-- Graphic Designing -->
   <url>
     <loc>https://www.crapd.in/gd.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-   <!-- Subpages Under Graphic Designing Page -->
   <url>
-  <loc>https://www.crapd.in/gd/allgd.html</loc>
-  <changefreq>monthly</changefreq>
-  <priority>0.7</priority>
-</url>
+    <loc>https://www.crapd.in/gd/allgd.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 
-
-  
-  <!-- Video Editing Page -->
+  <!-- Video Editing -->
   <url>
     <loc>https://www.crapd.in/ve.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-   <!-- Subpages Under Video Editing Page -->
   <url>
-  <loc>https://www.crapd.in/ve/allved.html</loc>
-  <changefreq>monthly</changefreq>
-  <priority>0.7</priority>
-</url>
+    <loc>https://www.crapd.in/ve/allved.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 
-
-
-  <!-- Digital Marketing Page -->
+  <!-- Digital Marketing -->
   <url>
     <loc>https://www.crapd.in/dm.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-      <!-- Subpages Under Digital Marketing Page -->
   <url>
-  <loc>https://www.crapd.in/dm/dgtmktng.html</loc>
-  <changefreq>monthly</changefreq>
-  <priority>0.7</priority>
-   </url>
+    <loc>https://www.crapd.in/dm/dgtmktng.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 
-  
-  
   <!-- Portal Handling -->
   <url>
     <loc>https://www.crapd.in/portals.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-    <!-- Subpages Under Portal Handling Page -->
-    <url>
-  <loc>https://www.crapd.in/portals/jobprtls.html</loc>
-  <changefreq>monthly</changefreq>
-  <priority>0.7</priority>
-   </url>
   <url>
-  <loc>https://www.crapd.in/portals/ecmrcprtl.html</loc>
-  <changefreq>monthly</changefreq>
-  <priority>0.7</priority>
-   </url>
-  
-<!-- Mehandi page -->
- <url>
-    <loc>https://www.crapd.in/https://shekhu-tech.github.io/tamannaSharmaSonipat/</loc>
+    <loc>https://www.crapd.in/portals/jobprtls.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.crapd.in/portals/ecmrcprtl.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Mehandi Page (External Link Removed) -->
+  <!-- You had an invalid link: a nested URL inside your domain. Fix below: -->
+  <url>
+    <loc>https://shekhu-tech.github.io/tamannaSharmaSonipat/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-  
 
   <!-- About Me Page -->
   <url>
@@ -103,10 +88,11 @@
     <priority>0.8</priority>
   </url>
 
-  <!-- Privacy Policy Page -->
+  <!-- Privacy Policy -->
   <url>
     <loc>https://www.crapd.in/privacy.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
+
 </urlset>
