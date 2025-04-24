@@ -73,13 +73,12 @@
     <priority>0.7</priority>
   </url>
 
-  <!-- Mehandi Page (External Link Removed) -->
-  <!-- You had an invalid link: a nested URL inside your domain. Fix below: -->
+  <!-- Mehandi Page 
   <url>
-    <loc>https://www.crapd.in/</loc>
+    <loc>https://www.crapd.in/index.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-  </url>
+  </url> --> 
 
   <!-- About Me Page -->
   <url>
