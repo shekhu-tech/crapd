@@ -73,12 +73,12 @@
     <priority>0.7</priority>
   </url>
 
-  <!-- Chose Your Website -->
+  <!-- Chose Your Website 
   <url>
     <loc>https://www.crapd.in/index.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-  </url> 
+  </url> -->
 
   <!-- About Me Page -->
   <url>
