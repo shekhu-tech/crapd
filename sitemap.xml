@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <!-- Home Page -->
   <url>
     <loc>https://crapd.in/index.html</loc>
+    <lastmod>2025-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -11,11 +12,13 @@
   <!-- Website Designing -->
   <url>
     <loc>https://crapd.in/wd.html</loc>
+    <lastmod>2025-05-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://crapd.in/wd/allweb.html</loc>
+    <lastmod>2025-05-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -23,11 +26,13 @@
   <!-- Graphic Designing -->
   <url>
     <loc>https://crapd.in/gd.html</loc>
+    <lastmod>2025-05-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://crapd.in/gd/allgd.html</loc>
+    <lastmod>2025-05-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -35,11 +40,13 @@
   <!-- Video Editing -->
   <url>
     <loc>https://crapd.in/ve.html</loc>
+    <lastmod>2025-05-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://crapd.in/ve/allved.html</loc>
+    <lastmod>2025-05-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -47,11 +54,13 @@
   <!-- Digital Marketing -->
   <url>
     <loc>https://crapd.in/dm.html</loc>
+    <lastmod>2025-05-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://crapd.in/dm/dgtmktng.html</loc>
+    <lastmod>2025-05-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -59,30 +68,27 @@
   <!-- Portal Handling -->
   <url>
     <loc>https://crapd.in/portals.html</loc>
+    <lastmod>2025-05-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://crapd.in/portals/jobprtls.html</loc>
+    <lastmod>2025-05-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://crapd.in/portals/ecmrcprtl.html</loc>
+    <lastmod>2025-05-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
-  <!-- Chose Your Website 
-  <url>
-    <loc>https://www.crapd.in/index.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url> -->
-
   <!-- About Me Page -->
   <url>
     <loc>https://crapd.in/aboutme.html</loc>
+    <lastmod>2025-05-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -90,6 +96,7 @@
   <!-- Privacy Policy -->
   <url>
     <loc>https://crapd.in/privacy.html</loc>
+    <lastmod>2025-05-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
