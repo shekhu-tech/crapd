@@ -89,7 +89,8 @@
       transform: rotate(-45deg); top: 21px;
     }
 
-    @media (max-width: 768px) {
+/* Mobile Sidebar */
+    @media (max-width: 1200px) {
       nav {
         position: absolute;
         top: 90px;
