@@ -45,11 +45,11 @@ whatsappButton.innerHTML = '💬'; // Or use an icon
 document.body.appendChild(whatsappButton);
 
 
-const icon = document.createElement('img');
-icon.src = 'https://img.icons8.com/ios-filled/50/ffffff/whatsapp.png';
-icon.alt = 'WhatsApp';
-whatsappButton.appendChild(icon);
-document.body.appendChild(whatsappButton);
+// const icon = document.createElement('img');
+//icon.src = 'https://img.icons8.com/ios-filled/50/ffffff/whatsapp.png';
+//icon.alt = 'WhatsApp';
+//whatsappButton.appendChild(icon);
+//document.body.appendChild(whatsappButton); --> 
 
 // Call Floating Button
 const callButton = document.createElement('a');
