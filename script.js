@@ -33,23 +33,12 @@ function changeColor() {
 changeColor();
 setInterval(changeColor, 20000);
 
-// WhatsApp Floating Button
-const whatsappButton = document.createElement('a');
-const message = encodeURIComponent("Hi, I'm interested in your product!");
-whatsappButton.href = `https://wa.me/918395913829?text=${message}`;
-whatsappButton.target = '_blank';
-whatsappButton.id = 'whatsapp-button';
-whatsappButton.title = 'Chat on WhatsApp';
-whatsappButton.innerHTML = '💬'; // Or use an icon
-// Add styling and append as shown before
-document.body.appendChild(whatsappButton);
-
-
-// const icon = document.createElement('img');
-//icon.src = 'https://img.icons8.com/ios-filled/50/ffffff/whatsapp.png';
-//icon.alt = 'WhatsApp';
-//whatsappButton.appendChild(icon);
-//document.body.appendChild(whatsappButton); --> 
+// WhatsApp Floating ButtoN
+const icon = document.createElement('img');
+icon.src = 'https://img.icons8.com/ios-filled/50/ffffff/whatsapp.png';
+icon.alt = 'WhatsApp';
+whatsappButton.appendChild(icon);
+document.body.appendChild(whatsappButton); --> 
 
 // Call Floating Button
 const callButton = document.createElement('a');
