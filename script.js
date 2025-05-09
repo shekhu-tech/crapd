@@ -34,11 +34,18 @@ changeColor();
 setInterval(changeColor, 20000);
 
 // WhatsApp Floating ButtoN
+// WhatsApp Floating Button
+const whatsappButton = document.createElement('a');
+whatsappButton.href = 'https://wa.me/918395913829';
+whatsappButton.target = '_blank';
+whatsappButton.id = 'whatsapp-button';
+whatsappButton.title = 'Chat on WhatsApp';
+
 const icon = document.createElement('img');
 icon.src = 'https://img.icons8.com/ios-filled/50/ffffff/whatsapp.png';
 icon.alt = 'WhatsApp';
 whatsappButton.appendChild(icon);
-document.body.appendChild(whatsappButton); --> 
+document.body.appendChild(whatsappButton);
 
 // Call Floating Button
 const callButton = document.createElement('a');
@@ -120,6 +127,15 @@ document.getElementById('contactForm').addEventListener('submit', function (e) {
       alert('Error: ' + error.message);
     });
 });
+
+// Card Click Toggle
+document.querySelectorAll('.card').forEach(card => {
+  card.addEventListener('click', () => {
+    card.classList.toggle('open');
+  });
+});
+
+
 
 // Card Click Toggle
 document.querySelectorAll('.card').forEach(card => {
