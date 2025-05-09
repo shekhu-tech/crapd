@@ -315,6 +315,20 @@ nav a.active::after {
     text-transform: uppercase;
     letter-spacing: 2px;
   }
+ .who-we-are h3 {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 0px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+ .who-we-are h2 {
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 0px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
  
   /* Paragraph Style */
   .who-we-are p {
