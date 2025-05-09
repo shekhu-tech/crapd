@@ -309,21 +309,21 @@ nav a.active::after {
 
   /* Heading Style */
   .who-we-are h2 {
-    font-size: 18px;
+    font-size: 16px;
     font-weight: bold;
     margin-bottom: 0px;
     text-transform: uppercase;
     letter-spacing: 2px;
   }
  .who-we-are h3 {
-    font-size: 14px;
+    font-size: 122px;
     font-weight: bold;
     margin-bottom: 0px;
     text-transform: uppercase;
     letter-spacing: 2px;
   }
  .who-we-are h2 {
-    font-size: 12px;
+    font-size: 10px;
     font-weight: bold;
     margin-bottom: 0px;
     text-transform: uppercase;
