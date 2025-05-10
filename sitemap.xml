@@ -3,7 +3,7 @@
 
   <!-- Home Page -->
   <url>
-    <loc>https://crapd.in/index.html</loc>
+    <loc>https://crapd.in</loc>
     <lastmod>2025-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
@@ -17,11 +17,11 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://crapd.in/wd/allweb.html</loc>
+    <!--<loc>https://crapd.in/wd/allweb.html</loc>
     <lastmod>2025-05-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-  </url>
+  </url>-->
 
   <!-- Graphic Designing -->
   <url>
@@ -30,12 +30,12 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-  <url>
+ <!-- <url>
     <loc>https://crapd.in/gd/allgd.html</loc>
     <lastmod>2025-05-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-  </url>
+  </url>-->
 
   <!-- Video Editing -->
   <url>
@@ -44,12 +44,12 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-  <url>
+   <!-- <url>
     <loc>https://crapd.in/ve/allved.html</loc>
     <lastmod>2025-05-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-  </url>
+  </url>-->
 
   <!-- Digital Marketing -->
   <url>
@@ -58,12 +58,12 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-  <url>
+  <!-- <url>
     <loc>https://crapd.in/dm/dgtmktng.html</loc>
     <lastmod>2025-05-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-  </url>
+  </url> -->
 
   <!-- Portal Handling -->
   <url>
@@ -72,7 +72,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-  <url>
+ <!--  <url>
     <loc>https://crapd.in/portals/jobprtls.html</loc>
     <lastmod>2025-05-01</lastmod>
     <changefreq>monthly</changefreq>
@@ -83,7 +83,7 @@
     <lastmod>2025-05-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-  </url>
+  </url>-->
 
   <!-- About Me Page -->
   <url>
