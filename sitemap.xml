@@ -16,12 +16,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-  <url>
-    <!--<loc>https://crapd.in/wd/allweb.html</loc>
-    <lastmod>2025-05-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>-->
+  <!-- Not included: https://crapd.in/wd/allweb.html -->
 
   <!-- Graphic Designing -->
   <url>
@@ -30,12 +25,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
- <!-- <url>
-    <loc>https://crapd.in/gd/allgd.html</loc>
-    <lastmod>2025-05-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>-->
+  <!-- Not included: https://crapd.in/gd/allgd.html -->
 
   <!-- Video Editing -->
   <url>
@@ -44,12 +34,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-   <!-- <url>
-    <loc>https://crapd.in/ve/allved.html</loc>
-    <lastmod>2025-05-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>-->
+  <!-- Not included: https://crapd.in/ve/allved.html -->
 
   <!-- Digital Marketing -->
   <url>
@@ -58,12 +43,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-  <!-- <url>
-    <loc>https://crapd.in/dm/dgtmktng.html</loc>
-    <lastmod>2025-05-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url> -->
+  <!-- Not included: https://crapd.in/dm/dgtmktng.html -->
 
   <!-- Portal Handling -->
   <url>
@@ -72,18 +52,10 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
- <!--  <url>
-    <loc>https://crapd.in/portals/jobprtls.html</loc>
-    <lastmod>2025-05-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://crapd.in/portals/ecmrcprtl.html</loc>
-    <lastmod>2025-05-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>-->
+  <!-- Not included:
+    https://crapd.in/portals/jobprtls.html
+    https://crapd.in/portals/ecmrcprtl.html
+  -->
 
   <!-- About Me Page -->
   <url>
