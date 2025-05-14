@@ -73,70 +73,10 @@
      <section>
  <header>
     <div class="logo">
-  <a href="index.html">
-    <img src="STI.png" alt="shekhar Tyagi" class="logo-img">
+  <a href="#">
+   <img src="STI.png" alt="" style="height: 35px;">
   </a>
-  <div class="datetime-container">
-    <span id="datetime"></span>
-  </div>
 </div>
-
-<style>
-  /* Logo styling */
-  .logo-img {
-    height: 37px;
-    display: block;
-    margin-bottom: 0px; /* Reduced from 2px to 0px */
-  }
-
-  @media (min-width: 768px) {
-    .logo-img {
-      height: 45px;
-    }
-  }
-
-  /* Date time styling */
-  .datetime-container {
-    text-align: center;
-    font-size: 12px;
-    font-weight: bold;
-    color: white;
-    padding: 1px; /* Reduced padding */
-    margin-top: -3px; /* Optional: pull it up closer to the logo */
-  }
-
-  @media (min-width: 768px) {
-    .datetime-container {
-      font-size: 12px;
-    }
-  }
-
-  @media (max-width: 400px) {
-    .datetime-container {
-      font-size: 8px;
-    }
-  }
-</style>
-
-<script>
-  function updateDateTime() {
-    const now = new Date();
-    const options = { 
-      weekday: 'short',
-      year: 'numeric',
-      month: 'short',
-      day: 'numeric',
-      hour: '2-digit',
-      minute: '2-digit',
-      second: '2-digit',
-      hour12: true 
-    };
-    document.getElementById('datetime').textContent = now.toLocaleDateString('en-US', options);
-  }
-
-  updateDateTime();
-  setInterval(updateDateTime, 1000);
-</script>
 
     <nav id="nav">
                 <!-- Stylish Dropdown -->
