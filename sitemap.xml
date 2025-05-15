@@ -11,55 +11,47 @@
 
   <!-- Website Designing -->
   <url>
-    <loc>https://crapd.in/wd.html</loc>
+    <loc>https://crapd.in/wd</loc>
     <lastmod>2025-05-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-  <!-- Not included: https://crapd.in/wd/allweb.html -->
 
   <!-- Graphic Designing -->
   <url>
-    <loc>https://crapd.in/gd.html</loc>
+    <loc>https://crapd.in/gd</loc>
     <lastmod>2025-05-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-  <!-- Not included: https://crapd.in/gd/allgd.html -->
 
   <!-- Video Editing -->
   <url>
-    <loc>https://crapd.in/ve.html</loc>
+    <loc>https://crapd.in/ve</loc>
     <lastmod>2025-05-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-  <!-- Not included: https://crapd.in/ve/allved.html -->
-
+  
   <!-- Digital Marketing -->
   <url>
-    <loc>https://crapd.in/dm.html</loc>
+    <loc>https://crapd.in/dm</loc>
     <lastmod>2025-05-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-  <!-- Not included: https://crapd.in/dm/dgtmktng.html -->
-
+  
   <!-- Portal Handling -->
   <url>
-    <loc>https://crapd.in/portals.html</loc>
+    <loc>https://crapd.in/portals</loc>
     <lastmod>2025-05-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-  <!-- Not included:
-    https://crapd.in/portals/jobprtls.html
-    https://crapd.in/portals/ecmrcprtl.html
-  -->
 
   <!-- About Me Page -->
   <url>
-    <loc>https://crapd.in/aboutme.html</loc>
+    <loc>https://crapd.in/aboutme</loc>
     <lastmod>2025-05-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -67,7 +59,7 @@
 
   <!-- Privacy Policy -->
   <url>
-    <loc>https://crapd.in/privacy.html</loc>
+    <loc>https://crapd.in/privacy</loc>
     <lastmod>2025-05-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
