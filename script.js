@@ -37,29 +37,29 @@ setInterval(changeColor, 20000);
 
 // WhatsApp Floating ButtoN
 // WhatsApp Floating Button
-const whatsappButton = document.createElement('a');
-whatsappButton.href = 'https://wa.me/918395913829';
-whatsappButton.target = '_blank';
-whatsappButton.id = 'whatsapp-button';
-whatsappButton.title = 'Chat on WhatsApp';
+//const whatsappButton = document.createElement('a');
+//whatsappButton.href = 'https://wa.me/918395913829';
+//whatsappButton.target = '_blank';
+//whatsappButton.id = 'whatsapp-button';
+//whatsappButton.title = 'Chat on WhatsApp';
 
-const icon = document.createElement('img');
-icon.src = 'https://img.icons8.com/ios-filled/50/ffffff/whatsapp.png';
-icon.alt = 'WhatsApp';
-whatsappButton.appendChild(icon);
-document.body.appendChild(whatsappButton);
+//const icon = document.createElement('img');
+//icon.src = 'https://img.icons8.com/ios-filled/50/ffffff/whatsapp.png';
+//icon.alt = 'WhatsApp';
+//whatsappButton.appendChild(icon);
+//document.body.appendChild(whatsappButton);
 
 // Call Floating Button
-const callButton = document.createElement('a');
-callButton.href = 'tel:+918395913829';
-callButton.id = 'call-button';
-callButton.title = 'Call Now';
+//const callButton = document.createElement('a');
+//callButton.href = 'tel:+918395913829';
+//callButton.id = 'call-button';
+//callButton.title = 'Call Now';
 
-const callIcon = document.createElement('img');
-callIcon.src = 'https://img.icons8.com/ios-filled/50/ffffff/phone.png';
-callIcon.alt = 'Call';
-callButton.appendChild(callIcon);
-document.body.appendChild(callButton);
+//const callIcon = document.createElement('img');
+//callIcon.src = 'https://img.icons8.com/ios-filled/50/ffffff/phone.png';
+//callIcon.alt = 'Call';
+//callButton.appendChild(callIcon);
+//document.body.appendChild(callButton);
 
 // Message Floating Button + Popup Form
 const msgBtn = document.createElement('button');
