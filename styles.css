@@ -462,24 +462,24 @@ nav a.active::after {
   cursor: pointer;
 }
 
-#whatsapp-button {
+/*#whatsapp-button {
   bottom: 180px;
 }
 
 #call-button {
   bottom: 140px;
-}
+}*/
 
 #message-button {
   bottom: 100px;
 }
 
-#whatsapp-button img,
+/*#whatsapp-button img,
 #call-button img,
 #message-button img {
   width: 32px;
   height: 32px;
-}
+}*/
 
 /* POPUP */
 #popupForm {
@@ -556,15 +556,15 @@ nav a.active::after {
     grid-template-columns: 1fr;
   }
 
-  #whatsapp-button,
-  #call-button,
+ /*#whatsapp-button,
+  #call-button,*/
   #message-button {
     right: 10px;
     padding: 10px;
   }
 
-  #whatsapp-button img,
-  #call-button img,
+ /* #whatsapp-button img,
+  #call-button img,*/
   #message-button img {
     width: 28px;
     height: 28px;
@@ -664,7 +664,7 @@ html, body {
 /* All buttons */
 
 /* WhatsApp Floating Button Styles */
-#whatsapp-button {
+/*#whatsapp-button {
   position: fixed;
   top: 40%;
   right: 7px;
@@ -691,15 +691,14 @@ html, body {
   transform: translateY(-50%) scale(1.1);
 }
 
-/* Call Button Style */
+/* Call Button Style 
 #call-button {
   position: fixed;
-  top: calc(37.8% + 70px); /* 70px below WhatsApp */
-  right: 7px;
+  top: calc(37.8% + 70px); /* 70px below WhatsApp 
   transform: translateY(-50%);
   width: 40px;
   height: 40px;
-  background-color: #007BFF; /* professional blue */
+  background-color: #007BFF; /* professional blue 
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -717,9 +716,8 @@ html, body {
 
 #call-button:hover {
   transform: translateY(-50%) scale(1.1);
-}
+}*/
 
-/* Message Button */
 /* Message Button (Orange with Glow) */
 #message-button {
   position: fixed;
