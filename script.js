@@ -7,7 +7,15 @@ function toggleMenu() {
 }
 
 // Dynamic background color change
-const colors = [ "#FF573399, #FF7A5C99, #FFA08A99, #CC462999, #99351F99, #FFFFFF99, #00000099"];
+const colors = [
+  "#FF573399",
+  "#FF7A5C99",
+  "#FFA08A99",
+  "#CC462999",
+  "#99351F99",
+  "#FFFFFF99",
+  "#00000099"
+];
 
 function changeColor() {
   const color = colors[Math.floor(Math.random() * colors.length)];
@@ -19,6 +27,9 @@ function changeColor() {
   const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6, p');
   headings.forEach(el => el.style.color = '#fff');
 }
+
+changeColor();
+setInterval(changeColor, 20000);
 
 changeColor();
 setInterval(changeColor, 20000);
