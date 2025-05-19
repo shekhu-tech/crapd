@@ -8,17 +8,19 @@ function toggleMenu() {
 
 // Dynamic background color change
 const colors = [
-  "#FF573399",
-  "#FF7A5C99",
-  "#FFA08A99",
-  "#CC462999",
-  "#99351F99",
-  "#FFFFFF99",
-  "#00000099"
+  "rgba(255, 87, 51, 0.6)",
+  "rgba(255, 122, 92, 0.6)",
+  "rgba(255, 160, 138, 0.6)",
+  "rgba(204, 70, 41, 0.6)",
+  "rgba(153, 53, 31, 0.6)",
+  "rgba(255, 255, 255, 0.6)",
+  "rgba(0, 0, 0, 0.6)"
 ];
 
 function changeColor() {
   const color = colors[Math.floor(Math.random() * colors.length)];
+  console.log("Color applied:", color);
+
   document.body.style.backgroundColor = color;
 
   const bg = document.querySelector('.background-shape');
@@ -28,8 +30,10 @@ function changeColor() {
   headings.forEach(el => el.style.color = '#fff');
 }
 
+console.log("changeColor script loaded");
 changeColor();
 setInterval(changeColor, 20000);
+
 
 // WhatsApp Floating ButtoN
 // WhatsApp Floating Button
