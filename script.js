@@ -31,9 +31,6 @@ function changeColor() {
 changeColor();
 setInterval(changeColor, 20000);
 
-changeColor();
-setInterval(changeColor, 20000);
-
 // WhatsApp Floating ButtoN
 // WhatsApp Floating Button
 const whatsappButton = document.createElement('a');
