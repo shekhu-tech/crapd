@@ -7,7 +7,7 @@ function toggleMenu() {
 }
 
 // Dynamic background color change
-const colors = [ "#FF5733", "#FF7A5C", "#FFA08A", "#CC4629", "#99351F", "#FFFFFF", "#000000"];
+const colors = [ "#FF573399, #FF7A5C99, #FFA08A99, #CC462999, #99351F99, #FFFFFF99, #00000099"];
 
 function changeColor() {
   const color = colors[Math.floor(Math.random() * colors.length)];
