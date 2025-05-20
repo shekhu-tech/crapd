@@ -22,6 +22,312 @@
   <meta name="robots" content="index, follow" />
 </head>
 <body>
+  </head>
+ 
+<body>
+ <main>
+     <section>
+ <header>
+    <div class="logo">
+  <a href="index.html">
+    <img src="STI.png" alt="shekhar Tyagi" class="logo-img">
+  </a>
+  <div class="datetime-container">
+    <span id="datetime"></span>
+  </div>
+</div>
+
+<style>
+  /* Logo styling */
+  .logo-img {
+    height: 35px;
+    display: block;
+    margin-bottom: 0px; /* Reduced from 2px to 0px */
+  }
+
+  @media (min-width: 768px) {
+    .logo-img {
+      height: 45px;
+    }
+  }
+
+  /* Date time styling */
+  .datetime-container {
+    text-align: center;
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+    padding: 1px; /* Reduced padding */
+    margin-top: -3px; /* Optional: pull it up closer to the logo */
+  }
+
+  @media (min-width: 768px) {
+    .datetime-container {
+      font-size: 8px;
+    }
+  }
+
+  @media (max-width: 400px) {
+    .datetime-container {
+      font-size: 8px;
+    }
+  }
+</style>
+
+<script>
+  function updateDateTime() {
+    const now = new Date();
+    const options = { 
+      weekday: 'short',
+      year: 'numeric',
+      month: 'short',
+      day: 'numeric',
+      hour: '2-digit',
+      minute: '2-digit',
+      second: '2-digit',
+      hour12: true 
+    };
+    document.getElementById('datetime').textContent = now.toLocaleDateString('en-US', options);
+  }
+
+  updateDateTime();
+  setInterval(updateDateTime, 1000);
+</script>
+
+
+    <nav id="nav">
+                <!-- Stylish Dropdown -->
+<div class="dropdown">
+  <a href="#" class="dropbtn">Graphics ▼</a>
+  <div class="dropdown-content">
+    <a href="allgd.html"><i class="fas fa-pen-nib"></i> Branding & Identity</a>
+    <a href="allgd.html"><i class="fas fa-bullhorn"></i> Marketing Design</a>
+    <a href="allgd.html"><i class="fas fa-desktop"></i> UI/UX Design</a>
+    <a href="allgd.html"><i class="fas fa-box-open"></i> Packaging Design</a>
+    <a href="allgd.html"><i class="fas fa-book-open"></i> Editorial Design</a>
+    <a href="allgd.html"><i class="fas fa-film"></i> Motion Graphics</a>
+  </div>
+</div>
+
+<!-- Font Awesome CDN for icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+<!-- Dropdown CSS -->
+<style>
+
+/* Dropdown Content */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(15px);
+  border-radius: 16px;
+  overflow: hidden;
+  min-width: 280px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+  animation: fadeIn 0.4s ease;
+  z-index: 100;
+  margin-top: 10px;
+}
+
+.dropdown-content a {
+  color: #fff;
+  padding: 14px 20px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 16px;
+  transition: background 0.3s ease;
+}
+
+.dropdown-content a:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* Show menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Animate */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+</style>
+
+                <div class="dropdown">
+  <a href="#" class="dropbtn">Video Editing ▼</a>
+  <div class="dropdown-content">
+    <a href="allved.html" class="heading-linear"><i class="fas fa-film"></i> Linear Editing</a>
+<a href="allved.html" class="heading-nle"><i class="fas fa-edit"></i> Non-Linear Editing (NLE)</a>
+<a href="allved.html" class="heading-montage"><i class="fas fa-clapperboard"></i> Montage Editing</a>
+<a href="allved.html" class="heading-color"><i class="fas fa-palette"></i> Color Grading & Correction</a>
+<a href="allved.html" class="heading-broll"><i class="fas fa-video"></i> Cutaway & B-roll Editing</a>
+<a href="allved.html" class="heading-vfx"><i class="fas fa-magic"></i> Motion Graphics & VFX Editing</a>
+</div>
+</div>
+                <div class="dropdown">
+  <a href="#" class="dropbtn">Websites ▼</a>
+  <div class="dropdown-content">
+    <a href="allweb.html" class="heading-static"><i class="fas fa-globe"></i> Static Website</a>
+<a href="allweb.html" class="heading-dynamic"><i class="fas fa-sync-alt"></i> Dynamic Website</a>
+<a href="allweb.html" class="heading-ecommerce"><i class="fas fa-shopping-cart"></i> E-commerce Website</a>
+<a href="allweb.html" class="heading-portfolio"><i class="fas fa-user"></i> Portfolio Website</a>
+<a href="allweb.html" class="heading-corporate"><i class="fas fa-building"></i> Corporate Website</a>
+<a href="allweb.html" class="heading-webapp"><i class="fas fa-laptop-code"></i> Web Application</a>
+  </div>
+</div>
+                <div class="dropdown">
+  <a href="#" class="dropbtn">Portals ▼</a>
+  <div class="dropdown-content">
+    <a href="jobprtls.html" class="heading-static"><i class="fas fa-globe"></i>Job Portals</a>
+<a href="ecmrcprtl" class="heading-dynamic"><i class="fas fa-sync-alt"></i>E-Commerce Portals</a>
+  </div>
+</div>
+                <div class="dropdown">
+  <a href="#" class="dropbtn">Digital Marketing ▼</a>
+  <div class="dropdown-content">
+    <a href="dgtlmktng.html" class="heading-seo"><i class="fas fa-search"></i> Search Engine Optimization (SEO)</a>
+    <a href="dgtlmktng.html" class="heading-content"><i class="fas fa-file-alt"></i> Content Marketing</a>
+    <a href="dgtlmktng.html" class="heading-social"><i class="fab fa-facebook"></i> Social Media Marketing</a>
+    <a href="dgtlmktng.html" class="heading-email"><i class="fas fa-envelope"></i> Email Marketing</a>
+    <a href="dgtlmktng.html" class="heading-ppc"><i class="fas fa-bullhorn"></i> Pay-Per-Click (PPC) Advertising</a>
+    <a href="dgtlmktng.html" class="heading-influencer"><i class="fas fa-user-friends"></i> Influencer Marketing</a>
+  </div>
+</div>           
+    </nav>
+    <div class="toggle" onclick="toggleMenu()" id="toggleBtn">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+</header>
+</section>
+
+
+         <section class="who-we-are">
+          <div class="content">
+                  <h2>Top 10 Summer Travel Destinations for 2025 – Budget-Friendly Picks </h2>              
+        </div>
+           </section>
+   
+  
+                    
+  <style>
+    :root {
+      --primary: #2a5dfc;
+      --container-bg:#808080B2;
+      --accent-bg: #f0f4ff;
+      --text-primary: #222;
+      --text-secondary: #555;
+      --border-color: #d0d7ff;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+   
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      background: var(--container-bg);
+      padding: 40px 30px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+      border-radius: 16px;
+      border: 1px solid var(--border-color);
+      text-align: center; /* Center all text inside container */
+    }
+
+    h1 {
+      font-size: 2.8rem;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 24px;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+    }
+
+    h2 {
+      font-size: 1.9rem;
+      font-weight: 700;
+      margin: 48px 0 16px;
+      border-left: none; /* Remove border for better centering */
+      padding-left: 0;
+      color: var(--text-primary);
+      display: inline-block; /* To avoid full width */
+    }
+
+    h3 {
+      font-size: 1.4rem;
+      margin-top: 28px;
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+
+    p {
+      margin-top: 16px;
+      font-size: 1rem;
+      color: var(--text-secondary);
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    ul {
+      margin: 16px auto 16px;
+      padding-left: 0;
+      list-style-position: inside;
+      display: inline-block; /* Center the whole list block */
+      text-align: left; /* Keep bullets aligned left inside the block */
+      color: var(--text-secondary);
+      max-width: 600px;
+    }
+
+    a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    a:hover,
+    a:focus {
+      text-decoration: underline;
+      color: #1a40c9;
+    }
+
+    /* Featured image styling */
+    .featured-image {
+      width: 100%;
+      max-width: 900px;
+      border-radius: 12px;
+      margin-bottom: 32px;
+      box-shadow: 0 6px 18px rgba(42, 93, 252, 0.15);
+      object-fit: cover;
+      max-height: 400px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* Highlight box */
+    .highlight {
+      background: var(--accent-bg);
+      padding: 20px 24px;
+      border-left: none; /* remove left border */
+      margin: 32px auto;
+      border-radius: 8px;
+      color: var(--text-primary);
+      font-weight: 600;
+      font-size: 1.1rem;
+      max-width: 700px;
+    }
+  </style>
   <article>
     <header>
       <h1>Top 10 Summer Travel Destinations for 2025 – Budget-Friendly Picks</h1>
