@@ -1,4 +1,4 @@
-
+rod
    
 
     /* Mobile Responsive */
@@ -283,7 +283,7 @@ nav a.active::after {
    
    /* WHO WE ARE SECTION */
   .who-we-are {
-    background: gold; /* Beautiful gradient background */
+    background: goldenrod; /* Beautiful gradient background */
     color: white;
     padding: 20px 15px;
     text-align: center;
