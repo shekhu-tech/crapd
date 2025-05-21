@@ -482,5 +482,14 @@ body {
   }
 }
 </style>
+  <script>
+  const firstButton = document.querySelector('.btn.enter');
+
+  firstButton.addEventListener('click', function(event) {
+    event.preventDefault();
+    document.getElementById('welcomePopup').style.display = 'none';
+    window.location.href = 'index.html';
+  });
+</script>
 </body> 
 </html>
