@@ -481,14 +481,24 @@ body {
     text-align: center;
   }
 }
-</style>
-  <script>
-  const firstButton = document.querySelector('.btn.enter');
+<script>
+  // Pehle buttons select karo
+  const popup = document.getElementById('welcomePopup');
+  const mainContent = document.getElementById('mainContent');
 
-  firstButton.addEventListener('click', function(event) {
+  // Enter button click handler
+  document.querySelector('.btn.enter').addEventListener('click', function(event) {
     event.preventDefault();
-    document.getElementById('welcomePopup').style.display = 'none';
-    window.location.href = 'index.html';
+    // Popup hide karo
+    popup.style.display = 'none';
+    // Main content show karo
+    mainContent.style.display = 'block';
+  });
+
+  // Contact button - agar woh bhi popup band karna chahta hai to
+  document.querySelector('.btn.contact').addEventListener('click', function() {
+    // Popup hide karo (optional, kyunki yeh link page change karega)
+    popup.style.display = 'none';
   });
 </script>
 </body> 
