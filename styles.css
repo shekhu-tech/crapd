@@ -283,7 +283,7 @@ nav a.active::after {
    
    /* WHO WE ARE SECTION */
   .who-we-are {
-    background: linear-gradient(to right, #1e3c72, #2a5298); /* Beautiful gradient background */
+    background: gold; /* Beautiful gradient background */
     color: white;
     padding: 20px 15px;
     text-align: center;
