@@ -50,8 +50,7 @@
  
 <body>
  <main>
-     <section>
- <header>
+    <header>
     <div class="logo">
   <a href="index.html">
     <img src="STI.png" alt="shekhar Tyagi" class="logo-img">
@@ -64,14 +63,19 @@
 <style>
   /* Logo styling */
   .logo-img {
-    height: 35px;
+    height: 45px;
     display: block;
     margin-bottom: 0px; /* Reduced from 2px to 0px */
   }
 
   @media (min-width: 768px) {
     .logo-img {
-      height: 45px;
+      height: 35px;
+    }
+  }
+  @media (min-width: 375px) {
+    .logo-img {
+      height: 30px;
     }
   }
 
@@ -87,13 +91,13 @@
 
   @media (min-width: 768px) {
     .datetime-container {
-      font-size: 8px;
+      font-size: 5px;
     }
   }
 
-  @media (max-width: 400px) {
+  @media (max-width: 375px) {
     .datetime-container {
-      font-size: 8px;
+      font-size: 3px;
     }
   }
 </style>
@@ -228,7 +232,7 @@
       <div class="bar"></div>
     </div>
 </header>
-</section>
+
 
 
          <section class="who-we-are">
