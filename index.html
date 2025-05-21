@@ -483,27 +483,19 @@ body {
 }
 </style>
 <script>
-  // Get popup and button elements
-  const popup = document.getElementById("welcomePopup");
+  // Get elements
   const enterBtn = document.getElementById("enterBtn");
+  const popup = document.getElementById("welcomePopup");
 
-  // Hide popup if already visited
-  if (localStorage.getItem("popupClosed") === "true") {
+  // When button is clicked
+  enterBtn.addEventListener("click", function(e) {
+    e.preventDefault(); // Prevent default link
+
+    // Hide the popup
     popup.style.display = "none";
-  }
 
-  // On button click
-  enterBtn.addEventListener("click", function (e) {
-    e.preventDefault(); // stop the default anchor link
-    localStorage.setItem("popupClosed", "true"); // save state
-    popup.style.display = "none"; // hide popup
-
-    // Optional: redirect only if you're not already on index.html
-    if (window.location.pathname !== "/index.html") {
-      window.location.href = "index.html";
-    } else {
-      location.reload(); // refresh if already on index
-    }
+    // Redirect after hiding
+    window.location.href = "index.html";
   });
 </script>
   
