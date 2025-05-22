@@ -258,115 +258,158 @@
         </div>
            </section>
            <style>
-    p1 {
-      font-size: 1.2rem;
-    }
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #e0f7fa, #ffffff);
+    color: #2d3436;
+    line-height: 1.8;
+    padding: 30px;
+  }
+
+  article {
+    max-width: 1000px;
+    margin: auto;
+    background: #ffffff;
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+    position: relative;
+    overflow: hidden;
+  }
+
+  article::before {
+    content: "";
+    position: absolute;
+    top: -100px;
+    left: -100px;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle at center, #00c6ff30 0%, transparent 70%);
+    z-index: 0;
+  }
+
+  h5 {
+    color: #007bff;
+    font-size: 1.9rem;
+    margin-top: 50px;
+    position: relative;
+    padding-left: 35px;
+  }
+
+  h5::before {
+    content: "🌐";
+    position: absolute;
+    left: 0;
+    top: 3px;
+    font-size: 1.5rem;
+    color: #00c6ff;
+  }
+
+  h5:nth-of-type(2)::before { content: "🦠"; }
+  h5:nth-of-type(3)::before { content: "🤒"; }
+  h5:nth-of-type(4)::before { content: "🏥"; }
+  h5:nth-of-type(5)::before { content: "🧼"; }
+  h5:nth-of-type(6)::before { content: "🧪"; }
+  h5:nth-of-type(7)::before { content: "✅"; }
+
+  p {
+    margin: 18px 0;
+    font-size: 1.15rem;
+    z-index: 1;
+    position: relative;
+  }
+
+  ul {
+    margin: 20px 0 30px 20px;
+    padding-left: 20px;
+  }
+
+  ul li {
+    margin-bottom: 12px;
+    font-size: 1.1rem;
+    position: relative;
+    padding-left: 20px;
+  }
+
+  ul li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: #00c6ff;
+    font-weight: bold;
+  }
+
+  @media screen and (max-width: 768px) {
     article {
-      max-width: 1000px;
-      margin: auto;
-      background: white;
-      padding: 40px;
-      border-radius: 20px;
-      box-shadow: 0 25px 35px rgba(0, 0, 0, 0.1);
+      padding: 30px;
     }
-
     h5 {
-      color: #007bff;
-      margin-top: 40px;
-      font-size: 1.8rem;
-      position: relative;
+      font-size: 1.5rem;
     }
-
-    h5::before {
-      content: "★";
-      color: #00c6ff;
-      margin-right: 10px;
+    p, ul li {
+      font-size: 1rem;
     }
+  }
+</style>
 
-    ul {
-      margin: 20px 0 30px 20px;
-      padding-left: 20px;
-    }
+<article>
+  <h5>Here’s What You Should Know (May 2025)</h5>
+  <h5>🦠 Why Is COVID-19 Back?</h5>
+  <p>
+    In May 2025, several countries like <strong>India, Singapore, and Hong Kong</strong> are seeing a rise in COVID-19 cases. 
+    In India, cities like <strong>Mumbai, Chennai, and Ahmedabad</strong> have been affected the most.
+  </p>
+  <p>
+    The main reason is the spread of new variants such as <strong>JN.1</strong>, <strong>LF.7</strong>, and <strong>NB.1.8</strong>. 
+    These are more contagious but usually cause only mild symptoms.
+  </p>
 
-    ul li {
-      margin-bottom: 10px;
-    }
+  <h5>🤒 What Are the Symptoms?</h5>
+  <p>Symptoms of the new variants are similar to the common cold or flu:</p>
+  <ul>
+    <li>Sore throat</li>
+    <li>Runny or blocked nose</li>
+    <li>Dry cough</li>
+    <li>Fever (mild to moderate)</li>
+    <li>Headache</li>
+    <li>Fatigue</li>
+    <li>Loss of taste or smell</li>
+  </ul>
 
-    p {
-      margin: 20px 0;
-      font-size: 1.1rem;
-    }
+  <h5>🏥 Do We Need to Worry?</h5>
+  <p>
+    So far, most cases are mild and not many people are needing hospital care. 
+    However, some hospitals are preparing in advance by reopening isolation wards and refreshing safety protocols.
+  </p>
 
-    
+  <h5>🧼 What Should You Do?</h5>
+  <p>To stay safe, follow these simple tips:</p>
+  <ul>
+    <li>Wear a mask in crowded areas</li>
+    <li>Wash your hands frequently</li>
+    <li>Stay home if you're feeling unwell</li>
+    <li>Avoid crowded events</li>
+    <li>Get vaccinated or a booster if recommended</li>
+  </ul>
 
-    @media screen and (max-width: 768px) {
-      header h1 {
-        font-size: 2rem;
-      }
-      article {
-        padding: 25px;
-      }
-      h5 {
-        font-size: 1.5rem;
-      }
-    }
-  </style>
-              <article>
-    <h5>Here’s What You Should Know (May 2025)</h2>
-    <h5>🦠 Why Is COVID-19 Back?</h2>
-    <p>
-      In May 2025, several countries like <strong>India, Singapore, and Hong Kong</strong> are seeing a rise in COVID-19 cases. 
-      In India, cities like <strong>Mumbai, Chennai, and Ahmedabad</strong> have been affected the most.
-    </p>
-    <p>
-      The main reason is the spread of new variants such as <strong>JN.1</strong>, <strong>LF.7</strong>, and <strong>NB.1.8</strong>. 
-      These are more contagious but usually cause only mild symptoms.
-    </p>
+  <h5>🧪 What Are Governments Doing?</h5>
+  <p>
+    Governments are watching the situation closely. In India, some hospitals and health departments 
+    have restarted COVID precautions like testing, monitoring, and reserving special beds for serious cases.
+  </p>
 
-    <h5>🤒 What Are the Symptoms?</h2>
-    <p>Symptoms of the new variants are similar to the common cold or flu:</p>
-    <ul>
-      <li>Sore throat</li>
-      <li>Runny or blocked nose</li>
-      <li>Dry cough</li>
-      <li>Fever (mild to moderate)</li>
-      <li>Headache</li>
-      <li>Fatigue</li>
-      <li>Loss of taste or smell</li>
-    </ul>
+  <h5>✅ Final Words</h5>
+  <p>
+    COVID-19 is still with us, but we’re better prepared now than ever. 
+    Vaccines, better treatments, and simple safety habits can help us stay protected.
+  </p>
+  <p>
+    <strong>Stay safe. Stay smart. We’ve done it before — we can do it again.</strong>
+  </p>
+</article>
 
-    <h5>🏥 Do We Need to Worry?</h2>
-    <p>
-      So far, most cases are mild and not many people are needing hospital care. 
-      However, some hospitals are preparing in advance by reopening isolation wards and refreshing safety protocols.
-    </p>
-
-    <h5>🧼 What Should You Do?</h2>
-    <p>To stay safe, follow these simple tips:</p>
-    <ul>
-      <li>Wear a mask in crowded areas</li>
-      <li>Wash your hands frequently</li>
-      <li>Stay home if you're feeling unwell</li>
-      <li>Avoid crowded events</li>
-      <li>Get vaccinated or a booster if recommended</li>
-    </ul>
-
-    <h5>🧪 What Are Governments Doing?</h2>
-    <p>
-      Governments are watching the situation closely. In India, some hospitals and health departments 
-      have restarted COVID precautions like testing, monitoring, and reserving special beds for serious cases.
-    </p>
-
-    <h5>✅ Final Words</h2>
-    <p>
-      COVID-19 is still with us, but we’re better prepared now than ever. 
-      Vaccines, better treatments, and simple safety habits can help us stay protected.
-    </p>
-    <p>
-      <strong>Stay safe. Stay smart. We’ve done it before — we can do it again.</strong>
-    </p>
-  </article>
                     
   
 
