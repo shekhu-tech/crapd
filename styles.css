@@ -1,5 +1,5 @@
 header {
-  width: 90%;
+  width: auto;
   margin: 40px auto;
   padding: 20px 40px;
   background: linear-gradient(135deg, #fdf5d6, goldenrod);
@@ -179,6 +179,18 @@ nav a.active::after {
 .close-btn:hover {
   transform: scale(1.2);
   color: red;
+}
+
+/* By default: hide the close button */
+.close-btn {
+  display: none;
+}
+
+/* Show the close button only on mobile (up to 1200px) */
+@media (max-width: 1200px) {
+  .close-btn {
+    display: block;
+  }
 }
 
 
