@@ -1,3 +1,31 @@
+// Inject HEADER
+document.getElementById('site-header').innerHTML = `
+  <header> 
+  <div class="logo">
+    <a href="#">
+      <img src="STI.png" alt="Shekhar tyagi" style="height: 35px;">
+    </a>
+  </div>
+
+  <nav id="nav">
+    <a href="allgd.html"><i class="fas fa-pen-nib"></i> Graphics</a>
+    <a href="allved.html"><i class="fas fa-film"></i> Video Editing</a>
+    <a href="allweb.html"><i class="fas fa-globe"></i> Websites</a>
+    <a href="jobprtls.html"><i class="fas fa-globe"></i> Portals</a>
+    <a href="dgtlmktng.html"><i class="fas fa-search"></i> Digital Marketing</a>
+  </nav>
+
+  <div class="toggle" onclick="toggleMenu()" id="toggleBtn">
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+  </div>
+</header>
+
+<!-- Font Awesome CDN for icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+`;
+
 // Toggle menu
 function toggleMenu() {
   const nav = document.getElementById('nav');
