@@ -70,7 +70,7 @@ document.getElementById('site-footer').innerHTML = `
 </footer>
 
 <style>
-/* Glowing border effect */
+/* Glowing border effect (no changes needed for responsiveness here) */
 .footer-glow {
   margin-top: 3rem;
   padding: 2rem;
@@ -81,23 +81,26 @@ document.getElementById('site-footer').innerHTML = `
   transition: all 0.4s ease-in-out;
 }
 
-/* Footer buttons */
+/* Footer buttons - Updated for responsiveness */
 .footer-buttons {
   margin-top: 20px;
-  text-align: center;
+  text-align: center; /* Keeps existing center alignment for the container */
+  display: flex; /* Enable flexbox */
+  flex-wrap: wrap; /* Allow items to wrap to the next line */
+  justify-content: center; /* Center buttons horizontally when they wrap */
+  gap: 10px; /* Add space between buttons */
 }
 
 .footer-btn {
   background-color: transparent;
   color: white;
   padding: 10px 20px;
-  margin: 10px;
   text-decoration: none;
   border-radius: 5px;
   font-size: 16px;
-  display: inline-block;
   border: 1px solid white;
   transition: background-color 0.3s ease, color 0.3s ease;
+  flex-shrink: 0; /* Prevent buttons from shrinking too much */
 }
 
 .footer-btn:hover {
@@ -105,7 +108,22 @@ document.getElementById('site-footer').innerHTML = `
   color: white;
 }
 
-/* Optional icon styling */
+/* Media Queries for smaller screens */
+@media (max-width: 768px) {
+  .footer-btn {
+    flex-basis: calc(50% - 20px); /* Two buttons per row on medium screens, accounting for gap */
+    margin: 5px; /* Adjust margin for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-btn {
+    flex-basis: 100%; /* Full width for each button on small screens */
+    margin: 5px 0; /* Adjust margin for stacked buttons */
+  }
+}
+
+/* Optional icon styling (no changes needed for responsiveness here) */
 .footer-icons img {
   width: 40px;
   margin: 5px;
