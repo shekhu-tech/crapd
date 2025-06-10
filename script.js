@@ -3,7 +3,7 @@ document.getElementById('site-header').innerHTML = `
   <header> 
   <div class="logo">
     <a href="#">
-      <img src="STI.png" alt="Shekhar tyagi" style="height: 35px;">
+      <img src="#" alt="Crapd.in" style="height: 35px;">
     </a>
   </div>
 
