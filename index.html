@@ -17,406 +17,532 @@
         body {
             margin: 0;
             font-family: 'Inter', sans-serif;
-            background-color: gold; /* Even darker background for more contrast */
-            color: #e0e0e0;
-            /* FIX: Allow vertical scrolling, prevent horizontal scrollbars */
+            background-color: #FCF5E2; /* Soft, comfortable light cream/gold background */
+            color: #333; /* Darker text for readability */
             overflow-x: hidden; /* Prevents horizontal scrollbar */
-            overflow-y: auto;    /* Allows vertical scrolling if content exceeds height */
+            overflow-y: auto;   /* Allows vertical scrolling */
+        }
+
+        /* WHO WE ARE Section */
+        .who-we-are {
+            background-color: #222; /* Dark background */
+            color: #e0e0e0; /* Light text */
+            padding: 60px 20px; /* Slightly more padding */
+            text-align: center;
+        }
+
+        .who-we-are .content {
+            max-width: 900px; /* Wider content area */
+            margin: auto;
+        }
+
+        .who-we-are h2 {
+            font-family: 'Georgia', serif; /* Use Georgia for this heading too */
+            font-size: 3em; /* Larger heading */
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: gold; /* Highlighted heading */
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2); /* More prominent shadow */
+        }
+
+        .who-we-are h3 {
+            font-size: 2em; /* Larger */
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #f0f0f0;
+        }
+
+        .who-we-are h1 {
+            font-size: 1.3em; /* Slightly larger */
+            font-weight: 500;
+            color: #bbb;
+            margin-bottom: 25px;
+            letter-spacing: 0.5px;
+        }
+
+        .who-we-are p {
+            font-size: 1.2em; /* Larger paragraph */
+            line-height: 1.7;
+            max-width: 750px;
+            margin: auto;
         }
 
         /* CARD CONTAINER */
         .card-container {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-            padding: 50px 20px;
-            perspective: 1000px;
+            gap: 40px; /* Increased gap for more breathing room */
+            padding: 60px 30px; /* More padding around the grid */
             max-width: 1800px;
             margin: auto;
         }
 
-        /* CARD DESIGN */
+        /* CARD DESIGN - Enhanced Classic & Professional */
         .card {
-            position: relative;
-            height: 230px;
-            border-radius: 15px;
-            overflow: hidden;
-            background-size: cover;
-            background-position: center;
             display: flex;
-            align-items: flex-end;
+            flex-direction: column;
+            align-items: center;
             justify-content: center;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-            transition: box-shadow 0.4s ease-in-out, filter 0.3s ease-out;
+            height: 150px; /* Adjusted card height to 101px */
+            border-radius: 20px; /* More rounded corners for a softer feel */
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1); /* Softer, deeper initial shadow */
+            transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1); /* Smoother, more impactful transition */
             cursor: pointer;
-            filter: brightness(1) saturate(1); /* Default state */
-            transform: none; /* No tilt */
+            text-decoration: none;
+            color: inherit;
+            padding: 8px; /* Reduced internal padding for smaller height */
+            text-align: center;
+            position: relative;
+            z-index: 1;
+            overflow: hidden; /* Ensure inner shadow is clipped */
         }
 
-        /* Pseudo-elements for the effect layers */
-        .card::before,
-        .card::after {
+        /* CARD HOVER EFFECTS */
+        .card:hover {
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.35); /* Much more prominent lift shadow */
+            transform: translateY(-10px) scale(1.02); /* Adjusted lift for smaller card */
+            z-index: 2; /* Bring hovered card to front */
+        }
+
+        /* Subtle inner glow/border on hover using pseudo-element */
+        .card::before {
             content: '';
             position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+            top: 2px; /* Inset slightly */
+            left: 2px;
+            right: 2px;
+            bottom: 2px;
+            border-radius: inherit;
+            border: 2px solid transparent; /* Default transparent border */
+            box-shadow: inset 0 0 8px rgba(255, 215, 0, 0.08); /* Subtle inner shadow */
             pointer-events: none;
-            opacity: 0;
-            z-index: 3;
-            transition: opacity 0.3s ease-out; /* For general fading */
+            transition: border-color 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+            z-index: -1;
         }
 
-        /* Sci-Fi Scan/Flash Overlay */
-        .card::before {
-            background: linear-gradient(90deg, transparent, rgba(0, 255, 255, 0.4), transparent);
-            transform: translateX(-100%);
-            transition: none; /* Will be controlled by animation */
+        .card:hover::before {
+            border-color: gold; /* Solid gold inner border on hover */
+            box-shadow: inset 0 0 15px rgba(255, 215, 0, 0.5); /* More intense inner glow on hover */
         }
 
-        /* Wormhole/Tunnel Overlay */
-        .card::after {
-            background: radial-gradient(circle at center, rgba(0, 0, 0, 0) 0%, rgba(20, 0, 50, 0.9) 60%, rgba(0, 0, 0, 1) 100%);
-            transform: scale(0);
-            border-radius: 50%; /* Start as a circle */
-            transition: none; /* Will be controlled by animation */
-            opacity: 0;
+        /* ICON STYLES (Kept for safety, but display: none removes them) */
+        .card .icon {
+            display: none;
         }
 
-        /* CARD CONTENT (existing) */
+        /* CARD CONTENT */
         .card-content {
-            position: absolute;
-            bottom: 20px;
-            width: 80%;
-            padding: 20px;
-            text-align: center;
-            color: white;
-            font-family: 'Inter', sans-serif;
-            z-index: 2;
-            border-radius: 10px;
-            backdrop-filter: blur(12px);
-            background: transparent;
-            transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
-            transform: translateY(50px);
-            opacity: 0;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            padding-top: 0;
+            position: relative; /* For text layering over potential bg effects if re-added */
         }
 
-        /* BUTTON (existing) */
+        .card-content h2 {
+            font-family: 'Georgia', serif;
+            font-size: 1.2em; /* Adjusted heading size for smaller card */
+            font-weight: 700;
+            margin-bottom: 5px; /* Reduced space below heading */
+            color: #0A0A0A; /* Very dark text for strong contrast */
+            text-shadow: 1px 1px 1px rgba(0,0,0,0.03); /* Subtle text shadow */
+            line-height: 1.1; /* Tighter line height for heading */
+        }
+
+        .card-content p {
+            font-size: 0.8em; /* Adjusted paragraph size for smaller card */
+            font-weight: 400;
+            line-height: 1.3; /* Improved line spacing */
+            margin-bottom: 12px; /* Reduced space before button */
+            color: #444; /* Slightly softer text color */
+            /* If the paragraph still overflows, consider display: none or limiting lines */
+            display: -webkit-box;
+            -webkit-line-clamp: 2; /* Limit to 2 lines */
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        /* BUTTON STYLES */
         .card-content button {
-            padding: 12px 24px;
-            font-size: 14px;
-            font-weight: bold;
+            padding: 8px 18px; /* Reduced button padding */
+            font-size: 13px; /* Reduced button text size */
+            font-weight: 700; /* Bolder text */
             border: none;
-            border-radius: 5px;
-            background: gold;
+            border-radius: 8px; /* Matches card border-radius */
+            background: radial-gradient(circle at center, #FFD700 0%, #DAA520 100%); /* Gold to Darker Gold gradient */
             color: white;
             cursor: pointer;
-            transition: background 0.3s ease-in-out, transform 0.3s ease-in-out;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3); /* Adjusted button shadow */
+            transition: all 0.3s ease-in-out;
             pointer-events: auto;
+            letter-spacing: 0.5px; /* Slightly increased letter spacing for refined look */
+            text-transform: uppercase; /* Uppercase for a professional touch */
         }
 
         .card-content button:hover {
-            background: #1DA851;
-            transform: scale(1.1);
+            background: radial-gradient(circle at center, #DAA520 0%, #FFD700 100%); /* Reverse gradient on hover */
+            transform: translateY(-2px) scale(1.01); /* Adjusted lift and scale */
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4); /* Enhanced shadow on hover */
         }
-
-        /* CARD HOVER EFFECTS (existing, no tilt) */
-        .card:hover {
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
-            filter: brightness(1.1);
-            transform: none;
-        }
-
-        .card:hover .glow {
-            opacity: 1;
-        }
-
-        .card:hover .card-content {
-            transform: translateY(0);
-            opacity: 1;
-        }
-
-        /* --- Click Animation Sequence (New) --- */
-
-        /* State when a card is clicked */
-        .card.is-active {
-            box-shadow: 0 0 120px rgba(0, 255, 255, 0.9); /* More intense glow */
-            filter: brightness(1.8) saturate(1.5); /* Card itself gets much brighter and vibrant */
-            pointer-events: none;
-            z-index: 10;
-        }
-
-        /* Other cards during active animation */
-        .card.is-inactive {
-            filter: grayscale(100%) brightness(0.2) blur(3px); /* More blurred and darker */
-            pointer-events: none;
-            transition: filter 0.5s ease-out;
-        }
-
-        /* 1. Sci-Fi Scan Animation */
-        .card.is-active::before {
-            animation: sciFiScan 0.5s forwards; /* Quick scan */
-            opacity: 1;
-        }
-
-        @keyframes sciFiScan {
-            0% { transform: translateX(-100%); }
-            100% { transform: translateX(100%); }
-        }
-
-        /* 2. Portal Ripple/Distortion */
-        .card.is-active {
-            animation: portalRipple 0.8s forwards; /* Combined with other active states */
-            animation-delay: 0.2s; /* Starts slightly after scan begins */
-        }
-        @keyframes portalRipple {
-            0% { transform: scale(1); filter: brightness(1.8) saturate(1.5); }
-            50% { transform: scale(1.05) rotateZ(2deg); filter: brightness(2) saturate(2) hue-rotate(10deg); } /* Slight distortion */
-            100% { transform: scale(1); filter: brightness(1.8) saturate(1.5); }
-        }
-
-        /* 3. Wormhole/Tunnel Effect (Expands rapidly) */
-        .card.is-active::after {
-            animation: wormholeExpand 0.8s forwards; /* Faster tunnel effect */
-            animation-delay: 0.8s; /* Starts after scan and ripple are well underway */
-            opacity: 1;
-        }
-
-        @keyframes wormholeExpand {
-            0% { transform: scale(0); opacity: 0; border-radius: 50%; }
-            50% { transform: scale(1.2); opacity: 1; border-radius: 20%; } /* Aggressive expansion, deforming shape */
-            100% { transform: scale(2); opacity: 1; border-radius: 0%; } /* Fills screen, becomes square */
-        }
-
-        /* 4. Final Flash (covers everything before navigation) */
-        .flash-overlay {
+        /* --- SCI-FI FLASH EFFECT --- */
+        /* Overlay that creates the bright flash */
+        .super-ultra-light-flash-overlay {
             position: fixed;
             top: 0;
             left: 0;
             width: 100vw;
             height: 100vh;
-            background-color: white; /* Bright white flash */
+            background-color: rgba(255, 250, 205, 0); /* Initial transparent light yellow/gold */
             opacity: 0;
-            z-index: 9999; /* On top of everything */
-            pointer-events: none;
-            animation: finalFlash 0.3s forwards;
+            z-index: 99999; /* Super high to cover everything */
+            pointer-events: none; /* Allows clicks to pass through initially */
         }
 
-        @keyframes finalFlash {
-            0% { opacity: 0; }
-            50% { opacity: 1; }
-            100% { opacity: 1; } /* Stays bright briefly */
+        /* Keyframe animation for the flash */
+        @keyframes superUltraLightFlash {
+            0% {
+                opacity: 0;
+                background-color: rgba(255, 250, 205, 0); /* Start fully transparent */
+                transform: scale(0.8); /* Start slightly smaller for expansion effect */
+            }
+            30% {
+                opacity: 1;
+                background-color: rgba(255, 250, 205, 0.8); /* Opaque light yellow/gold */
+                transform: scale(1);
+            }
+            70% {
+                opacity: 1;
+                background-color: rgba(255, 250, 205, 1); /* Fully opaque, brightest point */
+                transform: scale(1.1); /* Slight zoom at peak */
+            }
+            100% {
+                opacity: 0;
+                background-color: rgba(255, 250, 205, 0); /* Fade out */
+                transform: scale(1.5); /* Expands out */
+            }
+        }
+
+        /* States for cards during the click animation */
+        .card.is-active {
+            box-shadow: 0 0 80px 30px rgba(255, 215, 0, 0.9), /* Bright, spreading glow */
+                        0 0 15px 5px rgba(255, 255, 255, 0.7); /* Inner bright halo */
+            transform: translateY(-15px) scale(1.05); /* More pronounced lift and scale */
+            z-index: 100; /* Ensure it's on top of other cards */
+            transition: all 0.3s ease-out; /* Quick transition to active state */
+            pointer-events: none; /* Disable interaction with the active card */
+        }
+
+        .card.is-active::before {
+            border-color: gold; /* Solid gold inner border */
+            box-shadow: inset 0 0 40px rgba(255, 215, 0, 1); /* Intense inner glow */
+        }
+
+        .card.is-inactive {
+            filter: brightness(0.4) grayscale(100%) blur(2px); /* Dim and desaturate other cards heavily */
+            pointer-events: none; /* Disable interaction with inactive cards */
+            transition: filter 0.6s ease-out, transform 0.6s ease-out; /* Slower transition for others */
+            transform: scale(0.9); /* Slightly shrink inactive cards */
+        }
+
+        /* Ensure default hover is overridden when a card is active or inactive */
+        .card.is-active:hover {
+            box-shadow: 0 0 80px 30px rgba(255, 215, 0, 0.9),
+                        0 0 15px 5px rgba(255, 255, 255, 0.7);
+            transform: translateY(-15px) scale(1.05);
+        }
+        .card.is-inactive:hover {
+            filter: brightness(0.4) grayscale(100%) blur(2px);
+            transform: scale(0.9);
         }
 
 
         /* Responsive adjustments */
+        @media (max-width: 1024px) {
+            .card-container {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 30px;
+                padding: 50px 25px;
+            }
+            .card { height: 120px; padding: 12px;} /* Adjusted for tablet landscape */
+            .who-we-are { padding: 40px 20px; }
+            .who-we-are h2 { font-size: 2.5em; }
+            .card-content h2 { font-size: 1.4em; }
+            .card-content p { font-size: 0.85em; margin-bottom: 10px; }
+            .card-content button { padding: 10px 24px; font-size: 13px; }
+        }
+
         @media (max-width: 768px) {
             .card-container {
-                grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-                padding: 30px 15px;
+                grid-template-columns: 1fr; /* Single column on smaller devices */
+                padding: 40px 20px;
+                gap: 25px;
             }
+
+            .who-we-are { padding: 30px 15px; }
+            .who-we-are .content { max-width: 100%; }
+            .who-we-are h2 { font-size: 2.2em; }
+            .who-we-are h3 { font-size: 1.6em; }
+            .who-we-are h1 { font-size: 1.1em; }
+            .who-we-are p { font-size: 1.0em; }
+
+            .card { height: 130px; padding: 15px;} /* Adjusted for mobile portrait */
+            .card-content h2 { font-size: 1.3em; margin-bottom: 8px;}
+            .card-content p { font-size: 0.8em; margin-bottom: 15px;}
+            .card-content button { padding: 8px 20px; font-size: 12px; }
         }
 
         @media (max-width: 480px) {
             .card-container {
-                grid-template-columns: 1fr;
-                padding: 20px 10px;
+                padding: 25px 15px;
+            }
+            .card { height: 120px; padding: 10px;}
+            .card-content h2 { font-size: 1.2em; }
+            .card-content p { font-size: 0.75em; margin-bottom: 12px;}
+            .card-content button { padding: 6px 16px; font-size: 11px; }
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 1024px) {
+            .card-container {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 30px;
+                padding: 50px 25px;
+            }
+            .card { height: 120px; padding: 12px;} /* Adjusted for tablet landscape */
+            .who-we-are { padding: 40px 20px; }
+            .who-we-are h2 { font-size: 2.5em; }
+            .card-content h2 { font-size: 1.4em; }
+            .card-content p { font-size: 0.85em; margin-bottom: 10px; }
+            .card-content button { padding: 10px 24px; font-size: 13px; }
+        }
+
+        @media (max-width: 768px) {
+            .card-container {
+                grid-template-columns: 1fr; /* Single column on smaller devices */
+                padding: 40px 20px;
+                gap: 25px;
             }
 
-            .card-content h2 {
-                font-size: 1.3em; /* Smaller heading for mobile */
-                font-weight: 700; /* Bolder heading */
-            }
+            .who-we-are { padding: 30px 15px; }
+            .who-we-are .content { max-width: 100%; }
+            .who-we-are h2 { font-size: 2.2em; }
+            .who-we-are h3 { font-size: 1.6em; }
+            .who-we-are h1 { font-size: 1.1em; }
+            .who-we-are p { font-size: 1.0em; }
 
-            .card-content p {
-                font-size: 0.9em; /* Smaller paragraph for mobile */
-                font-weight: 500; /* Bolder paragraph */
+            .card { height: 130px; padding: 15px;} /* Adjusted for mobile portrait */
+            .card-content h2 { font-size: 1.3em; margin-bottom: 8px;}
+            .card-content p { font-size: 0.8em; margin-bottom: 15px;}
+            .card-content button { padding: 8px 20px; font-size: 12px; }
+        }
+
+        @media (max-width: 480px) {
+            .card-container {
+                padding: 25px 15px;
             }
+            .card { height: 120px; padding: 10px;}
+            .card-content h2 { font-size: 1.2em; }
+            .card-content p { font-size: 0.75em; margin-bottom: 12px;}
+            .card-content button { padding: 6px 16px; font-size: 11px; }
         }
     </style>
 </head>
 <body>
     <div id="site-header"></div>
- <main>
-     <section>
-       <section class="who-we-are">
-          <div class="content">
-                  <h2>Who we Are</h2>               
-           <h3>We are C.R.A.P.D</h3> 
-<h1>C = Create, R = Real, A = Amazing, P = Projects, D = Daily</h1>
-   <p>We help brands grow with powerful website design, video editing, graphic design, article writing, and more. Let’s work together! I am a Graphic Designer, Video Editor, Website Developer, Freelance Designer from India, Article Writer, and Digital Marketer.</p>
-
-        </div>
-           </section>
-    <section>
-        <div class="card-container">
-            <div class="card" style="background-image: url('wib2.png');">
-                <div class="glow"></div>
-                <div class="card-content">
-                    <h2 data-i18n="card1_title">Why was I born?</h2>
-                    <p data-i18n="card1_desc">Explore the path of life through ancient scriptures.</p>
-                    <button data-i18n="card1_button" data-href="gyan.html">Explore</button>
-                </div>
-                <div class="light-ripple"></div>
+    <main>
+        <section class="who-we-are">
+            <div class="content">
+                <h2>Who we Are</h2>
+                <h3>We are C.R.A.P.D</h3>
+                <h1>C = Create, R = Real, A = Amazing, P = Projects, D = Daily</h1>
+                <p>We help brands grow with powerful website design, video editing, graphic design, article writing, and more. Let’s work together! I am a Graphic Designer, Video Editor, Website Developer, Freelance Designer from India, Article Writer, and Digital Marketer.</p>
             </div>
+        </section>
 
-            <div class="card" style="background-image: url('mbc.png');">
-                <div class="glow"></div>
-                <div class="card-content">
-                    <h2 data-i18n="card2_title">My Body Control</h2>
-                    <p data-i18n="card2_desc">Achieve spiritual progress through selfless action.</p>
-                    <button data-i18n="card2_button" data-href="karma.html">Begin</button>
-                </div>
-                <div class="light-ripple"></div>
-            </div>
+        <section>
+            <div class="card-container">
+                <!-- Card 1: Why was I born? (Soft Sky Blue to Light Azure) -->
+                <a href="gyan.html" class="card" style="background: linear-gradient(to bottom right, #EBF8FF, #D7F2FA);">
+                    <div class="card-content">
+                        <h2 data-i18n="card1_title">Why was I born?</h2>
+                        <p data-i18n="card1_desc">Explore the path of life through ancient scriptures.</p>
+                        <button data-i18n="card1_button">Explore</button>
+                    </div>
+                </a>
 
-            <div class="card" style="background-image: url('cc.png');">
-                <div class="glow"></div>
-                <div class="card-content">
-                    <h2 data-i18n="card3_title">Career Counseling</h2>
-                    <p data-i18n="card3_desc">Get personalized career guidance rooted in ancient wisdom.</p>
-                    <button data-i18n="card3_button" data-href="career.html">Proceed</button>
-                </div>
-                <div class="light-ripple"></div>
-            </div>
+                <!-- Card 2: My Body Control (Pale Lavender to Light Orchid) -->
+                <a href="karma.html" class="card" style="background: linear-gradient(to bottom right, #F8F0FF, #EEE6FA);">
+                    <div class="card-content">
+                        <h2 data-i18n="card2_title">My Body Control</h2>
+                        <p data-i18n="card2_desc">Achieve spiritual progress through selfless action.</p>
+                        <button data-i18n="card2_button">Begin</button>
+                    </div>
+                </a>
 
-            <div class="card" style="background-image: url('kya.png');">
-                <div class="glow"></div>
-                <div class="card-content">
-                    <h2 data-i18n="card4_title">Know Your Aura</h2>
-                    <p data-i18n="card4_desc">Discover your energetic presence and spiritual vibration.</p>
-                    <button data-i18n="card4_button" data-href="aura.html">Start</button>
-                </div>
-                <div class="light-ripple"></div>
-            </div>
+                <!-- Card 3: Career Counseling (Mint Cream to Pale Green) -->
+                <a href="career.html" class="card" style="background: linear-gradient(to bottom right, #F5FFFA, #EAFBEB);">
+                    <div class="card-content">
+                        <h2 data-i18n="card3_title">Career Counseling</h2>
+                        <p data-i18n="card3_desc">Get personalized career guidance rooted in ancient wisdom.</p>
+                        <button data-i18n="card3_button">Proceed</button>
+                    </div>
+                </a>
 
-            <div class="card" style="background-image: url('wil.png');">
-                <div class="glow"></div>
-                <div class="card-content">
-                    <h2 data-i18n="card5_title">Whose Life Am I Important To?</h2>
-                    <p data-i18n="card5_desc">Understand your significance in the lives of others.</p>
-                    <button data-i18n="card5_button" data-href="importance.html">Learn</button>
-                </div>
-                <div class="light-ripple"></div>
-            </div>
+                <!-- Card 4: Know Your Aura (Lemon Chiffon to Light Goldenrod Yellow) -->
+                <a href="aura.html" class="card" style="background: linear-gradient(to bottom right, #FFFDE8, #FFF5D6);">
+                    <div class="card-content">
+                        <h2 data-i18n="card4_title">Know Your Aura</h2>
+                        <p data-i18n="card4_desc">Discover your energetic presence and spiritual vibration.</p>
+                        <button data-i18n="card4_button">Start</button>
+                    </div>
+                </a>
 
-            <div class="card" style="background-image: url('wiiml.png');">
-                <div class="glow"></div>
-                <div class="card-content">
-                    <h2 data-i18n="card6_title">Who is Important in My Life?</h2>
-                    <p data-i18n="card6_desc">Identify key relationships and their impact on your journey.</p>
-                    <button data-i18n="card6_button" data-href="relationships.html">Understand</button>
-                </div>
-                <div class="light-ripple"></div>
-            </div>
+                <!-- Card 5: Whose Life Am I Important To? (Powder Blue to Light Steel Blue) -->
+                <a href="importance.html" class="card" style="background: linear-gradient(to bottom right, #D8F0FA, #C2E8F2);">
+                    <div class="card-content">
+                        <h2 data-i18n="card5_title">Whose Life Am I Important To?</h2>
+                        <p data-i18n="card5_desc">Understand your significance in the lives of others.</p>
+                        <button data-i18n="card5_button">Learn</button>
+                    </div>
+                </a>
 
-            <div class="card" style="background-image: url('iql.png');">
-                <div class="glow"></div>
-                <div class="card-content">
-                    <h2 data-i18n="card7_title">My IQ Level</h2>
-                    <p data-i18n="card7_desc">Assess your intellectual capabilities and cognitive strengths.</p>
-                    <button data-i18n="card7_button" data-href="iq.html">Evaluate</button>
-                </div>
-                <div class="light-ripple"></div>
-            </div>
+                <!-- Card 6: Who is Important in My Life? (Misty Rose to Light Pink) -->
+                <a href="relationships.html" class="card" style="background: linear-gradient(to bottom right, #FFF5F5, #FFEBEB);">
+                    <div class="card-content">
+                        <h2 data-i18n="card6_title">Who is Important in My Life?</h2>
+                        <p data-i18n="card6_desc">Identify key relationships and their impact on your journey.</p>
+                        <button data-i18n="card6_button">Understand</button>
+                    </div>
+                </a>
 
-            <div class="card" style="background-image: url('alf.png');">
-                <div class="glow"></div>
-                <div class="card-content">
-                    <h2 data-i18n="card8_title">Am I Average?</h2>
-                    <p data-i18n="card8_desc">Discover your unique qualities and stand out from the ordinary.</p>
-                    <button data-i18n="card8_button" data-href="uniqueness.html">Advance</button>
-                </div>
-                <div class="light-ripple"></div>
-            </div>
+                <!-- Card 7: My IQ Level (Pale Turquoise to Aquamarine) -->
+                <a href="iq.html" class="card" style="background: linear-gradient(to bottom right, #EFFEFF, #D6F8F0);">
+                    <div class="card-content">
+                        <h2 data-i18n="card7_title">My IQ Level</h2>
+                        <p data-i18n="card7_desc">Assess your intellectual capabilities and cognitive strengths.</p>
+                        <button data-i18n="card7_button">Evaluate</button>
+                    </div>
+                </a>
 
-            <div class="card" style="background-image: url('goe.png');">
-                <div class="glow"></div>
-                <div class="card-content">
-                    <h2 data-i18n="card9_title">Am I Evil or Good?</h2>
-                    <p data-i18n="card9_desc">Explore the dualities within and align with your true nature.</p>
-                    <button data-i18n="card9_button" data-href="morality.html">Learn</button>
-                </div>
-                <div class="light-ripple"></div>
-            </div>
+                <!-- Card 8: Am I Average? (Thistle to Plum) -->
+                <a href="uniqueness.html" class="card" style="background: linear-gradient(to bottom right, #F8F0FA, #EEE6F2);">
+                    <div class="card-content">
+                        <h2 data-i18n="card8_title">Am I Average?</h2>
+                        <p data-i18n="card8_desc">Discover your unique qualities and stand out from the ordinary.</p>
+                        <button data-i18n="card8_button">Advance</button>
+                    </div>
+                </a>
 
-            <div class="card" style="background-image: url('dim.png');">
-                <div class="glow"></div>
-                <div class="card-content">
-                    <h2 data-i18n="card10_title">Dark Inside Me</h2>
-                    <p data-i18n="card10_desc">Confront and transform your inner shadows for personal growth.</p>
-                    <button data-i18n="card10_button" data-href="shadow-self.html">Strive</button>
-                </div>
-                <div class="light-ripple"></div>
-            </div>
+                <!-- Card 9: Am I Evil or Good? (Honeydew to Pale Green) -->
+                <a href="morality.html" class="card" style="background: linear-gradient(to bottom right, #F0FFF0, #E0F5E0);">
+                    <div class="card-content">
+                        <h2 data-i18n="card9_title">Am I Evil or Good?</h2>
+                        <p data-i18n="card9_desc">Explore the dualities within and align with your true nature.</p>
+                        <button data-i18n="card9_button">Learn</button>
+                    </div>
+                </a>
 
-            <div class="card" style="background-image: url('gim.png');">
-                <div class="glow"></div>
-                <div class="card-content">
-                    <h2 data-i18n="card11_title">Good Inside Me</h2>
-                    <p data-i18n="card11_desc">Nurture your inherent goodness and cultivate positive traits.</p>
-                    <button data-i18n="card11_button" data-href="inner-good.html">Search</button>
-                </div>
-                <div class="light-ripple"></div>
-            </div>
+                <!-- Card 10: Dark Inside Me (Ivory to Light Yellow) -->
+                <a href="shadow-self.html" class="card" style="background: linear-gradient(to bottom right, #FFFFF8, #FFFFF0);">
+                    <div class="card-content">
+                        <h2 data-i18n="card10_title">Dark Inside Me</h2>
+                        <p data-i18n="card10_desc">Confront and transform your inner shadows for personal growth.</p>
+                        <button data-i18n="card10_button">Strive</button>
+                    </div>
+                </a>
 
-            <div class="card" style="background-image: url('kyt.png');">
-                <div class="glow"></div>
-                <div class="card-content">
-                    <h2 data-i18n="card12_title">Know Your Talent</h2>
-                    <p data-i18n="card12_desc">Uncover your hidden talents and unlock your full potential.</p>
-                    <button data-i18n="card12_button" data-href="talent.html">Awaken</button>
-                </div>
-                <div class="light-ripple"></div>
+                <!-- Card 11: Good Inside Me (Lavender Blush to Thistle) -->
+                <a href="inner-good.html" class="card" style="background: linear-gradient(to bottom right, #FFF0F5, #F5E0F0);">
+                    <div class="card-content">
+                        <h2 data-i18n="card11_title">Good Inside Me</h2>
+                        <p data-i18n="card11_desc">Nurture your inherent goodness and cultivate positive traits.</p>
+                        <button data-i18n="card11_button">Search</button>
+                    </div>
+                </a>
+
+                <!-- Card 12: Know Your Talent (Seashell to Light Coral) -->
+                <a href="talent.html" class="card" style="background: linear-gradient(to bottom right, #FFF5EE, #FAE0D6);">
+                    <div class="card-content">
+                        <h2 data-i18n="card12_title">Know Your Talent</h2>
+                        <p data-i18n="card12_desc">Uncover your hidden talents and unlock your full potential.</p>
+                        <button data-i18n="card12_button">Awaken</button>
+                    </div>
+                </a>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
+    <div id="site-footer"></div>
 
     <script>
         const cards = document.querySelectorAll('.card');
-        const body = document.body; // Reference to the body element
+        const body = document.body;
 
+        // Centralized click handler for cards
+        function handleCardClick(clickedCard, url) {
+            // Prevent multiple clicks during animation
+            if (clickedCard.classList.contains('is-active') || body.classList.contains('flash-active')) {
+                return;
+            }
+
+            // 1. Activate the clicked card and dim others
+            clickedCard.classList.add('is-active');
+            cards.forEach(c => {
+                if (c !== clickedCard) {
+                    c.classList.add('is-inactive');
+                }
+            });
+
+            // 2. Prepare and trigger the full-screen flash
+            const flashDiv = document.createElement('div');
+            flashDiv.classList.add('super-ultra-light-flash-overlay');
+            body.appendChild(flashDiv);
+            body.classList.add('flash-active'); // Add a class to body to manage flash state globally
+
+            // Animation timing:
+            // Card active/inactive transition: 0.3s (quick for active) to 0.6s (slow for inactive)
+            // Flash animation duration: 1.0s
+            // Navigate after flash is visible (e.g., 0.8s into the flash)
+            const flashDuration = 1000; // milliseconds for the flash animation
+            const navigationDelay = 800; // milliseconds before navigating
+
+            // Trigger flash animation shortly after card states are applied
+            setTimeout(() => {
+                flashDiv.style.animation = `superUltraLightFlash ${flashDuration / 1000}s forwards`;
+            }, 100); // Small delay to allow initial card styling to apply
+
+            // Navigate after the flash effect is visible
+            setTimeout(() => {
+                window.location.href = url;
+            }, navigationDelay);
+        }
+
+        // Add event listeners to all cards
         cards.forEach(card => {
             const button = card.querySelector('button');
-            const targetUrl = button ? button.dataset.href : null;
+            const targetUrl = card.getAttribute('href');
 
+            // Handle button click within the card
             if (button && targetUrl) {
-                card.addEventListener('click', (event) => {
+                button.addEventListener('click', (event) => {
                     event.preventDefault(); // Prevent default button action
-
-                    if (card.classList.contains('is-active') || card.classList.contains('is-inactive')) {
-                        return;
-                    }
-
-                    card.classList.add('is-active');
-
-                    cards.forEach(c => {
-                        if (c !== card) {
-                            c.classList.add('is-inactive');
-                        }
-                    });
-
-                    // Total animation duration for the entire sequence:
-                    // sciFiScan: 0.5s
-                    // portalRipple: 0.8s (starts at 0.2s) -> ends at 1.0s
-                    // wormholeExpand: 0.8s (starts at 0.8s) -> ends at 1.6s
-                    // finalFlash: 0.3s (starts at 1.6s) -> ends at 1.9s
-                    const totalAnimationDuration = 1900; // milliseconds
-
-                    // Add the flash overlay to the body right before navigation
-                    setTimeout(() => {
-                        const flashDiv = document.createElement('div');
-                        flashDiv.classList.add('flash-overlay');
-                        body.appendChild(flashDiv);
-                    }, totalAnimationDuration - 300); // Start flash 0.3s before end
-
-                    // Navigate after all animations (including flash)
-                    setTimeout(() => {
-                        window.location.href = targetUrl;
-                    }, totalAnimationDuration);
+                    event.stopPropagation(); // Stop click from bubbling up to the card
+                    handleCardClick(card, targetUrl); // Call the main handler
                 });
             }
+
+            // Handle click on the rest of the card (excluding the button)
+            card.addEventListener('click', (event) => {
+                // If the click was on the button or a child of the button, do nothing (already handled)
+                if (button && (event.target === button || button.contains(event.target))) {
+                    return;
+                }
+                event.preventDefault(); // Prevent default link navigation for the card itself
+                handleCardClick(card, targetUrl); // Call the main handler
+            });
         });
     </script>
 <script src="script.js" defer></script>
