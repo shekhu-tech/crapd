@@ -50,13 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Dynamic background color change
 const colors = [
-  "rgba(255, 87, 51, 0.6)",
-  "rgba(255, 122, 92, 0.6)",
-  "rgba(255, 160, 138, 0.6)",
-  "rgba(204, 70, 41, 0.6)",
-  "rgba(153, 53, 31, 0.6)",
-  "rgba(255, 255, 255, 0.6)",
-  "rgba(0, 0, 0, 0.6)"
+  #F8F8F8
 ];
 
 function changeColor() {
