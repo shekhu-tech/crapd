@@ -75,7 +75,7 @@ document.getElementById('site-footer').innerHTML = `
       </div>
     </div>
 
-    <p style="text-align: center; margin-top: 20px;">&copy; 2025 Shekhar Tyagi. All Rights Reserved.</p>
+    <p style="text-align: center; margin-top: 20px;">&copy; 2025 crapd.in. All Rights Reserved.</p>
   </div>
 </footer>
 
