@@ -96,7 +96,7 @@ nav a.active::after {
 }
 
 /* Mobile Menu with Dropdown-like glass effect */
-@media (max-width: auto) {
+@media (max-width: 1920px) {
   nav {
     position: absolute;
     top: 60px;
@@ -187,7 +187,7 @@ nav a.active::after {
 }
 
 /* Show the close button only on mobile (up to 1200px) */
-@media (max-width: auto) {
+@media (max-width: 1920px) {
   .close-btn {
     display: block;
   }
