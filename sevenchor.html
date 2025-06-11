@@ -21,242 +21,349 @@
     <meta name="twitter:image" content="https://livfit.pro/images/7-chor-thumbnail.jpg"> 
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <body>
-        <div id="site-header"></div>
-       <main>
-        <style>
-        /* CSS Variables for easy theme adjustments */
-            :root {
-                --bg-color: #f4f1de; /* Light, classic background (cream/off-white) */
-                --text-color: #3d405b; /* Dark, muted blue-grey text */
-                --heading-color: #e07a5f; /* Warm, classic terracotta/salmon heading color */
-                --card-bg-base: #ffffff; /* Pure white card background */
-                --card-border: #a8dadc; /* Light teal/blueish border */
-                --card-shadow: rgba(0, 0, 0, 0.05); /* Softer, subtle shadow */
+    <style>
+        /* General Body Styles */
+        body {
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            background-color: #FCF5E2; /* Soft, comfortable light cream/gold background */
+            color: #333; /* Darker text for readability */
+            overflow-x: hidden; /* Prevents horizontal scrollbar */
+            overflow-y: auto;   /* Allows vertical scrolling */
+        }
+        /* CARD CONTAINER */
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px; /* Increased gap for more breathing room */
+            padding: 60px 30px; /* More padding around the grid */
+            max-width: 1800px;
+            margin: auto;
+        }
+
+        /* CARD DESIGN - Enhanced Classic & Professional */
+        .card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 150px; /* Adjusted card height to 101px */
+            border-radius: 20px; /* More rounded corners for a softer feel */
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1); /* Softer, deeper initial shadow */
+            transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1); /* Smoother, more impactful transition */
+            cursor: pointer;
+            text-decoration: none;
+            color: inherit;
+            padding: 8px; /* Reduced internal padding for smaller height */
+            text-align: center;
+            position: relative;
+            z-index: 1;
+            overflow: hidden; /* Ensure inner shadow is clipped */
+        }
+
+        /* CARD HOVER EFFECTS */
+        .card:hover {
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.35); /* Much more prominent lift shadow */
+            transform: translateY(-10px) scale(1.02); /* Adjusted lift for smaller card */
+            z-index: 2; /* Bring hovered card to front */
+        }
+
+        /* Subtle inner glow/border on hover using pseudo-element */
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 2px; /* Inset slightly */
+            left: 2px;
+            right: 2px;
+            bottom: 2px;
+            border-radius: inherit;
+            border: 2px solid transparent; /* Default transparent border */
+            box-shadow: inset 0 0 8px rgba(255, 215, 0, 0.08); /* Subtle inner shadow */
+            pointer-events: none;
+            transition: border-color 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+            z-index: -1;
+        }
+
+        .card:hover::before {
+            border-color: gold; /* Solid gold inner border on hover */
+            box-shadow: inset 0 0 15px rgba(255, 215, 0, 0.5); /* More intense inner glow on hover */
+        }
+
+        /* ICON STYLES (Kept for safety, but display: none removes them) */
+        .card .icon {
+            display: none;
+        }
+
+        /* CARD CONTENT */
+        .card-content {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            padding-top: 0;
+            position: relative; /* For text layering over potential bg effects if re-added */
+        }
+
+        .card-content h2 {
+            font-family: 'Georgia', serif;
+            font-size: 1.2em; /* Adjusted heading size for smaller card */
+            font-weight: 700;
+            margin-bottom: 5px; /* Reduced space below heading */
+            color: #0A0A0A; /* Very dark text for strong contrast */
+            text-shadow: 1px 1px 1px rgba(0,0,0,0.03); /* Subtle text shadow */
+            line-height: 1.1; /* Tighter line height for heading */
+        }
+
+        .card-content p {
+            font-size: 0.8em; /* Adjusted paragraph size for smaller card */
+            font-weight: 400;
+            line-height: 1.3; /* Improved line spacing */
+            margin-bottom: 12px; /* Reduced space before button */
+            color: #444; /* Slightly softer text color */
+            /* If the paragraph still overflows, consider display: none or limiting lines */
+            display: -webkit-box;
+            -webkit-line-clamp: 2; /* Limit to 2 lines */
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        /* BUTTON STYLES */
+        .card-content button {
+            padding: 8px 18px; /* Reduced button padding */
+            font-size: 13px; /* Reduced button text size */
+            font-weight: 700; /* Bolder text */
+            border: none;
+            border-radius: 8px; /* Matches card border-radius */
+            background: radial-gradient(circle at center, #FFD700 0%, #DAA520 100%); /* Gold to Darker Gold gradient */
+            color: white;
+            cursor: pointer;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3); /* Adjusted button shadow */
+            transition: all 0.3s ease-in-out;
+            pointer-events: auto;
+            letter-spacing: 0.5px; /* Slightly increased letter spacing for refined look */
+            text-transform: uppercase; /* Uppercase for a professional touch */
+        }
+
+        .card-content button:hover {
+            background: radial-gradient(circle at center, #DAA520 0%, #FFD700 100%); /* Reverse gradient on hover */
+            transform: translateY(-2px) scale(1.01); /* Adjusted lift and scale */
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4); /* Enhanced shadow on hover */
+        }
+        /* --- SCI-FI FLASH EFFECT --- */
+        /* Overlay that creates the bright flash */
+        .super-ultra-light-flash-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(255, 250, 205, 0); /* Initial transparent light yellow/gold */
+            opacity: 0;
+            z-index: 99999; /* Super high to cover everything */
+            pointer-events: none; /* Allows clicks to pass through initially */
+        }
+
+        /* Keyframe animation for the flash */
+        @keyframes superUltraLightFlash {
+            0% {
+                opacity: 0;
+                background-color: rgba(255, 250, 205, 0); /* Start fully transparent */
+                transform: scale(0.8); /* Start slightly smaller for expansion effect */
             }
-
-            /* --- Global Styles --- */
-            body {
-                background-color: var(--bg-color);
+            30% {
+                opacity: 1;
+                background-color: rgba(255, 250, 205, 0.8); /* Opaque light yellow/gold */
+                transform: scale(1);
             }
-
-            /* --- Cards Container (CSS Grid) --- */
-            .cards-container {
-                display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); /* Responsive columns */
-                gap: 30px; /* Space between cards */
-                max-width: 1200px; /* Max width for the container */
-                width: 100%;
-                padding: 20px;
-                margin: 0 auto; /* Center the container */
+            70% {
+                opacity: 1;
+                background-color: rgba(255, 250, 205, 1); /* Fully opaque, brightest point */
+                transform: scale(1.1); /* Slight zoom at peak */
             }
-
-            /* --- Individual Card Link & Base Styling --- */
-            /* The 'a' tag now wraps the card div to make the entire card clickable */
-            .card-link {
-                text-decoration: none; /* Remove underline from link */
-                color: inherit; /* Inherit text color from its children */
-                display: block; /* Make the link take up the full card area */
-                height: 100%; /* Ensure link covers the entire card height */
+            100% {
+                opacity: 0;
+                background-color: rgba(255, 250, 205, 0); /* Fade out */
+                transform: scale(1.5); /* Expands out */
             }
+        }
 
-            .card {
-                background-color: var(--card-bg-base);
-                border-radius: 8px; /* Slightly rounded corners */
-                border: 1px solid var(--card-border); /* Subtle border */
-                box-shadow: 5px 5px 10px var(--card-shadow); /* Soft shadow */
-                overflow: hidden;
-                position: relative;
-                text-align: center;
-                padding: 30px 20px;
-                transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
-                cursor: pointer;
-                min-height: 57px; /* Ensured consistent card height, reverted from 57px */
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                /* Ensure the card's hover effects apply when hovering the link */
+        /* States for cards during the click animation */
+        .card.is-active {
+            box-shadow: 0 0 80px 30px rgba(255, 215, 0, 0.9), /* Bright, spreading glow */
+                        0 0 15px 5px rgba(255, 255, 255, 0.7); /* Inner bright halo */
+            transform: translateY(-15px) scale(1.05); /* More pronounced lift and scale */
+            z-index: 100; /* Ensure it's on top of other cards */
+            transition: all 0.3s ease-out; /* Quick transition to active state */
+            pointer-events: none; /* Disable interaction with the active card */
+        }
+
+        .card.is-active::before {
+            border-color: gold; /* Solid gold inner border */
+            box-shadow: inset 0 0 40px rgba(255, 215, 0, 1); /* Intense inner glow */
+        }
+
+        .card.is-inactive {
+            filter: brightness(0.4) grayscale(100%) blur(2px); /* Dim and desaturate other cards heavily */
+            pointer-events: none; /* Disable interaction with inactive cards */
+            transition: filter 0.6s ease-out, transform 0.6s ease-out; /* Slower transition for others */
+            transform: scale(0.9); /* Slightly shrink inactive cards */
+        }
+
+        /* Ensure default hover is overridden when a card is active or inactive */
+        .card.is-active:hover {
+            box-shadow: 0 0 80px 30px rgba(255, 215, 0, 0.9),
+                        0 0 15px 5px rgba(255, 255, 255, 0.7);
+            transform: translateY(-15px) scale(1.05);
+        }
+        .card.is-inactive:hover {
+            filter: brightness(0.4) grayscale(100%) blur(2px);
+            transform: scale(0.9);
+        }
+
+
+        /* Responsive adjustments */
+        @media (max-width: 1024px) {
+            .card-container {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 30px;
+                padding: 50px 25px;
             }
+            .card { height: 120px; padding: 12px;} /* Adjusted for tablet landscape */
+            .card-content h2 { font-size: 1.4em; }
+            .card-content p { font-size: 0.85em; margin-bottom: 10px; }
+            .card-content button { padding: 10px 24px; font-size: 13px; }
+        }
 
-            .card-link:hover .card { /* Apply hover effect to the card when its parent link is hovered */
-                transform: translateY(-5px); /* Lift slightly on hover */
-                box-shadow: 5px 10px 15px rgba(0, 0, 0, 0.1); /* Deeper shadow on hover */
+        @media (max-width: 768px) {
+            .card-container {
+                grid-template-columns: 1fr; /* Single column on smaller devices */
+                padding: 40px 20px;
+                gap: 25px;
             }
+            .card { height: 130px; padding: 15px;} /* Adjusted for mobile portrait */
+            .card-content h2 { font-size: 1.3em; margin-bottom: 8px;}
+            .card-content p { font-size: 0.8em; margin-bottom: 15px;}
+            .card-content button { padding: 8px 20px; font-size: 12px; }
+        }
 
-            /* --- Card Inner Content --- */
-            .card-inner {
-                position: relative;
-                z-index: 2; /* Ensures text is visible */
+        @media (max-width: 480px) {
+            .card-container {
+                padding: 25px 15px;
             }
+            .card { height: 120px; padding: 10px;}
+            .card-content h2 { font-size: 1.2em; }
+            .card-content p { font-size: 0.75em; margin-bottom: 12px;}
+            .card-content button { padding: 6px 16px; font-size: 11px; }
+        }
 
-            .card h2 {
-                font-family: 'Playfair Display', serif; /* Classic serif font for card titles */
-                font-weight: 700;
-                font-size: 2rem;
-                margin-bottom: 10px;
-                color: var(--heading-color);
+        /* Responsive adjustments */
+        @media (max-width: 1024px) {
+            .card-container {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 30px;
+                padding: 50px 25px;
             }
-            h1 {
-                font-family: 'Playfair Display', serif; /* Elegant serif font */
-                font-weight: 700;
-                font-size: 1.5rem; /* Slightly larger for better visual impact */
-                text-align: center; /* Correct property to center text */
-                margin-bottom: 1rem;
-                margin-top: 1rem;
-                color: var(--heading-color);
-                line-height: 1.2;
-                padding: 0 1rem; /* Adds spacing on small screens */
+            .card { height: 120px; padding: 12px;} /* Adjusted for tablet landscape */
+            .card-content h2 { font-size: 1.4em; }
+            .card-content p { font-size: 0.85em; margin-bottom: 10px; }
+            .card-content button { padding: 10px 24px; font-size: 13px; }
+        }
+
+        @media (max-width: 768px) {
+            .card-container {
+                grid-template-columns: 1fr; /* Single column on smaller devices */
+                padding: 40px 20px;
+                gap: 25px;
             }
+            .card { height: 130px; padding: 15px;} /* Adjusted for mobile portrait */
+            .card-content h2 { font-size: 1.3em; margin-bottom: 8px;}
+            .card-content p { font-size: 0.8em; margin-bottom: 15px;}
+            .card-content button { padding: 8px 20px; font-size: 12px; }
+        }
 
-            /* Responsive adjustment for smaller screens */
-            @media (max-width: 600px) {
-                h1 {
-                    font-size: 1.8rem;
-                }
+        @media (max-width: 480px) {
+            .card-container {
+                padding: 25px 15px;
             }
-
-            .card p {
-                font-size: 1rem;
-                line-height: 1.5;
-                margin-top: 0;
-                color: var(--text-color);
-            }
-
-            /* --- Specific Card Subtle Background Adjustments (No Icons) --- */
-
-            /* Kamvasna (Lust) */
-            .kamvasna {
-                background-color: rgba(255, 182, 193, 0.05); /* Very subtle pink tint */
-            }
-
-            /* Krodh (Anger) */
-            .krodh {
-                background-color: rgba(220, 20, 60, 0.05); /* Very subtle crimson tint */
-            }
-
-            /* Lobh (Greed) */
-            .lobh {
-                background-color: rgba(255, 215, 0, 0.05); /* Very subtle gold tint */
-            }
-
-            /* Moh (Attachment) */
-            .moh {
-                background-color: rgba(100, 149, 237, 0.05); /* Very subtle cornflower blue tint */
-            }
-
-            /* Ahankar (Ego) */
-            .ahankar {
-                background-color: rgba(147, 112, 219, 0.05); /* Very subtle medium purple tint */
-            }
-
-            /* Man (Mind) */
-            .man {
-                background-color: rgba(0, 128, 0, 0.05); /* Very subtle green tint */
-            }
-
-            /* Maya (Illusion) */
-            .maya {
-                background-color: rgba(105, 105, 105, 0.05); /* Very subtle dim grey tint */
-            }
-
-            /* --- Responsive Adjustments --- */
-            @media (max-width: 768px) {
-                .cards-container {
-                    grid-template-columns: 1fr; /* Stack cards vertically on smaller screens */
-                    padding: 10px;
-                }
-
-                .card {
-                    padding: 25px 15px;
-                }
-
-                h1 {
-                    font-size: clamp(2rem, 8vw, 3.5rem); /* Adjust heading size */
-                }
-
-                .card h2 {
-                    font-size: 1.8rem;
-                }
-
-                .card p {
-                    font-size: 1rem;
-                }
-            }
-
-            @media (max-width: 480px) {
-                body {
-                    padding: 0; /* Remove body padding on very small screens if it's causing issues */
-                }
-            }
-
-        </style>
-       
-        <h1>Check Your 7 "Chor"</h1>
-       
-        <div class="cards-container">
-            <a href="kamvashnachecker.html" class="card-link">
-                <div class="card kamvasna">
-                    <div class="card-inner">
-                        <h2>Kamvasna</h2>
+            .card { height: 120px; padding: 10px;}
+            .card-content h2 { font-size: 1.2em; }
+            .card-content p { font-size: 0.75em; margin-bottom: 12px;}
+            .card-content button { padding: 6px 16px; font-size: 11px; }
+        }
+    </style>
+</head>
+<body>
+    <div id="site-header"></div>
+    <main>
+        <section>
+            <div class="card-container">
+                <!-- Card 1: Why was I born? (Soft Sky Blue to Light Azure) -->
+                <a href="kamvashnachecker.html" class="card" style="background: linear-gradient(to bottom right, #EBF8FF, #D7F2FA);">
+                    <div class="card-content">
+                       <h2>Kamvasna</h2>
                         <p>The seductive whisper of desire.</p>
+                        <button data-i18n="card1_button">Explore</button>
                     </div>
-                </div>
-            </a>
+                </a>
 
-            <a href="anger.html" class="card-link">
-                <div class="card krodh">
-                    <div class="card-inner">
+                <!-- Card 2: My Body Control (Pale Lavender to Light Orchid) -->
+                <a href="anger.html" class="card" style="background: linear-gradient(to bottom right, #F8F0FF, #EEE6FA);">
+                    <div class="card-content">
                         <h2>Krodh</h2>
                         <p>The burning inferno of rage.</p>
+                        <button data-i18n="card2_button">Begin</button>
                     </div>
-                </div>
-            </a>
+                </a>
 
-            <a href="lobh.html" class="card-link">
-                <div class="card lobh">
-                    <div class="card-inner">
+                <!-- Card 3: Career Counseling (Mint Cream to Pale Green) -->
+                <a href="lobh.html" class="card" style="background: linear-gradient(to bottom right, #F5FFFA, #EAFBEB);">
+                    <div class="card-content">
                         <h2>Lobh</h2>
                         <p>The insatiable hunger for more.</p>
+                        <button data-i18n="card3_button">Proceed</button>
                     </div>
-                </div>
-            </a>
+                </a>
 
-            <a href="mohhh.html" class="card-link">
-                <div class="card moh">
-                    <div class="card-inner">
-                        <h2>Moh</h2>
+                <!-- Card 4: Know Your Aura (Lemon Chiffon to Light Goldenrod Yellow) -->
+                <a href="mohhh.html" class="card" style="background: linear-gradient(to bottom right, #FFFDE8, #FFF5D6);">
+                    <div class="card-content">
+                       <h2>Moh</h2>
                         <p>The invisible chains of attachment.</p>
+                        <button data-i18n="card4_button">Start</button>
                     </div>
-                </div>
-            </a>
+                </a>
 
-            <a href="ahenkar.html" class="card-link">
-                <div class="card ahankar">
-                    <div class="card-inner">
-                        <h2>Ahankar</h2>
+                <!-- Card 5: Whose Life Am I Important To? (Powder Blue to Light Steel Blue) -->
+                <a href="ahenkar.html" class="card" style="background: linear-gradient(to bottom right, #D8F0FA, #C2E8F2);">
+                    <div class="card-content">
+                         <h2>Ahankar</h2>
                         <p>The towering illusion of self-importance.</p>
+                        <button data-i18n="card5_button">Learn</button>
                     </div>
-                </div>
-            </a>
+                </a>
 
-            <a href="mannn.html" class="card-link">
-                <div class="card man">
-                    <div class="card-inner">
+                <!-- Card 6: Who is Important in My Life? (Misty Rose to Light Pink) -->
+                <a href="mannn.html" class="card" style="background: linear-gradient(to bottom right, #FFF5F5, #FFEBEB);">
+                    <div class="card-content">
                         <h2>Man</h2>
                         <p>The restless wanderer of thoughts.</p>
+                        <button data-i18n="card6_button">Understand</button>
                     </div>
-                </div>
-            </a>
+                </a>
 
-            <a href="mayaaa.html" class="card-link">
-                <div class="card maya">
-                    <div class="card-inner">
-                        <h2>Maya</h2>
+                <!-- Card 7: My IQ Level (Pale Turquoise to Aquamarine) -->
+                <a href="mayaaa.html" class="card" style="background: linear-gradient(to bottom right, #EFFEFF, #D6F8F0);">
+                    <div class="card-content">
+                         <h2>Maya</h2>
                         <p>The grand illusion, the deceptive veil.</p>
+                        <button data-i18n="card7_button">Evaluate</button>
                     </div>
-                </div>
-            </a>
-        </div>
+                </a>
+            </div>
+        </section>
     </main>
     <div id="site-footer"></div>
     <script src="script.js" defer></script>
