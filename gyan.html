@@ -1,0 +1,1938 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Why Am I Born? Discover Your Life's Purpose with Our 100-Question Quiz | crapd.in</title>
+    <meta name="description" content="Embark on a profound journey of self-discovery. Our 'Why I Am Born Calculator' uses 100 insightful questions to help you analyze your existential purpose, find meaning, and clarify your life's direction.">
+    <meta name="keywords" content="why am i born, why i am born calculator, life purpose quiz, existential purpose, meaning of life, self-discovery questions, personal growth quiz, 100 questions, find your purpose, spiritual awakening, modern edge quiz">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://crapd.in/why-am-i-born-calculator.html"> <meta property="og:type" content="website">
+    <meta property="og:url" content="https://crapd.in/why-am-i-born-calculator.html"> <meta property="og:title" content="Why Am I Born? Discover Your Life's Purpose with Our 100-Question Quiz">
+    <meta property="og:description" content="Embark on a profound journey of self-discovery. Our 'Why I Am Born Calculator' uses 100 insightful questions to help you analyze your existential purpose, find meaning, and clarify your life's direction.">
+    <meta property="og:image" content="https://crapd.in/images/why-am-i-born-quiz-social.jpg"> <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://crapd.in/why-am-i-born-calculator.html"> <meta property="twitter:title" content="Why Am I Born? Discover Your Life's Purpose with Our 100-Question Quiz">
+    <meta property="twitter:description" content="Embark on a profound journey of self-discovery. Our 'Why I Am Born Calculator' uses 100 insightful questions to help you analyze your existential purpose, find meaning, and clarify your life's direction.">
+    <meta property="twitter:image" content="https://crapd.in/images/why-am-i-born-quiz-social.jpg"> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #673ab7; /* Deep Purple - for purpose/meaning */
+            --secondary-color: #512da8; /* Even Darker Purple */
+            --accent-color: #8bc34a; /* Light Green for accent/growth */
+            --light-bg: #ede7f6; /* Very light purple background */
+            --dark-text: #333;
+            --light-text: #666;
+            --white: #ffffff;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', 'Arial', sans-serif;
+            background-color: #f3e5f5; /* Lighter purple background */
+            color: var(--dark-text);
+            line-height: 1.6;
+            padding: 0;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            border-radius: 0 0 20px 20px;
+            box-shadow: var(--shadow);
+            margin-bottom: 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%);
+            transform: rotate(30deg);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            position: relative;
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            position: relative;
+        }
+
+        .progress-container {
+            width: 100%;
+            background-color: #e0e0e0;
+            border-radius: 10px;
+            margin: 2rem 0;
+            height: 15px;
+            overflow: hidden;
+            box-shadow: inset 0 1px 3px rgba(0,0,0,0.2);
+        }
+
+        .progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, var(--accent-color), var(--primary-color));
+            width: 0%;
+            transition: width 0.5s ease;
+            border-radius: 10px;
+        }
+
+        .quiz-container {
+            background-color: var(--white);
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        .question-counter {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+
+        .question {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            color: var(--secondary-color);
+        }
+
+        .options {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 12px;
+        }
+
+        .option {
+            display: flex;
+            align-items: center;
+            padding: 12px 15px;
+            background-color: var(--light-bg);
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .option:hover {
+            background-color: #d1c4e9; /* Lighter purple tint on hover */
+            border-color: var(--primary-color);
+        }
+
+        .option input {
+            display: none;
+        }
+
+        .option label {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            cursor: pointer;
+            position: relative;
+            padding-left: 35px;
+        }
+
+        .custom-radio {
+            position: absolute;
+            left: 0;
+            height: 22px;
+            width: 22px;
+            background-color: #eee;
+            border-radius: 50%;
+            border: 2px solid var(--light-text);
+            transition: all 0.3s ease;
+        }
+
+        .option input:checked ~ .custom-radio {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+
+        .custom-radio::after {
+            content: "";
+            position: absolute;
+            display: none;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: white;
+        }
+
+        .option input:checked ~ .custom-radio::after {
+            display: block;
+        }
+
+        .option-text {
+            margin-left: 10px;
+            font-size: 1rem;
+            color: var(--dark-text);
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 2rem;
+        }
+
+        .btn {
+            padding: 12px 25px;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .btn-secondary {
+            background-color: #e0e0e0;
+            color: var(--dark-text);
+        }
+
+        .btn-secondary:hover {
+            background-color: #d0d0d0;
+        }
+
+        .result-container {
+            background-color: var(--white);
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            padding: 2rem;
+            text-align: center;
+            display: none;
+            animation: fadeIn 0.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .result-title {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 2rem;
+        }
+
+        .score {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--accent-color);
+            margin: 1rem 0;
+        }
+
+        .score-bar {
+            height: 30px;
+            background-color: #e0e0e0;
+            border-radius: 15px;
+            margin: 2rem auto;
+            max-width: 500px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .score-progress {
+            height: 100%;
+            background: linear-gradient(90deg, #d32f2f, #4CAF50); /* Red (lower purpose clarity) to Green (higher purpose clarity) gradient */
+            width: 0%;
+            transition: width 1s ease;
+        }
+
+        .score-labels {
+            display: flex;
+            justify-content: space-between;
+            max-width: 500px;
+            margin: 0 auto;
+            font-size: 0.8rem;
+            color: var(--light-text);
+        }
+
+        .result-message {
+            margin-top: 2rem;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--dark-text);
+            padding: 0 1rem;
+        }
+
+        .restart-btn {
+            margin-top: 2rem;
+            background-color: var(--accent-color);
+            color: white;
+        }
+
+        .restart-btn:hover {
+            background-color: #689f38; /* Darker green */
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+
+            header {
+                padding: 1.5rem 0;
+                border-radius: 0;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            .subtitle {
+                font-size: 0.9rem;
+            }
+
+            .quiz-container, .result-container {
+                padding: 1.5rem;
+            }
+
+            .question {
+                font-size: 1.1rem;
+            }
+
+            .option-text {
+                font-size: 0.9rem;
+            }
+
+            .btn {
+                padding: 10px 20px;
+                font-size: 0.9rem;
+            }
+
+            .result-title {
+                font-size: 1.5rem;
+            }
+
+            .score {
+                font-size: 2.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            .quiz-container, .result-container {
+                padding: 1rem;
+                border-radius: 10px;
+            }
+
+            .options {
+                gap: 8px;
+            }
+
+            .option {
+                padding: 10px;
+            }
+
+            .custom-radio {
+                height: 18px;
+                width: 18px;
+            }
+
+            .option-text {
+                font-size: 0.85rem;
+                margin-left: 8px;
+            }
+
+            .navigation {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .btn {
+                width: 100%;
+            }
+        }
+
+        /* Animation for options */
+        @keyframes optionAppear {
+            from { opacity: 0; transform: translateX(-10px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        .option {
+            animation: optionAppear 0.3s ease forwards;
+            opacity: 0;
+        }
+
+        .option:nth-child(1) { animation-delay: 0.1s; }
+        .option:nth-child(2) { animation-delay: 0.2s; }
+        .option:nth-child(3) { animation-delay: 0.3s; }
+        .option:nth-child(4) { animation-delay: 0.4s; }
+        .option:nth-child(5) { animation-delay: 0.5s; }
+        .option:nth-child(6) { animation-delay: 0.6s; }
+        .option:nth-child(7) { animation-delay: 0.7s; }
+
+        /* Loading spinner */
+        .loader {
+            display: none;
+            border: 5px solid #f3f3f3;
+            border-top: 5px solid var(--primary-color);
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+            margin: 2rem auto;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Floating action button */
+        .fab {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background-color: var(--accent-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            cursor: pointer;
+            z-index: 100;
+            transition: all 0.3s ease;
+        }
+
+        .fab:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 16px rgba(0,0,0,0.3);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><i class="fas fa-question-circle"></i> Why I Am Born Calculator</h1>
+            <p class="subtitle">Analyze your existential purpose with 100  questions</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="progress-container">
+            <div class="progress-bar" id="quiz-progress"></div>
+        </div>
+
+        <div id="quiz" class="quiz-container"></div>
+
+        <div class="navigation">
+            <button class="btn btn-secondary" id="prev-btn" disabled>
+                <i class="fas fa-arrow-left"></i> Previous
+            </button>
+            <button class="btn btn-primary" id="next-btn">
+                Next <i class="fas fa-arrow-right"></i>
+            </button>
+            <button class="btn btn-primary" id="submit-btn" style="display: none;">
+                See Result <i class="fas fa-chart-bar"></i>
+            </button>
+        </div>
+
+        <div class="loader" id="loader"></div>
+
+        <div class="result-container" id="result-container">
+            <h2 class="result-title">Your Existential Purpose Score</h2>
+            <div class="score" id="score">0%</div>
+
+            <div class="score-bar">
+                <div class="score-progress" id="score-progress"></div>
+            </div>
+
+            <div class="score-labels">
+                <span>Unclear</span>
+                <span>In Search</span>
+                <span>Evolving</span>
+                <span>Clear Purpose</span>
+            </div>
+
+            <div class="result-message" id="result-message"></div>
+
+            <button class="btn restart-btn" id="restart-btn">
+                <i class="fas fa-redo"></i> Restart
+            </button>
+        </div>
+    </div>
+
+    <div class="fab" id="fab" title="See Progress">
+        <i class="fas fa-chart-pie"></i>
+    </div>
+
+    <script>
+        const questions = [
+    {
+        question: "1. If you were a blank canvas, what would be the first impression you leave on your life?",
+        options: [
+            { text: "A peaceful landscape reflecting infinite possibilities.", value: 5 },
+            { text: "A complex geometric pattern, where every line has a purpose.", value: 6 },
+            { text: "A vibrant, abstract explosion depicting pure emotion.", value: 4 },
+            { text: "A mirror reflecting the world in its true light.", value: 3 },
+            { text: "A black dot symbolizing all beginnings and ends.", value: 1 },
+            { text: "A mysterious labyrinth, with a discovery at every turn.", value: 7 },
+            { text: "Nothing, for the deepest art lies in silence.", value: 2 }
+        ]
+    },
+    {
+        question: "2. What do you consider the biggest mystery about your existence?",
+        options: [
+            { text: "There is no mystery; life is just a chance.", value: 1 },
+            { text: "It's part of a predetermined destiny that I have to unravel.", value: 6 },
+            { text: "It's a creative process where I create my own meaning.", value: 7 },
+            { text: "It's a learning journey, every experience a lesson.", value: 5 },
+            { text: "It's a dream from which I have to wake up.", value: 2 },
+            { text: "It's a social construct that I have to challenge.", value: 3 },
+            { text: "It's a mysterious phenomenon that cannot be understood by logic.", value: 4 }
+        ]
+    },
+    {
+        question: "3. When you look back at your life, what do you see?",
+        options: [
+            { text: "A coherent story where every event had a purpose.", value: 7 },
+            { text: "A series of random events that have no particular meaning.", value: 1 },
+            { text: "A learning path where every mistake made me better.", value: 6 },
+            { text: "A struggle in which I discovered my identity.", value: 4 },
+            { text: "A blank slate yet to be filled.", value: 2 },
+            { text: "A seed that is slowly in the process of blossoming.", value: 5 },
+            { text: "A puzzle whose pieces are still coming together.", value: 3 }
+        ]
+    },
+    {
+        question: "4. What does 'successful life' mean to you?",
+        options: [
+            { text: "Achieving wealth and social status.", value: 2 },
+            { text: "Making a positive difference in the lives of others.", value: 7 },
+            { text: "Finding inner peace and contentment.", value: 6 },
+            { text: "Fulfilling all my desires and dreams.", value: 4 },
+            { text: "Leaving a legacy that lives on after me.", value: 5 },
+            { text: "Living all experiences of life completely.", value: 3 },
+            { text: "Mastering a particular field.", value: 1 }
+        ]
+    },
+    {
+        question: "5. When you think about your future, what do you feel?",
+        options: [
+            { text: "Excitement and a sense of immense possibilities.", value: 7 },
+            { text: "Anxiety and uncertainty.", value: 2 },
+            { text: "A burden of responsibility and duty.", value: 3 },
+            { text: "A deep understanding that everything will be fine.", value: 6 },
+            { text: "Mystery and curiosity.", value: 5 },
+            { text: "Indifference - what will be, will be.", value: 1 },
+            { text: "A strong desire to complete a mission.", value: 4 }
+        ]
+    },
+    {
+        question: "6. What does the word 'purpose' mean to you?",
+        options: [
+            { text: "A definite goal to be achieved.", value: 4 },
+            { text: "Things that make life meaningful.", value: 6 },
+            { text: "An illusion that has no real existence.", value: 1 },
+            { text: "The reason I came into this world.", value: 7 },
+            { text: "A philosophical question with no definite answer.", value: 3 },
+            { text: "The force that gets me out of bed every morning.", value: 5 },
+            { text: "A concept imposed by society.", value: 2 }
+        ]
+    },
+    {
+        question: "7. If you had one message to give the world about your life, what would it be?",
+        options: [
+            { text: "Love is the only truth.", value: 7 },
+            { text: "Existence has no meaning - we create our own meaning.", value: 4 },
+            { text: "Find balance and harmony in everything.", value: 6 },
+            { text: "Life is a gift - live it to the fullest.", value: 5 },
+            { text: "True freedom is the highest goal.", value: 3 },
+            { text: "We are all connected to each other.", value: 2 },
+            { text: "Nothing is permanent - change is the only truth.", value: 1 }
+        ]
+    },
+    {
+        question: "8. When you recall your childhood dreams, what do you feel?",
+        options: [
+            { text: "I am on the path to fulfilling those dreams.", value: 7 },
+            { text: "Those dreams no longer relate to my present.", value: 2 },
+            { text: "A bittersweet memory that inspires me.", value: 5 },
+            { text: "Those dreams reflected my true self.", value: 6 },
+            { text: "Those dreams held clues to my life's purpose.", value: 4 },
+            { text: "Childhood innocence that is no longer there.", value: 3 },
+            { text: "Don't remember much - they were just childhood thoughts.", value: 1 }
+        ]
+    },
+    {
+        question: "9. What does 'self-realization' mean to you?",
+        options: [
+            { text: "Knowing your true self and living in accordance with it.", value: 7 },
+            { text: "A spiritual concept unrelated to reality.", value: 1 },
+            { text: "Understanding my capabilities and limitations.", value: 5 },
+            { text: "The process by which I understand my purpose.", value: 6 },
+            { text: "A lifelong quest.", value: 4 },
+            { text: "Knowing my likes, dislikes, and values.", value: 3 },
+            { text: "A fashionable term with no concrete meaning.", value: 2 }
+        ]
+    },
+    {
+        question: "10. What will you care about most in the last moments of your life?",
+        options: [
+            { text: "Did I do everything I wanted to do?", value: 6 },
+            { text: "Did I make my loved ones happy?", value: 5 },
+            { text: "Did I contribute to making the world a better place?", value: 7 },
+            { text: "Did I enjoy life to the fullest?", value: 4 },
+            { text: "Did I live by walking on the path of truth?", value: 3 },
+            { text: "I won't worry about it - death is a natural phenomenon.", value: 2 },
+            { text: "I never think about this - it's just a waste of time.", value: 1 }
+        ]
+    },
+    {
+        question: "11. What inspires you when you wake up in the morning?",
+        options: [
+            { text: "The desire to achieve my goals and dreams.", value: 7 },
+            { text: "Daily responsibilities and duties.", value: 3 },
+            { text: "The possibility of new challenges and experiences.", value: 6 },
+            { text: "The opportunity to spend time with my loved ones.", value: 5 },
+            { text: "Anticipation of the small joys of life.", value: 4 },
+            { text: "No special motivation - just part of the routine.", value: 2 },
+            { text: "Nothing - I struggle to get out of bed.", value: 1 }
+        ]
+    },
+    {
+        question: "12. What does 'spirituality' mean to you?",
+        options: [
+            { text: "Connection with God or a higher power.", value: 4 },
+            { text: "Establishing contact with my inner self.", value: 7 },
+            { text: "A personal journey that connects me to my purpose.", value: 6 },
+            { text: "A concept that has nothing to do with my life.", value: 1 },
+            { text: "Following religion and rituals.", value: 2 },
+            { text: "The feeling of being part of universal consciousness.", value: 5 },
+            { text: "A mystical experience that cannot be expressed in words.", value: 3 }
+        ]
+    },
+    {
+        question: "13. What do you value most in your life?",
+        options: [
+            { text: "My relationships and loved ones.", value: 5 },
+            { text: "My freedom and independence.", value: 4 },
+            { text: "My achievements and successes.", value: 3 },
+            { text: "My inner peace and contentment.", value: 7 },
+            { text: "My creative expression.", value: 6 },
+            { text: "My material security and comforts.", value: 2 },
+            { text: "My health and physical ability.", value: 1 }
+        ]
+    },
+    {
+        question: "14. When you face a big problem, what is your reaction?",
+        options: [
+            { text: "I try to view it in the context of my life's purpose.", value: 7 },
+            { text: "I take it as a challenge that will make me stronger.", value: 6 },
+            { text: "I use logic and analysis to deal with it.", value: 4 },
+            { text: "I get emotionally overwhelmed and give up.", value: 1 },
+            { text: "I ask others for help and guidance.", value: 3 },
+            { text: "I accept it as part of fate or destiny.", value: 5 },
+            { text: "I find a way to avoid it or ignore it.", value: 2 }
+        ]
+    },
+    {
+        question: "15. What are you seeking most in your life?",
+        options: [
+            { text: "Peace and contentment.", value: 6 },
+            { text: "Love and connection.", value: 5 },
+            { text: "Success and recognition.", value: 3 },
+            { text: "Meaning and purpose.", value: 7 },
+            { text: "Knowledge and understanding.", value: 4 },
+            { text: "Happiness and joy.", value: 2 },
+            { text: "I am not looking for anything - what is, is enough.", value: 1 }
+        ]
+    },
+    {
+        question: "16. What is 'true happiness' for you?",
+        options: [
+            { text: "Living in accordance with my purpose.", value: 7 },
+            { text: "Spending time with loved ones.", value: 5 },
+            { text: "Achieving personal successes.", value: 4 },
+            { text: "A state of inner peace and balance.", value: 6 },
+            { text: "Material comfort and relaxation.", value: 2 },
+            { text: "Freedom and self-reliance.", value: 3 },
+            { text: "Happiness is an illusion - life is a mix of sorrow and joy.", value: 1 }
+        ]
+    },
+    {
+        question: "17. When you spend time in nature, what do you experience?",
+        options: [
+            { text: "A deep sense of connection and interconnectedness.", value: 7 },
+            { text: "Peace and relaxation.", value: 5 },
+            { text: "Enjoyment of life's beauty and diversity.", value: 6 },
+            { text: "A realization of my own insignificance.", value: 4 },
+            { text: "A creative inspiration.", value: 3 },
+            { text: "Nothing special - it's just a normal environment.", value: 2 },
+            { text: "Boredom and waste of time.", value: 1 }
+        ]
+    },
+    {
+        question: "18. What kind of changes would you like to bring into your life?",
+        options: [
+            { text: "Starting to live in accordance with my purpose.", value: 7 },
+            { text: "Adopting a more balanced and healthy lifestyle.", value: 5 },
+            { text: "Making my relationships deeper and more meaningful.", value: 6 },
+            { text: "Making progress in my career or personal development.", value: 4 },
+            { text: "Gaining more wealth and material comforts.", value: 2 },
+            { text: "Bringing positive change to the world around me.", value: 3 },
+            { text: "I don't want any major changes - everything is fine.", value: 1 }
+        ]
+    },
+    {
+        question: "19. What are you most grateful for in your life?",
+        options: [
+            { text: "My experiences have made me who I am.", value: 7 },
+            { text: "The love and support of my loved ones.", value: 6 },
+            { text: "My abilities and talents.", value: 5 },
+            { text: "My material comforts and security.", value: 3 },
+            { text: "Opportunities and possibilities I've received in life.", value: 4 },
+            { text: "My freedom and right to choose.", value: 2 },
+            { text: "I am not particularly grateful for anything.", value: 1 }
+        ]
+    },
+    {
+        question: "20. When you meet someone for the first time, what do you want to share first?",
+        options: [
+            { text: "My passions and outlook on life.", value: 7 },
+            { text: "My achievements and successes.", value: 3 },
+            { text: "My interests and hobbies.", value: 5 },
+            { text: "My values and beliefs.", value: 6 },
+            { text: "My occupation or profession.", value: 2 },
+            { text: "My background and family.", value: 4 },
+            { text: "Not much - I avoid sharing personal information.", value: 1 }
+        ]
+    },
+    {
+        question: "21. What does 'success' mean to you?",
+        options: [
+            { text: "Fulfilling my purpose and realizing my potential.", value: 7 },
+            { text: "Achieving inner peace and contentment.", value: 6 },
+            { text: "Gaining recognition and prestige in society.", value: 3 },
+            { text: "Achieving financial security and material comfort.", value: 2 },
+            { text: "Building deep and meaningful relationships.", value: 5 },
+            { text: "Personal growth and self-realization.", value: 4 },
+            { text: "Success is an illusion - it's just a concept imposed by society.", value: 1 }
+        ]
+    },
+    {
+        question: "22. When you face a difficult decision, how do you choose?",
+        options: [
+            { text: "In alignment with my values and long-term goals.", value: 7 },
+            { text: "Based on logic and practicality.", value: 4 },
+            { text: "By following intuition and inner voice.", value: 6 },
+            { text: "With advice and guidance from others.", value: 3 },
+            { text: "Based on immediate gain and convenience.", value: 2 },
+            { text: "By listening to emotions and the heart.", value: 5 },
+            { text: "I avoid making decisions or procrastinate.", value: 1 }
+        ]
+    },
+    {
+        question: "23. What kind of legacy would you like to leave in your life?",
+        options: [
+            { text: "A positive impact that makes the world better.", value: 7 },
+            { text: "My ideas and creations that live on after me.", value: 6 },
+            { text: "A story of a successful and inspiring life.", value: 5 },
+            { text: "A strong family and good children.", value: 4 },
+            { text: "Wealth and property that will be useful after me.", value: 2 },
+            { text: "I have no desire to leave a legacy.", value: 1 },
+            { text: "A name that people remember and respect.", value: 3 }
+        ]
+    },
+    {
+        question: "24. When you look at a work of art, what do you experience?",
+        options: [
+            { text: "A realization of the power of creativity and expression.", value: 7 },
+            { text: "Enjoyment of beauty and aesthetics.", value: 5 },
+            { text: "Trying to understand the artist's message and emotions.", value: 6 },
+            { text: "Consideration of technical skill and the creation process.", value: 4 },
+            { text: "The surge of my own emotions and memories.", value: 3 },
+            { text: "Nothing special - it's just decoration.", value: 2 },
+            { text: "Boredom and waste of time.", value: 1 }
+        ]
+    },
+    {
+        question: "25. What are you most excited about in your life?",
+        options: [
+            { text: "The possibility of fulfilling my purpose and realizing my potential.", value: 7 },
+            { text: "Future experiences and learning opportunities.", value: 6 },
+            { text: "The growth and depth of my relationships.", value: 5 },
+            { text: "Potential for personal and professional success.", value: 4 },
+            { text: "Travel and discovering new places.", value: 3 },
+            { text: "The small joys and pleasures of life.", value: 2 },
+            { text: "I am not particularly excited about anything.", value: 1 }
+        ]
+    },
+    {
+        question: "26. What does 'love' mean to you?",
+        options: [
+            { text: "A deep spiritual connection that links us to our purpose.", value: 7 },
+            { text: "Unconditional acceptance and support.", value: 6 },
+            { text: "An emotional need that is fulfilled.", value: 4 },
+            { text: "A chemical reaction and biological impulse.", value: 1 },
+            { text: "Life's greatest gift and meaning.", value: 5 },
+            { text: "A social construct that has nothing to do with reality.", value: 2 },
+            { text: "A pleasant experience that beautifies life.", value: 3 }
+        ]
+    },
+    {
+        question: "27. When you think about yourself, what word do you prefer to use?",
+        options: [
+            { text: "Explorer", value: 7 },
+            { text: "Kind", value: 6 },
+            { text: "Capable", value: 4 },
+            { text: "Logical", value: 3 },
+            { text: "Independent", value: 5 },
+            { text: "Practical", value: 2 },
+            { text: "Indifferent", value: 1 }
+        ]
+    },
+    {
+        question: "28. What are you most hopeful for in your life?",
+        options: [
+            { text: "The collective evolution and awakening of humanity.", value: 7 },
+            { text: "My personal growth and self-realization.", value: 6 },
+            { text: "The well-being and happiness of my loved ones.", value: 5 },
+            { text: "Improvement in my status and prestige in society.", value: 3 },
+            { text: "Future technological developments and conveniences.", value: 2 },
+            { text: "Resolution of global problems and peace.", value: 4 },
+            { text: "I am not particularly hopeful - the future is uncertain.", value: 1 }
+        ]
+    },
+    {
+        question: "29. When you make a big mistake, what is your reaction?",
+        options: [
+            { text: "I see it as a learning opportunity.", value: 7 },
+            { text: "I try to overcome it and move forward.", value: 6 },
+            { text: "I blame myself and regret it.", value: 2 },
+            { text: "I try to understand the reasons behind it.", value: 5 },
+            { text: "I accept it as part of fate or destiny.", value: 4 },
+            { text: "I try to hide it or forget it.", value: 1 },
+            { text: "I ask others for advice on what to do next.", value: 3 }
+        ]
+    },
+    {
+        question: "30. What do you fear most in your life?",
+        options: [
+            { text: "Living without any purpose or meaning.", value: 7 },
+            { text: "Loneliness and disconnection.", value: 5 },
+            { text: "Failure and rejection.", value: 3 },
+            { text: "Fear of death and the unknown.", value: 4 },
+            { text: "Not fully realizing my potential.", value: 6 },
+            { text: "Financial insecurity and poverty.", value: 2 },
+            { text: "I have no particular fear of anything.", value: 1 }
+        ]
+    },
+    {
+        question: "31. What is 'true freedom' for you?",
+        options: [
+            { text: "The ability to live in accordance with my purpose.", value: 7 },
+            { text: "Freedom from all external influences and limitations.", value: 6 },
+            { text: "Inner peace and self-acceptance.", value: 5 },
+            { text: "Financial freedom and security.", value: 3 },
+            { text: "The ability to live and choose as I wish.", value: 4 },
+            { text: "Freedom from social expectations and pressures.", value: 2 },
+            { text: "Freedom is an illusion - we are all bound by something.", value: 1 }
+        ]
+    },
+    {
+        question: "32. When you see a child, what do you think?",
+        options: [
+            { text: "A symbol of pure potential and limitless ability.", value: 7 },
+            { text: "An expression of innocence and hope.", value: 6 },
+            { text: "The future generation for whom we must build a better world.", value: 5 },
+            { text: "A small human who still has much to learn.", value: 4 },
+            { text: "A symbol of family and continuity.", value: 3 },
+            { text: "A source of responsibility and worry.", value: 2 },
+            { text: "Nothing special - it's just a child.", value: 1 }
+        ]
+    },
+    {
+        question: "33. What do you feel is missing most in your life?",
+        options: [
+            { text: "A clear purpose and direction.", value: 7 },
+            { text: "Deep and meaningful connections.", value: 5 },
+            { text: "Inner peace and contentment.", value: 6 },
+            { text: "Personal achievements and successes.", value: 4 },
+            { text: "Financial security and stability.", value: 2 },
+            { text: "Health and physical comfort.", value: 3 },
+            { text: "I don't feel anything is missing.", value: 1 }
+        ]
+    },
+    {
+        question: "34. When you help someone, what do you feel?",
+        options: [
+            { text: "The true purpose of my existence is fulfilled.", value: 7 },
+            { text: "Self-satisfaction and inner happiness.", value: 6 },
+            { text: "Fulfillment of a human duty.", value: 5 },
+            { text: "A feeling of meeting social expectations.", value: 3 },
+            { text: "The feeling of being a good person.", value: 4 },
+            { text: "Nothing special - it's just normal.", value: 2 },
+            { text: "Waste of time and energy.", value: 1 }
+        ]
+    },
+    {
+        question: "35. What are you most proud of in your life?",
+        options: [
+            { text: "My journey of growth and self-discovery.", value: 7 },
+            { text: "My ethics and values.", value: 6 },
+            { text: "My achievements and successes.", value: 4 },
+            { text: "My relationships and loved ones.", value: 5 },
+            { text: "My abilities and talents.", value: 3 },
+            { text: "My material possessions and status.", value: 2 },
+            { text: "I am not particularly proud of anything.", value: 1 }
+        ]
+    },
+    {
+        question: "36. When you face a big challenge, what is your reaction?",
+        options: [
+            { text: "I consider it part of my journey of purpose.", value: 7 },
+            { text: "I see it as an opportunity for growth.", value: 6 },
+            { text: "I plan and act to deal with it.", value: 5 },
+            { text: "I feel uncertainty and anxiety.", value: 3 },
+            { text: "I ask others for help and support.", value: 4 },
+            { text: "I try to avoid it.", value: 2 },
+            { text: "I give up and surrender.", value: 1 }
+        ]
+    },
+    {
+        question: "37. What is 'true prosperity' for you?",
+        options: [
+            { text: "Living in accordance with my purpose and realizing my potential.", value: 7 },
+            { text: "A state of inner peace and contentment.", value: 6 },
+            { text: "Deep and meaningful relationships.", value: 5 },
+            { text: "Financial freedom and security.", value: 3 },
+            { text: "Health and physical comfort.", value: 2 },
+            { text: "Knowledge and wisdom.", value: 4 },
+            { text: "Prestige and recognition in society.", value: 1 }
+        ]
+    },
+    {
+        question: "38. When you see an elderly person, what do you think?",
+        options: [
+            { text: "A storehouse of life experience and wisdom.", value: 7 },
+            { text: "The inevitability of time and the transience of life.", value: 6 },
+            { text: "The need for respect and care.", value: 5 },
+            { text: "A reflection of my own future self.", value: 4 },
+            { text: "A victim of social neglect and isolation.", value: 3 },
+            { text: "Memories and stories of the past.", value: 2 },
+            { text: "Nothing special - it's just an old person.", value: 1 }
+        ]
+    },
+    {
+        question: "39. What do you desire most in your life?",
+        options: [
+            { text: "The opportunity to fulfill my purpose and realize my potential.", value: 7 },
+            { text: "Inner peace and contentment.", value: 6 },
+            { text: "Deep and meaningful connections.", value: 5 },
+            { text: "Personal growth and self-realization.", value: 4 },
+            { text: "Success and recognition.", value: 3 },
+            { text: "Happiness and comfort.", value: 2 },
+            { text: "I don't particularly desire anything.", value: 1 }
+        ]
+    },
+    {
+        question: "40. When you see an animal, what do you experience?",
+        options: [
+            { text: "A feeling of unity and connection with all living beings.", value: 7 },
+            { text: "Enjoyment of nature's beauty and diversity.", value: 6 },
+            { text: "A feeling of compassion and protection.", value: 5 },
+            { text: "The fundamental simplicity and truth of life.", value: 4 },
+            { text: "Curiosity and interest.", value: 3 },
+            { text: "Indifference - it's just an animal.", value: 2 },
+            { text: "Fear or disgust (in some cases).", value: 1 }
+        ]
+    },
+    {
+        question: "41. What is 'true wisdom' for you?",
+        options: [
+            { text: "Understanding myself and the mysteries of the universe.", value: 7 },
+            { text: "The ability to see and understand life deeply.", value: 6 },
+            { text: "Practical knowledge and common sense.", value: 5 },
+            { text: "Academic achievements and knowledge.", value: 3 },
+            { text: "The ability to solve problems and make decisions.", value: 4 },
+            { text: "The ability to learn and grow from experience.", value: 2 },
+            { text: "Wisdom is a relative concept - it has no definite meaning.", value: 1 }
+        ]
+    },
+    {
+        question: "42. When you think about someone's death, what do you feel?",
+        options: [
+            { text: "The transience of life inspires me to make it more meaningful.", value: 7 },
+            { text: "A deep understanding that everything has a time and purpose.", value: 6 },
+            { text: "Fear and uncertainty.", value: 3 },
+            { text: "A feeling of grief and loss.", value: 4 },
+            { text: "Consideration of the cycle of life and reincarnation.", value: 5 },
+            { text: "Indifference - it's a natural phenomenon.", value: 2 },
+            { text: "I don't like to think about this.", value: 1 }
+        ]
+    },
+    {
+        question: "43. What are you most surprised by in your life?",
+        options: [
+            { text: "The mystery of the universe and existence.", value: 7 },
+            { text: "The complexity of the human mind and consciousness.", value: 6 },
+            { text: "The beauty and diversity of nature.", value: 5 },
+            { text: "Technological progress and scientific discoveries.", value: 3 },
+            { text: "The depth of human relationships and emotions.", value: 4 },
+            { text: "Life's small coincidences and connections.", value: 2 },
+            { text: "I am not particularly surprised by anything.", value: 1 }
+        ]
+    },
+    {
+                question: "44. When you see a poor or struggling person, what is your reaction?",
+                options: [
+                    { text: "I try to help them and make a difference in their lives.", value: 7 },
+                    { text: "I try to understand the reasons for their situation.", value: 6 },
+                    { text: "I feel compassion and empathy.", value: 5 },
+                    { text: "I think society should do something about it.", value: 4 },
+                    { text: "I feel grateful for my fortunate situation.", value: 3 },
+                    { text: "I try to avoid them or ignore them.", value: 2 },
+                    { text: "I don't think about their situation - it's their problem.", value: 1 }
+                ]
+            },
+            {
+                question: "45. What is 'true courage' for you?",
+                options: [
+                    { text: "Living in accordance with your true self and purpose, no matter what.", value: 7 },
+                    { text: "Doing the right thing despite fear.", value: 6 },
+                    { text: "Standing up for your beliefs and values.", value: 5 },
+                    { text: "Facing physically dangerous situations.", value: 3 },
+                    { text: "Accepting your weaknesses and vulnerability.", value: 4 },
+                    { text: "Going against societal expectations.", value: 2 },
+                    { text: "Courage is a relative concept - it has no definite meaning.", value: 1 }
+                ]
+            },
+            {
+                question: "46. When you go to a new place, what do you experience?",
+                options: [
+                    { text: "A new possibility and learning opportunity.", value: 7 },
+                    { text: "Excitement and curiosity.", value: 6 },
+                    { text: "A desire to understand the culture and people.", value: 5 },
+                    { text: "Enjoyment of beauty and architecture.", value: 4 },
+                    { text: "Strangeness and discomfort.", value: 3 },
+                    { text: "Stress and uncertainty.", value: 2 },
+                    { text: "Nothing special - every place is the same.", value: 1 }
+                ]
+            },
+            {
+                question: "47. What makes you feel most confident in your life?",
+                options: [
+                    { text: "My inner strength and resilience.", value: 7 },
+                    { text: "My abilities and talents.", value: 6 },
+                    { text: "My relationships and support system.", value: 5 },
+                    { text: "My knowledge and experience.", value: 4 },
+                    { text: "My achievements and successes.", value: 3 },
+                    { text: "My material security and resources.", value: 2 },
+                    { text: "I don't feel particularly confident.", value: 1 }
+                ]
+            },
+            {
+                question: "48. When you face a major loss or harm, what is your reaction?",
+                options: [
+                    { text: "I accept it as part of life's larger cycle.", value: 7 },
+                    { text: "I learn from it and try to move forward.", value: 6 },
+                    { text: "I feel sad but accept it over time.", value: 5 },
+                    { text: "I try to understand the reasons behind it.", value: 4 },
+                    { text: "I become emotionally broken and struggle.", value: 3 },
+                    { text: "I try to ignore it or forget about it.", value: 2 },
+                    { text: "I get angry and...", value: 1 } // The original text was cut off here.
+                ]
+            },
+            {
+                question: "49. What role does creativity play in your life?",
+                options: [
+                    { text: "It's fundamental to expressing my true self and purpose.", value: 7 },
+                    { text: "It's a way to relax and enjoy myself.", value: 5 },
+                    { text: "It's a tool for problem-solving and innovation.", value: 6 },
+                    { text: "It's not very important to me.", value: 1 },
+                    { text: "It helps me understand the world around me.", value: 4 },
+                    { text: "It's a skill I'd like to develop more.", value: 3 },
+                    { text: "It's often messy and unpredictable, which I dislike.", value: 2 }
+                ]
+            },
+            {
+                question: "50. When you reflect on human history, what do you see?",
+                options: [
+                    { text: "A continuous journey of evolution and progress towards higher consciousness.", value: 7 },
+                    { text: "A series of conflicts and struggles.", value: 2 },
+                    { text: "A testament to human resilience and adaptability.", value: 6 },
+                    { text: "A repeating cycle of rise and fall.", value: 4 },
+                    { text: "A fascinating story of cultural and technological advancement.", value: 5 },
+                    { text: "A tragic tale of missed opportunities.", value: 3 },
+                    { text: "Not much meaning - it's just events happening.", value: 1 }
+                ]
+            },
+            {
+                question: "51. What is your ideal environment for growth?",
+                options: [
+                    { text: "One that challenges me and pushes my boundaries.", value: 7 },
+                    { text: "One that provides stability and security.", value: 5 },
+                    { text: "One where I can learn and acquire new knowledge.", value: 6 },
+                    { text: "One that is peaceful and allows for introspection.", value: 4 },
+                    { text: "One where I am surrounded by supportive people.", value: 3 },
+                    { text: "One where I have minimal responsibilities.", value: 2 },
+                    { text: "I don't think much about my environment for growth.", value: 1 }
+                ]
+            },
+            {
+                question: "52. What does 'wisdom' mean to you?",
+                options: [
+                    { text: "Understanding the interconnectedness of all things and living in harmony.", value: 7 },
+                    { text: "Accumulating knowledge and experience.", value: 5 },
+                    { text: "The ability to make sound judgments and decisions.", value: 6 },
+                    { text: "Knowing what truly matters in life.", value: 4 },
+                    { text: "A theoretical concept, not always practical.", value: 2 },
+                    { text: "The ability to overcome personal challenges.", value: 3 },
+                    { text: "It's simply common sense.", value: 1 }
+                ]
+            },
+            {
+                question: "53. How do you approach your daily tasks and responsibilities?",
+                options: [
+                    { text: "With a sense of purpose, seeing how they contribute to my larger goals.", value: 7 },
+                    { text: "Methodically and efficiently.", value: 6 },
+                    { text: "As necessary obligations that need to be completed.", value: 3 },
+                    { text: "With enthusiasm and a desire to do my best.", value: 5 },
+                    { text: "With a focus on learning and improving.", value: 4 },
+                    { text: "I often procrastinate and find them tedious.", value: 2 },
+                    { text: "I try to do as little as possible.", value: 1 }
+                ]
+            },
+            {
+                question: "54. What is your reaction to injustice?",
+                options: [
+                    { text: "I feel a strong urge to act and fight against it.", value: 7 },
+                    { text: "I try to understand its root causes and seek peaceful solutions.", value: 6 },
+                    { text: "It makes me angry and frustrated.", value: 5 },
+                    { text: "I believe it's a part of human nature and difficult to change.", value: 3 },
+                    { text: "I feel saddened but often don't know how to help.", value: 4 },
+                    { text: "I try to distance myself from it.", value: 2 },
+                    { text: "It doesn't affect me much.", value: 1 }
+                ]
+            },
+            {
+                question: "55. What does 'freedom' truly mean to you?",
+                options: [
+                    { text: "The ability to choose my own path and live authentically, aligned with my purpose.", value: 7 },
+                    { text: "Financial independence and the absence of external constraints.", value: 4 },
+                    { text: "The power to live without fear or judgment.", value: 6 },
+                    { text: "The right to express myself and my ideas freely.", value: 5 },
+                    { text: "Being able to do whatever I want.", value: 2 },
+                    { text: "A state of mind, rather than a physical condition.", value: 3 },
+                    { text: "It's an illusion.", value: 1 }
+                ]
+            },
+            {
+                question: "56. When you reflect on your personal strengths, what comes to mind first?",
+                options: [
+                    { text: "My ability to understand complex ideas.", value: 6 },
+                    { text: "My empathy and compassion for others.", value: 7 },
+                    { text: "My resilience and ability to bounce back from setbacks.", value: 5 },
+                    { text: "My determination and persistence.", value: 4 },
+                    { text: "My practical skills and resourcefulness.", value: 3 },
+                    { text: "My ability to remain calm under pressure.", value: 2 },
+                    { text: "I don't really think about my strengths.", value: 1 }
+                ]
+            },
+            {
+                question: "57. What is your preferred way to learn and grow?",
+                options: [
+                    { text: "Through real-life experiences and challenges.", value: 7 },
+                    { text: "By studying and reading books.", value: 6 },
+                    { text: "Through discussions and interactions with others.", value: 5 },
+                    { text: "By observing and analyzing situations.", value: 4 },
+                    { text: "By trial and error, figuring things out myself.", value: 3 },
+                    { text: "Through structured courses or training.", value: 2 },
+                    { text: "I'm not actively seeking learning or growth.", value: 1 }
+                ]
+            },
+            {
+                question: "58. What role does service to others play in your life?",
+                options: [
+                    { text: "It is a core part of my purpose and brings me deep fulfillment.", value: 7 },
+                    { text: "It's important, and I try to help when I can.", value: 6 },
+                    { text: "It's a good thing, but I focus on my own well-being first.", value: 4 },
+                    { text: "I occasionally volunteer or donate.", value: 3 },
+                    { text: "It's not something I prioritize.", value: 2 },
+                    { text: "It's a societal expectation, not a personal drive.", value: 1 },
+                    { text: "It's a way to connect with the community.", value: 5 }
+                ]
+            },
+            {
+                question: "59. When you feel truly alive, what are you usually doing?",
+                options: [
+                    { text: "Engaging in activities that align with my deepest values and purpose.", value: 7 },
+                    { text: "Experiencing moments of beauty and wonder in nature or art.", value: 6 },
+                    { text: "Connecting deeply with loved ones.", value: 5 },
+                    { text: "Overcoming a significant challenge or achieving a goal.", value: 4 },
+                    { text: "Exploring new places or ideas.", value: 3 },
+                    { text: "Enjoying simple pleasures and relaxation.", value: 2 },
+                    { text: "I don't often feel 'truly alive'.", value: 1 }
+                ]
+            },
+            {
+                question: "60. What is your perspective on suffering?",
+                options: [
+                    { text: "It is an inevitable part of life, and it offers opportunities for growth and deeper understanding.", value: 7 },
+                    { text: "It is something to be avoided at all costs.", value: 2 },
+                    { text: "It can make us stronger and more compassionate.", value: 6 },
+                    { text: "It is largely a result of human choices and societal structures.", value: 4 },
+                    { text: "It is a mystery that is difficult to comprehend.", value: 3 },
+                    { text: "It's a necessary evil.", value: 1 },
+                    { text: "It motivates me to seek solutions and alleviate pain.", value: 5 }
+                ]
+            },
+            {
+                question: "61. What does 'authenticity' mean to you?",
+                options: [
+                    { text: "Living in complete alignment with my inner truth and values, regardless of external pressures.", value: 7 },
+                    { text: "Being honest and transparent with others.", value: 6 },
+                    { text: "Presenting my true self, even if it's imperfect.", value: 5 },
+                    { text: "Not conforming to societal norms.", value: 4 },
+                    { text: "It's about being genuine in my interactions.", value: 3 },
+                    { text: "A difficult or impossible ideal to achieve.", value: 2 },
+                    { text: "It's not something I actively think about.", value: 1 }
+                ]
+            },
+            {
+                question: "62. When you feel a deep sense of peace, what is usually happening?",
+                options: [
+                    { text: "I am connected to something larger than myself, experiencing a sense of unity.", value: 7 },
+                    { text: "I have resolved a major problem or achieved a significant goal.", value: 6 },
+                    { text: "I am in a tranquil natural setting.", value: 5 },
+                    { text: "I am spending quality time with people I love.", value: 4 },
+                    { text: "My mind is quiet and free from worries.", value: 3 },
+                    { text: "I am in a comfortable and familiar environment.", value: 2 },
+                    { text: "I rarely experience a deep sense of peace.", value: 1 }
+                ]
+            },
+            {
+                question: "63. What is your approach to dealing with fear?",
+                options: [
+                    { text: "I confront it head-on, seeing it as an opportunity to grow.", value: 7 },
+                    { text: "I acknowledge it, try to understand its source, and then move forward.", value: 6 },
+                    { text: "I try to rationalize it and find logical solutions.", value: 4 },
+                    { text: "I often let it paralyze me.", value: 1 },
+                    { text: "I seek support from others to overcome it.", value: 3 },
+                    { text: "I try to avoid situations that trigger fear.", value: 2 },
+                    { text: "I accept it as a natural human emotion and let it pass.", value: 5 }
+                ]
+            },
+            {
+                question: "64. What gives your life meaning?",
+                options: [
+                    { text: "Fulfilling my unique potential and contributing to the greater good.", value: 7 },
+                    { text: "My relationships with family and friends.", value: 6 },
+                    { text: "Learning and growing constantly.", value: 5 },
+                    { text: "Achieving personal success and recognition.", value: 4 },
+                    { text: "Creating something beautiful or impactful.", value: 3 },
+                    { text: "Experiencing joy and pleasure.", value: 2 },
+                    { text: "I don't believe life has an inherent meaning.", value: 1 }
+                ]
+            },
+            {
+                question: "65. What is your biggest hope for the future of humanity?",
+                options: [
+                    { text: "A collective awakening to higher consciousness and global unity.", value: 7 },
+                    { text: "Sustainable living and environmental harmony.", value: 6 },
+                    { text: "Peace and the end of all conflicts.", value: 5 },
+                    { text: "Advancements in science and technology to solve major problems.", value: 4 },
+                    { text: "Greater equality and justice for all.", value: 3 },
+                    { text: "Survival and continuation of the species.", value: 2 },
+                    { text: "I don't have much hope for humanity's future.", value: 1 }
+                ]
+            },
+            {
+                question: "66. What is your reaction to the idea of change?",
+                options: [
+                    { text: "I embrace it as essential for growth and evolution.", value: 7 },
+                    { text: "I approach it cautiously, assessing its potential impact.", value: 6 },
+                    { text: "I find it unsettling and prefer stability.", value: 2 },
+                    { text: "I see it as an opportunity for new beginnings.", value: 5 },
+                    { text: "I adapt to it, but it often causes stress.", value: 4 },
+                    { text: "I resist it strongly.", value: 1 },
+                    { text: "It's an inevitable part of life, so I accept it.", value: 3 }
+                ]
+            },
+            {
+                question: "67. What kind of mark do you wish to leave on the world?",
+                options: [
+                    { text: "A legacy of positive transformation and inspiration.", value: 7 },
+                    { text: "A contribution that improves people's lives.", value: 6 },
+                    { text: "A reputation for integrity and kindness.", value: 5 },
+                    { text: "A testament to my unique talents and achievements.", value: 4 },
+                    { text: "I prefer to live a quiet life without seeking recognition.", value: 2 },
+                    { text: "A name remembered for its influence and power.", value: 3 },
+                    { text: "I don't particularly care about leaving a mark.", value: 1 }
+                ]
+            },
+            {
+                question: "68. What role does intuition play in your decision-making?",
+                options: [
+                    { text: "It's my primary guide, especially for important decisions.", value: 7 },
+                    { text: "It's a valuable input that I consider alongside logic.", value: 6 },
+                    { text: "I rarely trust my intuition; I prefer logic and data.", value: 3 },
+                    { text: "It sometimes helps me, but I don't rely on it heavily.", value: 5 },
+                    { text: "It's often misleading, so I ignore it.", value: 1 },
+                    { text: "It's an interesting concept, but I don't fully understand it.", value: 2 },
+                    { text: "It's a subconscious processing of information.", value: 4 }
+                ]
+            },
+            {
+                question: "69. What is your ideal state of being?",
+                options: [
+                    { text: "Complete alignment with my inner purpose and universal flow.", value: 7 },
+                    { text: "Peace, contentment, and inner harmony.", value: 6 },
+                    { text: "Joy, excitement, and vibrant energy.", value: 5 },
+                    { text: "Clarity, focus, and productivity.", value: 4 },
+                    { text: "Freedom from worries and stress.", value: 3 },
+                    { text: "Relaxation and comfort.", value: 2 },
+                    { text: "I don't have an ideal state; life is a mix of everything.", value: 1 }
+                ]
+            },
+            {
+                question: "70. When do you feel most connected to others?",
+                options: [
+                    { text: "When we are working together towards a shared, meaningful cause.", value: 7 },
+                    { text: "During deep, honest conversations.", value: 6 },
+                    { text: "When sharing laughter and joyful moments.", value: 5 },
+                    { text: "When collaborating on a creative project.", value: 4 },
+                    { text: "During simple, everyday interactions.", value: 3 },
+                    { text: "When they appreciate my contributions.", value: 2 },
+                    { text: "I often feel disconnected from others.", value: 1 }
+                ]
+            },
+            {
+                question: "71. What does 'personal growth' mean to you?",
+                options: [
+                    { text: "A continuous journey of self-discovery and evolving into my highest self.", value: 7 },
+                    { text: "Learning new skills and expanding my knowledge.", value: 6 },
+                    { text: "Overcoming challenges and improving my weaknesses.", value: 5 },
+                    { text: "Achieving my goals and aspirations.", value: 4 },
+                    { text: "Becoming more emotionally intelligent.", value: 3 },
+                    { text: "It's about adapting to changing circumstances.", value: 2 },
+                    { text: "It's a buzzword that doesn't hold much meaning for me.", value: 1 }
+                ]
+            },
+            {
+                question: "72. What is your view on the concept of 'destiny'?",
+                options: [
+                    { text: "I believe in a predetermined path, but I have free will within it.", value: 6 },
+                    { text: "I believe I create my own destiny through my choices and actions.", value: 7 },
+                    { text: "It's a comforting idea, but I don't fully believe in it.", value: 5 },
+                    { text: "It's an illusion; everything is random chance.", value: 1 },
+                    { text: "It's a complex interplay of fate and free will.", value: 4 },
+                    { text: "It's something people believe in to avoid responsibility.", value: 2 },
+                    { text: "I haven't really thought much about it.", value: 3 }
+                ]
+            },
+            {
+                question: "73. What brings you the most profound sense of joy?",
+                options: [
+                    { text: "Witnessing positive change or making a significant difference.", value: 7 },
+                    { text: "Deep connection and shared experiences with loved ones.", value: 6 },
+                    { text: "Achieving a personal breakthrough or understanding something new.", value: 5 },
+                    { text: "Moments of intense creativity or artistic expression.", value: 4 },
+                    { text: "Simple pleasures like good food, music, or nature.", value: 3 },
+                    { text: "Relaxation and freedom from responsibilities.", value: 2 },
+                    { text: "I rarely experience profound joy.", value: 1 }
+                ]
+            },
+            {
+                question: "74. How do you respond to criticism?",
+                options: [
+                    { text: "I welcome it as an opportunity for self-improvement and growth.", value: 7 },
+                    { text: "I listen carefully and consider its validity.", value: 6 },
+                    { text: "It can be hurtful, but I try not to dwell on it.", value: 5 },
+                    { text: "I analyze it logically to see if there's truth in it.", value: 4 },
+                    { text: "I become defensive and dismiss it.", value: 2 },
+                    { text: "I feel upset and embarrassed.", value: 1 },
+                    { text: "It depends on who it comes from and how it's delivered.", value: 3 }
+                ]
+            },
+            {
+                question: "75. What is your relationship with time?",
+                options: [
+                    { text: "I view it as a precious resource to be used wisely for my purpose.", value: 7 },
+                    { text: "I try to manage it effectively to maximize productivity.", value: 6 },
+                    { text: "I often feel rushed or that there's not enough time.", value: 3 },
+                    { text: "I appreciate the present moment and try not to worry about the past or future.", value: 5 },
+                    { text: "It's a constant reminder of how much I still need to do.", value: 4 },
+                    { text: "I'm often disorganized with my time.", value: 2 },
+                    { text: "Time is an abstract concept that doesn't hold much meaning.", value: 1 }
+                ]
+            },
+
+            {
+                question: "76. What is your relationship with your past?",
+                options: [
+                    { text: "I learn from it, but I don't dwell on it; I focus on the present and future.", value: 7 },
+                    { text: "I cherish good memories and try to let go of the bad ones.", value: 6 },
+                    { text: "It's a source of regret and unresolved issues.", value: 1 },
+                    { text: "It shapes who I am, and I accept it completely.", value: 5 },
+                    { text: "I often find myself replaying past events.", value: 2 },
+                    { text: "I use it as a guide for future decisions.", value: 4 },
+                    { text: "I rarely think about the past.", value: 3 }
+                ]
+            },
+            {
+                question: "77. What does 'success' mean to you?",
+                options: [
+                    { text: "Fulfilling my true potential and contributing meaningfully to the world.", value: 7 },
+                    { text: "Achieving my personal and professional goals.", value: 6 },
+                    { text: "Having deep and loving relationships.", value: 5 },
+                    { text: "Financial security and freedom.", value: 4 },
+                    { text: "Making a positive impact on others.", value: 3 },
+                    { text: "Recognition and admiration from my peers.", value: 2 },
+                    { text: "It's an elusive concept that often leads to unhappiness.", value: 1 }
+                ]
+            },
+            {
+                question: "78. How do you handle uncertainty?",
+                options: [
+                    { text: "I embrace it as a natural part of life and an opportunity for new possibilities.", value: 7 },
+                    { text: "I try to minimize it by planning and preparing.", value: 6 },
+                    { text: "It causes me significant anxiety and stress.", value: 1 },
+                    { text: "I adapt and find ways to navigate it.", value: 5 },
+                    { text: "I try to control what I can and accept what I cannot.", value: 4 },
+                    { text: "I avoid situations with too much uncertainty.", value: 2 },
+                    { text: "I ignore it and hope for the best.", value: 3 }
+                ]
+            },
+            {
+                question: "79. What is your understanding of 'truth'?",
+                options: [
+                    { text: "It's a multifaceted and evolving concept that can be perceived differently by individuals.", value: 7 },
+                    { text: "It's objective and can be discovered through rigorous inquiry and evidence.", value: 6 },
+                    { text: "It's relative and depends on individual perspectives.", value: 5 },
+                    { text: "It's what is verifiable and factual.", value: 4 },
+                    { text: "It's often hidden and difficult to uncover.", value: 3 },
+                    { text: "It's a fixed set of principles or beliefs.", value: 2 },
+                    { text: "I'm skeptical of the existence of absolute truth.", value: 1 }
+                ]
+            },
+            {
+                question: "80. When do you feel most at peace with yourself?",
+                options: [
+                    { text: "When I am living in alignment with my deepest values and purpose.", value: 7 },
+                    { text: "When I have resolved inner conflicts and found clarity.", value: 6 },
+                    { text: "When I am surrounded by nature and quiet.", value: 5 },
+                    { text: "When I have completed a challenging task successfully.", value: 4 },
+                    { text: "When I am practicing mindfulness or meditation.", value: 3 },
+                    { text: "When I am relaxed and free from responsibilities.", value: 2 },
+                    { text: "I rarely feel completely at peace with myself.", value: 1 }
+                ]
+            },
+            {
+                question: "81. What is your attitude towards risk-taking?",
+                options: [
+                    { text: "I am willing to take calculated risks for significant growth or impact.", value: 7 },
+                    { text: "I am generally cautious but open to taking risks when necessary.", value: 6 },
+                    { text: "I avoid risks whenever possible.", value: 2 },
+                    { text: "I see risks as opportunities for excitement and adventure.", value: 5 },
+                    { text: "I assess risks carefully and weigh the pros and cons.", value: 4 },
+                    { text: "I am highly risk-averse.", value: 1 },
+                    { text: "It depends on the situation and my confidence level.", value: 3 }
+                ]
+            },
+            {
+                question: "82. What is your vision for your ideal future?",
+                options: [
+                    { text: "A life of profound purpose, impact, and continuous evolution.", value: 7 },
+                    { text: "A balanced life filled with love, joy, and meaningful connections.", value: 6 },
+                    { text: "A life of stability, security, and comfort.", value: 4 },
+                    { text: "A life where I can explore my passions and travel the world.", value: 5 },
+                    { text: "A life free from worries and stress.", value: 3 },
+                    { text: "A life of success and recognition in my chosen field.", value: 2 },
+                    { text: "I don't really have a clear vision for the future.", value: 1 }
+                ]
+            },
+            {
+                question: "83. How do you define 'wisdom'?",
+                options: [
+                    { text: "The ability to apply deep understanding and insight to life's challenges, coupled with compassion.", value: 7 },
+                    { text: "Accumulated knowledge and experience.", value: 6 },
+                    { text: "The ability to make sound judgments based on logic and reason.", value: 5 },
+                    { text: "Understanding the true nature of reality.", value: 4 },
+                    { text: "Learning from mistakes and adapting.", value: 3 },
+                    { text: "It's something that comes with age.", value: 2 },
+                    { text: "It's an abstract concept that varies for everyone.", value: 1 }
+                ]
+            },
+            {
+                question: "84. What is your relationship with your own emotions?",
+                options: [
+                    { text: "I acknowledge them, understand their messages, and express them constructively.", value: 7 },
+                    { text: "I experience them deeply and allow myself to feel them.", value: 6 },
+                    { text: "I try to suppress or ignore difficult emotions.", value: 1 },
+                    { text: "I analyze them to understand their origins.", value: 5 },
+                    { text: "I often feel overwhelmed by them.", value: 2 },
+                    { text: "I manage them effectively to maintain composure.", value: 4 },
+                    { text: "I don't often pay attention to my emotions.", value: 3 }
+                ]
+            },
+            {
+                question: "85. What is your biggest concern for the world?",
+                options: [
+                    { text: "The erosion of human connection and empathy.", value: 7 },
+                    { text: "Environmental degradation and climate change.", value: 6 },
+                    { text: "Poverty and inequality.", value: 5 },
+                    { text: "Conflict and violence.", value: 4 },
+                    { text: "Loss of personal freedom and privacy.", value: 3 },
+                    { text: "The decline of moral values.", value: 2 },
+                    { text: "I don't have major concerns; I focus on my own life.", value: 1 }
+                ]
+            },
+         
+            {
+                question: "86. What is your preferred way to deal with conflict?",
+                options: [
+                    { text: "I seek to understand all perspectives and find a mutually beneficial resolution.", value: 7 },
+                    { text: "I try to mediate and find common ground.", value: 6 },
+                    { text: "I avoid it whenever possible.", value: 1 },
+                    { text: "I address it directly and assertively.", value: 5 },
+                    { text: "I analyze the situation to find a logical solution.", value: 4 },
+                    { text: "I tend to give in to avoid confrontation.", value: 2 },
+                    { text: "I often get defensive or aggressive.", value: 3 }
+                ]
+            },
+            {
+                question: "87. What does 'freedom' mean to you?",
+                options: [
+                    { text: "The ability to live authentically and pursue my highest purpose without external constraints.", value: 7 },
+                    { text: "The ability to make my own choices and live life on my own terms.", value: 6 },
+                    { text: "Financial independence and the ability to do what I want.", value: 4 },
+                    { text: "Freedom from fear and worry.", value: 5 },
+                    { text: "The absence of obligations and responsibilities.", value: 2 },
+                    { text: "It's an illusion; we are always bound by something.", value: 1 },
+                    { text: "The opportunity to explore and experience new things.", value: 3 }
+                ]
+            },
+            {
+                question: "88. How do you approach challenging situations?",
+                options: [
+                    { text: "I see them as opportunities for growth and innovation, facing them with courage.", value: 7 },
+                    { text: "I break them down into smaller steps and tackle them systematically.", value: 6 },
+                    { text: "I often feel overwhelmed and unsure how to proceed.", value: 1 },
+                    { text: "I seek support and collaborate with others to find solutions.", value: 5 },
+                    { text: "I analyze them logically to identify the best course of action.", value: 4 },
+                    { text: "I try to avoid them or wish they would go away.", value: 2 },
+                    { text: "I rely on my past experiences to guide me.", value: 3 }
+                ]
+            },
+            {
+                question: "89. What is your relationship with nature?",
+                options: [
+                    { text: "I feel a deep spiritual connection to it and find solace and inspiration there.", value: 7 },
+                    { text: "I enjoy spending time in nature for relaxation and rejuvenation.", value: 6 },
+                    { text: "I appreciate its beauty but don't feel a strong connection.", value: 4 },
+                    { text: "It's an important resource that needs to be protected.", value: 5 },
+                    { text: "I don't spend much time in nature.", value: 2 },
+                    { text: "It's a nice place for outdoor activities.", value: 3 },
+                    { text: "I'm largely indifferent to it.", value: 1 }
+                ]
+            },
+            {
+                question: "90. What does 'happiness' mean to you?",
+                options: [
+                    { text: "A profound state of well-being that comes from living a meaningful and purposeful life.", value: 7 },
+                    { text: "A state of contentment and positive emotions.", value: 6 },
+                    { text: "Achieving my goals and desires.", value: 4 },
+                    { text: "Moments of joy and pleasure.", value: 3 },
+                    { text: "Freedom from suffering and negative emotions.", value: 5 },
+                    { text: "It's a fleeting emotion that doesn't last.", value: 1 },
+                    { text: "It's about having strong social connections.", value: 2 }
+                ]
+            },
+            {
+                question: "91. How do you define 'love'?",
+                options: [
+                    { text: "A universal force of connection, compassion, and unconditional acceptance.", value: 7 },
+                    { text: "A deep emotional bond and commitment to another person.", value: 6 },
+                    { text: "A strong affection and care for others.", value: 5 },
+                    { text: "A feeling of attraction and desire.", value: 3 },
+                    { text: "It's a complex emotion that is often misunderstood.", value: 4 },
+                    { text: "It's a romantic ideal often portrayed in media.", value: 2 },
+                    { text: "It's a biological imperative.", value: 1 }
+                ]
+            },
+            {
+                question: "92. What is your approach to dealing with loss or grief?",
+                options: [
+                    { text: "I allow myself to feel the emotions, process them, and find meaning in the experience.", value: 7 },
+                    { text: "I lean on my support system and allow myself to mourn.", value: 6 },
+                    { text: "I try to stay strong and not show my emotions.", value: 2 },
+                    { text: "I distract myself to cope with the pain.", value: 1 },
+                    { text: "I seek to understand the philosophical implications of loss.", value: 5 },
+                    { text: "I focus on practical matters to get through it.", value: 4 },
+                    { text: "I try to move on as quickly as possible.", value: 3 }
+                ]
+            },
+            {
+                question: "93. What role does creativity play in your life?",
+                options: [
+                    { text: "It's essential for my self-expression and problem-solving in all areas of my life.", value: 7 },
+                    { text: "It's an enjoyable hobby and a way to relax.", value: 6 },
+                    { text: "I don't consider myself a creative person.", value: 1 },
+                    { text: "It's a way to explore new ideas and perspectives.", value: 5 },
+                    { text: "It's important for innovation and progress.", value: 4 },
+                    { text: "I use it when needed for practical tasks.", value: 3 },
+                    { text: "It's a form of escapism.", value: 2 }
+                ]
+            },
+            {
+                question: "94. What is your biggest aspiration in life?",
+                options: [
+                    { text: "To fully realize my potential and contribute to a better world.", value: 7 },
+                    { text: "To live a happy and fulfilling life surrounded by loved ones.", value: 6 },
+                    { text: "To achieve financial independence and security.", value: 4 },
+                    { text: "To make a significant impact in my field or community.", value: 5 },
+                    { text: "To continuously learn and grow.", value: 3 },
+                    { text: "To live a peaceful and comfortable life.", value: 2 },
+                    { text: "I don't have a clear biggest aspiration.", value: 1 }
+                ]
+            },
+            {
+                question: "95. What does 'spiritual awakening' mean to you?",
+                options: [
+                    { text: "A profound shift in consciousness leading to a deeper understanding of self and reality.", value: 7 },
+                    { text: "A growing awareness of my inner self and connection to something larger.", value: 6 },
+                    { text: "It's a religious concept that doesn't resonate with me.", value: 1 },
+                    { text: "A process of finding inner peace and enlightenment.", value: 5 },
+                    { text: "It's about becoming more mindful and present.", value: 4 },
+                    { text: "It's a vague or abstract idea.", value: 3 },
+                    { text: "It's something that only happens to a few people.", value: 2 }
+                ]
+            },
+            {
+                question: "96. How do you view the concept of 'evil'?",
+                options: [
+                    { text: "It's the absence of light or love, often stemming from ignorance or fear.", value: 7 },
+                    { text: "It's a destructive force that causes suffering in the world.", value: 6 },
+                    { text: "It's a product of societal conditions and human nature.", value: 5 },
+                    { text: "It's a necessary counterpart to good in the dualistic nature of existence.", value: 4 },
+                    { text: "It's a religious or mythical concept.", value: 2 },
+                    { text: "I don't believe in absolute evil.", value: 3 },
+                    { text: "It's something I try not to think about.", value: 1 }
+                ]
+            },
+            {
+                question: "97. What is your most cherished personal value?",
+                options: [
+                    { text: "Integrity and authenticity.", value: 7 },
+                    { text: "Compassion and kindness.", value: 6 },
+                    { text: "Freedom and independence.", value: 5 },
+                    { text: "Knowledge and wisdom.", value: 4 },
+                    { text: "Creativity and innovation.", value: 3 },
+                    { text: "Security and stability.", value: 2 },
+                    { text: "I don't have one single most cherished value.", value: 1 }
+                ]
+            },
+            {
+                question: "98. What is your reaction to witnessing injustice?",
+                options: [
+                    { text: "I feel a strong urge to act and fight for what is right.", value: 7 },
+                    { text: "I feel a sense of sadness and empathy, and I try to help if I can.", value: 6 },
+                    { text: "I feel angry and frustrated, but unsure how to make a difference.", value: 5 },
+                    { text: "I analyze the situation to understand its root causes.", value: 4 },
+                    { text: "It makes me feel helpless.", value: 2 },
+                    { text: "I try to avoid thinking about it too much.", value: 1 },
+                    { text: "I believe it's a part of life and difficult to change.", value: 3 }
+                ]
+            },
+            {
+                question: "99. What does 'inner peace' mean to you?",
+                options: [
+                    { text: "A state of profound tranquility and harmony, irrespective of external circumstances.", value: 7 },
+                    { text: "Freedom from anxiety, stress, and negative thoughts.", value: 6 },
+                    { text: "A sense of contentment and acceptance of oneself.", value: 5 },
+                    { text: "Clarity of mind and emotional balance.", value: 4 },
+                    { text: "Being able to relax and enjoy the present moment.", value: 3 },
+                    { text: "It's a goal I strive for but rarely achieve.", value: 2 },
+                    { text: "I'm not sure what it means.", value: 1 }
+                ]
+            },
+            {
+                question: "100. What is your ultimate purpose in life?",
+                options: [
+                    { text: "To evolve spiritually and help elevate humanity.", value: 7 },
+                    { text: "To live a life filled with love, meaning, and positive impact.", value: 6 },
+                    { text: "To find happiness and fulfillment for myself and my loved ones.", value: 5 },
+                    { text: "To achieve my full potential and leave a lasting legacy.", value: 4 },
+                    { text: "To learn, grow, and experience as much as possible.", value: 3 },
+                    { text: "To live a comfortable and secure life.", value: 2 },
+                    { text: "I don't believe there is an ultimate purpose.", value: 1 }
+                ]
+            }
+      
+        ];
+
+        let currentQuestionIndex = 0;
+        const userAnswers = {}; // Store answers {questionIndex: selectedValue}
+        const totalQuestions = questions.length;
+        // Adjust max possible score based on 7 options (max value 7)
+        const maxPossibleScore = totalQuestions * 7;
+        const minPossibleScore = totalQuestions * 1; // Each question has min 1 point
+
+        const quizDiv = document.getElementById('quiz');
+        const prevBtn = document.getElementById('prev-btn');
+        const nextBtn = document.getElementById('next-btn');
+        const submitBtn = document.getElementById('submit-btn');
+        const quizProgress = document.getElementById('quiz-progress');
+        const loader = document.getElementById('loader');
+        const resultContainer = document.getElementById('result-container');
+        const scoreDisplay = document.getElementById('score');
+        const scoreProgress = document.getElementById('score-progress');
+        const resultMessage = document.getElementById('result-message');
+        const restartBtn = document.getElementById('restart-btn');
+        const fab = document.getElementById('fab');
+
+        function loadQuestion() {
+            if (currentQuestionIndex < totalQuestions) {
+                const q = questions[currentQuestionIndex];
+                let optionsHtml = '';
+                q.options.forEach((option, optionIndex) => {
+                    const isChecked = userAnswers[currentQuestionIndex] === option.value;
+                    optionsHtml += `
+                        <div class="option">
+                            <input type="radio" id="q${currentQuestionIndex}o${optionIndex}" name="q${currentQuestionIndex}" value="${option.value}" ${isChecked ? 'checked' : ''}>
+                            <label for="q${currentQuestionIndex}o${optionIndex}">
+                                <span class="custom-radio"></span>
+                                <span class="option-text">${option.text}</span>
+                            </label>
+                        </div>
+                    `;
+                });
+
+                quizDiv.innerHTML = `
+                    <div class="question-counter">Question ${currentQuestionIndex + 1} / ${totalQuestions}</div>
+                    <div class="question">${q.question}</div>
+                    <div class="options">${optionsHtml}</div>
+                `;
+
+                // Add event listeners for radio buttons
+                quizDiv.querySelectorAll('input[type="radio"]').forEach(radio => {
+                    radio.addEventListener('change', (event) => {
+                        userAnswers[currentQuestionIndex] = parseInt(event.target.value);
+                        updateNavigationButtons();
+                    });
+                });
+
+                updateNavigationButtons();
+                updateProgressBar();
+            } else {
+                showResult();
+            }
+        }
+
+        function updateProgressBar() {
+            const progress = ((currentQuestionIndex) / totalQuestions) * 100;
+            quizProgress.style.width = `${progress}%`;
+        }
+
+        function updateNavigationButtons() {
+            prevBtn.disabled = currentQuestionIndex === 0;
+            nextBtn.style.display = currentQuestionIndex === totalQuestions - 1 ? 'none' : 'flex';
+            submitBtn.style.display = currentQuestionIndex === totalQuestions - 1 ? 'flex' : 'none';
+        }
+
+        function prevQuestion() {
+            if (currentQuestionIndex > 0) {
+                currentQuestionIndex--;
+                loadQuestion();
+            }
+        }
+
+        function nextQuestion() {
+            if (currentQuestionIndex < totalQuestions - 1) {
+                // Ensure an option is selected before moving next
+                if (userAnswers[currentQuestionIndex] === undefined) {
+                    alert('Please select an option before moving to the next question.');
+                    return;
+                }
+                currentQuestionIndex++;
+                loadQuestion();
+            }
+        }
+
+        function calculateScore() {
+            let totalScore = 0;
+            for (const key in userAnswers) {
+                totalScore += userAnswers[key];
+            }
+
+            // Normalize score to a percentage (higher percentage means clearer purpose)
+            const scoreRange = maxPossibleScore - minPossibleScore;
+            const adjustedScore = totalScore - minPossibleScore;
+            const percentage = (adjustedScore / scoreRange) * 100;
+            return Math.round(percentage);
+        }
+
+        function getResultMessage(percentage) {
+            let message = "";
+            let color = "";
+
+            if (percentage >= 85) {
+                message = "Extraordinary! You are very clear and focused on your existential purpose. You are giving meaningful direction to your life.";
+                color = "#4CAF50"; // Green for clear purpose
+            } else if (percentage >= 65) {
+                message = "Excellent! You have a good understanding of your life's purpose. You are moving in the right direction.";
+                color = "#8BC34A"; // Light Green
+            } else if (percentage >= 45) {
+                message = "Good. You are in search of your purpose and making progress. Listen to your inner voice.";
+                color = "#FFC107"; // Amber
+            } else if (percentage >= 25) {
+                message = "In search. You are still in the process of understanding your existential purpose. It's a journey, be patient.";
+                color = "#FF9800"; // Orange
+            } else {
+                message = "Unclear. You may feel confused or uncertain about your life's purpose. This might be a time for introspection and guidance.";
+                color = "#F44336"; // Red for unclear purpose
+            }
+            scoreProgress.style.backgroundColor = color;
+            return message;
+        }
+
+        function showResult() {
+            if (Object.keys(userAnswers).length !== totalQuestions) {
+                if (!confirm('You have not answered all questions. Do you still want to see the result?')) {
+                    return;
+                }
+            }
+
+            quizDiv.style.display = 'none';
+            prevBtn.style.display = 'none';
+            nextBtn.style.display = 'none';
+            submitBtn.style.display = 'none';
+            fab.style.display = 'none'; // Hide FAB on result page
+
+            loader.style.display = 'block';
+
+            setTimeout(() => {
+                loader.style.display = 'none';
+                resultContainer.style.display = 'block';
+                const finalScore = calculateScore();
+                scoreDisplay.textContent = `${finalScore}%`;
+                scoreProgress.style.width = `${finalScore}%`;
+                resultMessage.innerHTML = getResultMessage(finalScore);
+            }, 1500); // Simulate loading time
+        }
+
+        function restartQuiz() {
+            currentQuestionIndex = 0;
+            for (const key in userAnswers) {
+                delete userAnswers[key];
+            }
+            quizDiv.style.display = 'block';
+            resultContainer.style.display = 'none';
+            fab.style.display = 'flex'; // Show FAB on quiz start
+            loadQuestion();
+            updateProgressBar();
+        }
+
+        prevBtn.addEventListener('click', prevQuestion);
+        nextBtn.addEventListener('click', nextQuestion);
+        submitBtn.addEventListener('click', showResult);
+        restartBtn.addEventListener('click', restartQuiz);
+
+        // FAB functionality - allows jumping to the result even if not all questions are answered
+        fab.addEventListener('click', () => {
+            showResult();
+        });
+
+        // Initial load
+        loadQuestion();
+    </script>
+     <style>
+    .floating-home-button {
+      position: fixed;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      background-color: transparent;
+      border: none;
+      z-index: 1000;
+      text-decoration: none;
+    }
+
+    .home-button-inner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
+      height: 70px;
+      width: 23px;
+      background-color: #28a745; /* Green background for Home */
+      color: white;
+      font-weight: bold;
+      border-radius: 0 10px 10px 0;
+      box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
+      transition: background-color 0.3s ease;
+      writing-mode: vertical-rl;
+      text-orientation: mixed;
+    }
+
+    .home-button-inner:hover {
+      background-color: #1e7e34;
+    }
+  </style>
+  <a href="index.html" class="floating-home-button">
+    <div class="home-button-inner">
+      Home
+    </div>
+  </a>
+</body>
+</html>
