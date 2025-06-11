@@ -96,7 +96,7 @@ nav a.active::after {
 }
 
 /* Mobile Menu with Dropdown-like glass effect */
-@media (max-width: 2500px) {
+@media (max-width: auto) {
   nav {
     position: absolute;
     top: 60px;
