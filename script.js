@@ -2,7 +2,7 @@
 document.getElementById('site-header').innerHTML = `
   <header> 
   <div class="logo">
-    <a href="#">
+    <a href="index.html">
       <img src="#" alt="Crapd.in" style="height: 35px;">
     </a>
   </div>
