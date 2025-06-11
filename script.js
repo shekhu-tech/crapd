@@ -9,11 +9,18 @@ document.getElementById('site-header').innerHTML = `
 
   <nav id="nav">
    <button id="closeNav" class="close-btn">×</button>
-    <a href="allgd.html"><i class="fas fa-pen-nib"></i> Graphics</a>
-    <a href="allved.html"><i class="fas fa-film"></i> Video Editing</a>
-    <a href="allweb.html"><i class="fas fa-globe"></i> Websites</a>
-    <a href="jobprtls.html"><i class="fas fa-globe"></i> Portals</a>
-    <a href="dgtlmktng.html"><i class="fas fa-search"></i> Digital Marketing</a>
+    <a href="gyan.html"><i class="fas fa-question-circle"></i> Why was I born?</a>
+<a href="sevenchor.html"><i class="fas fa-child"></i> My Body Control</a>
+<a href="career.html"><i class="fas fa-briefcase"></i> Career Counseling</a>
+<a href="aura.html"><i class="fas fa-hand-sparkles"></i> Know Your Aura</a>
+<a href="importance.html"><i class="fas fa-users"></i> Whose Life Am I Important To?</a>
+<a href="relationships.html"><i class="fas fa-heart"></i> Who is Important in My Life?</a>
+<a href="iq.html"><i class="fas fa-brain"></i> My IQ Level</a>
+<a href="uniqueness.html"><i class="fas fa-star"></i> Am I Average?</a>
+<a href="morality.html"><i class="fas fa-balance-scale"></i> Am I Evil or Good?</a>
+<a href="shadow-self.html"><i class="fas fa-moon"></i> Dark Inside Me</a>
+<a href="inner-good.html"><i class="fas fa-sun"></i> Good Inside Me</a>
+<a href="talent.html"><i class="fas fa-lightbulb"></i> Know Your Talent</a>
   </nav>
 
   <div class="toggle" onclick="toggleMenu()" id="toggleBtn">
@@ -53,15 +60,18 @@ document.getElementById('site-footer').innerHTML = `
   <div class="footer-container">
     <div class="footer-section">
       <div class="footer-buttons">
-        <a href="privacy.html" class="footer-btn" title="Privacy Policy">Privacy Policy</a>
-        <a href="aboutme.html" class="footer-btn" title="Meet Me">Meet Me</a>
-        <a href="index.html" class="footer-btn" title="Home">Home</a>
-        <a href="gd.html" class="footer-btn" title="Graphic Designing">Graphic Designing</a>
-        <a href="ve.html" class="footer-btn" title="Video Editing">Video Editing</a>
-        <a href="wd.html" class="footer-btn" title="Website Designing">Website Designing</a>
-        <a href="portals.html" class="footer-btn" title="Portals">Portals</a>
-        <a href="https://shekhu-tech.github.io/tamannaSharmaSonipat/" class="footer-btn" title="Mehndi">Mehndi</a>
-        <a href="dm.html" class="footer-btn" title="Digital Marketing">Digital Marketing</a>
+        <a href="gyan.html" class="footer-btn" title="Why was I born?"><i class="fas fa-question-circle"></i> Why was I born?</a>
+<a href="sevenchor.html" class="footer-btn" title="My Body Control"><i class="fas fa-child"></i> My Body Control</a>
+<a href="career.html" class="footer-btn" title="Career Counseling"><i class="fas fa-briefcase"></i> Career Counseling</a>
+<a href="aura.html" class="footer-btn" title="Know Your Aura"><i class="fas fa-hand-sparkles"></i> Know Your Aura</a>
+<a href="importance.html" class="footer-btn" title="Whose Life Am I Important To?"><i class="fas fa-users"></i> Whose Life Am I Important To?</a>
+<a href="relationships.html" class="footer-btn" title="Who is Important in My Life?"><i class="fas fa-heart"></i> Who is Important in My Life?</a>
+<a href="iq.html" class="footer-btn" title="My IQ Level"><i class="fas fa-brain"></i> My IQ Level</a>
+<a href="uniqueness.html" class="footer-btn" title="Am I Average?"><i class="fas fa-star"></i> Am I Average?</a>
+<a href="morality.html" class="footer-btn" title="Am I Evil or Good?"><i class="fas fa-balance-scale"></i> Am I Evil or Good?</a>
+<a href="shadow-self.html" class="footer-btn" title="Dark Inside Me"><i class="fas fa-moon"></i> Dark Inside Me</a>
+<a href="inner-good.html" class="footer-btn" title="Good Inside Me"><i class="fas fa-sun"></i> Good Inside Me</a>
+<a href="talent.html" class="footer-btn" title="Know Your Talent"><i class="fas fa-lightbulb"></i> Know Your Talent</a>
       </div>
     </div>
 
