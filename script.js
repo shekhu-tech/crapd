@@ -1,58 +1,58 @@
 // Inject HEADER
 document.getElementById('site-header').innerHTML = `
-  <header> 
-  <div class="logo">
-    <a href="index.html">
-      <img src="#" alt="Crapd.in" style="height: 35px;">
-    </a>
-  </div>
+  <header>
+    <div class="logo">
+      <a href="index.html">
+        <img src="#" alt="Crapd.in" style="height: 35px;">
+      </a>
+    </div>
 
-  <nav id="nav">
-   <button id="closeNav" class="close-btn">×</button>
-    <a href="gyan.html"><i class="fas fa-question-circle"></i> Why was I born?</a>
-<a href="sevenchor.html"><i class="fas fa-child"></i> My Body Control</a>
-<a href="career.html"><i class="fas fa-briefcase"></i> Career Counseling</a>
-<a href="aura.html"><i class="fas fa-hand-sparkles"></i> Know Your Aura</a>
-<a href="importance.html"><i class="fas fa-users"></i> Whose Life Am I Important To?</a>
-<a href="relationships.html"><i class="fas fa-heart"></i> Who is Important in My Life?</a>
-<a href="iq.html"><i class="fas fa-brain"></i> My IQ Level</a>
-<a href="uniqueness.html"><i class="fas fa-star"></i> Am I Average?</a>
-<a href="morality.html"><i class="fas fa-balance-scale"></i> Am I Evil or Good?</a>
-<a href="shadow-self.html"><i class="fas fa-moon"></i> Dark Inside Me</a>
-<a href="inner-good.html"><i class="fas fa-sun"></i> Good Inside Me</a>
-<a href="talent.html"><i class="fas fa-lightbulb"></i> Know Your Talent</a>
-  </nav>
+    <nav id="nav">
+      <button id="closeNav" class="close-btn">×</button>
+      <a href="gyan.html"><i class="fas fa-question-circle"></i> Why was I born?</a>
+      <a href="sevenchor.html"><i class="fas fa-child"></i> My Body Control</a>
+      <a href="career.html"><i class="fas fa-briefcase"></i> Career Counseling</a>
+      <a href="aura.html"><i class="fas fa-hand-sparkles"></i> Know Your Aura</a>
+      <a href="importance.html"><i class="fas fa-users"></i> Whose Life Am I Important To?</a>
+      <a href="relationships.html"><i class="fas fa-heart"></i> Who is Important in My Life?</a>
+      <a href="iq.html"><i class="fas fa-brain"></i> My IQ Level</a>
+      <a href="uniqueness.html"><i class="fas fa-star"></i> Am I Average?</a>
+      <a href="morality.html"><i class="fas fa-balance-scale"></i> Am I Evil or Good?</a>
+      <a href="shadow-self.html"><i class="fas fa-moon"></i> Dark Inside Me</a>
+      <a href="inner-good.html"><i class="fas fa-sun"></i> Good Inside Me</a>
+      <a href="talent.html"><i class="fas fa-lightbulb"></i> Know Your Talent</a>
+    </nav>
 
-  <div class="toggle" onclick="toggleMenu()" id="toggleBtn">
-    <div class="bar"></div>
-    <div class="bar"></div>
-    <div class="bar"></div>
-  </div>
-</header>
+    <div class="toggle" onclick="toggleMenu()" id="toggleBtn">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+  </header>
 
-<!-- Font Awesome CDN for icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 `;
 
-// Toggle menu
+// Now, attach the event listeners immediately after injecting the HTML
+const nav = document.getElementById('nav');
+const toggleBtn = document.getElementById('toggleBtn');
+const closeBtn = document.getElementById('closeNav'); // Get reference after injection
+
+// Toggle menu function (can remain global if called by onclick in HTML)
 function toggleMenu() {
-  const nav = document.getElementById('nav');
-  const toggleBtn = document.getElementById('toggleBtn');
   nav.classList.toggle('active');
   toggleBtn.classList.toggle('active');
 }
-document.addEventListener('DOMContentLoaded', () => {
-  const closeBtn = document.getElementById('closeNav');
-  const nav = document.getElementById('nav');
-  const toggleBtn = document.getElementById('toggleBtn');
 
-  if (closeBtn && nav && toggleBtn) {
-    closeBtn.addEventListener('click', () => {
-      nav.classList.remove('active');
-      toggleBtn.classList.remove('active');
-    });
-  }
-});
+// Add event listener for the close button
+if (closeBtn && nav && toggleBtn) {
+  closeBtn.addEventListener('click', () => {
+    nav.classList.remove('active');
+    // It's also good practice to remove the 'active' class from the toggle button
+    // when the nav is closed by the close button, to reflect its state.
+    toggleBtn.classList.remove('active');
+  });
+}
 
 // Inject FOOTER
 document.getElementById('site-footer').innerHTML = `
