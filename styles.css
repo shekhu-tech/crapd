@@ -187,7 +187,7 @@ nav a.active::after {
 }
 
 /* Show the close button only on mobile (up to 1200px) */
-@media (max-width: 2500px) {
+@media (max-width: auto) {
   .close-btn {
     display: block;
   }
