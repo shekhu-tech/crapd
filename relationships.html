@@ -1,0 +1,1377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Who Is Important in My Life? A 50-Question Reflection | crapd.in</title>
+    <meta name="description" content="Identify and reflect on the key people in your life with our 50-question interactive quiz. Understand the roles they play and the impact they have on your well-being.">
+    <meta name="keywords" content="important people, relationships, personal connections, support system, gratitude, reflection, social bonds, well-being, 50 questions, crapd.in">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://crapd.in/who-is-important-quiz.html">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://crapd.in/who-is-important-quiz.html">
+    <meta property="og:title" content="Who Is Important in My Life? A 50-Question Reflection">
+    <meta property="og:description" content="Identify and reflect on the key people in your life with our 50-question interactive quiz. Understand the roles they play and the impact they have on your well-being.">
+    <meta property="og:image" content="https://crapd.in/images/important-people-quiz-social.jpg">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://crapd.in/who-is-important-quiz.html">
+    <meta property="twitter:title" content="Who Is Important in My Life? A 50-Question Reflection">
+    <meta property="twitter:description" content="Identify and reflect on the key people in your life with our 50-question interactive quiz. Understand the roles they play and the impact they have on your well-being.">
+    <meta property="twitter:image" content="https://crapd.in/images/important-people-quiz-social.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #673AB7; /* Deep Purple for wisdom & introspection */
+            --secondary-color: #5E35B1; /* Even Deeper Purple */
+            --accent-color: #8BC34A; /* Light Green for growth & harmony */
+            --light-bg: #EDE7F6; /* Very light purple background */
+            --dark-text: #263238; /* Darker charcoal */
+            --light-text: #546E7A; /* Muted blue-grey */
+            --white: #ffffff;
+            --shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #F8F4FF; /* Very light purple-pink for softness */
+            color: var(--dark-text);
+            line-height: 1.7;
+            padding: 0;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 25px;
+        }
+
+        header {
+            background: linear-gradient(145deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 2.5rem 0;
+            text-align: center;
+            border-radius: 0 0 30px 30px;
+            box-shadow: var(--shadow);
+            margin-bottom: 2.5rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: "";
+            position: absolute;
+            top: -60%;
+            left: -60%;
+            width: 220%;
+            height: 220%;
+            background: radial-gradient(circle, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0) 70%);
+            transform: rotate(-25deg);
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 0.75rem;
+            position: relative;
+            letter-spacing: 0.5px;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.95;
+            position: relative;
+            font-weight: 300;
+        }
+
+        .progress-container {
+            width: 100%;
+            background-color: #D1C4E9; /* Light purple */
+            border-radius: 12px;
+            margin: 2.5rem 0;
+            height: 18px;
+            overflow: hidden;
+            box-shadow: inset 0 2px 4px rgba(0,0,0,0.15);
+        }
+
+        .progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, var(--accent-color), var(--primary-color));
+            width: 0%;
+            transition: width 0.6s ease-out;
+            border-radius: 12px;
+        }
+
+        .quiz-container {
+            background-color: var(--white);
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+            padding: 2.5rem;
+            margin-bottom: 2.5rem;
+            position: relative;
+            transition: opacity 0.3s ease-out;
+        }
+
+        .question-counter {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 0.6rem 1.2rem;
+            border-radius: 25px;
+            font-weight: 500;
+            display: inline-block;
+            margin-bottom: 1.5rem;
+            font-size: 1rem;
+            animation: fadeInScale 0.4s ease-out;
+        }
+
+        @keyframes fadeInScale {
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        .question {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 2rem;
+            color: var(--secondary-color);
+            line-height: 1.4;
+        }
+
+        .options {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 12px;
+        }
+
+        .option {
+            display: flex;
+            align-items: center;
+            padding: 12px 15px;
+            background-color: var(--light-bg);
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            opacity: 1;
+            animation: fadeInScale 0.3s ease forwards;
+        }
+
+        .option:hover {
+            background-color: #DCEDC8; /* Lighter green */
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border-color: var(--primary-color);
+        }
+
+        .option input {
+            display: none;
+        }
+
+        .option label {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            cursor: pointer;
+            position: relative;
+            padding-left: 35px;
+        }
+
+        .custom-radio {
+            position: absolute;
+            left: 0;
+            height: 22px;
+            width: 22px;
+            background-color: #eee;
+            border-radius: 50%;
+            border: 2px solid var(--light-text);
+            transition: all 0.3s ease;
+        }
+
+        .option input:checked ~ .custom-radio {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+
+        .custom-radio::after {
+            content: "";
+            position: absolute;
+            display: none;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: white;
+        }
+
+        .option input:checked ~ .custom-radio::after {
+            display: block;
+        }
+
+        .option-text {
+            margin-left: 10px;
+            font-size: 1rem;
+            color: var(--dark-text);
+        }
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 3rem;
+            gap: 15px;
+        }
+
+        .btn {
+            padding: 14px 30px;
+            border: none;
+            border-radius: 10px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            font-size: 1.1rem;
+            flex-grow: 1;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 12px rgba(0,0,0,0.15);
+        }
+
+        .btn-secondary {
+            background-color: #D1C4E9;
+            color: var(--dark-text);
+        }
+
+        .btn-secondary:hover {
+            background-color: #B39DDB;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 12px rgba(0,0,0,0.15);
+        }
+
+        .result-container {
+            background-color: var(--white);
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+            padding: 3rem;
+            text-align: center;
+            display: none;
+            animation: fadeIn 0.6s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .result-title {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            font-size: 2.5rem;
+            letter-spacing: 0.5px;
+        }
+
+        .score {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: var(--accent-color);
+            margin: 1.5rem 0;
+            line-height: 1;
+        }
+
+        .score-bar {
+            height: 35px;
+            background-color: #D1C4E9;
+            border-radius: 18px;
+            margin: 2.5rem auto;
+            max-width: 600px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: inset 0 2px 6px rgba(0,0,0,0.1);
+        }
+
+        .score-progress {
+            height: 100%;
+            background: linear-gradient(90deg, #CCFF90, var(--accent-color)); /* Light green to accent green */
+            width: 0%;
+            transition: width 1.2s ease-out;
+            border-radius: 18px;
+        }
+
+        .score-labels {
+            display: flex;
+            justify-content: space-between;
+            max-width: 600px;
+            margin: 0.75rem auto 0;
+            font-size: 0.9rem;
+            color: var(--light-text);
+            font-weight: 500;
+        }
+
+        .result-message {
+            margin-top: 2.5rem;
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: var(--dark-text);
+            padding: 0 1.5rem;
+        }
+
+        .restart-btn {
+            margin-top: 3rem;
+            background-color: var(--accent-color);
+            color: var(--primary-color);
+            font-weight: 700;
+        }
+
+        .restart-btn:hover {
+            background-color: #7CB342; /* Darker green */
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+
+            header {
+                padding: 2rem 0;
+                border-radius: 0;
+            }
+
+            h1 {
+                font-size: 2.2rem;
+            }
+
+            .subtitle {
+                font-size: 1rem;
+            }
+
+            .quiz-container, .result-container {
+                padding: 2rem;
+            }
+
+            .question {
+                font-size: 1.2rem;
+            }
+
+            .option label {
+                font-size: 1rem;
+            }
+
+            .option-text {
+                font-size: 1rem;
+            }
+
+            .btn {
+                padding: 12px 25px;
+                font-size: 1rem;
+            }
+
+            .result-title {
+                font-size: 2rem;
+            }
+
+            .score {
+                font-size: 3rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            .quiz-container, .result-container {
+                padding: 1.5rem;
+                border-radius: 15px;
+            }
+
+            .options {
+                gap: 10px;
+            }
+
+            .option {
+                padding: 12px;
+            }
+
+            .custom-radio {
+                height: 22px;
+                width: 22px;
+            }
+
+            .option label {
+                padding-left: 35px;
+            }
+
+            .option-text {
+                font-size: 0.95rem;
+                margin-left: 8px;
+            }
+
+            .navigation {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .btn {
+                width: 100%;
+            }
+        }
+
+        /* Loading spinner */
+        .loader {
+            display: none;
+            border: 6px solid #f3f3f3;
+            border-top: 6px solid var(--primary-color);
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            animation: spin 1s linear infinite;
+            margin: 3rem auto;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Floating action button */
+        .fab {
+            position: fixed;
+            bottom: 35px;
+            right: 35px;
+            width: 65px;
+            height: 65px;
+            background-color: var(--accent-color);
+            color: var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.25);
+            cursor: pointer;
+            z-index: 100;
+            transition: all 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+        }
+
+        .fab:hover {
+            transform: scale(1.15);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+        }
+
+        .floating-home-button {
+            position: fixed;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            background-color: transparent;
+            border: none;
+            z-index: 1000;
+            text-decoration: none;
+        }
+
+        .home-button-inner {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-end;
+            height: 70px;
+            width: 23px;
+            background-color: #673AB7; /* Deep Purple for Home */
+            color: white;
+            font-weight: bold;
+            border-radius: 0 10px 10px 0;
+            box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease;
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+        }
+
+        .home-button-inner:hover {
+            background-color: #512DA8;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><i class="fas fa-handshake"></i> Who Is Important in My Life?</h1>
+            <p class="subtitle">A 50-Question Reflection on Your Core Connections</p>
+        </div>
+    </header>
+
+    <div class="container">
+
+        <div class="progress-container">
+            <div class="progress-bar" id="quiz-progress"></div>
+        </div>
+
+        <div id="quiz" class="quiz-container"></div>
+
+        <div class="navigation">
+            <button class="btn btn-secondary" id="prev-btn" disabled>
+                <i class="fas fa-arrow-left"></i> Previous
+            </button>
+            <button class="btn btn-primary" id="next-btn">
+                Next <i class="fas fa-arrow-right"></i>
+            </button>
+            <button class="btn btn-primary" id="submit-btn" style="display: none;">
+                See Your Connections <i class="fas fa-heart"></i>
+            </button>
+        </div>
+
+        <div class="loader" id="loader"></div>
+
+        <div class="result-container" id="result-container">
+            <h2 class="result-title">Your Circle of Importance</h2>
+            <div class="score" id="score">0%</div>
+
+            <div class="score-bar">
+                <div class="score-progress" id="score-progress"></div>
+            </div>
+
+            <div class="score-labels">
+                <span>Emerging Bonds</span>
+                <span>Valued Connections</span>
+                <span>Close Companions</span>
+                <span>Indispensable Pillars</span>
+            </div>
+
+            <div class="result-message" id="result-message"></div>
+
+            <button class="btn restart-btn" id="restart-btn">
+                <i class="fas fa-redo"></i> Restart Reflection
+            </button>
+        </div>
+    </div>
+
+    <a href="https://crapd.in/" class="floating-home-button" aria-label="Go to Home Page">
+        <div class="home-button-inner">
+            <i class="home"></i> HOME
+        </div>
+    </a>
+
+    <div class="fab" id="fab" title="See Your Current Connections Summary">
+        <i class="fas fa-user-group"></i>
+    </div>
+
+    <script>
+        const questions = [
+            {
+                "question_number": 1,
+                "question": "1. Who is the first person you typically call or text when you have exciting news to share?",
+                "options": [
+                    { "text": "No one in particular, I usually don't share quickly.", "value": 1 },
+                    { "text": "An acquaintance or a casual friend.", "value": 2 },
+                    { "text": "A family member, but not necessarily a close one.", "value": 3 },
+                    { "text": "A close friend or immediate family member.", "value": 4 },
+                    { "text": "My partner, or a very best friend.", "value": 5 },
+                    { "text": "It varies between 2-3 specific individuals who I know will be genuinely happy for me.", "value": 6 },
+                    { "text": "There's one specific person whose reaction I value above all others.", "value": 7 }
+                ]
+            },
+            {
+                "question_number": 2,
+                "question": "2. When you're facing a difficult challenge, who do you first turn to for support or advice?",
+                "options": [
+                    { "text": "I usually try to handle it alone.", "value": 1 },
+                    { "text": "A professional or external resource.", "value": 2 },
+                    { "text": "Someone who offers practical solutions, even if they don't know me well.", "value": 3 },
+                    { "text": "A trusted friend or family member who is a good listener.", "value": 4 },
+                    { "text": "Someone who combines emotional support with practical advice.", "value": 5 },
+                    { "text": "A few specific individuals who have proven their reliability and understanding.", "value": 6 },
+                    { "text": "There is one person who is my absolute rock and first point of contact.", "value": 7 }
+                ]
+            },
+            {
+                "question_number": 3,
+                "question": "3. Whose opinion do you value most when making important life decisions?",
+                "options": [
+                    { "text": "My own, primarily.", "value": 1 },
+                    { "text": "Experts or public figures.", "value": 2 },
+                    { "text": "A general consensus from a few people.", "value": 3 },
+                    { "text": "A parent or elder.", "value": 4 },
+                    { "text": "A close friend or mentor.", "value": 5 },
+                    { "text": "My partner or a very close family member.", "value": 6 },
+                    { "text": "There's one person whose wisdom and judgment I trust above all others.", "value": 7 }
+                ]
+            },
+            {
+                "question_number": 4,
+                "question": "4. Who is the person you feel most comfortable being completely vulnerable with?",
+                "options": [
+                    { "text": "No one, I keep my vulnerabilities private.", "value": 1 },
+                    { "text": "A therapist or counselor.", "value": 2 },
+                    { "text": "Someone I don't see very often, to avoid judgment.", "value": 3 },
+                    { "text": "A trusted friend or family member who understands me.", "value": 4 },
+                    { "text": "My partner, with whom I share everything.", "value": 5 },
+                    { "text": "A few individuals who offer unconditional acceptance.", "value": 6 },
+                    { "text": "There's one specific person with whom I share my deepest secrets without hesitation.", "value": 7 }
+                ]
+            },
+            {
+                "question_number": 5,
+                "question": "5. Whose well-being or happiness is often a significant consideration in your personal choices?",
+                "options": [
+                    { "text": "Only my own.", "value": 1 },
+                    { "text": "My pets or general humanity.", "value": 2 },
+                    { "text": "My extended family members.", "value": 3 },
+                    { "text": "My close friends.", "value": 4 },
+                    { "text": "My immediate family (parents, siblings, children).", "value": 5 },
+                    { "text": "My partner or children, if applicable.", "value": 6 },
+                    { "text": "There is one specific person whose happiness profoundly influences my decisions.", "value": 7 }
+                ]
+            },
+            {
+                "question_number": 6,
+                "question": "6. If you were to spend a quiet evening at home, who would you most want to share it with?",
+                "options": [
+                    { "text": "No one, I prefer solitude.", "value": 1 },
+                    { "text": "A casual acquaintance or colleague.", "value": 2 },
+                    { "text": "A family member I don't see often.", "value": 3 },
+                    { "text": "A good friend for light conversation.", "value": 4 },
+                    { "text": "My partner or best friend for comfortable silence or deep talks.", "value": 5 },
+                    { "text": "A small group of cherished individuals for shared comfort.", "value": 6 },
+                    { "text": "There's one person whose mere presence makes any quiet evening fulfilling.", "value": 7 }
+                ]
+            },
+            {
+                "question_number": 7,
+                "question": "7. Who consistently remembers important dates or details about your life (e.g., birthday, anniversaries, big events)?",
+                "options": [
+                    { "text": "No one really, or only if reminded.", "value": 1 },
+                    { "text": "Only family members for major holidays.", "value": 2 },
+                    { "text": "A few friends or family, but not consistently.", "value": 3 },
+                    { "text": "Several people, including some good friends.", "value": 4 },
+                    { "text": "My partner and a couple of very close friends.", "value": 5 },
+                    { "text": "A dedicated group of individuals who truly care about my life details.", "value": 6 },
+                    { "text": "There's one person who remembers almost everything and goes out of their way to acknowledge it.", "value": 7 }
+                ]
+            },
+            {
+                "question_number": 8,
+                "question": "8. When you need a good laugh, who is the first person you think of reaching out to?",
+                "options": [
+                    { "text": "No one, I find humor on my own.", "value": 1 },
+                    { "text": "A random friend who tells good jokes.", "value": 2 },
+                    { "text": "Someone from a comedy show or social media.", "value": 3 },
+                    { "text": "A friend who shares my sense of humor.", "value": 4 },
+                    { "text": "My partner or best friend, with whom I have many inside jokes.", "value": 5 },
+                    { "text": "A small circle of friends who consistently bring joy and laughter.", "value": 6 },
+                    { "text": "There's one specific person whose company guarantees genuine laughter and lightheartedness.", "value": 7 }
+                ]
+            },
+            {
+                "question_number": 9,
+                "question": "9. Who do you consider your 'safe space'—someone you can be completely yourself with, without judgment?",
+                "options": [
+                    { "text": "I don't really have one.", "value": 1 },
+                    { "text": "A professional (e.g., therapist).", "value": 2 },
+                    { "text": "A distant relative or old friend I rarely see.", "value": 3 },
+                    { "text": "A trusted friend or mentor.", "value": 4 },
+                    { "text": "My partner or a specific family member.", "value": 5 },
+                    { "text": "A select few individuals who offer unconditional acceptance.", "value": 6 },
+                    { "text": "There's one person who is my absolute sanctuary, where I feel completely understood and safe.", "value": 7 }
+                ]
+            },
+            {
+                "question_number": 10,
+                "question": "10. Who has consistently seen you through both your highs and your lows?",
+                "options": [
+                    { "text": "No one, I've primarily navigated life alone.", "value": 1 },
+                    { "text": "Different people at different times.", "value": 2 },
+                    { "text": "A few fair-weather friends.", "value": 3 },
+                    { "text": "A supportive family member or two.", "value": 4 },
+                    { "text": "A consistent group of close friends.", "value": 5 },
+                    { "text": "My partner and a best friend, who have been constants.", "value": 6 },
+                    { "text": "There's one person who has been an unwavering presence and pillar of support throughout my life's journey.", "value": 7 }
+                ]
+            },
+            {
+                "question_number": 11,
+                "question": "11. If you achieved a major personal goal, who would be the first person you'd want to tell?",
+                "options": [
+                    { "text": "Myself, I keep achievements private.", "value": 1 },
+                    { "text": "Someone on social media.", "value": 2 },
+                    { "text": "A professional contact.", "value": 3 },
+                    { "text": "A casual friend or colleague.", "value": 4 },
+                    { "text": "A close friend or a family member.", "value": 5 },
+                    { "text": "My partner or best friend, knowing they'd truly celebrate with me.", "value": 6 },
+                    { "text": "There is one person whose pride in my achievement matters most.", "value": 7 }
+                ]
+            },
+            {
+                "question_number": 12,
+                "question": "12. When you need a reality check or honest feedback, who do you trust to give it to you, even if it's hard to hear?",
+                "options": [
+                    { "text": "No one, I prefer to figure things out alone.", "value": 1 },
+                    { "text": "An anonymous online forum.", "value": 2 },
+                    { "text": "Someone who is generally blunt, but not necessarily close.", "value": 3 },
+                    { "text": "A mentor or supervisor.", "value": 4 },
+                    { "text": "A trusted friend or family member who speaks their mind.", "value": 5 },
+                    { "text": "My partner or a specific best friend, who has my best interests at heart.", "value": 6 },
+                    { "text": "There's one person whose candor and wisdom I rely on completely for honest self-assessment.", "value": 7 }
+                ]
+            },
+            {
+                "question_number": 13,
+                "question": "13. Who brings out the best in you, encouraging your growth and positive qualities?",
+                "options": [
+                    { "text": "No one in particular, my growth is self-driven.", "value": 1 },
+                    { "text": "Motivational speakers or books.", "value": 2 },
+                    { "text": "A competitive rival.", "value": 3 },
+                    { "text": "A positive acquaintance.", "value": 4 },
+                    { "text": "A supportive friend or family member.", "value": 5 },
+                    { "text": "My partner, or a friend who genuinely believes in my potential.", "value": 6 },
+                    { "text": "There is one person who consistently inspires and empowers me to be my best self.", "value": 7 }
+                ]
+            },
+            {
+                "question_number": 14,
+                "question": "14. Who is the person you miss most when you're apart for an extended period?",
+                "options": [
+                    { "text": "No one in particular, I enjoy my own company.", "value": 1 },
+                    { "text": "My pet.", "value": 2 },
+                    { "text": "Someone I see regularly but aren't deeply connected to.", "value": 3 },
+                    { "text": "A good friend from childhood.", "value": 4 },
+                    { "text": "A family member I'm very close to.", "value": 5 },
+                    { "text": "My partner or best friend, whose absence is strongly felt.", "value": 6 },
+                    { "text": "There's one person whose presence I deeply crave when they're not around.", "value": 7 }
+                ]
+            },
+            {
+                "question_number": 15,
+                "question": "15. Who do you share inside jokes, unique experiences, or a 'secret language' with?",
+                "options": [
+                    { "text": "No one, I don't really have those.", "value": 1 },
+                    { "text": "A group of online friends.", "value": 2 },
+                    { "text": "A colleague I spend a lot of time with.", "value": 3 },
+                    { "text": "A few close friends.", "value": 4 },
+                    { "text": "My siblings or parents, from shared upbringing.", "value": 5 },
+                    { "text": "My partner or best friend, due to a long history together.", "value": 6 },
+                    { "text": "There's one person who understands me implicitly, with whom I share a unique bond.", "value": 7 }
+                ]
+            },
+            {
+                "question_number": 16,
+                "question": "16. Who would you drop everything for if they genuinely needed your help?",
+                "options": [
+                    { "text": "Only if it was an emergency and no inconvenience to me.", "value": 1 },
+                    { "text": "Someone who has helped me extensively in the past.", "value": 2 },
+                    { "text": "A good friend, if their need was significant.", "value": 3 },
+                    { "text": "A close family member.", "value": 4 },
+                    { "text": "My partner or children, without hesitation.", "value": 5 },
+                    { "text": "A select few individuals whom I consider family by choice.", "value": 6 },
+                    { "text": "There's one person for whom I would sacrifice almost anything.", "value": 7 }
+                ]
+            },
+            {
+                "question_number": 17,
+                "question": "17. Who makes you feel completely accepted, flaws and all?",
+                "options": [
+                    { "text": "No one, I always feel I need to impress others.", "value": 1 },
+                    { "text": "A therapist or counselor.", "value": 2 },
+                    { "text": "Someone who doesn't know me very well.", "value": 3 },
+                    { "text": "A supportive friend who offers encouragement.", "value": 4 },
+                    { "text": "My partner, who knows me deeply.", "value": 5 },
+                    { "text": "A few individuals who consistently offer unconditional love.", "value": 6 },
+                    { "text": "There's one person whose acceptance is unwavering and profound, making me feel truly seen.", "value": 7 }
+                ]
+            },
+            {
+                "question_number": 18,
+                "question": "18. When you reminisce about happy memories, who is most often a part of those memories?",
+                "options": [
+                    { "text": "Mostly myself or general events.", "value": 1 },
+                    { "text": "Acquaintances from past events.", "value": 2 },
+                    { "text": "Distant relatives.", "value": 3 },
+                    { "text": "Friends from a specific period of my life.", "value": 4 },
+                    { "text": "Family members from my upbringing.", "value": 5 },
+                    { "text": "My partner and a few core friends with whom I've built many memories.", "value": 6 },
+                    { "text": "There's one person who is central to almost all of my most cherished memories.", "value": 7 }
+                ]
+            },
+            {
+                "question_number": 19,
+                "question": "19. Who inspires you to be a better person, pushing you towards your potential?",
+                "options": [
+                    { "text": "I'm self-motivated primarily.", "value": 1 },
+                    { "text": "Public figures or role models I don't know personally.", "value": 2 },
+                    { "text": "A mentor or coach.", "value": 3 },
+                    { "text": "A friend who sets a good example.", "value": 4 },
+                    { "text": "A family member whose achievements I admire.", "value": 5 },
+                    { "text": "My partner or a close friend whose ambition motivates me.", "value": 6 },
+                    { "text": "There is one person who consistently ignites my drive for self-improvement and growth.", "value": 7 }
+                ]
+            },
+            {
+                "question_number": 20,
+                "question": "20. Who is the first person you think of when you hear a song, see a place, or experience something that reminds you of a shared moment?",
+                "options": [
+                    { "text": "No one specifically, it's just a general feeling.", "value": 1 },
+                    { "text": "A random friend from that time.", "value": 2 },
+                    { "text": "A distant relative.", "value": 3 },
+                    { "text": "A good friend with whom I shared the experience.", "value": 4 },
+                    { "text": "My family, if it was a family event.", "value": 5 },
+                    { "text": "My partner or best friend, with whom I have many shared memories.", "value": 6 },
+                    { "text": "There's one person with whom almost every significant shared moment is mentally linked.", "value": 7 }
+                ]
+            },
+            {
+                "question_number": 21,
+                "question": "21. Who consistently checks in on your well-being, even when you haven't reached out?",
+                "options": [
+                    { "text": "No one really, I usually initiate contact.", "value": 1 },
+                    { "text": "A few acquaintances sporadically.", "value": 2 },
+                    { "text": "A distant relative or old friend.", "value": 3 },
+                    { "text": "A supportive friend who cares.", "value": 4 },
+                    { "text": "My parents or siblings.", "value": 5 },
+                    { "text": "My partner and a couple of very close friends.", "value": 6 },
+                    { "text": "There's one person who makes a point of regularly checking in on me, regardless of how often I reach out.", "value": 7 }
+                ]
+            },
+            {
+                "question_number": 22,
+                "question": "22. Whose presence brings you a sense of calm and peace, especially during stressful times?",
+                "options": [
+                    { "text": "No one, I find peace in solitude or activities.", "value": 1 },
+                    { "text": "A pet.", "value": 2 },
+                    { "text": "A professional or calming environment.", "value": 3 },
+                    { "text": "A generally positive friend.", "value": 4 },
+                    { "text": "A family member who grounds me.", "value": 5 },
+                    { "text": "My partner, whose presence is inherently soothing.", "value": 6 },
+                    { "text": "There's one person whose mere presence can instantly calm my anxieties.", "value": 7 }
+                ]
+            },
+            {
+                "question_number": 23,
+                "question": "23. Who encourages your unique quirks and allows you to be authentically yourself?",
+                "options": [
+                    { "text": "No one, I often feel I need to conform.", "value": 1 },
+                    { "text": "A new acquaintance who doesn't know my history.", "value": 2 },
+                    { "text": "Someone who is also quirky.", "value": 3 },
+                    { "text": "A friend who appreciates my individuality.", "value": 4 },
+                    { "text": "A family member who has always accepted me.", "value": 5 },
+                    { "text": "My partner, who celebrates my true self.", "value": 6 },
+                    { "text": "There's one person who makes me feel completely free to be myself, without any pretense.", "value": 7 }
+                ]
+            },
+            {
+                "question_number": 24,
+                "question": "24. If you needed a ride to the airport at 4 AM, who would you feel comfortable asking?",
+                "options": [
+                    { "text": "No one, I'd take a taxi/ride-share.", "value": 1 },
+                    { "text": "A paid service or a casual friend who owes me a favor.", "value": 2 },
+                    { "text": "A relative who lives very close.", "value": 3 },
+                    { "text": "A good friend, with some hesitation.", "value": 4 },
+                    { "text": "My sibling or parent, knowing they would do it.", "value": 5 },
+                    { "text": "My partner or a very best friend, who would do it without question.", "value": 6 },
+                    { "text": "There's one person I could ask for anything, anytime, knowing they'd be there for me.", "value": 7 }
+                ]
+            },
+            {
+                "question_number": 25,
+                "question": "25. Who is the person you feel most grateful to have in your life?",
+                "options": [
+                    { "text": "Myself.", "value": 1 },
+                    { "text": "A general sense of gratitude for life.", "value": 2 },
+                    { "text": "Someone who helped me recently.", "value": 3 },
+                    { "text": "A good friend.", "value": 4 },
+                    { "text": "A specific family member.", "value": 5 },
+                    { "text": "My partner or a best friend, for their unwavering presence.", "value": 6 },
+                    { "text": "There is one individual whose presence truly defines and enriches my life more than any other.", "value": 7 }
+                ]
+            },
+            {
+                "question_number": 26,
+                "question": "26. Who challenges your perspectives and encourages you to think critically, without making you feel small?",
+                "options": [
+                    { "text": "No one, I avoid intellectual challenges from others.", "value": 1 },
+                    { "text": "An academic or professional figure.", "value": 2 },
+                    { "text": "Someone who often disagrees with me.", "value": 3 },
+                    { "text": "A curious friend.", "value": 4 },
+                    { "text": "A family member with different viewpoints.", "value": 5 },
+                    { "text": "My partner or a friend who engages in thoughtful debate.", "value": 6 },
+                    { "text": "There's one person whose intellectual sparring helps me grow and refine my thoughts.", "value": 7 }
+                ]
+            },
+            {
+                "question_number": 27,
+                "question": "27. Who is the person you most enjoy sharing silence with?",
+                "options": [
+                    { "text": "No one, silence with others feels awkward.", "value": 1 },
+                    { "text": "A pet.", "value": 2 },
+                    { "text": "Someone I don't know well, so there's no pressure to talk.", "value": 3 },
+                    { "text": "A relaxed friend.", "value": 4 },
+                    { "text": "A close family member, where silence is comfortable.", "value": 5 },
+                    { "text": "My partner or best friend, enjoying mutual presence without words.", "value": 6 },
+                    { "text": "There's one person with whom silence is as rich and meaningful as conversation.", "value": 7 }
+                ]
+            },
+            {
+                "question_number": 28,
+                "question": "28. Who celebrates your small victories with as much enthusiasm as your big ones?",
+                "options": [
+                    { "text": "No one, I usually celebrate alone.", "value": 1 },
+                    { "text": "Someone who is generally optimistic.", "value": 2 },
+                    { "text": "A casual acquaintance who says 'congrats'.", "value": 3 },
+                    { "text": "A supportive friend.", "value": 4 },
+                    { "text": "A family member who is proud of me.", "value": 5 },
+                    { "text": "My partner or best friend, who understands the significance of every step.", "value": 6 },
+                    { "text": "There's one person who genuinely feels my joy in every success, big or small.", "value": 7 }
+                ]
+            },
+            {
+                "question_number": 29,
+                "question": "29. Who is the person you feel a strong, almost telepathic, understanding with?",
+                "options": [
+                    { "text": "No one, I don't believe in that.", "value": 1 },
+                    { "text": "Someone I've known for a very long time.", "value": 2 },
+                    { "text": "A close sibling.", "value": 3 },
+                    { "text": "A friend with similar interests.", "value": 4 },
+                    { "text": "My parents, who often know what I'm thinking.", "value": 5 },
+                    { "text": "My partner, where words are often unnecessary.", "value": 6 },
+                    { "text": "There's one person with whom I share an uncanny, deep, unspoken connection.", "value": 7 }
+                ]
+            },
+            {
+                "question_number": 30,
+                "question": "30. Who makes you feel most like 'home' when you're with them, regardless of location?",
+                "options": [
+                    { "text": "Nowhere and no one, home is a place.", "value": 1 },
+                    { "text": "A place or a comforting routine.", "value": 2 },
+                    { "text": "A specific location where I grew up.", "value": 3 },
+                    { "text": "A few good friends who provide a sense of belonging.", "value": 4 },
+                    { "text": "My immediate family, wherever they are.", "value": 5 },
+                    { "text": "My partner or best friend, whose presence is my true home.", "value": 6 },
+                    { "text": "There's one person who embodies 'home' for me more than any physical place.", "value": 7 }
+                ]
+            },
+            {
+                "question_number": 31,
+                "question": "31. Who is the person you've had the most significant personal growth because of?",
+                "options": [
+                    { "text": "Myself, I'm self-taught in growth.", "value": 1 },
+                    { "text": "A challenging experience.", "value": 2 },
+                    { "text": "A teacher or a therapist.", "value": 3 },
+                    { "text": "A friend who offered a different perspective.", "value": 4 },
+                    { "text": "A parent or mentor who guided me.", "value": 5 },
+                    { "text": "My partner, who has witnessed and supported my entire journey.", "value": 6 },
+                    { "text": "There's one person whose influence has fundamentally shaped my personal development.", "value": 7 }
+                ]
+            },
+            {
+                "question_number": 32,
+                "question": "32. Who makes you feel heard and understood, even when you struggle to articulate your thoughts?",
+                "options": [
+                    { "text": "No one, I often feel misunderstood.", "value": 1 },
+                    { "text": "Someone I communicate with primarily in writing.", "value": 2 },
+                    { "text": "A patient listener.", "value": 3 },
+                    { "text": "A empathetic friend.", "value": 4 },
+                    { "text": "A family member who knows me well.", "value": 5 },
+                    { "text": "My partner or best friend, who can read between the lines.", "value": 6 },
+                    { "text": "There's one person who possesses an almost uncanny ability to truly hear and grasp my unspoken feelings.", "value": 7 }
+                ]
+            },
+            {
+                "question_number": 33,
+                "question": "33. Who is the person you most enjoy just 'being' with, without needing a plan or activity?",
+                "options": [
+                    { "text": "No one, I prefer planned activities.", "value": 1 },
+                    { "text": "My pet.", "value": 2 },
+                    { "text": "A casual friend for background presence.", "value": 3 },
+                    { "text": "A relaxed family member.", "value": 4 },
+                    { "text": "A close friend who is easy to be around.", "value": 5 },
+                    { "text": "My partner, where simply existing together is enough.", "value": 6 },
+                    { "text": "There's one person whose company makes even mundane moments feel special and effortless.", "value": 7 }
+                ]
+            },
+            {
+                "question_number": 34,
+                "question": "34. Who has introduced you to new experiences, ideas, or passions that have enriched your life?",
+                "options": [
+                    { "text": "No one, I discover things on my own.", "value": 1 },
+                    { "text": "Books or documentaries.", "value": 2 },
+                    { "text": "A teacher or a travel guide.", "value": 3 },
+                    { "text": "A friend with diverse interests.", "value": 4 },
+                    { "text": "A family member who exposed me to new things.", "value": 5 },
+                    { "text": "My partner, with whom I've explored many new horizons.", "value": 6 },
+                    { "text": "There's one person who consistently opens my mind to new possibilities and broadens my world.", "value": 7 }
+                ]
+            },
+            {
+                "question_number": 35,
+                "question": "35. Who is the person you most consistently learn from?",
+                "options": [
+                    { "text": "No one, I learn from various sources.", "value": 1 },
+                    { "text": "Online courses or formal education.", "value": 2 },
+                    { "text": "A leader or a public figure.", "value": 3 },
+                    { "text": "A colleague or peer.", "value": 4 },
+                    { "text": "A parent or elder.", "value": 5 },
+                    { "text": "My partner or a mentor, through their example and insights.", "value": 6 },
+                    { "text": "There's one person who is a continuous source of wisdom and valuable lessons for me.", "value": 7 }
+                ]
+            },
+            {
+                "question_number": 36,
+                "question": "36. Who has had the most significant impact on your self-confidence?",
+                "options": [
+                    { "text": "No one, it's an internal process.", "value": 1 },
+                    { "text": "A positive achievement.", "value": 2 },
+                    { "text": "A coach or therapist.", "value": 3 },
+                    { "text": "A supportive friend.", "value": 4 },
+                    { "text": "A parent or family member who believed in me.", "value": 5 },
+                    { "text": "My partner, whose belief in me is unwavering.", "value": 6 },
+                    { "text": "There's one person whose consistent support and belief have profoundly boosted my self-worth.", "value": 7 }
+                ]
+            },
+            {
+                "question_number": 37,
+                "question": "37. Who is the first person you want to celebrate holidays or special occasions with?",
+                "options": [
+                    { "text": "No one, I prefer to celebrate quietly.", "value": 1 },
+                    { "text": "A large group of acquaintances.", "value": 2 },
+                    { "text": "Distant relatives out of obligation.", "value": 3 },
+                    { "text": "A few good friends.", "value": 4 },
+                    { "text": "My immediate family.", "value": 5 },
+                    { "text": "My partner and/or children, who are central to my celebrations.", "value": 6 },
+                    { "text": "There's one person who defines the joy of celebrations for me.", "value": 7 }
+                ]
+            },
+            {
+                "question_number": 38,
+                "question": "38. Who do you feel most comfortable taking risks or trying new things with?",
+                "options": [
+                    { "text": "No one, I prefer to stick to what I know.", "value": 1 },
+                    { "text": "Someone equally adventurous but not necessarily close.", "value": 2 },
+                    { "text": "A casual friend for light adventures.", "value": 3 },
+                    { "text": "A supportive friend who's up for anything.", "value": 4 },
+                    { "text": "A family member who encourages my explorations.", "value": 5 },
+                    { "text": "My partner, knowing they'll support me no matter the outcome.", "value": 6 },
+                    { "text": "There's one person whose unwavering support makes me feel brave enough to try anything new.", "value": 7 }
+                ]
+            },
+            {
+                "question_number": 39,
+                "question": "39. Who can always make you smile or laugh, even when you're feeling down?",
+                "options": [
+                    { "text": "No one, I have to cheer myself up.", "value": 1 },
+                    { "text": "A comedian or a funny video.", "value": 2 },
+                    { "text": "Someone who tries very hard to be funny.", "value": 3 },
+                    { "text": "A friend with a good sense of humor.", "value": 4 },
+                    { "text": "A family member who knows how to lift my spirits.", "value": 5 },
+                    { "text": "My partner or best friend, whose presence is inherently uplifting.", "value": 6 },
+                    { "text": "There's one person whose mere existence or voice can instantly bring a smile to my face.", "value": 7 }
+                ]
+            },
+            {
+                "question_number": 40,
+                "question": "40. Who has profoundly influenced your moral compass or values?",
+                "options": [
+                    { "text": "No one, my values are self-formed.", "value": 1 },
+                    { "text": "Philosophers or religious texts.", "value": 2 },
+                    { "text": "A teacher or a leader.", "value": 3 },
+                    { "text": "A respected friend.", "value": 4 },
+                    { "text": "A parent or grandparent.", "value": 5 },
+                    { "text": "My partner, through shared ethical growth.", "value": 6 },
+                    { "text": "There's one person whose integrity and principles have deeply shaped my own moral framework.", "value": 7 }
+                ]
+            },
+            {
+                "question_number": 41,
+                "question": "41. Who is the person you would choose to be stuck on a desert island with?",
+                "options": [
+                    { "text": "Myself, for survival.", "value": 1 },
+                    { "text": "A survival expert.", "value": 2 },
+                    { "text": "Someone with practical skills, but not necessarily close.", "value": 3 },
+                    { "text": "A good friend for company.", "value": 4 },
+                    { "text": "A resourceful family member.", "value": 5 },
+                    { "text": "My partner or best friend, for enduring companionship and teamwork.", "value": 6 },
+                    { "text": "There's one person whose presence would make even the most challenging situation bearable, or even an adventure.", "value": 7 }
+                ]
+            },
+            {
+                "question_number": 42,
+                "question": "42. Who makes you feel the most secure and protected?",
+                "options": [
+                    { "text": "No one, I rely on my own strength.", "value": 1 },
+                    { "text": "A security system or safe environment.", "value": 2 },
+                    { "text": "A police officer or authority figure.", "value": 3 },
+                    { "text": "A strong and loyal friend.", "value": 4 },
+                    { "text": "A parent or guardian.", "value": 5 },
+                    { "text": "My partner, who provides a sense of safety and belonging.", "value": 6 },
+                    { "text": "There's one person whose protective presence makes me feel truly safe and cherished.", "value": 7 }
+                ]
+            },
+            {
+                "question_number": 43,
+                "question": "43. Who is the person you share your wildest dreams and aspirations with?",
+                "options": [
+                    { "text": "No one, I keep them to myself.", "value": 1 },
+                    { "text": "My journal.", "value": 2 },
+                    { "text": "Someone who is also ambitious.", "value": 3 },
+                    { "text": "A friend who doesn't judge.", "value": 4 },
+                    { "text": "A family member who encourages dreams.", "value": 5 },
+                    { "text": "My partner or best friend, who supports my craziest ideas.", "value": 6 },
+                    { "text": "There's one person who not only listens but also champions my biggest dreams, no matter how audacious.", "value": 7 }
+                ]
+            },
+            {
+                "question_number": 44,
+                "question": "44. Who is the person you enjoy performing acts of service for the most?",
+                "options": [
+                    { "text": "No one, I don't typically do acts of service.", "value": 1 },
+                    { "text": "Anyone who needs help.", "value": 2 },
+                    { "text": "A cause or charity.", "value": 3 },
+                    { "text": "A good friend or neighbor.", "value": 4 },
+                    { "text": "A family member I care for.", "value": 5 },
+                    { "text": "My partner or children, for whom serving brings me joy.", "value": 6 },
+                    { "text": "There's one person for whom doing something thoughtful brings me the deepest sense of fulfillment.", "value": 7 }
+                ]
+            },
+            {
+                "question_number": 45,
+                "question": "45. Who reminds you of the best parts of yourself?",
+                "options": [
+                    { "text": "No one, I reflect on myself.", "value": 1 },
+                    { "text": "My past achievements.", "value": 2 },
+                    { "text": "A positive affirmation.", "value": 3 },
+                    { "text": "A friend who gives compliments.", "value": 4 },
+                    { "text": "A family member who knows my strengths.", "value": 5 },
+                    { "text": "My partner, who sees and reflects my best qualities.", "value": 6 },
+                    { "text": "There's one person who consistently reminds me of my inner strength, kindness, and worth.", "value": 7 }
+                ]
+            },
+            {
+                "question_number": 46,
+                "question": "46. Who makes you feel most accountable for your goals and promises?",
+                "options": [
+                    { "text": "Myself, I'm self-accountable.", "value": 1 },
+                    { "text": "A public commitment.", "value": 2 },
+                    { "text": "A colleague or boss.", "value": 3 },
+                    { "text": "A friend who holds me to my word.", "value": 4 },
+                    { "text": "A family member who checks in on my progress.", "value": 5 },
+                    { "text": "My partner, with whom I share life's ambitions.", "value": 6 },
+                    { "text": "There's one person whose belief in me motivates me to always follow through.", "value": 7 }
+                ]
+            },
+            {
+                "question_number": 47,
+                "question": "47. Who is the person you feel most comfortable asking for forgiveness from, and offering forgiveness to?",
+                "options": [
+                    { "text": "No one, I avoid those conversations.", "value": 1 },
+                    { "text": "Someone who is very forgiving.", "value": 2 },
+                    { "text": "A neutral party.", "value": 3 },
+                    { "text": "A friend with whom I have a strong bond.", "value": 4 },
+                    { "text": "A family member, despite any past friction.", "value": 5 },
+                    { "text": "My partner, with whom true reconciliation is possible.", "value": 6 },
+                    { "text": "There's one person with whom the cycle of forgiveness is effortless and deeply healing.", "value": 7 }
+                ]
+            },
+            {
+                "question_number": 48,
+                "question": "48. Who makes you feel most connected to your roots or heritage?",
+                "options": [
+                    { "text": "No one, I don't feel connected to those.", "value": 1 },
+                    { "text": "Historical texts or museums.", "value": 2 },
+                    { "text": "A community group.", "value": 3 },
+                    { "text": "An older relative.", "value": 4 },
+                    { "text": "My parents or grandparents.", "value": 5 },
+                    { "text": "A specific family member who carries family traditions and stories.", "value": 6 },
+                    { "text": "There's one person who is the living embodiment of my history and cultural identity.", "value": 7 }
+                ]
+            },
+            {
+                "question_number": 49,
+                "question": "49. Who is the person you would want by your side during a major life transition (e.g., new job, moving, health changes)?",
+                "options": [
+                    { "text": "No one, I prefer independence during transitions.", "value": 1 },
+                    { "text": "A professional advisor.", "value": 2 },
+                    { "text": "A reliable acquaintance.", "value": 3 },
+                    { "text": "A supportive friend.", "value": 4 },
+                    { "text": "A key family member.", "value": 5 },
+                    { "text": "My partner or best friend, for unwavering practical and emotional support.", "value": 6 },
+                    { "text": "There's one person whose presence is essential and comforting during every significant life change.", "value": 7 }
+                ]
+            },
+            {
+                "question_number": 50,
+                "question": "50. Considering all aspects, how many individuals would you truly describe as indispensable in your life?",
+                "options": [
+                    { "text": "Very few, perhaps 0-1.", "value": 1 },
+                    { "text": "1-2 individuals.", "value": 2 },
+                    { "text": "3-5 individuals.", "value": 3 },
+                    { "text": "6-10 individuals.", "value": 4 },
+                    { "text": "10-15 individuals.", "value": 5 },
+                    { "text": "15-20 individuals.", "value": 6 },
+                    { "text": "More than 20 individuals, my life is rich with important connections.", "value": 7 }
+                ]
+            }
+        ];
+
+        let currentQuestionIndex = 0;
+        let userAnswers = {};
+        const quizContainer = document.getElementById('quiz');
+        const progressBar = document.getElementById('quiz-progress');
+        const nextButton = document.getElementById('next-btn');
+        const prevButton = document.getElementById('prev-btn');
+        const submitButton = document.getElementById('submit-btn');
+        const resultContainer = document.getElementById('result-container');
+        const scoreElement = document.getElementById('score');
+        const scoreProgressBar = document.getElementById('score-progress');
+        const resultMessageElement = document.getElementById('result-message');
+        const restartButton = document.getElementById('restart-btn');
+        const fabButton = document.getElementById('fab');
+
+        function loadQuestion() {
+            quizContainer.style.opacity = 0;
+
+            setTimeout(() => {
+                const questionData = questions[currentQuestionIndex];
+                quizContainer.innerHTML = `
+                    <div class="question-counter">Question ${currentQuestionIndex + 1} of ${questions.length}</div>
+                    <div class="question">${questionData.question}</div>
+                    <div class="options">
+                        ${questionData.options.map((option, index) => `
+                            <div class="option">
+                                <input type="radio" id="option-${currentQuestionIndex}-${index}" name="question-${currentQuestionIndex}" value="${option.value}"
+                                    ${userAnswers[currentQuestionIndex] == option.value ? 'checked' : ''}>
+                                <label for="option-${currentQuestionIndex}-${index}">
+                                    <span class="custom-radio"></span>
+                                    <span class="option-text">${option.text}</span>
+                                </label>
+                            </div>
+                        `).join('')}
+                    </div>
+                `;
+                quizContainer.querySelectorAll('.option input').forEach(input => {
+                    input.addEventListener('change', (event) => {
+                        userAnswers[currentQuestionIndex] = parseInt(event.target.value);
+                    });
+                });
+
+                updateProgressBar();
+                updateNavigationButtons();
+                quizContainer.style.opacity = 1;
+            }, 100);
+        }
+
+        function updateProgressBar() {
+            const progress = ((currentQuestionIndex + 1) / questions.length) * 100;
+            progressBar.style.width = `${progress}%`;
+        }
+
+        function updateNavigationButtons() {
+            prevButton.disabled = currentQuestionIndex === 0;
+            nextButton.style.display = currentQuestionIndex === questions.length - 1 ? 'none' : 'flex';
+            submitButton.style.display = currentQuestionIndex === questions.length - 1 ? 'flex' : 'none';
+        }
+
+        function calculateScoreAndDisplayResult() {
+            const totalQuestions = questions.length;
+            let totalPossibleScore = 0;
+            questions.forEach(q => {
+                const maxOptionValue = Math.max(...q.options.map(o => o.value));
+                totalPossibleScore += maxOptionValue;
+            });
+
+            let userTotalScore = 0;
+            for (let i = 0; i < totalQuestions; i++) {
+                if (userAnswers[i] !== undefined) {
+                    userTotalScore += userAnswers[i];
+                }
+            }
+
+            const percentageScore = (userTotalScore / totalPossibleScore) * 100;
+            const formattedScore = percentageScore.toFixed(0);
+
+            scoreElement.textContent = `${formattedScore}%`;
+            scoreProgressBar.style.width = `${formattedScore}%`;
+
+            let message = "";
+            if (percentageScore < 20) {
+                message = "Your circle of important people might feel small right now. This quiz is a reminder that connections exist in many forms, and you have the power to nurture new ones. Even a few strong bonds can make a world of difference.";
+            } else if (percentageScore < 40) {
+                message = "You have some valued connections, but there's potential to deepen existing bonds or explore new relationships. Consider actively reaching out and sharing more of yourself with those around you.";
+            } else if (percentageScore < 60) {
+                message = "You have a good number of close companions who enrich your life. These relationships are a source of strength and joy. Continue to invest in them, as they are truly important.";
+            } else if (percentageScore < 80) {
+                message = "Your life is rich with important people! You have a robust network of individuals who provide support, comfort, and meaning. These strong bonds are a testament to your ability to form deep connections.";
+            } else {
+                message = "You are surrounded by indispensable pillars of support and love. Your life is profoundly shaped by a multitude of significant relationships. Cherish these connections; they are the bedrock of your well-being and happiness.";
+            }
+            resultMessageElement.textContent = message;
+
+            quizContainer.style.display = 'none';
+            prevButton.style.display = 'none';
+            nextButton.style.display = 'none';
+            submitButton.style.display = 'none';
+            resultContainer.style.display = 'block';
+            fabButton.style.display = 'none';
+        }
+
+        function resetQuiz() {
+            currentQuestionIndex = 0;
+            userAnswers = {};
+            quizContainer.style.display = 'block';
+            resultContainer.style.display = 'none';
+            fabButton.style.display = 'flex';
+            loadQuestion();
+        }
+
+        nextButton.addEventListener('click', () => {
+            if (userAnswers[currentQuestionIndex] === undefined) {
+                alert("Please select an option before proceeding!");
+                return;
+            }
+            if (currentQuestionIndex < questions.length - 1) {
+                currentQuestionIndex++;
+                loadQuestion();
+            }
+        });
+
+        prevButton.addEventListener('click', () => {
+            if (currentQuestionIndex > 0) {
+                currentQuestionIndex--;
+                loadQuestion();
+            }
+        });
+
+        submitButton.addEventListener('click', () => {
+            if (userAnswers[currentQuestionIndex] === undefined) {
+                alert("Please select an option before seeing your results!");
+                return;
+            }
+            calculateScoreAndDisplayResult();
+        });
+
+        restartButton.addEventListener('click', resetQuiz);
+
+        fabButton.addEventListener('click', () => {
+            if (Object.keys(userAnswers).length > 0) {
+                calculateScoreAndDisplayResult();
+            } else {
+                alert("Please answer at least one question to see your connections summary!");
+            }
+        });
+
+        loadQuestion();
+    </script>
+</body>
+</html>
