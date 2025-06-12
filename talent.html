@@ -1,0 +1,1189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Your Talent - Discover Your Hidden Potential (50 Questions)</title>
+    <meta name="description" content="Embark on a journey to discover your unique talents and hidden potential with this insightful 50-question quiz. Uncover what you're naturally good at and passionate about.">
+    <meta name="keywords" content="find talent, talent discovery, personal strengths, hidden potential, skill assessment, aptitude test, self-discovery, career guidance, passion quiz, what am I good at">
+    <meta name="author" content="Your Name/Website Name">
+    <meta property="og:title" content="Find Your Talent - Discover Your Hidden Potential">
+    <meta property="og:description" content="Embark on a journey to discover your unique talents and hidden potential with this insightful 50-question quiz. Uncover what you're naturally good at and passionate about.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="[Your Website URL]/find_talent.html">
+    <meta property="og:image" content="https://www.pinterest.com/pin/thinking-of-you-flowers-imagetwq143desi41--754704850025371692/">
+    <link rel="canonical" href="[Your Website URL]/find_talent.html">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #673AB7; /* Deep Purple - for creativity/wisdom */
+            --secondary-color: #512DA8; /* Darker Purple */
+            --accent-color: #FFC107; /* Amber - for energy/illumination */
+            --light-bg: #F3E5F5; /* Very light purple background */
+            --dark-text: #212121;
+            --light-text: #616161;
+            --white: #ffffff;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', 'Arial', sans-serif;
+            background-color: var(--light-bg);
+            color: var(--dark-text);
+            line-height: 1.6;
+            padding: 0;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: var(--white);
+            padding: 2rem 0;
+            text-align: center;
+            border-radius: 0 0 20px 20px;
+            box-shadow: var(--shadow);
+            margin-bottom: 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 70%);
+            transform: rotate(45deg);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            position: relative;
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            position: relative;
+        }
+
+        .progress-container {
+            width: 100%;
+            background-color: #ddd;
+            border-radius: 10px;
+            margin: 2rem 0;
+            height: 15px;
+            overflow: hidden;
+            box-shadow: inset 0 1px 3px rgba(0,0,0,0.2);
+        }
+
+        .progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, var(--accent-color), var(--primary-color));
+            width: 0%;
+            transition: width 0.5s ease;
+            border-radius: 10px;
+        }
+
+        .quiz-container {
+            background-color: var(--white);
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        .question-counter {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+
+        .question {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            color: var(--secondary-color);
+        }
+
+        .options {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 12px;
+        }
+
+        .option {
+            display: flex;
+            align-items: center;
+            padding: 12px 15px;
+            background-color: #f5f5f5;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .option:hover {
+            background-color: #eee;
+            border-color: var(--primary-color);
+        }
+
+        .option input {
+            display: none;
+        }
+
+        .option label {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            cursor: pointer;
+            position: relative;
+            padding-left: 35px;
+        }
+
+        .custom-radio {
+            position: absolute;
+            left: 0;
+            height: 22px;
+            width: 22px;
+            background-color: #ccc;
+            border-radius: 50%;
+            border: 2px solid var(--light-text);
+            transition: all 0.3s ease;
+        }
+
+        .option input:checked ~ .custom-radio {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+
+        .custom-radio::after {
+            content: "";
+            position: absolute;
+            display: none;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: var(--white);
+        }
+
+        .option input:checked ~ .custom-radio::after {
+            display: block;
+        }
+
+        .option-text {
+            margin-left: 10px;
+            font-size: 1rem;
+            color: var(--dark-text);
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 2rem;
+        }
+
+        .btn {
+            padding: 12px 25px;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        .btn-secondary {
+            background-color: #ccc;
+            color: var(--dark-text);
+        }
+
+        .btn-secondary:hover {
+            background-color: #bbb;
+        }
+
+        .result-container {
+            background-color: var(--white);
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            padding: 2rem;
+            text-align: center;
+            display: none;
+            animation: fadeIn 0.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .result-title {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 2rem;
+        }
+
+        .score {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin: 1rem 0;
+        }
+
+        .score-bar {
+            height: 30px;
+            background-color: #ddd;
+            border-radius: 15px;
+            margin: 2rem auto;
+            max-width: 500px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .score-progress {
+            height: 100%;
+            background: linear-gradient(90deg, #FFC107, #673AB7); /* Amber to Purple gradient for talent */
+            width: 0%;
+            transition: width 1s ease;
+        }
+
+        .score-labels {
+            display: flex;
+            justify-content: space-between;
+            max-width: 500px;
+            margin: 0 auto;
+            font-size: 0.8rem;
+            color: var(--light-text);
+        }
+
+        .result-message {
+            margin-top: 2rem;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--dark-text);
+            padding: 0 1rem;
+        }
+
+        .restart-btn {
+            margin-top: 2rem;
+            background-color: var(--primary-color);
+            color: var(--white);
+        }
+
+        .restart-btn:hover {
+            background-color: var(--secondary-color);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+
+            header {
+                padding: 1.5rem 0;
+                border-radius: 0;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            .subtitle {
+                font-size: 0.9rem;
+            }
+
+            .quiz-container, .result-container {
+                padding: 1.5rem;
+            }
+
+            .question {
+                font-size: 1.1rem;
+            }
+
+            .option-text {
+                font-size: 0.9rem;
+            }
+
+            .btn {
+                padding: 10px 20px;
+                font-size: 0.9rem;
+            }
+
+            .result-title {
+                font-size: 1.5rem;
+            }
+
+            .score {
+                font-size: 2.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            .quiz-container, .result-container {
+                padding: 1rem;
+                border-radius: 10px;
+            }
+
+            .options {
+                gap: 8px;
+            }
+
+            .option {
+                padding: 10px;
+            }
+
+            .custom-radio {
+                height: 18px;
+                width: 18px;
+            }
+
+            .option-text {
+                font-size: 0.85rem;
+                margin-left: 8px;
+            }
+
+            .navigation {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .btn {
+                width: 100%;
+            }
+        }
+
+        /* Animation for options */
+        @keyframes optionAppear {
+            from { opacity: 0; transform: translateX(-10px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        .option {
+            animation: optionAppear 0.3s ease forwards;
+            opacity: 0;
+        }
+
+        .option:nth-child(1) { animation-delay: 0.1s; }
+        .option:nth-child(2) { animation-delay: 0.2s; }
+        .option:nth-child(3) { animation-delay: 0.3s; }
+        .option:nth-child(4) { animation-delay: 0.4s; }
+
+        /* Loading spinner */
+        .loader {
+            display: none;
+            border: 5px solid #ccc;
+            border-top: 5px solid var(--primary-color);
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+            margin: 2rem auto;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Floating action button */
+        .fab {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background-color: var(--primary-color);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            cursor: pointer;
+            z-index: 100;
+            transition: all 0.3s ease;
+        }
+
+        .fab:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 16px rgba(0,0,0,0.3);
+        }
+
+        .floating-home-button {
+            position: fixed;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            background-color: transparent;
+            border: none;
+            z-index: 1000;
+            text-decoration: none;
+        }
+
+        .home-button-inner {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-end;
+            height: 70px;
+            width: 23px;
+            background-color: #3F51B5; /* Indigo background for Home (contrast with talent theme) */
+            color: white;
+            font-weight: bold;
+            border-radius: 0 10px 10px 0;
+            box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.3);
+            transition: background-color 0.3s ease;
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+        }
+
+        .home-button-inner:hover {
+            background-color: #303F9F;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><i class="fas fa-sparkles"></i> Find Your Talent</h1>
+            <p class="subtitle">Discover Your Hidden Potential (50 Questions)</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="progress-container">
+            <div class="progress-bar" id="quiz-progress"></div>
+        </div>
+
+        <div id="quiz" class="quiz-container"></div>
+
+        <div class="navigation">
+            <button class="btn btn-secondary" id="prev-btn" disabled>
+                <i class="fas fa-arrow-left"></i> Previous
+            </button>
+            <button class="btn btn-primary" id="next-btn">
+                Next <i class="fas fa-arrow-right"></i>
+            </button>
+            <button class="btn btn-primary" id="submit-btn" style="display: none;">
+                See Results <i class="fas fa-chart-bar"></i>
+            </button>
+        </div>
+
+        <div class="loader" id="loader"></div>
+
+        <div class="result-container" id="result-container">
+            <h2 class="result-title">Your Talent Potential</h2>
+            <div class="score" id="score">0%</div>
+
+            <div class="score-bar">
+                <div class="score-progress" id="score-progress"></div>
+            </div>
+
+            <div class="score-labels">
+                <span>Emerging</span>
+                <span>Developing</span>
+                <span>Strong</span>
+                <span>Exceptional</span>
+            </div>
+
+            <div class="result-message" id="result-message"></div>
+
+            <button class="btn restart-btn" id="restart-btn">
+                <i class="fas fa-redo"></i> Retake Quiz
+            </button>
+        </div>
+    </div>
+
+    <div class="fab" id="fab" title="View Progress">
+        <i class="fas fa-chart-pie"></i>
+    </div>
+
+    <script>
+        const questions = [
+            // Section 1: Creative & Artistic Talents (10 Questions)
+            {
+                question: "1. How often do you find yourself sketching, drawing, or painting in your free time?",
+                options: [
+                    { text: "Rarely or never", value: 1 },
+                    { text: "Occasionally", value: 2 },
+                    { text: "Often", value: 3 },
+                    { text: "Almost daily", value: 4 }
+                ]
+            },
+            {
+                question: "2. Do you enjoy writing stories, poems, or expressing yourself through words?",
+                options: [
+                    { text: "Not really", value: 1 },
+                    { text: "Sometimes, for practical purposes", value: 2 },
+                    { text: "Yes, I like creative writing", value: 3 },
+                    { text: "It's a strong passion", value: 4 }
+                ]
+            },
+            {
+                question: "3. Are you drawn to music, either playing an instrument, singing, or composing?",
+                options: [
+                    { text: "No interest", value: 1 },
+                    { text: "I enjoy listening to music", value: 2 },
+                    { text: "I actively participate in music", value: 3 },
+                    { text: "Music is a huge part of my life", value: 4 }
+                ]
+            },
+            {
+                question: "4. Do you have a knack for interior design, fashion, or visual aesthetics?",
+                options: [
+                    { text: "Not at all", value: 1 },
+                    { text: "I appreciate good design", value: 2 },
+                    { text: "I often think about improving aesthetics", value: 3 },
+                    { text: "I have a strong sense of style and design", value: 4 }
+                ]
+            },
+            {
+                question: "5. When faced with a problem, do you often think of unconventional or imaginative solutions?",
+                options: [
+                    { text: "Rarely", value: 1 },
+                    { text: "Sometimes", value: 2 },
+                    { text: "Often", value: 3 },
+                    { text: "Almost always, I think outside the box", value: 4 }
+                ]
+            },
+            {
+                question: "6. Do you enjoy taking photos or videos and editing them to tell a story?",
+                options: [
+                    { text: "Not interested in visual media", value: 1 },
+                    { text: "I take casual photos/videos", value: 2 },
+                    { text: "I like composing shots and editing", value: 3 },
+                    { text: "Photography/videography is a serious hobby/skill", value: 4 }
+                ]
+            },
+            {
+                question: "7. Do you enjoy expressing yourself through dance or physical movement?",
+                options: [
+                    { text: "Not at all", value: 1 },
+                    { text: "Occasionally, for fun", value: 2 },
+                    { text: "Yes, I enjoy dancing/movement", value: 3 },
+                    { text: "It's a significant form of expression for me", value: 4 }
+                ]
+            },
+            {
+                question: "8. Are you skilled at crafting, making things with your hands, or DIY projects?",
+                options: [
+                    { text: "No, I'm not handy", value: 1 },
+                    { text: "I can follow instructions sometimes", value: 2 },
+                    { text: "Yes, I enjoy creating things", value: 3 },
+                    { text: "I'm very good at crafting and building", value: 4 }
+                ]
+            },
+            {
+                question: "9. Do you enjoy performing (e.g., acting, stand-up, public speaking)?",
+                options: [
+                    { text: "I avoid public speaking", value: 1 },
+                    { text: "I can do it if necessary", value: 2 },
+                    { text: "I enjoy being on stage", value: 3 },
+                    { text: "I love performing and captivating an audience", value: 4 }
+                ]
+            },
+            {
+                question: "10. Do you often have original ideas for new products, services, or creative projects?",
+                options: [
+                    { text: "Rarely", value: 1 },
+                    { text: "Occasionally", value: 2 },
+                    { text: "Often, I have many ideas", value: 3 },
+                    { text: "I'm constantly brainstorming innovative concepts", value: 4 }
+                ]
+            },
+
+            // Section 2: Analytical & Problem-Solving Talents (10 Questions)
+            {
+                question: "11. Do you enjoy solving complex puzzles or brain teasers?",
+                options: [
+                    { text: "Not really, I get frustrated", value: 1 },
+                    { text: "Sometimes, if they're easy", value: 2 },
+                    { text: "Yes, I find them engaging", value: 3 },
+                    { text: "I love challenging puzzles and logic games", value: 4 }
+                ]
+            },
+            {
+                question: "12. Are you good at identifying patterns and making predictions based on data or information?",
+                options: [
+                    { text: "No, I struggle with that", value: 1 },
+                    { text: "Occasionally", value: 2 },
+                    { text: "Yes, I'm fairly good at it", value: 3 },
+                    { text: "I have a strong analytical mind for patterns", value: 4 }
+                ]
+            },
+            {
+                question: "13. Do you enjoy dissecting how things work, from machines to systems?",
+                options: [
+                    { text: "No interest in mechanics/systems", value: 1 },
+                    { text: "Only if it affects me directly", value: 2 },
+                    { text: "Yes, I'm curious about how things function", value: 3 },
+                    { text: "I love taking things apart (mentally or physically) to understand them", value: 4 }
+                ]
+            },
+            {
+                question: "14. Are you skilled at debugging code, troubleshooting technical issues, or finding solutions to technical problems?",
+                options: [
+                    { text: "I avoid technical problems", value: 1 },
+                    { text: "I can follow basic instructions", value: 2 },
+                    { text: "I'm decent at fixing technical issues", value: 3 },
+                    { text: "I excel at diagnosing and solving technical challenges", value: 4 }
+                ]
+            },
+            {
+                question: "15. Do you enjoy research and diving deep into subjects to understand them thoroughly?",
+                options: [
+                    { text: "No, I prefer quick answers", value: 1 },
+                    { text: "I do basic research if needed", value: 2 },
+                    { text: "Yes, I enjoy learning new things in depth", value: 3 },
+                    { text: "I love extensive research and becoming an expert on topics", value: 4 }
+                ]
+            },
+            {
+                question: "16. Are you good at organizing information, creating clear systems, or categorizing data?",
+                options: [
+                    { text: "My things are often disorganized", value: 1 },
+                    { text: "I try to be organized", value: 2 },
+                    { text: "Yes, I'm good at organizing", value: 3 },
+                    { text: "I thrive on creating highly efficient systems and structures", value: 4 }
+                ]
+            },
+            {
+                question: "17. Do you enjoy working with numbers, statistics, or financial data?",
+                options: [
+                    { text: "I dislike numbers", value: 1 },
+                    { text: "I can handle basic calculations", value: 2 },
+                    { text: "Yes, I find numbers interesting", value: 3 },
+                    { text: "I have a strong aptitude for mathematics and data analysis", value: 4 }
+                ]
+            },
+            {
+                question: "18. When presented with a challenge, do you break it down into smaller, manageable steps?",
+                options: [
+                    { text: "No, I get overwhelmed", value: 1 },
+                    { text: "Sometimes", value: 2 },
+                    { text: "Often, it helps me tackle problems", value: 3 },
+                    { text: "This is my natural approach to complex situations", value: 4 }
+                ]
+            },
+            {
+                question: "19. Do you enjoy debates or discussions where logical arguments are key?",
+                options: [
+                    { text: "I avoid debates", value: 1 },
+                    { text: "Only if I'm passionate about the topic", value: 2 },
+                    { text: "Yes, I enjoy intellectual sparring", value: 3 },
+                    { text: "I love constructing and deconstructing logical arguments", value: 4 }
+                ]
+            },
+            {
+                question: "20. Are you good at spotting flaws or inconsistencies in arguments or plans?",
+                options: [
+                    { text: "Not really", value: 1 },
+                    { text: "Sometimes", value: 2 },
+                    { text: "Often, I notice details others miss", value: 3 },
+                    { text: "I have a sharp eye for logical errors and discrepancies", value: 4 }
+                ]
+            },
+
+            // Section 3: Interpersonal & Communication Talents (10 Questions)
+            {
+                question: "21. Do you easily connect with new people and make them feel comfortable?",
+                options: [
+                    { text: "I'm shy/reserved", value: 1 },
+                    { text: "It takes me a while", value: 2 },
+                    { text: "Yes, I'm good at meeting people", value: 3 },
+                    { text: "I effortlessly build rapport and make others feel at ease", value: 4 }
+                ]
+            },
+            {
+                question: "22. Are you skilled at resolving conflicts between people?",
+                options: [
+                    { text: "I avoid conflicts", value: 1 },
+                    { text: "I try to mediate, but it's hard", value: 2 },
+                    { text: "Yes, I can usually help resolve disputes", value: 3 },
+                    { text: "I'm an excellent mediator and negotiator", value: 4 }
+                ]
+            },
+            {
+                question: "23. Do you enjoy teaching, mentoring, or explaining complex ideas to others?",
+                options: [
+                    { text: "No, I prefer learning myself", value: 1 },
+                    { text: "I can explain simple things", value: 2 },
+                    { text: "Yes, I enjoy guiding others", value: 3 },
+                    { text: "I love to teach and empower others with knowledge", value: 4 }
+                ]
+            },
+            {
+                question: "24. Are you a good listener, truly understanding what others are saying?",
+                options: [
+                    { text: "I often interrupt or drift off", value: 1 },
+                    { text: "I try to listen well", value: 2 },
+                    { text: "Yes, I actively listen", value: 3 },
+                    { text: "I'm an exceptional active listener, understanding deeply", value: 4 }
+                ]
+            },
+            {
+                question: "25. Do you find it easy to persuade or influence others effectively?",
+                options: [
+                    { text: "No, I struggle with persuasion", value: 1 },
+                    { text: "Sometimes, if it's a simple request", value: 2 },
+                    { text: "Yes, I can generally influence people", value: 3 },
+                    { text: "I am highly persuasive and can effectively influence others", value: 4 }
+                ]
+            },
+            {
+                question: "26. Do you enjoy leading groups or projects?",
+                options: [
+                    { text: "I prefer to follow", value: 1 },
+                    { text: "I can lead if needed", value: 2 },
+                    { text: "Yes, I enjoy taking charge", value: 3 },
+                    { text: "I am a natural leader and enjoy guiding teams", value: 4 }
+                ]
+            },
+            {
+                question: "27. Are you good at public speaking and presenting ideas clearly and engagingly?",
+                options: [
+                    { text: "I have stage fright", value: 1 },
+                    { text: "I can manage basic presentations", value: 2 },
+                    { text: "Yes, I'm comfortable speaking publicly", value: 3 },
+                    { text: "I excel at public speaking and captivate audiences", value: 4 }
+                ]
+            },
+            {
+                question: "28. Do you enjoy organizing events, gatherings, or coordinating activities?",
+                options: [
+                    { text: "No, it's too much work", value: 1 },
+                    { text: "I can help with small tasks", value: 2 },
+                    { text: "Yes, I enjoy planning and organizing", value: 3 },
+                    { text: "I'm highly skilled at event planning and coordination", value: 4 }
+                ]
+            },
+            {
+                question: "29. Do you enjoy motivating and inspiring others to achieve their goals?",
+                options: [
+                    { text: "Not really", value: 1 },
+                    { text: "I offer encouragement sometimes", value: 2 },
+                    { text: "Yes, I like to motivate people", value: 3 },
+                    { text: "I am a powerful source of motivation and inspiration for others", value: 4 }
+                ]
+            },
+            {
+                question: "30. Are you good at adapting your communication style to different people and situations?",
+                options: [
+                    { text: "No, I communicate one way", value: 1 },
+                    { text: "Sometimes", value: 2 },
+                    { text: "Yes, I can adjust my style", value: 3 },
+                    { text: "I'm highly adaptable in my communication, connecting with anyone", value: 4 }
+                ]
+            },
+
+            // Section 4: Practical & Technical Talents (10 Questions)
+            {
+                question: "31. Do you enjoy working with tools, fixing things, or building practical items?",
+                options: [
+                    { text: "Not interested", value: 1 },
+                    { text: "I can do simple repairs", value: 2 },
+                    { text: "Yes, I enjoy hands-on projects", value: 3 },
+                    { text: "I have a strong aptitude for hands-on technical work and repairs", value: 4 }
+                ]
+            },
+            {
+                question: "32. Are you good at understanding and operating complex machinery or technology?",
+                options: [
+                    { text: "I find technology daunting", value: 1 },
+                    { text: "I can learn with instructions", value: 2 },
+                    { text: "Yes, I pick up new tech quickly", value: 3 },
+                    { text: "I'm highly adept at mastering and operating complex tech/machinery", value: 4 }
+                ]
+            },
+            {
+                question: "33. Do you enjoy gardening, working with plants, or understanding natural systems?",
+                options: [
+                    { text: "No interest in nature/plants", value: 1 },
+                    { text: "I appreciate nature casually", value: 2 },
+                    { text: "Yes, I enjoy gardening/nature activities", value: 3 },
+                    { text: "I have a green thumb and deep understanding of plant life/ecology", value: 4 }
+                ]
+            },
+            {
+                question: "34. Are you skilled at cooking, baking, or experimenting with recipes?",
+                options: [
+                    { text: "I rarely cook", value: 1 },
+                    { text: "I can follow recipes", value: 2 },
+                    { text: "Yes, I enjoy cooking/baking", value: 3 },
+                    { text: "I'm a talented cook/baker, often creating my own dishes", value: 4 }
+                ]
+            },
+            {
+                question: "35. Do you enjoy planning and executing trips or expeditions?",
+                options: [
+                    { text: "I prefer others to plan", value: 1 },
+                    { text: "I can help with simple planning", value: 2 },
+                    { text: "Yes, I enjoy organizing travel", value: 3 },
+                    { text: "I excel at planning and navigating complex journeys/expeditions", value: 4 }
+                ]
+            },
+            {
+                question: "36. Are you good at precise, detailed tasks that require fine motor skills (e.g., surgery, watchmaking, intricate crafting)?",
+                options: [
+                    { text: "No, I'm clumsy", value: 1 },
+                    { text: "I can do some detailed work", value: 2 },
+                    { text: "Yes, I'm good with precision tasks", value: 3 },
+                    { text: "I have exceptional fine motor control and attention to detail", value: 4 }
+                ]
+            },
+            {
+                question: "37. Do you enjoy learning new software programs or digital tools?",
+                options: [
+                    { text: "I stick to what I know", value: 1 },
+                    { text: "I learn if necessary", value: 2 },
+                    { text: "Yes, I'm quick to learn new software", value: 3 },
+                    { text: "I thrive on mastering new software and digital technologies", value: 4 }
+                ]
+            },
+            {
+                question: "38. Are you skilled at managing budgets, finances, or resources efficiently?",
+                options: [
+                    { text: "I struggle with finances", value: 1 },
+                    { text: "I manage basic finances", value: 2 },
+                    { text: "Yes, I'm good at managing resources", value: 3 },
+                    { text: "I excel at strategic financial planning and resource optimization", value: 4 }
+                ]
+            },
+            {
+                question: "39. Do you enjoy hands-on work with animals or understanding animal behavior?",
+                options: [
+                    { text: "No interest in animals", value: 1 },
+                    { text: "I like pets casually", value: 2 },
+                    { text: "Yes, I enjoy interacting with animals", value: 3 },
+                    { text: "I have a deep connection and understanding of animal behavior", value: 4 }
+                ]
+            },
+            {
+                question: "40. Are you good at designing or building things with structural integrity (e.g., engineering, architecture)?",
+                options: [
+                    { text: "Not my area", value: 1 },
+                    { text: "I can understand basic structures", value: 2 },
+                    { text: "Yes, I enjoy structural design", value: 3 },
+                    { text: "I have a strong aptitude for engineering principles and structural design", value: 4 }
+                ]
+            },
+
+            // Section 5: Physical & Observational Talents (10 Questions)
+            {
+                question: "41. Do you excel in sports or physical activities requiring coordination and agility?",
+                options: [
+                    { text: "Not athletic", value: 1 },
+                    { text: "I participate casually", value: 2 },
+                    { text: "Yes, I'm good at sports/physical activities", value: 3 },
+                    { text: "I have exceptional athletic ability and physical coordination", value: 4 }
+                ]
+            },
+            {
+                question: "42. Are you good at quickly assessing a physical situation or environment (e.g., navigating, finding shortcuts)?",
+                options: [
+                    { text: "I get lost easily", value: 1 },
+                    { text: "I can find my way eventually", value: 2 },
+                    { text: "Yes, I have a good sense of direction/space", value: 3 },
+                    { text: "I have an innate ability to quickly assess and navigate complex environments", value: 4 }
+                ]
+            },
+            {
+                question: "43. Do you have a strong memory for details, facts, or observations?",
+                options: [
+                    { text: "My memory is average", value: 1 },
+                    { text: "I remember some details", value: 2 },
+                    { text: "Yes, I have a good memory for details", value: 3 },
+                    { text: "I have an outstanding memory for intricate details and facts", value: 4 }
+                ]
+            },
+            {
+                question: "44. Are you skilled at strategy games, like chess, or planning complex moves?",
+                options: [
+                    { text: "I don't enjoy strategy games", value: 1 },
+                    { text: "I play for fun", value: 2 },
+                    { text: "Yes, I'm good at strategy games", value: 3 },
+                    { text: "I excel at strategic thinking and anticipating outcomes in games/life", value: 4 }
+                ]
+            },
+            {
+                question: "45. Do you notice subtle changes in people's expressions, body language, or tone?",
+                options: [
+                    { text: "Rarely, I miss social cues", value: 1 },
+                    { text: "Sometimes", value: 2 },
+                    { text: "Often, I'm observant", value: 3 },
+                    { text: "I have a keen ability to read non-verbal cues and understand unspoken feelings", value: 4 }
+                ]
+            },
+            {
+                question: "46. Do you enjoy precision tasks that require steady hands (e.g., surgery, sculpting, delicate repairs)?",
+                options: [
+                    { text: "My hands aren't steady", value: 1 },
+                    { text: "I can manage some precision tasks", value: 2 },
+                    { text: "Yes, I enjoy tasks requiring steady hands", value: 3 },
+                    { text: "I possess exceptional hand-eye coordination and precision for delicate work", value: 4 }
+                ]
+            },
+            {
+                question: "47. Are you good at teaching or demonstrating physical skills to others (e.g., sports, dance, crafts)?",
+                options: [
+                    { text: "No, I teach abstract ideas", value: 1 },
+                    { text: "I can show basic moves", value: 2 },
+                    { text: "Yes, I effectively demonstrate physical skills", value: 3 },
+                    { text: "I excel at breaking down and teaching complex physical movements/skills", value: 4 }
+                ]
+            },
+            {
+                question: "48. Do you enjoy tasks that involve detailed classification or identification (e.g., botany, mineralogy, forensics)?",
+                options: [
+                    { text: "Not interested in classification", value: 1 },
+                    { text: "I can categorize simple things", value: 2 },
+                    { text: "Yes, I enjoy detailed identification tasks", value: 3 },
+                    { text: "I have a natural aptitude for detailed classification and identification", value: 4 }
+                ]
+            },
+            {
+                question: "49. Are you good at quickly reacting to changing situations (e.g., driving, sports, emergencies)?",
+                options: [
+                    { text: "I react slowly", value: 1 },
+                    { text: "I can react adequately", value: 2 },
+                    { text: "Yes, I have quick reflexes", value: 3 },
+                    { text: "I possess exceptional reaction time and adaptability in dynamic situations", value: 4 }
+                ]
+            },
+            {
+                question: "50. Do you have a strong sense of rhythm and timing?",
+                options: [
+                    { text: "No, I'm off-beat", value: 1 },
+                    { text: "Sometimes, with practice", value: 2 },
+                    { text: "Yes, I have a good sense of rhythm", value: 3 },
+                    { text: "I have an innate and strong sense of rhythm and timing", value: 4 }
+                ]
+            }
+        ];
+
+        let currentQuestionIndex = 0;
+        const userAnswers = {}; // Store answers {questionIndex: selectedValue}
+        const totalQuestions = questions.length;
+        const maxPossibleScore = totalQuestions * 4; // Each question has max 4 points
+        const minPossibleScore = totalQuestions * 1; // Each question has min 1 point
+
+        const quizDiv = document.getElementById('quiz');
+        const prevBtn = document.getElementById('prev-btn');
+        const nextBtn = document.getElementById('next-btn');
+        const submitBtn = document.getElementById('submit-btn');
+        const quizProgress = document.getElementById('quiz-progress');
+        const loader = document.getElementById('loader');
+        const resultContainer = document.getElementById('result-container');
+        const scoreDisplay = document.getElementById('score');
+        const scoreProgress = document.getElementById('score-progress');
+        const resultMessage = document.getElementById('result-message');
+        const restartBtn = document.getElementById('restart-btn');
+        const fab = document.getElementById('fab');
+
+        function loadQuestion() {
+            if (currentQuestionIndex < totalQuestions) {
+                const q = questions[currentQuestionIndex];
+                let optionsHtml = '';
+                q.options.forEach((option, optionIndex) => {
+                    const isChecked = userAnswers[currentQuestionIndex] === option.value;
+                    optionsHtml += `
+                        <div class="option">
+                            <input type="radio" id="q${currentQuestionIndex}o${optionIndex}" name="q${currentQuestionIndex}" value="${option.value}" ${isChecked ? 'checked' : ''}>
+                            <label for="q${currentQuestionIndex}o${optionIndex}">
+                                <span class="custom-radio"></span>
+                                <span class="option-text">${option.text}</span>
+                            </label>
+                        </div>
+                    `;
+                });
+
+                quizDiv.innerHTML = `
+                    <div class="question-counter">Question ${currentQuestionIndex + 1} / ${totalQuestions}</div>
+                    <div class="question">${q.question}</div>
+                    <div class="options">${optionsHtml}</div>
+                `;
+
+                // Add event listeners for radio buttons
+                quizDiv.querySelectorAll('input[type="radio"]').forEach(radio => {
+                    radio.addEventListener('change', (event) => {
+                        userAnswers[currentQuestionIndex] = parseInt(event.target.value);
+                        updateNavigationButtons();
+                    });
+                });
+
+                updateNavigationButtons();
+                updateProgressBar();
+            } else {
+                showResult();
+            }
+        }
+
+        function updateProgressBar() {
+            const progress = ((currentQuestionIndex) / totalQuestions) * 100;
+            quizProgress.style.width = `${progress}%`;
+        }
+
+        function updateNavigationButtons() {
+            prevBtn.disabled = currentQuestionIndex === 0;
+            nextBtn.style.display = currentQuestionIndex === totalQuestions - 1 ? 'none' : 'flex';
+            submitBtn.style.display = currentQuestionIndex === totalQuestions - 1 ? 'flex' : 'none';
+        }
+
+        function prevQuestion() {
+            if (currentQuestionIndex > 0) {
+                currentQuestionIndex--;
+                loadQuestion();
+            }
+        }
+
+        function nextQuestion() {
+            if (currentQuestionIndex < totalQuestions - 1) {
+                // Ensure an option is selected before moving next
+                if (userAnswers[currentQuestionIndex] === undefined) {
+                    alert('Please select an option before moving to the next question.');
+                    return;
+                }
+                currentQuestionIndex++;
+                loadQuestion();
+            }
+        }
+
+        function calculateScore() {
+            let totalScore = 0;
+            for (const key in userAnswers) {
+                totalScore += userAnswers[key];
+            }
+
+            // Normalize score to a percentage (higher percentage means more talent presence)
+            const scoreRange = maxPossibleScore - minPossibleScore;
+            const adjustedScore = totalScore - minPossibleScore;
+            const percentage = (adjustedScore / scoreRange) * 100;
+            return Math.round(percentage);
+        }
+
+        function getResultMessage(percentage) {
+            let message = "";
+            let color = "";
+            // Higher percentage means more talent presence
+            if (percentage >= 80) {
+                message = "Exceptional Potential! You show strong aptitude across many areas. You are likely a quick learner with diverse skills. Keep exploring and nurturing these talents!";
+                color = "#673AB7"; // Deep Purple for exceptional
+            } else if (percentage >= 60) {
+                message = "Strong Potential. You have clear talents and strong inclinations towards certain areas. Focus on developing these further to truly excel.";
+                color = "#9C27B0"; // Purple for strong
+            } else if (percentage >= 40) {
+                message = "Developing Potential. You have good foundational skills and interests. With more exploration and practice, you can uncover and refine your unique talents.";
+                color = "#FFC107"; // Amber for developing
+            } else if (percentage >= 20) {
+                message = "Emerging Potential. Your talents are still emerging, and that's perfectly fine! Try new activities and pay attention to what excites you. Your path to discovery has just begun.";
+                color = "#FF9800"; // Orange for emerging
+            } else {
+                message = "Beginning to Explore. You are at the start of your talent discovery journey. Don't be afraid to try new things and reflect on what you enjoy and what comes naturally to you.";
+                color = "#FF5722"; // Deep Orange for beginning
+            }
+            scoreProgress.style.backgroundColor = color;
+            return message;
+        }
+
+        function showResult() {
+            if (Object.keys(userAnswers).length !== totalQuestions) {
+                if (!confirm('You have not answered all questions. Do you still want to see the results?')) {
+                    return;
+                }
+            }
+
+            quizDiv.style.display = 'none';
+            prevBtn.style.display = 'none';
+            nextBtn.style.display = 'none';
+            submitBtn.style.display = 'none';
+            fab.style.display = 'none'; // Hide FAB on result page
+
+            loader.style.display = 'block';
+
+            setTimeout(() => {
+                loader.style.display = 'none';
+                resultContainer.style.display = 'block';
+                const finalScore = calculateScore();
+                scoreDisplay.textContent = `${finalScore}%`;
+                scoreProgress.style.width = `${finalScore}%`;
+                resultMessage.innerHTML = getResultMessage(finalScore);
+            }, 1500); // Simulate loading time
+        }
+
+        function restartQuiz() {
+            currentQuestionIndex = 0;
+            for (const key in userAnswers) {
+                delete userAnswers[key];
+            }
+            quizDiv.style.display = 'block';
+            resultContainer.style.display = 'none';
+            fab.style.display = 'flex'; // Show FAB on quiz start
+            loadQuestion();
+            updateProgressBar();
+        }
+
+        prevBtn.addEventListener('click', prevQuestion);
+        nextBtn.addEventListener('click', nextQuestion);
+        submitBtn.addEventListener('click', showResult);
+        restartBtn.addEventListener('click', restartQuiz);
+
+        // FAB functionality - allows jumping to the result even if not all questions are answered
+        fab.addEventListener('click', () => {
+            showResult();
+        });
+
+        // Initial load
+        loadQuestion();
+    </script>
+    <a href="index.html" class="floating-home-button">
+        <div class="home-button-inner">
+            Home
+        </div>
+    </a>
+</body>
+</html>
