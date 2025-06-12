@@ -1,0 +1,2009 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Know Your Aura: Discover Your Energetic Signature with Our 100-Question Quiz | crapd.in</title>
+    <meta name="description" content="Uncover your true energetic essence with our comprehensive 100-question 'Know Your Aura' quiz. Explore your personality, strengths, and vibrational colors to understand your unique energetic signature.">
+    <meta name="keywords" content="aura quiz, energetic signature, aura colors, spiritual quiz, self-discovery, personality test, vibrational energy, chakra, spiritual growth, 100 questions, know your aura, crapd.in">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://crapd.in/know-your-aura-quiz.html">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://crapd.in/know-your-aura-quiz.html">
+    <meta property="og:title" content="Know Your Aura: Discover Your Energetic Signature with Our 100-Question Quiz">
+    <meta property="og:description" content="Uncover your true energetic essence with our comprehensive 100-question 'Know Your Aura' quiz. Explore your personality, strengths, and vibrational colors to understand your unique energetic signature.">
+    <meta property="og:image" content="https://crapd.in/images/aura-quiz-social.jpg">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://crapd.in/know-your-aura-quiz.html">
+    <meta property="twitter:title" content="Know Your Aura: Discover Your Energetic Signature with Our 100-Question Quiz">
+    <meta property="twitter:description" content="Uncover your true energetic essence with our comprehensive 100-question 'Know Your Aura' quiz. Explore your personality, strengths, and vibrational colors to understand your unique energetic signature.">
+    <meta property="twitter:image" content="https://crapd.in/images/aura-quiz-social.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #8A2BE2; /* Amethyst Purple for spiritual/mystical */
+            --secondary-color: #6A1B9A; /* Deeper Purple */
+            --accent-color: #FFD700; /* Gold for enlightenment/energy */
+            --light-bg: #F3E5F5; /* Very light purple-pink background */
+            --dark-text: #333;
+            --light-text: #666;
+            --white: #ffffff;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', 'Arial', sans-serif;
+            background-color: #E6EBF5; /* Soft, ethereal blue-purple */
+            color: var(--dark-text);
+            line-height: 1.6;
+            padding: 0;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            border-radius: 0 0 20px 20px;
+            box-shadow: var(--shadow);
+            margin-bottom: 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%);
+            transform: rotate(30deg);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            position: relative;
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            position: relative;
+        }
+
+        .progress-container {
+            width: 100%;
+            background-color: #e0e0e0;
+            border-radius: 10px;
+            margin: 2rem 0;
+            height: 15px;
+            overflow: hidden;
+            box-shadow: inset 0 1px 3px rgba(0,0,0,0.2);
+        }
+
+        .progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, var(--accent-color), var(--primary-color));
+            width: 0%;
+            transition: width 0.5s ease;
+            border-radius: 10px;
+        }
+
+        .quiz-container {
+            background-color: var(--white);
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        .question-counter {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+
+        .question {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            color: var(--secondary-color);
+        }
+
+        .options {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 12px;
+        }
+
+        .option {
+            display: flex;
+            align-items: center;
+            padding: 12px 15px;
+            background-color: var(--light-bg);
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .option:hover {
+            background-color: #E0CCE0; /* Lighter purple tint on hover */
+            border-color: var(--primary-color);
+        }
+
+        .option input {
+            display: none;
+        }
+
+        .option label {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            cursor: pointer;
+            position: relative;
+            padding-left: 35px;
+        }
+
+        .custom-radio {
+            position: absolute;
+            left: 0;
+            height: 22px;
+            width: 22px;
+            background-color: #eee;
+            border-radius: 50%;
+            border: 2px solid var(--light-text);
+            transition: all 0.3s ease;
+        }
+
+        .option input:checked ~ .custom-radio {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+
+        .custom-radio::after {
+            content: "";
+            position: absolute;
+            display: none;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: white;
+        }
+
+        .option input:checked ~ .custom-radio::after {
+            display: block;
+        }
+
+        .option-text {
+            margin-left: 10px;
+            font-size: 1rem;
+            color: var(--dark-text);
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 2rem;
+        }
+
+        .btn {
+            padding: 12px 25px;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .btn-secondary {
+            background-color: #e0e0e0;
+            color: var(--dark-text);
+        }
+
+        .btn-secondary:hover {
+            background-color: #d0d0d0;
+        }
+
+        .result-container {
+            background-color: var(--white);
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            padding: 2rem;
+            text-align: center;
+            display: none;
+            animation: fadeIn 0.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .result-title {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 2rem;
+        }
+
+        .score {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--accent-color);
+            margin: 1rem 0;
+        }
+
+        .score-bar {
+            height: 30px;
+            background-color: #e0e0e0;
+            border-radius: 15px;
+            margin: 2rem auto;
+            max-width: 500px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .score-progress {
+            height: 100%;
+            background: linear-gradient(90deg, #DDA0DD, var(--primary-color)); /* From light purple to primary color */
+            width: 0%;
+            transition: width 1s ease;
+        }
+
+        .score-labels {
+            display: flex;
+            justify-content: space-between;
+            max-width: 500px;
+            margin: 0 auto;
+            font-size: 0.8rem;
+            color: var(--light-text);
+        }
+
+        .result-message {
+            margin-top: 2rem;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--dark-text);
+            padding: 0 1rem;
+        }
+
+        .restart-btn {
+            margin-top: 2rem;
+            background-color: var(--accent-color);
+            color: var(--primary-color); /* Text color contrasting with gold */
+            font-weight: bold;
+        }
+
+        .restart-btn:hover {
+            background-color: #FFC400; /* Darker gold */
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+
+            header {
+                padding: 1.5rem 0;
+                border-radius: 0;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            .subtitle {
+                font-size: 0.9rem;
+            }
+
+            .quiz-container, .result-container {
+                padding: 1.5rem;
+            }
+
+            .question {
+                font-size: 1.1rem;
+            }
+
+            .option-text {
+                font-size: 0.9rem;
+            }
+
+            .btn {
+                padding: 10px 20px;
+                font-size: 0.9rem;
+            }
+
+            .result-title {
+                font-size: 1.5rem;
+            }
+
+            .score {
+                font-size: 2.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            .quiz-container, .result-container {
+                padding: 1rem;
+                border-radius: 10px;
+            }
+
+            .options {
+                gap: 8px;
+            }
+
+            .option {
+                padding: 10px;
+            }
+
+            .custom-radio {
+                height: 18px;
+                width: 18px;
+            }
+
+            .option-text {
+                font-size: 0.85rem;
+                margin-left: 8px;
+            }
+
+            .navigation {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .btn {
+                width: 100%;
+            }
+        }
+
+        /* Animation for options */
+        @keyframes optionAppear {
+            from { opacity: 0; transform: translateX(-10px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        .option {
+            animation: optionAppear 0.3s ease forwards;
+            opacity: 0;
+        }
+
+        .option:nth-child(1) { animation-delay: 0.1s; }
+        .option:nth-child(2) { animation-delay: 0.2s; }
+        .option:nth-child(3) { animation-delay: 0.3s; }
+        .option:nth-child(4) { animation-delay: 0.4s; }
+        .option:nth-child(5) { animation-delay: 0.5s; }
+        .option:nth-child(6) { animation-delay: 0.6s; }
+        .option:nth-child(7) { animation-delay: 0.7s; }
+
+        /* Loading spinner */
+        .loader {
+            display: none;
+            border: 5px solid #f3f3f3;
+            border-top: 5px solid var(--primary-color);
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+            margin: 2rem auto;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Floating action button */
+        .fab {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background-color: var(--accent-color);
+            color: var(--primary-color); /* Icon color contrasting with gold */
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            cursor: pointer;
+            z-index: 100;
+            transition: all 0.3s ease;
+        }
+
+        .fab:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 16px rgba(0,0,0,0.3);
+        }
+
+        .floating-home-button {
+            position: fixed;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            background-color: transparent;
+            border: none;
+            z-index: 1000;
+            text-decoration: none;
+        }
+
+        .home-button-inner {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-end;
+            height: 70px;
+            width: 23px;
+            background-color: #9C27B0; /* Purple for Home, contrasting with Aura */
+            color: white;
+            font-weight: bold;
+            border-radius: 0 10px 10px 0;
+            box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease;
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+        }
+
+        .home-button-inner:hover {
+            background-color: #7B1FA2;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><i class="fas fa-sparkles"></i> Know Your Aura: Discover Your Energetic Signature</h1>
+            <p class="subtitle">A 100-Question Journey to Uncover Your Inner Colors</p>
+        </div>
+    </header>
+
+    <div class="container">
+
+        <div class="progress-container">
+            <div class="progress-bar" id="quiz-progress"></div>
+        </div>
+
+        <div id="quiz" class="quiz-container"></div>
+
+        <div class="navigation">
+            <button class="btn btn-secondary" id="prev-btn" disabled>
+                <i class="fas fa-arrow-left"></i> Previous
+            </button>
+            <button class="btn btn-primary" id="next-btn">
+                Next <i class="fas fa-arrow-right"></i>
+            </button>
+            <button class="btn btn-primary" id="submit-btn" style="display: none;">
+                Reveal Aura <i class="fas fa-gem"></i>
+            </button>
+        </div>
+
+        <div class="loader" id="loader"></div>
+
+        <div class="result-container" id="result-container">
+            <h2 class="result-title">Your Aura's Dominant Color</h2>
+            <div class="score" id="score"></div>
+
+            <div class="score-bar">
+                <div class="score-progress" id="score-progress"></div>
+            </div>
+
+            <div class="score-labels">
+                <span>Gentle Flow</span>
+                <span>Vibrant Glow</span>
+                <span>Radiant Core</span>
+                <span>Luminous Presence</span>
+            </div>
+
+            <div class="result-message" id="result-message"></div>
+
+            <button class="btn restart-btn" id="restart-btn">
+                <i class="fas fa-redo"></i> Restart Aura Quiz
+            </button>
+        </div>
+    </div>
+
+    <div class="fab" id="fab" title="See Your Aura Summary">
+        <i class="fas fa-rainbow"></i>
+    </div>
+
+    <script>
+        const questions = [
+            {
+                question: "1. What subject or activity consistently holds your interest and makes you feel time flies?",
+                options: [
+                    { text: "Solving complex mathematical or scientific problems.", value: 5 },
+                    { text: "Creating art, music, or writing stories.", value: 4 },
+                    { text: "Understanding human behavior and helping others.", value: 6 },
+                    { text: "Organizing events, managing projects, or leading teams.", value: 7 },
+                    { text: "Working with technology, coding, or designing systems.", value: 5 },
+                    { text: "Exploring nature, environment, or animal welfare.", value: 3 },
+                    { text: "Analyzing financial data or market trends.", value: 4 }
+                ]
+            },
+            {
+                question: "2. When considering a career, what aspect is most important to you?",
+                options: [
+                    { text: "High earning potential and financial security.", value: 3 },
+                    { text: "Making a significant positive impact on society.", value: 7 },
+                    { text: "Continuous learning and intellectual challenge.", value: 6 },
+                    { text: "Work-life balance and personal well-being.", value: 5 },
+                    { text: "Recognition and status within the community/industry.", value: 4 },
+                    { text: "Creativity and freedom of expression.", value: 5 },
+                    { text: "Stability and job security.", value: 2 }
+                ]
+            },
+            {
+                question: "3. Which type of work environment do you prefer?",
+                options: [
+                    { text: "A dynamic, fast-paced environment with constant change.", value: 5 },
+                    { text: "A structured, organized setting with clear guidelines.", value: 4 },
+                    { text: "A collaborative team environment where ideas are shared freely.", value: 6 },
+                    { text: "An independent role where I can work at my own pace.", value: 3 },
+                    { text: "A challenging environment that pushes my limits.", value: 7 },
+                    { text: "One that allows for flexible hours and remote work options.", value: 2 },
+                    { text: "A traditional setup with established hierarchies.", value: 1 }
+                ]
+            },
+            {
+                question: "4. What kind of problems do you enjoy solving most?",
+                options: [
+                    { text: "Abstract logical puzzles and theoretical challenges.", value: 6 },
+                    { text: "Practical, hands-on problems that require immediate solutions.", value: 4 },
+                    { text: "Social or interpersonal conflicts.", value: 7 },
+                    { text: "Creative problems that require innovative thinking.", value: 5 },
+                    { text: "Strategic business or organizational challenges.", value: 6 },
+                    { text: "Technical glitches or system malfunctions.", value: 3 },
+                    { text: "Problems that benefit a large community or the nation.", value: 7 }
+                ]
+            },
+            {
+                question: "5. When learning a new skill, how do you prefer to approach it?",
+                options: [
+                    { text: "By reading books and theoretical concepts.", value: 4 },
+                    { text: "Through practical application and hands-on experience.", value: 5 },
+                    { text: "By observing and learning from experts.", value: 3 },
+                    { text: "Through structured courses and certifications.", value: 6 },
+                    { text: "By experimenting and trial-and-error.", value: 5 },
+                    { text: "By teaching others and reinforcing my own understanding.", value: 7 },
+                    { text: "By understanding the 'why' behind the skill first.", value: 6 }
+                ]
+            },
+            {
+                question: "6. Which statement best describes your comfort level with public speaking?",
+                options: [
+                    { text: "I love it and enjoy presenting to large groups.", value: 7 },
+                    { text: "I'm comfortable, especially with preparation.", value: 6 },
+                    { text: "I can do it if necessary, but I don't prefer it.", value: 4 },
+                    { text: "I get anxious and try to avoid it.", value: 2 },
+                    { text: "I prefer one-on-one or small group discussions.", value: 3 },
+                    { text: "I'm good at it when discussing topics I'm passionate about.", value: 5 },
+                    { text: "It's a necessary evil in some professions.", value: 1 }
+                ]
+            },
+            {
+                question: "7. How do you react to a situation where there is no clear right or wrong answer?",
+                options: [
+                    { text: "I enjoy exploring multiple perspectives and finding creative solutions.", value: 7 },
+                    { text: "I find it challenging but am determined to make a decision.", value: 6 },
+                    { text: "I seek advice from others to gain insights.", value: 5 },
+                    { text: "I prefer situations with clear rules and outcomes.", value: 3 },
+                    { text: "I might feel overwhelmed and prefer to avoid making a choice.", value: 2 },
+                    { text: "I analyze all possible outcomes before deciding.", value: 4 },
+                    { text: "I trust my intuition to guide me.", value: 5 }
+                ]
+            },
+            {
+                question: "8. What motivates you the most in a professional setting?",
+                options: [
+                    { text: "Achieving challenging goals and targets.", value: 7 },
+                    { text: "Collaborating with colleagues towards a shared vision.", value: 6 },
+                    { text: "Recognition for my hard work and contributions.", value: 5 },
+                    { text: "Opportunities for personal growth and skill development.", value: 6 },
+                    { text: "Solving complex problems and innovating.", value: 7 },
+                    { text: "A stable and predictable work routine.", value: 3 },
+                    { text: "Making a tangible difference in people's lives.", value: 7 }
+                ]
+            },
+            {
+                question: "9. When you encounter a new technology or tool, what's your first instinct?",
+                options: [
+                    { text: "To immediately try it out and see how it works.", value: 5 },
+                    { text: "To research its functionality and benefits thoroughly.", value: 6 },
+                    { text: "To see how others are using it.", value: 3 },
+                    { text: "To analyze its potential impact on my work or industry.", value: 7 },
+                    { text: "To understand the underlying principles and design.", value: 6 },
+                    { text: "To wait until it becomes mainstream before adopting it.", value: 2 },
+                    { text: "I'm generally hesitant towards new tech.", value: 1 }
+                ]
+            },
+            {
+                question: "10. Which area of study or field interests you most when reading news or articles?",
+                options: [
+                    { text: "Scientific discoveries and research.", value: 5 },
+                    { text: "Business, economy, and financial markets.", value: 4 },
+                    { text: "Social issues, human rights, and community development.", value: 7 },
+                    { text: "Arts, culture, and entertainment.", value: 3 },
+                    { text: "Technological advancements and innovations.", value: 6 },
+                    { text: "Politics, governance, and public policy.", value: 5 },
+                    { text: "History and philosophical debates.", value: 2 }
+                ]
+            },
+            {
+                question: "11. If you could spend a day with a professional from any field, who would you choose?",
+                options: [
+                    { text: "A successful entrepreneur or CEO.", value: 6 },
+                    { text: "A leading scientist or researcher.", value: 7 },
+                    { text: "A renowned artist or designer.", value: 5 },
+                    { text: "A social worker or activist making a difference.", value: 7 },
+                    { text: "A top engineer or software architect.", value: 6 },
+                    { text: "A revered teacher or academician.", value: 5 },
+                    { text: "A skilled craftsperson or artisan.", value: 4 }
+                ]
+            },
+            {
+                question: "12. What role do you naturally take in a group project?",
+                options: [
+                    { text: "The leader, organizing tasks and guiding the team.", value: 7 },
+                    { text: "The researcher, gathering information and analyzing data.", value: 6 },
+                    { text: "The creative one, brainstorming ideas and solutions.", value: 5 },
+                    { text: "The mediator, ensuring harmony and resolving conflicts.", value: 6 },
+                    { text: "The executor, focusing on getting tasks done efficiently.", value: 4 },
+                    { text: "The quiet contributor, working diligently on my part.", value: 3 },
+                    { text: "I prefer working alone.", value: 2 }
+                ]
+            },
+            {
+                question: "13. How do you define 'career success' for yourself?",
+                options: [
+                    { text: "Achieving mastery in my chosen field and being an expert.", value: 7 },
+                    { text: "Having a stable job that provides comfort and security.", value: 3 },
+                    { text: "Making a significant positive contribution to my community or country.", value: 7 },
+                    { text: "Continuously growing, learning, and adapting to new challenges.", value: 6 },
+                    { text: "Earning a high income and accumulating wealth.", value: 4 },
+                    { text: "Maintaining a healthy work-life balance and enjoying my work.", value: 5 },
+                    { text: "Being recognized and respected by my peers and superiors.", value: 5 }
+                ]
+            },
+            {
+                question: "14. What kind of challenges excite you the most?",
+                options: [
+                    { text: "Those that require logical thinking and problem-solving.", value: 6 },
+                    { text: "Those that involve interacting with diverse groups of people.", value: 7 },
+                    { text: "Those that demand creativity and innovation.", value: 5 },
+                    { text: "Those that push me out of my comfort zone for personal growth.", value: 6 },
+                    { text: "Those that involve building or fixing tangible things.", value: 4 },
+                    { text: "Those that are complex and require deep research.", value: 7 },
+                    { text: "I prefer avoiding challenges where possible.", value: 1 }
+                ]
+            },
+            {
+                question: "15. What are your long-term aspirations (5-10 years) in a professional context?",
+                options: [
+                    { text: "To be a leader or manager in my field.", value: 7 },
+                    { text: "To start my own business or venture.", value: 6 },
+                    { text: "To become a recognized expert or thought leader.", value: 7 },
+                    { text: "To achieve financial independence.", value: 4 },
+                    { text: "To continue learning and developing new skills.", value: 5 },
+                    { text: "To work in a stable job with good benefits.", value: 3 },
+                    { text: "To make a social impact through my work.", value: 7 }
+                ]
+            },
+            {
+                question: "16. Which statement resonates most with your approach to failures or setbacks?",
+                options: [
+                    { text: "I see them as opportunities to learn and grow stronger.", value: 7 },
+                    { text: "I analyze what went wrong and plan a new strategy.", value: 6 },
+                    { text: "I get disheartened initially but eventually bounce back.", value: 4 },
+                    { text: "I tend to dwell on them for a while.", value: 2 },
+                    { text: "I seek advice from mentors or experienced individuals.", value: 5 },
+                    { text: "I try to quickly move on and not let them affect me.", value: 3 },
+                    { text: "I feel like giving up.", value: 1 }
+                ]
+            },
+            {
+                question: "17. What type of contribution do you wish to make to society through your work?",
+                options: [
+                    { text: "Developing innovative solutions to real-world problems.", value: 7 },
+                    { text: "Helping individuals improve their lives and well-being.", value: 7 },
+                    { text: "Creating beautiful or inspiring content/products.", value: 5 },
+                    { text: "Contributing to scientific knowledge or research.", value: 6 },
+                    { text: "Ensuring efficiency and smooth operations in organizations.", value: 4 },
+                    { text: "Promoting fairness and justice.", value: 6 },
+                    { text: "Providing essential services to the public.", value: 5 }
+                ]
+            },
+            {
+                question: "18. How important is formal education and continuous academic learning for your career aspirations?",
+                options: [
+                    { text: "Extremely important; I value advanced degrees and certifications.", value: 7 },
+                    { text: "Very important, but practical experience is equally crucial.", value: 6 },
+                    { text: "Moderately important; I prefer learning on the job.", value: 4 },
+                    { text: "Not very important; I believe in self-taught skills.", value: 3 },
+                    { text: "It depends on the specific field I choose.", value: 5 },
+                    { text: "I think real-world exposure trumps academics.", value: 2 },
+                    { text: "Formal education is largely overrated for career success.", value: 1 }
+                ]
+            },
+            {
+                question: "19. Which phrase best describes your decision-making style regarding future plans?",
+                options: [
+                    { text: "Analytical and data-driven; I weigh pros and cons meticulously.", value: 6 },
+                    { text: "Intuitive; I trust my gut feeling after gathering some information.", value: 5 },
+                    { text: "Collaborative; I discuss options with trusted advisors.", value: 4 },
+                    { text: "Goal-oriented; I choose what directly aligns with my long-term vision.", value: 7 },
+                    { text: "Flexible and adaptable; I keep my options open.", value: 3 },
+                    { text: "Cautious; I prefer making safe choices.", value: 2 },
+                    { text: "Impulsive; I often decide quickly without much thought.", value: 1 }
+                ]
+            },
+            {
+                question: "20. What is your preferred way to de-stress after a busy week?",
+                options: [
+                    { text: "Engaging in a creative hobby (e.g., painting, playing music).", value: 5 },
+                    { text: "Spending time in nature or with animals.", value: 4 },
+                    { text: "Socializing with friends and family.", value: 6 },
+                    { text: "Exercising or playing a sport.", value: 3 },
+                    { text: "Reading, watching documentaries, or learning something new.", value: 7 },
+                    { text: "Relaxing at home and enjoying quiet time.", value: 2 },
+                    { text: "Volunteering for a cause I care about.", value: 7 }
+                ]
+            },
+            {
+                question: "21. When thinking about potential income, what's your priority?",
+                options: [
+                    { text: "Earning enough to live comfortably and save for the future.", value: 4 },
+                    { text: "Maximizing my income to achieve financial freedom and luxury.", value: 5 },
+                    { text: "Having a stable income, even if it's not very high.", value: 3 },
+                    { text: "Income is secondary to job satisfaction and impact.", value: 6 },
+                    { text: "I want to be able to support my family and community.", value: 7 },
+                    { text: "Income growth potential is more important than initial salary.", value: 5 },
+                    { text: "I don't think much about money; it will come if I work hard.", value: 2 }
+                ]
+            },
+            {
+                question: "22. How do you feel about taking risks in your career?",
+                options: [
+                    { text: "I'm willing to take calculated risks for significant rewards.", value: 6 },
+                    { text: "I prefer to play it safe and avoid unnecessary risks.", value: 3 },
+                    { text: "I'm open to risks if they align with my passions and goals.", value: 7 },
+                    { text: "I find risks unsettling and try to minimize them.", value: 2 },
+                    { text: "I'm not afraid to take big risks if I believe in the outcome.", value: 7 },
+                    { text: "I analyze risks thoroughly before making a move.", value: 5 },
+                    { text: "Risk-taking is for others; I prefer stability.", value: 1 }
+                ]
+            },
+            {
+                question: "23. Which phrase best describes your attitude towards adapting to change in a career?",
+                options: [
+                    { text: "I embrace change and see it as an opportunity for growth.", value: 7 },
+                    { text: "I'm adaptable, though I prefer some stability.", value: 6 },
+                    { text: "I find change challenging and prefer routine.", value: 3 },
+                    { text: "I'm resilient and can adapt quickly when necessary.", value: 5 },
+                    { text: "I often resist change until I see clear benefits.", value: 2 },
+                    { text: "Change is constant, so I expect it and prepare for it.", value: 7 },
+                    { text: "I get stressed and anxious with significant changes.", value: 1 }
+                ]
+            },
+            {
+                question: "24. What kind of impact do you aspire to make with your professional skills?",
+                options: [
+                    { text: "To innovate and create new products/services that improve lives.", value: 7 },
+                    { text: "To educate and empower the next generation.", value: 6 },
+                    { text: "To build strong organizations and contribute to economic growth.", value: 5 },
+                    { text: "To solve pressing social or environmental issues.", value: 7 },
+                    { text: "To provide essential services and support to individuals/businesses.", value: 4 },
+                    { text: "To express my creativity and leave a unique mark.", value: 5 },
+                    { text: "To achieve personal success and provide for my family.", value: 3 }
+                ]
+            },
+            {
+                question: "25. How do you prefer to receive feedback on your performance?",
+                options: [
+                    { text: "Direct, constructive, and actionable feedback.", value: 7 },
+                    { text: "Feedback that highlights my strengths and areas for development.", value: 6 },
+                    { text: "Positive reinforcement, with gentle suggestions for improvement.", value: 5 },
+                    { text: "Detailed feedback with specific examples.", value: 4 },
+                    { text: "I prefer to self-assess and learn from my own mistakes.", value: 3 },
+                    { text: "I'm sensitive to criticism and prefer minimal feedback.", value: 2 },
+                    { text: "I don't actively seek feedback; I just do my job.", value: 1 }
+                ]
+            },
+            {
+                question: "26. What type of tasks do you find most energizing?",
+                options: [
+                    { text: "Brainstorming new ideas and concepts.", value: 6 },
+                    { text: "Executing detailed plans and checking off tasks.", value: 4 },
+                    { text: "Interacting with people and building relationships.", value: 7 },
+                    { text: "Analyzing data and identifying patterns.", value: 5 },
+                    { text: "Designing or creating something tangible.", value: 5 },
+                    { text: "Solving unexpected problems under pressure.", value: 6 },
+                    { text: "Learning and acquiring new knowledge.", value: 7 }
+                ]
+            },
+            {
+                question: "27. When faced with a complex problem, what's your initial approach?",
+                options: [
+                    { text: "Break it down into smaller, manageable parts.", value: 6 },
+                    { text: "Look for precedents or existing solutions.", value: 4 },
+                    { text: "Discuss it with others to get different perspectives.", value: 5 },
+                    { text: "Jump in and start experimenting to find a solution.", value: 5 },
+                    { text: "Research extensively to understand all aspects.", value: 7 },
+                    { text: "Trust my intuition and take a creative leap.", value: 4 },
+                    { text: "Delegate it if possible.", value: 2 }
+                ]
+            },
+            {
+                question: "28. How important is a sense of purpose or mission in your work?",
+                options: [
+                    { text: "Absolutely essential; I need to feel my work matters.", value: 7 },
+                    { text: "Very important; it drives my motivation.", value: 6 },
+                    { text: "Moderately important; as long as I enjoy the work.", value: 4 },
+                    { text: "Not crucial; I focus on doing my job well regardless.", value: 3 },
+                    { text: "It's a bonus, but not a primary requirement.", value: 2 },
+                    { text: "It makes the work more fulfilling.", value: 5 },
+                    { text: "I haven't really thought about it.", value: 1 }
+                ]
+            },
+            {
+                question: "29. What is your ideal team size for a collaborative project?",
+                options: [
+                    { text: "Small (2-3 people) for close collaboration.", value: 5 },
+                    { text: "Medium (4-7 people) for diverse ideas and manageable communication.", value: 6 },
+                    { text: "Large (8+ people) for tackling big, complex projects.", value: 4 },
+                    { text: "I prefer working mostly independently with minimal team interaction.", value: 3 },
+                    { text: "Whatever size is most effective for the task at hand.", value: 7 },
+                    { text: "I prefer no team; solo work is best.", value: 2 },
+                    { text: "A team where everyone knows their role clearly.", value: 4 }
+                ]
+            },
+            {
+                question: "30. How do you handle routine or repetitive tasks?",
+                options: [
+                    { text: "I find ways to automate or optimize them.", value: 5 },
+                    { text: "I complete them diligently and efficiently.", value: 4 },
+                    { text: "I try to minimize them and focus on more engaging work.", value: 3 },
+                    { text: "I can tolerate them if they are part of a larger, interesting goal.", value: 4 },
+                    { text: "I delegate them whenever possible.", value: 2 },
+                    { text: "I find them calming and a good way to focus.", value: 3 },
+                    { text: "I dread them.", value: 1 }
+                ]
+            },
+            {
+                question: "31. Which type of achievement gives you the most satisfaction?",
+                options: [
+                    { text: "Completing a project perfectly and on time.", value: 5 },
+                    { text: "Helping someone achieve their goals or overcome a challenge.", value: 7 },
+                    { text: "Discovering a new concept or solution that nobody else has.", value: 6 },
+                    { text: "Creating something beautiful or inspiring.", value: 5 },
+                    { text: "Leading a successful initiative or team.", value: 7 },
+                    { text: "Mastering a difficult skill or subject.", value: 6 },
+                    { text: "Receiving public recognition for my work.", value: 4 }
+                ]
+            },
+            {
+                question: "32. What is your comfort level with making quick decisions under pressure?",
+                options: [
+                    { text: "Highly comfortable; I thrive in such situations.", value: 7 },
+                    { text: "Comfortable; I can make sound decisions when needed.", value: 6 },
+                    { text: "Neutral; I can do it but prefer having more time.", value: 4 },
+                    { text: "Uncomfortable; I tend to freeze or make mistakes.", value: 2 },
+                    { text: "I prefer to analyze everything before deciding, even under pressure.", value: 5 },
+                    { text: "I rely on my experience to guide me.", value: 5 },
+                    { text: "I avoid pressure situations.", value: 1 }
+                ]
+            },
+            {
+                question: "33. How do you handle constructive criticism?",
+                options: [
+                    { text: "I welcome it as an opportunity for growth.", value: 7 },
+                    { text: "I listen carefully and consider the feedback.", value: 6 },
+                    { text: "I might feel defensive initially but reflect on it later.", value: 4 },
+                    { text: "I find it difficult to hear and often take it personally.", value: 2 },
+                    { text: "I ask for clarification and examples.", value: 5 },
+                    { text: "I appreciate specific, actionable advice.", value: 6 },
+                    { text: "I prefer not to receive criticism.", value: 1 }
+                ]
+            },
+            {
+                question: "34. What kind of knowledge do you enjoy acquiring the most?",
+                options: [
+                    { text: "Deep theoretical understanding of complex subjects.", value: 6 },
+                    { text: "Practical skills that can be immediately applied.", value: 5 },
+                    { text: "Knowledge about human psychology and social dynamics.", value: 7 },
+                    { text: "Information about current events and global affairs.", value: 4 },
+                    { text: "Creative techniques and artistic methods.", value: 5 },
+                    { text: "Technical specifications and system architectures.", value: 6 },
+                    { text: "Historical facts and cultural insights.", value: 3 }
+                ]
+            },
+            {
+                question: "35. If you had to choose a role in a startup, which would it be?",
+                options: [
+                    { text: "Founder/CEO, setting the vision and leading the company.", value: 7 },
+                    { text: "Product Developer/Engineer, building the core product.", value: 6 },
+                    { text: "Marketing/Sales, bringing the product to customers.", value: 5 },
+                    { text: "Operations/HR, ensuring smooth internal functioning.", value: 4 },
+                    { text: "Creative Director/Designer, shaping the brand and user experience.", value: 5 },
+                    { text: "Research & Development, exploring new possibilities.", value: 7 },
+                    { text: "Financial Analyst, managing the money and strategy.", value: 4 }
+                ]
+            },
+            {
+                question: "36. What is your preferred method for staying organized?",
+                options: [
+                    { text: "Using digital tools and apps for task management.", value: 5 },
+                    { text: "Keeping a detailed physical planner or notebook.", value: 4 },
+                    { text: "Having a structured system and sticking to it rigidly.", value: 6 },
+                    { text: "I prefer a more flexible approach, adapting as needed.", value: 3 },
+                    { text: "Relying on my memory and keeping things in my head.", value: 2 },
+                    { text: "Creating lists and prioritizing tasks.", value: 5 },
+                    { text: "My organization method is a bit chaotic but works for me.", value: 1 }
+                ]
+            },
+            {
+                question: "37. How important is work-life balance to you?",
+                options: [
+                    { text: "Extremely important; it's a top priority.", value: 7 },
+                    { text: "Very important; I strive for a good balance.", value: 6 },
+                    { text: "Moderately important; I'm willing to sacrifice it for career growth.", value: 4 },
+                    { text: "Less important; my career comes first.", value: 3 },
+                    { text: "It depends on the phase of my career.", value: 5 },
+                    { text: "I don't think about it much; I just work until things are done.", value: 2 },
+                    { text: "I want to fully integrate work and life.", value: 5 }
+                ]
+            },
+            {
+                question: "38. What type of social interaction do you most enjoy in a professional context?",
+                options: [
+                    { text: "Networking events and meeting new people.", value: 6 },
+                    { text: "Deep, meaningful conversations with colleagues.", value: 7 },
+                    { text: "Collaborative brainstorming sessions.", value: 5 },
+                    { text: "Presenting my ideas to a group.", value: 5 },
+                    { text: "One-on-one mentoring or coaching.", value: 6 },
+                    { text: "Informal chats during breaks.", value: 4 },
+                    { text: "Minimizing social interaction and focusing on work.", value: 2 }
+                ]
+            },
+            {
+                question: "39. How do you approach deadlines?",
+                options: [
+                    { text: "I work consistently to stay ahead and meet them early.", value: 6 },
+                    { text: "I perform best under pressure, so I often work close to deadlines.", value: 5 },
+                    { text: "I plan meticulously to ensure I meet them.", value: 7 },
+                    { text: "I sometimes struggle with them but usually get things done.", value: 3 },
+                    { text: "I communicate early if I foresee a problem meeting a deadline.", value: 5 },
+                    { text: "Deadlines are stressful; I prefer open-ended tasks.", value: 2 },
+                    { text: "I prioritize based on urgency and importance.", value: 4 }
+                ]
+            },
+            {
+                question: "40. What kind of technology trend excites you the most?",
+                options: [
+                    { text: "Artificial Intelligence and Machine Learning.", value: 7 },
+                    { text: "Renewable energy and sustainable tech.", value: 6 },
+                    { text: "Virtual and Augmented Reality.", value: 5 },
+                    { text: "Biotechnology and medical innovations.", value: 7 },
+                    { text: "Space exploration and aerospace engineering.", value: 6 },
+                    { text: "Robotics and automation.", value: 5 },
+                    { text: "New forms of communication and social media.", value: 4 }
+                ]
+            },
+            {
+                question: "41. What is your preferred way to resolve conflicts in a team?",
+                options: [
+                    { text: "Facilitating open discussion to find common ground.", value: 7 },
+                    { text: "Analyzing the facts and proposing a logical solution.", value: 6 },
+                    { text: "Mediating between parties to reach a compromise.", value: 7 },
+                    { text: "Seeking guidance from a manager or higher authority.", value: 3 },
+                    { text: "Avoiding conflict whenever possible.", value: 2 },
+                    { text: "Clearly stating my perspective and sticking to it.", value: 4 },
+                    { text: "Finding a creative solution that satisfies everyone.", value: 5 }
+                ]
+            },
+            {
+                question: "42. How do you handle ambiguity or uncertainty in a project?",
+                options: [
+                    { text: "I actively seek to clarify and define the unknown elements.", value: 6 },
+                    { text: "I'm comfortable proceeding with some level of uncertainty.", value: 5 },
+                    { text: "I find it challenging and prefer clear instructions.", value: 3 },
+                    { text: "I embrace it as an opportunity for exploration and discovery.", value: 7 },
+                    { text: "I create contingencies and backup plans.", value: 5 },
+                    { text: "It makes me anxious.", value: 2 },
+                    { text: "I try to turn uncertainty into a competitive advantage.", value: 6 }
+                ]
+            },
+            {
+                question: "43. What kind of learning environment suits you best?",
+                options: [
+                    { text: "Hands-on, experiential learning with practical exercises.", value: 5 },
+                    { text: "Structured classroom settings with lectures and clear curricula.", value: 4 },
+                    { text: "Self-directed learning, researching topics of interest independently.", value: 6 },
+                    { text: "Mentorship-based learning, working closely with an expert.", value: 7 },
+                    { text: "Collaborative learning, discussing and working with peers.", value: 6 },
+                    { text: "A challenging environment that pushes me to learn quickly.", value: 5 },
+                    { text: "A relaxed pace with minimal pressure.", value: 3 }
+                ]
+            },
+            {
+                question: "44. How do you feel about working remotely versus in an office?",
+                options: [
+                    { text: "I prefer remote work for flexibility and focus.", value: 5 },
+                    { text: "I prefer in-office for collaboration and social interaction.", value: 4 },
+                    { text: "A hybrid model (mix of both) is ideal.", value: 6 },
+                    { text: "It doesn't matter as long as I can get my work done.", value: 3 },
+                    { text: "I thrive in a dynamic office environment.", value: 5 },
+                    { text: "Remote work makes me feel isolated.", value: 2 },
+                    { text: "I need minimal distractions, so remote work is better.", value: 4 }
+                ]
+            },
+            {
+                question: "45. What motivates you to go the extra mile in your work?",
+                options: [
+                    { text: "The desire to achieve excellence and exceed expectations.", value: 7 },
+                    { text: "The positive impact my work will have on others.", value: 7 },
+                    { text: "Recognition and appreciation from my superiors/peers.", value: 5 },
+                    { text: "The challenge of solving a difficult problem.", value: 6 },
+                    { text: "Opportunities for advancement or promotion.", value: 4 },
+                    { text: "Personal passion for the subject matter.", value: 6 },
+                    { text: "Fear of failure.", value: 1 }
+                ]
+            },
+            {
+                question: "46. What kind of information do you find most interesting to research?",
+                options: [
+                    { text: "Scientific breakthroughs and new theories.", value: 7 },
+                    { text: "Historical events and their causes/effects.", value: 4 },
+                    { text: "Sociological trends and human behavior patterns.", value: 6 },
+                    { text: "Technological innovations and future projections.", value: 6 },
+                    { text: "Economic indicators and market analysis.", value: 5 },
+                    { text: "Artistic movements and cultural phenomena.", value: 4 },
+                    { text: "Biographical details of influential figures.", value: 3 }
+                ]
+            },
+            {
+                question: "47. How do you typically respond to unforeseen obstacles?",
+                options: [
+                    { text: "I analyze the situation calmly and devise a new plan.", value: 6 },
+                    { text: "I get frustrated but eventually find a way around them.", value: 4 },
+                    { text: "I seek help or advice from others immediately.", value: 5 },
+                    { text: "I embrace them as part of the problem-solving process.", value: 7 },
+                    { text: "I try to anticipate them beforehand to minimize impact.", value: 5 },
+                    { text: "They tend to derail my progress.", value: 2 },
+                    { text: "I take a break and come back with a fresh perspective.", value: 3 }
+                ]
+            },
+            {
+                question: "48. What is your preferred method for generating new ideas?",
+                options: [
+                    { text: "Brainstorming sessions with a diverse group.", value: 6 },
+                    { text: "Solitary contemplation and deep thinking.", value: 5 },
+                    { text: "Reading widely and drawing connections between different fields.", value: 7 },
+                    { text: "Observing real-world problems and identifying needs.", value: 6 },
+                    { text: "Trial and error, experimenting with different approaches.", value: 5 },
+                    { text: "Following a structured creative process.", value: 4 },
+                    { text: "I struggle to generate new ideas.", value: 1 }
+                ]
+            },
+            {
+                question: "49. How comfortable are you with being a specialist vs. a generalist?",
+                options: [
+                    { text: "I prefer to be a specialist, deeply knowledgeable in one area.", value: 6 },
+                    { text: "I prefer to be a generalist, with a broad range of skills.", value: 5 },
+                    { text: "I am open to either, depending on the opportunity.", value: 4 },
+                    { text: "I lean towards specialization for career depth.", value: 7 },
+                    { text: "I enjoy learning many things, so generalist suits me.", value: 6 },
+                    { text: "Being too specialized feels limiting.", value: 3 },
+                    { text: "Being too general feels superficial.", value: 2 }
+                ]
+            },
+            {
+                question: "50. What ethical considerations are most important to you in a workplace?",
+                options: [
+                    { text: "Transparency and honesty in all dealings.", value: 7 },
+                    { text: "Fairness and equal opportunity for all employees.", value: 6 },
+                    { text: "Social responsibility and positive community impact.", value: 7 },
+                    { text: "Privacy and data security.", value: 5 },
+                    { text: "Environmental sustainability.", value: 6 },
+                    { text: "Adherence to laws and regulations.", value: 4 },
+                    { text: "Profit is the main concern.", value: 1 }
+                ]
+            },
+            {
+                question: "51. Which best describes your preferred pace of work?",
+                options: [
+                    { text: "Fast-paced and dynamic, with new challenges daily.", value: 6 },
+                    { text: "Steady and consistent, allowing for thoroughness.", value: 5 },
+                    { text: "Varied, with periods of intensity and periods of calm.", value: 5 },
+                    { text: "Relaxed, with minimal pressure.", value: 3 },
+                    { text: "Highly intense, I thrive under pressure.", value: 7 },
+                    { text: "A predictable routine is best for me.", value: 4 },
+                    { text: "I struggle with maintaining a consistent pace.", value: 2 }
+                ]
+            },
+            {
+                question: "52. What is your primary drive when pursuing a goal?",
+                options: [
+                    { text: "The challenge of the task itself.", value: 6 },
+                    { text: "The positive outcome or impact it will have.", value: 7 },
+                    { text: "The personal growth I will experience.", value: 6 },
+                    { text: "The recognition and rewards that come with success.", value: 4 },
+                    { text: "To prove something to myself or others.", value: 5 },
+                    { text: "To complete it efficiently and move on.", value: 3 },
+                    { text: "I need external motivation to pursue goals.", value: 1 }
+                ]
+            },
+            {
+                question: "53. How do you manage your time and priorities?",
+                options: [
+                    { text: "I use a structured system (e.g., Eisenhower Matrix, Pomodoro).", value: 6 },
+                    { text: "I prioritize based on deadlines and urgency.", value: 4 },
+                    { text: "I adapt my priorities fluidly based on changing circumstances.", value: 5 },
+                    { text: "I tend to work on whatever feels most interesting at the moment.", value: 3 },
+                    { text: "I make a to-do list and try to stick to it.", value: 5 },
+                    { text: "I often feel overwhelmed by too many priorities.", value: 2 },
+                    { text: "I prefer someone else to set my priorities.", value: 1 }
+                ]
+            },
+            {
+                question: "54. What aspect of innovation excites you most?",
+                options: [
+                    { text: "The initial creative spark and brainstorming.", value: 5 },
+                    { text: "The rigorous testing and refinement process.", value: 6 },
+                    { text: "Seeing a new idea come to life and impact the world.", value: 7 },
+                    { text: "Understanding the market need for an innovation.", value: 4 },
+                    { text: "The technological challenges of making it work.", value: 6 },
+                    { text: "Disrupting existing industries.", value: 7 },
+                    { text: "I'm more comfortable with established methods.", value: 2 }
+                ]
+            },
+            {
+                question: "55. Which would you rather do in your free time?",
+                options: [
+                    { text: "Learn a new language or musical instrument.", value: 5 },
+                    { text: "Work on a DIY project or craft.", value: 4 },
+                    { text: "Volunteer for a charity or community event.", value: 7 },
+                    { text: "Read non-fiction books or educational articles.", value: 6 },
+                    { text: "Explore new places and cultures.", value: 5 },
+                    { text: "Play strategic board games or video games.", value: 4 },
+                    { text: "Spend time relaxing with entertainment.", value: 3 }
+                ]
+            },
+            {
+                question: "56. How do you handle failure in experiments or projects?",
+                options: [
+                    { text: "Analyze the data to understand why it failed and iterate.", value: 7 },
+                    { text: "View it as a necessary step towards success.", value: 6 },
+                    { text: "Feel disappointed but quickly pivot to a new approach.", value: 5 },
+                    { text: "It makes me question my abilities.", value: 2 },
+                    { text: "I learn from it and try to prevent similar issues in the future.", value: 5 },
+                    { text: "I often blame external factors.", value: 1 },
+                    { text: "I seek feedback from peers to gain insights.", value: 4 }
+                ]
+            },
+            {
+                question: "57. What kind of legacy do you hope to leave professionally?",
+                options: [
+                    { text: "To be remembered for innovative solutions or breakthroughs.", value: 7 },
+                    { text: "To have positively influenced many lives through my work.", value: 7 },
+                    { text: "To have built a successful and ethical organization.", value: 6 },
+                    { text: "To have shared valuable knowledge and mentored others.", value: 6 },
+                    { text: "To have created enduring works of art or design.", value: 5 },
+                    { text: "To have contributed to solving a major societal problem.", value: 7 },
+                    { text: "To have simply had a stable and fulfilling career.", value: 4 }
+                ]
+            },
+            {
+                question: "58. What role do you typically take on during a crisis?",
+                options: [
+                    { text: "The calm problem-solver, focusing on practical steps.", value: 6 },
+                    { text: "The empathetic supporter, helping others manage stress.", value: 7 },
+                    { text: "The decisive leader, taking charge and directing efforts.", value: 7 },
+                    { text: "The information gatherer, seeking to understand the full scope.", value: 5 },
+                    { text: "I tend to panic or withdraw.", value: 2 },
+                    { text: "I look for creative, out-of-the-box solutions.", value: 5 },
+                    { text: "I prefer to follow instructions from someone else.", value: 3 }
+                ]
+            },
+            {
+                question: "59. How do you feel about working with numbers and data?",
+                options: [
+                    { text: "I love it; I find analyzing data fascinating and insightful.", value: 7 },
+                    { text: "I'm comfortable with it and can interpret data effectively.", value: 6 },
+                    { text: "I can do it if required, but it's not my favorite.", value: 4 },
+                    { text: "I find it boring and prefer qualitative information.", value: 3 },
+                    { text: "I excel at finding patterns and trends in data.", value: 7 },
+                    { text: "I find it overwhelming and confusing.", value: 2 },
+                    { text: "It's a necessary skill for many professions.", value: 5 }
+                ]
+            },
+            {
+                question: "60. What kind of resources do you prefer for professional development?",
+                options: [
+                    { text: "Online courses and tutorials.", value: 5 },
+                    { text: "Industry conferences and workshops.", value: 6 },
+                    { text: "Mentors and networking with experienced professionals.", value: 7 },
+                    { text: "Books, academic journals, and research papers.", value: 6 },
+                    { text: "On-the-job training and practical projects.", value: 5 },
+                    { text: "Webinars and podcasts.", value: 4 },
+                    { text: "I don't actively seek professional development.", value: 1 }
+                ]
+            },
+            {
+                question: "61. What is your preferred way to collaborate on written documents?",
+                options: [
+                    { text: "Using collaborative online platforms (e.g., Google Docs).", value: 5 },
+                    { text: "Reviewing and editing drafts individually.", value: 4 },
+                    { text: "Brainstorming and outlining together, then writing separately.", value: 6 },
+                    { text: "Leading the writing process and incorporating feedback.", value: 7 },
+                    { text: "Providing detailed feedback and suggestions.", value: 5 },
+                    { text: "I prefer to write independently.", value: 3 },
+                    { text: "I struggle with collaborative writing.", value: 2 }
+                ]
+            },
+            {
+                question: "62. How do you feel about continuous learning throughout your career?",
+                options: [
+                    { text: "It's essential and exciting; I always seek new knowledge.", value: 7 },
+                    { text: "It's important to stay relevant, but I prefer practical learning.", value: 6 },
+                    { text: "It's a necessary part of most professions.", value: 5 },
+                    { text: "I'm happy to learn new things if required, but not constantly.", value: 4 },
+                    { text: "I prefer to master one area and stick to it.", value: 3 },
+                    { text: "I find formal learning tedious.", value: 2 },
+                    { text: "Learning stops after formal education.", value: 1 }
+                ]
+            },
+            {
+                question: "63. What aspect of business operations interests you most?",
+                options: [
+                    { text: "Strategic planning and long-term vision.", value: 7 },
+                    { text: "Financial management and budgeting.", value: 5 },
+                    { text: "Process optimization and efficiency.", value: 6 },
+                    { text: "Human resources and team development.", value: 6 },
+                    { text: "Marketing and customer relations.", value: 5 },
+                    { text: "Product development and innovation.", value: 7 },
+                    { text: "Day-to-day administration.", value: 3 }
+                ]
+            },
+            {
+                question: "64. When working on a project, what kind of feedback do you value most from your team?",
+                options: [
+                    { text: "Constructive criticism that helps improve my work.", value: 7 },
+                    { text: "Praise for my efforts and accomplishments.", value: 5 },
+                    { text: "Suggestions for alternative approaches.", value: 6 },
+                    { text: "Confirmation that I'm on the right track.", value: 4 },
+                    { text: "Insights from their different perspectives.", value: 6 },
+                    { text: "Feedback that helps me grow personally.", value: 7 },
+                    { text: "Minimal feedback; I prefer to work independently.", value: 2 }
+                ]
+            },
+            {
+                question: "65. What is your reaction to working under strict rules and regulations?",
+                options: [
+                    { text: "I appreciate clear guidelines as they ensure quality and compliance.", value: 5 },
+                    { text: "I find them restrictive and prefer more autonomy.", value: 3 },
+                    { text: "I can adhere to them, but I also look for ways to improve processes.", value: 6 },
+                    { text: "It depends on the field; some fields require strict adherence.", value: 4 },
+                    { text: "I find them stifling to creativity.", value: 2 },
+                    { text: "I thrive in structured environments.", value: 6 },
+                    { text: "I often break rules if I think my way is better.", value: 1 }
+                ]
+            },
+            {
+                question: "66. What type of work best leverages your strengths?",
+                options: [
+                    { text: "Problem-solving and analytical thinking.", value: 7 },
+                    { text: "Interacting with and influencing people.", value: 7 },
+                    { text: "Creating and innovating.", value: 6 },
+                    { text: "Organizing and planning.", value: 6 },
+                    { text: "Executing tasks with precision.", value: 5 },
+                    { text: "Research and learning.", value: 7 },
+                    { text: "Technical development and implementation.", value: 6 }
+                ]
+            },
+            {
+                question: "67. How important is it for you to have a mentor in your career?",
+                options: [
+                    { text: "Very important; I value guidance and experience.", value: 7 },
+                    { text: "Moderately important; I'm open to it but can manage independently.", value: 5 },
+                    { text: "Not very important; I prefer to figure things out on my own.", value: 3 },
+                    { text: "Essential for navigating complex career paths.", value: 7 },
+                    { text: "I prefer to be a mentor rather than have one.", value: 6 },
+                    { text: "Mentors are helpful, but not critical for success.", value: 4 },
+                    { text: "I don't believe in the concept of mentorship.", value: 1 }
+                ]
+            },
+            {
+                question: "68. What kind of communication style do you prefer in a professional setting?",
+                options: [
+                    { text: "Direct and to the point.", value: 5 },
+                    { text: "Collaborative and open to discussion.", value: 6 },
+                    { text: "Detailed and thorough.", value: 4 },
+                    { text: "Empathetic and considerate.", value: 7 },
+                    { text: "Enthusiastic and inspiring.", value: 6 },
+                    { text: "Concise and efficient.", value: 5 },
+                    { text: "Informal and casual.", value: 3 }
+                ]
+            },
+            {
+                question: "69. How do you approach networking for career advancement?",
+                options: [
+                    { text: "Actively and strategically, building meaningful connections.", value: 7 },
+                    { text: "Naturally, as part of my social interactions.", value: 5 },
+                    { text: "Only when necessary for a specific opportunity.", value: 4 },
+                    { text: "I find it awkward and tend to avoid it.", value: 2 },
+                    { text: "I focus on quality over quantity in my connections.", value: 6 },
+                    { text: "I attend events but don't actively pursue connections.", value: 3 },
+                    { text: "I don't think networking is important.", value: 1 }
+                ]
+            },
+            {
+                question: "70. What aspect of project management do you enjoy most?",
+                options: [
+                    { text: "Defining the scope and objectives.", value: 6 },
+                    { text: "Resource allocation and budgeting.", value: 4 },
+                    { text: "Leading and motivating the team.", value: 7 },
+                    { text: "Risk assessment and mitigation.", value: 5 },
+                    { text: "Monitoring progress and ensuring deadlines are met.", value: 5 },
+                    { text: "Problem-solving unexpected issues.", value: 6 },
+                    { text: "The final delivery and celebration of success.", value: 7 }
+                ]
+            },
+            {
+                question: "71. What kind of feedback are you most likely to give to others?",
+                options: [
+                    { text: "Direct and honest, even if it's difficult to hear.", value: 5 },
+                    { text: "Supportive and encouraging, focusing on strengths.", value: 6 },
+                    { text: "Detailed and specific, with actionable suggestions.", value: 7 },
+                    { text: "Balanced, highlighting both positives and areas for improvement.", value: 6 },
+                    { text: "I tend to avoid giving feedback unless asked.", value: 3 },
+                    { text: "Empathetic, considering their feelings.", value: 7 },
+                    { text: "Brief and general.", value: 2 }
+                ]
+            },
+            {
+                question: "72. How do you handle competition in a professional setting?",
+                options: [
+                    { text: "I thrive on it and see it as a motivator to perform better.", value: 6 },
+                    { text: "I focus on my own work and try not to compare myself to others.", value: 4 },
+                    { text: "I prefer collaboration over competition.", value: 5 },
+                    { text: "It can be stressful, but I can manage.", value: 3 },
+                    { text: "I aim to be the best and constantly strive for competitive advantage.", value: 7 },
+                    { text: "I find it demotivating.", value: 2 },
+                    { text: "I believe competition is healthy and drives innovation.", value: 6 }
+                ]
+            },
+            {
+                question: "73. What aspect of diversity and inclusion in the workplace is most important to you?",
+                options: [
+                    { text: "Equal opportunity for all, regardless of background.", value: 7 },
+                    { text: "Diverse perspectives leading to better innovation.", value: 6 },
+                    { text: "A sense of belonging and psychological safety for everyone.", value: 7 },
+                    { text: "Fair representation at all levels of the organization.", value: 6 },
+                    { text: "Understanding and valuing different cultures.", value: 5 },
+                    { text: "It's important, but I don't focus on it specifically.", value: 4 },
+                    { text: "It's largely a 'buzzword' and not a practical concern.", value: 1 }
+                ]
+            },
+            {
+                question: "74. What is your preferred way to celebrate success?",
+                options: [
+                    { text: "Acknowledge the team's effort and celebrate together.", value: 7 },
+                    { text: "Quietly reflect on my achievements and set new goals.", value: 6 },
+                    { text: "Receive public recognition for my contributions.", value: 5 },
+                    { text: "Enjoy a personal treat or time off.", value: 4 },
+                    { text: "Share the success with friends and family.", value: 5 },
+                    { text: "Analyze what went well to replicate it in the future.", value: 6 },
+                    { text: "I don't really celebrate; I just move on.", value: 2 }
+                ]
+            },
+            {
+                question: "75. How do you feel about working with emerging technologies that are still unproven?",
+                options: [
+                    { text: "Excited and eager to experiment with them.", value: 7 },
+                    { text: "Cautious but open to exploring their potential.", value: 5 },
+                    { text: "Prefer to wait until they are more established and stable.", value: 3 },
+                    { text: "I'm fascinated by the potential but less interested in the implementation.", value: 6 },
+                    { text: "I see risks and prefer proven solutions.", value: 2 },
+                    { text: "I enjoy being an early adopter and shaping their development.", value: 7 },
+                    { text: "I'm indifferent.", value: 1 }
+                ]
+            },
+            {
+                question: "76. What type of research do you find most compelling?",
+                options: [
+                    { text: "Basic scientific research that expands fundamental knowledge.", value: 7 },
+                    { text: "Applied research that solves immediate, practical problems.", value: 6 },
+                    { text: "Market research to understand consumer needs.", value: 5 },
+                    { text: "Historical research to understand past trends.", value: 4 },
+                    { text: "Future-oriented research to predict emerging challenges.", value: 7 },
+                    { text: "Case study research to analyze specific examples.", value: 5 },
+                    { text: "I don't enjoy research.", value: 1 }
+                ]
+            },
+            {
+                question: "77. When delegating tasks, what is your primary concern?",
+                options: [
+                    { text: "Ensuring the task is completed correctly and efficiently.", value: 5 },
+                    { text: "Empowering team members and fostering their growth.", value: 7 },
+                    { text: "Distributing workload fairly.", value: 6 },
+                    { text: "Maintaining control and oversight.", value: 4 },
+                    { text: "Communicating clear expectations.", value: 6 },
+                    { text: "Choosing the person best suited for the task.", value: 7 },
+                    { text: "I prefer to do everything myself.", value: 2 }
+                ]
+            },
+            {
+                question: "78. What kind of personal development activity do you gravitate towards?",
+                options: [
+                    { text: "Reading self-help books or attending workshops.", value: 5 },
+                    { text: "Practicing mindfulness or meditation.", value: 4 },
+                    { text: "Seeking therapy or coaching for self-improvement.", value: 6 },
+                    { text: "Engaging in challenging experiences to build resilience.", value: 7 },
+                    { text: "Learning new skills purely for personal enrichment.", value: 5 },
+                    { text: "Spending time in nature to reflect.", value: 3 },
+                    { text: "I don't actively pursue personal development.", value: 1 }
+                ]
+            },
+            {
+                question: "79. How do you approach continuous self-improvement in your skills?",
+                options: [
+                    { text: "I actively seek out training, courses, and feedback.", value: 7 },
+                    { text: "I learn through observation and practical application on the job.", value: 6 },
+                    { text: "I focus on improving specific weaknesses I identify.", value: 5 },
+                    { text: "I'm generally content with my current skill set.", value: 3 },
+                    { text: "I look for opportunities to take on new responsibilities to grow.", value: 6 },
+                    { text: "I believe in natural aptitude over constant improvement.", value: 2 },
+                    { text: "I only improve if forced to.", value: 1 }
+                ]
+            },
+            {
+                question: "80. What kind of technological innovation would you be most excited to contribute to?",
+                options: [
+                    { text: "Sustainable energy solutions.", value: 7 },
+                    { text: "Advancements in healthcare technology.", value: 7 },
+                    { text: "AI that enhances human creativity and problem-solving.", value: 6 },
+                    { text: "Robotics for space exploration.", value: 6 },
+                    { text: "Personalized learning platforms.", value: 5 },
+                    { text: "Smart city infrastructure.", value: 5 },
+                    { text: "Entertainment technologies (e.g., gaming, VR).", value: 4 }
+                ]
+            },
+            {
+                question: "81. How do you manage your finances and investments?",
+                options: [
+                    { text: "I meticulously budget and plan for long-term growth.", value: 6 },
+                    { text: "I aim for financial stability and avoid risky investments.", value: 4 },
+                    { text: "I consult financial advisors for guidance.", value: 5 },
+                    { text: "I'm not very focused on finances; I just ensure bills are paid.", value: 2 },
+                    { text: "I enjoy researching investment opportunities and managing my own portfolio.", value: 7 },
+                    { text: "I spend freely and don't worry too much about savings.", value: 1 },
+                    { text: "I focus on earning more rather than managing what I have.", value: 5 }
+                ]
+            },
+            {
+                question: "82. What kind of problem-solving approach do you generally prefer?",
+                options: [
+                    { text: "Systematic, step-by-step analysis.", value: 6 },
+                    { text: "Creative and unconventional thinking.", value: 5 },
+                    { text: "Collaborative brainstorming and group input.", value: 6 },
+                    { text: "Hands-on experimentation and iteration.", value: 5 },
+                    { text: "Root cause analysis to prevent future issues.", value: 7 },
+                    { text: "Seeking expert opinion.", value: 4 },
+                    { text: "Trial and error with minimal planning.", value: 3 }
+                ]
+            },
+            {
+                question: "83. How do you feel about working on projects with long-term timelines (several years)?",
+                options: [
+                    { text: "I enjoy the depth and complexity of long-term projects.", value: 7 },
+                    { text: "I can work on them, but prefer to see quicker results.", value: 4 },
+                    { text: "I find them challenging to stay motivated for.", value: 3 },
+                    { text: "I'm comfortable with the slow burn and significant impact.", value: 6 },
+                    { text: "I break them down into smaller, achievable milestones.", value: 5 },
+                    { text: "I prefer short, impactful projects.", value: 2 },
+                    { text: "I lose interest easily.", value: 1 }
+                ]
+            },
+            {
+                question: "84. What is your preferred way to stay updated on industry trends?",
+                options: [
+                    { text: "Reading industry publications and journals.", value: 6 },
+                    { text: "Attending webinars and online conferences.", value: 5 },
+                    { text: "Networking with peers and thought leaders.", value: 7 },
+                    { text: "Following influential voices on social media.", value: 4 },
+                    { text: "Experimenting with new tools and technologies myself.", value: 6 },
+                    { text: "Through formal training programs.", value: 5 },
+                    { text: "I don't actively try to stay updated.", value: 1 }
+                ]
+            },
+            {
+                question: "85. How do you respond to constructive criticism regarding your creative work?",
+                options: [
+                    { text: "I welcome it as a chance to refine and improve.", value: 7 },
+                    { text: "I consider it carefully, but my artistic vision is paramount.", value: 5 },
+                    { text: "I might feel sensitive but will try to learn from it.", value: 4 },
+                    { text: "It can be disheartening and make me doubt myself.", value: 2 },
+                    { text: "I appreciate specific suggestions for improvement.", value: 6 },
+                    { text: "I defend my creative choices.", value: 3 },
+                    { text: "I only value positive feedback.", value: 1 }
+                ]
+            },
+            {
+                question: "86. What is your ideal approach to planning and strategy?",
+                options: [
+                    { text: "Detailed, long-term planning with clear objectives.", value: 7 },
+                    { text: "Agile and iterative planning, adapting as needed.", value: 6 },
+                    { text: "Broad strokes and high-level strategy, then improvising details.", value: 5 },
+                    { text: "I prefer to react to situations rather than plan extensively.", value: 3 },
+                    { text: "Data-driven planning based on extensive research.", value: 6 },
+                    { text: "Minimal planning, relying on intuition.", value: 2 },
+                    { text: "I struggle with planning.", value: 1 }
+                ]
+            },
+            {
+                question: "87. How comfortable are you with public speaking about your specialized knowledge?",
+                options: [
+                    { text: "Highly comfortable; I enjoy educating others.", value: 7 },
+                    { text: "Comfortable, especially if the audience is engaged.", value: 6 },
+                    { text: "I can do it, but I prefer written communication.", value: 4 },
+                    { text: "I get nervous, even about topics I know well.", value: 2 },
+                    { text: "I enjoy discussing it in small, informal settings.", value: 5 },
+                    { text: "I'm passionate, so it comes naturally.", value: 6 },
+                    { text: "I avoid public speaking.", value: 1 }
+                ]
+            },
+            {
+                question: "88. What kind of impact do you aim to have on your immediate colleagues?",
+                options: [
+                    { text: "To be a supportive and reliable team player.", value: 6 },
+                    { text: "To be a source of inspiration and motivation.", value: 7 },
+                    { text: "To be a go-to person for problem-solving.", value: 6 },
+                    { text: "To be a mentor and help others grow.", value: 7 },
+                    { text: "To contribute efficiently to shared goals.", value: 5 },
+                    { text: "To foster a positive and harmonious work environment.", value: 7 },
+                    { text: "To keep to myself and focus on my work.", value: 2 }
+                ]
+            },
+            {
+                question: "89. What is your reaction to working on multiple projects simultaneously?",
+                options: [
+                    { text: "I thrive on multitasking and variety.", value: 6 },
+                    { text: "I can manage, but prefer to focus on one project at a time.", value: 4 },
+                    { text: "I find it overwhelming and struggle to prioritize.", value: 2 },
+                    { text: "I enjoy the challenge of balancing different demands.", value: 7 },
+                    { text: "I use strong organizational skills to handle multiple projects.", value: 5 },
+                    { text: "It leads to decreased quality of work.", value: 1 },
+                    { text: "It keeps things interesting and prevents boredom.", value: 5 }
+                ]
+            },
+            {
+                question: "90. What kind of problem would you most enjoy tackling in a professional setting?",
+                options: [
+                    { text: "A scientific mystery that requires deep research.", value: 7 },
+                    { text: "A complex organizational efficiency challenge.", value: 6 },
+                    { text: "A social injustice issue requiring advocacy and action.", value: 7 },
+                    { text: "A design challenge that requires innovative aesthetic solutions.", value: 5 },
+                    { text: "A technical bug or system integration problem.", value: 6 },
+                    { text: "A business growth strategy problem.", value: 5 },
+                    { text: "A problem that is easy to solve.", value: 1 }
+                ]
+            },
+            {
+                question: "91. How do you handle criticism of your leadership style?",
+                options: [
+                    { text: "I listen, reflect, and seek to understand different perspectives.", value: 7 },
+                    { text: "I take it seriously and aim to adapt my approach.", value: 6 },
+                    { text: "I might feel defensive but will consider it later.", value: 4 },
+                    { text: "It makes me doubt my abilities as a leader.", value: 2 },
+                    { text: "I ask for specific examples and actionable suggestions.", value: 5 },
+                    { text: "I trust my leadership style and rarely change it.", value: 3 },
+                    { text: "I dismiss it if I don't agree.", value: 1 }
+                ]
+            },
+            {
+                question: "92. What aspect of global issues appeals to you most?",
+                options: [
+                    { text: "Understanding international relations and diplomacy.", value: 5 },
+                    { text: "Solving humanitarian crises and promoting human rights.", value: 7 },
+                    { text: "Addressing climate change and environmental sustainability.", value: 7 },
+                    { text: "Economic development and poverty alleviation.", value: 6 },
+                    { text: "Technological solutions to global challenges.", value: 6 },
+                    { text: "Cultural exchange and mutual understanding.", value: 5 },
+                    { text: "I don't follow global issues closely.", value: 1 }
+                ]
+            },
+            {
+                question: "93. When choosing a professional path, how important is personal fulfillment?",
+                options: [
+                    { text: "Absolutely critical; it's non-negotiable.", value: 7 },
+                    { text: "Very important; I strive for it alongside other goals.", value: 6 },
+                    { text: "Moderately important; financial stability often comes first.", value: 4 },
+                    { text: "Less important than career advancement or security.", value: 3 },
+                    { text: "It evolves over time, so I'm flexible.", value: 5 },
+                    { text: "I prioritize external validation over personal feelings.", value: 2 },
+                    { text: "I don't really think about personal fulfillment at work.", value: 1 }
+                ]
+            },
+            {
+                question: "94. What is your preferred way to learn about new concepts or ideas?",
+                options: [
+                    { text: "Through in-depth academic texts and research papers.", value: 6 },
+                    { text: "By listening to podcasts or watching educational videos.", value: 5 },
+                    { text: "Through engaging in discussions and debates with others.", value: 7 },
+                    { text: "By doing hands-on projects and applying the concepts.", value: 6 },
+                    { text: "From experienced practitioners and mentors.", value: 7 },
+                    { text: "Through online courses and certifications.", value: 5 },
+                    { text: "I prefer to stick to what I already know.", value: 1 }
+                ]
+            },
+            {
+                question: "95. How do you handle being wrong or making a mistake at work?",
+                options: [
+                    { text: "I admit it, learn from it, and take corrective action.", value: 7 },
+                    { text: "I analyze what went wrong and ensure it doesn't happen again.", value: 6 },
+                    { text: "I feel embarrassed but try to move on quickly.", value: 4 },
+                    { text: "I find it difficult to admit mistakes.", value: 2 },
+                    { text: "I seek feedback to understand the error fully.", value: 5 },
+                    { text: "I try to minimize the impact and learn silently.", value: 3 },
+                    { text: "I try to hide it.", value: 1 }
+                ]
+            },
+            {
+                question: "96. What kind of events do you enjoy attending or participating in?",
+                options: [
+                    { text: "Industry conferences and professional workshops.", value: 6 },
+                    { text: "Community service events or volunteer activities.", value: 7 },
+                    { text: "Art exhibitions, concerts, or theater performances.", value: 5 },
+                    { text: "Science fairs or technology expos.", value: 6 },
+                    { text: "Sporting events or fitness challenges.", value: 4 },
+                    { text: "Social gatherings and parties.", value: 5 },
+                    { text: "Quiet, solitary activities.", value: 2 }
+                ]
+            },
+            {
+                question: "97. What is your stance on taking calculated risks for high rewards?",
+                options: [
+                    { text: "I'm very comfortable; it's often necessary for innovation.", value: 7 },
+                    { text: "I will consider it after thorough analysis of pros and cons.", value: 6 },
+                    { text: "I prefer safer, more predictable paths.", value: 3 },
+                    { text: "I'm open to it if the potential reward is significant.", value: 5 },
+                    { text: "I find it stressful and would rather avoid it.", value: 2 },
+                    { text: "Risks are inherent in growth, so I embrace them.", value: 7 },
+                    { text: "I only take risks if someone else does first.", value: 1 }
+                ]
+            },
+            {
+                question: "98. How do you respond to complex bureaucratic processes?",
+                options: [
+                    { text: "I meticulously follow them to ensure compliance and order.", value: 5 },
+                    { text: "I try to understand their purpose and work within them.", value: 4 },
+                    { text: "I look for ways to streamline or bypass unnecessary bureaucracy.", value: 6 },
+                    { text: "I find them frustrating and inefficient.", value: 3 },
+                    { text: "I tolerate them as a necessary evil.", value: 2 },
+                    { text: "I excel at navigating complex systems.", value: 7 },
+                    { text: "They make me give up.", value: 1 }
+                ]
+            },
+            {
+                question: "99. What kind of tasks do you enjoy collaborating on most?",
+                options: [
+                    { text: "Brainstorming and ideation sessions.", value: 6 },
+                    { text: "Strategic planning and problem-solving.", value: 7 },
+                    { text: "Creative development and artistic projects.", value: 5 },
+                    { text: "Implementing and executing detailed plans.", value: 4 },
+                    { text: "Teaching or training others.", value: 7 },
+                    { text: "Research and analysis.", value: 6 },
+                    { text: "Tasks with clear, predefined roles.", value: 5 }
+                ]
+            },
+            {
+                question: "100. How important is a positive work culture to your job satisfaction?",
+                options: [
+                    { text: "Extremely important; it's crucial for my well-being and productivity.", value: 7 },
+                    { text: "Very important; it significantly impacts my daily experience.", value: 6 },
+                    { text: "Moderately important; I can adapt to different cultures.", value: 4 },
+                    { text: "Less important than the work itself or compensation.", value: 3 },
+                    { text: "I contribute to creating a positive culture regardless of the starting point.", value: 7 },
+                    { text: "As long as it's not overtly negative, I'm fine.", value: 2 },
+                    { text: "I don't pay much attention to work culture.", value: 1 }
+                ]
+            }
+        ];
+
+        
+        // Placeholder questions for demonstration if the user doesn't add them immediately
+        if (questions.length === 0) {
+            for (let i = 1; i <= 100; i++) {
+                questions.push({
+                    question: `This is placeholder question ${i}. What is your preferred way to spend a free evening?`,
+                    options: [
+                        { text: "Engaging in lively social activities.", value: 7 },
+                        { text: "Learning something new and thought-provoking.", value: 5 },
+                        { text: "Relaxing at home with a good book or movie.", value: 3 },
+                        { text: "Spending time in nature or quiet contemplation.", value: 1 }
+                    ]
+                });
+            }
+        }
+
+
+        const quizContainer = document.getElementById('quiz');
+        const prevBtn = document.getElementById('prev-btn');
+        const nextBtn = document.getElementById('next-btn');
+        const submitBtn = document.getElementById('submit-btn');
+        const quizProgress = document.getElementById('quiz-progress');
+        const resultContainer = document.getElementById('result-container');
+        const scoreDisplay = document.getElementById('score');
+        const scoreProgressBar = document.getElementById('score-progress');
+        const resultMessage = document.getElementById('result-message');
+        const restartBtn = document.getElementById('restart-btn');
+        const loader = document.getElementById('loader');
+        const fab = document.getElementById('fab');
+
+        let currentQuestionIndex = 0;
+        let userAnswers = new Array(questions.length).fill(null);
+        let totalScore = 0;
+
+        function loadQuestion() {
+            if (currentQuestionIndex < questions.length) {
+                const q = questions[currentQuestionIndex];
+                quizContainer.innerHTML = `
+                    <div class="question-counter">Question ${currentQuestionIndex + 1} of ${questions.length}</div>
+                    <div class="question">${q.question}</div>
+                    <div class="options">
+                        ${q.options.map((option, i) => `
+                            <div class="option">
+                                <input type="radio" id="q${currentQuestionIndex}option${i}" name="question${currentQuestionIndex}" value="${option.value}" ${userAnswers[currentQuestionIndex] !== null && userAnswers[currentQuestionIndex] == option.value ? 'checked' : ''}>
+                                <label for="q${currentQuestionIndex}option${i}">
+                                    <span class="custom-radio"></span>
+                                    <span class="option-text">${option.text}</span>
+                                </label>
+                            </div>
+                        `).join('')}
+                    </div>
+                `;
+                document.querySelectorAll(`input[name="question${currentQuestionIndex}"]`).forEach(input => {
+                    input.addEventListener('change', (e) => {
+                        userAnswers[currentQuestionIndex] = parseInt(e.target.value);
+                    });
+                });
+                updateNavigationButtons();
+                updateProgressBar();
+            } else {
+                showResult();
+            }
+        }
+
+        function updateNavigationButtons() {
+            prevBtn.disabled = currentQuestionIndex === 0;
+            if (currentQuestionIndex === questions.length - 1) {
+                nextBtn.style.display = 'none';
+                submitBtn.style.display = 'block';
+            } else {
+                nextBtn.style.display = 'block';
+                submitBtn.style.display = 'none';
+            }
+            quizContainer.style.display = 'block';
+            resultContainer.style.display = 'none';
+        }
+
+        function updateProgressBar() {
+            const progress = ((currentQuestionIndex + 1) / questions.length) * 100;
+            quizProgress.style.width = `${progress}%`;
+        }
+
+        function nextQuestion() {
+            if (userAnswers[currentQuestionIndex] === null) {
+                alert("Please select an option before proceeding.");
+                return;
+            }
+            currentQuestionIndex++;
+            if (currentQuestionIndex < questions.length) {
+                loadQuestion();
+            } else {
+                showResult();
+            }
+        }
+
+        function prevQuestion() {
+            if (currentQuestionIndex > 0) {
+                currentQuestionIndex--;
+                loadQuestion();
+            }
+        }
+
+        function showResult() {
+            quizContainer.style.display = 'none';
+            prevBtn.style.display = 'none';
+            nextBtn.style.display = 'none';
+            submitBtn.style.display = 'none';
+            loader.style.display = 'block';
+            fab.style.display = 'none'; // Hide FAB when results are loading/shown
+
+            // Simulate loading for better UX
+            setTimeout(() => {
+                totalScore = userAnswers.reduce((sum, value) => sum + (value || 0), 0);
+                const maxPossibleScore = questions.length * 7; // Max score for each question is 7
+                const minPossibleScore = questions.length * 1; // Min score for each question is 1
+                const normalizedScore = ((totalScore - minPossibleScore) / (maxPossibleScore - minPossibleScore)) * 100;
+
+                // Determine aura color based on normalized score
+                let auraColor = "Undefined";
+                let colorHex = "#AAB7B8"; // Default grey-blue
+                let message = "";
+
+                if (normalizedScore >= 85) {
+                    auraColor = "Vibrant Gold Aura";
+                    colorHex = "#FFD700";
+                    message = `<h4>Your Aura Radiates with Golden Light!</h4><p>Your aura is a **Vibrant Gold**, signifying profound wisdom, spiritual connection, and a radiant, generous spirit. You are often a source of inspiration and healing for others, embodying true enlightenment and inner peace. Your energy is highly developed and harmonious.</p>`;
+                } else if (normalizedScore >= 60) {
+                    auraColor = "Bright Blue-Green Aura";
+                    colorHex = "#00CED1"; // Dark Turquoise
+                    message = `<h4>Your Aura Shines with Blue-Green Harmony!</h4><p>Your aura resonates with a **Bright Blue-Green**, indicating a balanced and compassionate nature. You possess strong healing abilities, excellent communication skills, and a deep connection to truth and emotional well-being. You are a natural peacemaker and caregiver.</p>`;
+                } else if (normalizedScore >= 35) {
+                    auraColor = "Energetic Orange-Yellow Aura";
+                    colorHex = "#FFA500"; // Orange
+                    message = `<h4>Your Aura Glows with Warm Orange-Yellow!</h4><p>An **Energetic Orange-Yellow** aura surrounds you, reflecting creativity, optimism, and a joyful approach to life. You are enthusiastic, social, and enjoy expressing yourself. You bring warmth and positive energy wherever you go, constantly seeking new experiences.</p>`;
+                } else {
+                    auraColor = "Soft Pink-Purple Aura";
+                    colorHex = "#FF69B4"; // Hot Pink
+                    message = `<h4>Your Aura Carries a Soft Pink-Purple Hue!</h4><p>Your aura is illuminated by a **Soft Pink-Purple**, indicating a gentle, loving, and intuitive nature. You are empathetic, compassionate, and deeply connected to your emotions and spiritual insights. You value harmony and seek beauty in all aspects of life.</p>`;
+                }
+
+                scoreDisplay.textContent = auraColor;
+                scoreDisplay.style.color = colorHex; // Set the color of the displayed aura name
+                scoreProgressBar.style.width = `${normalizedScore}%`;
+                scoreProgressBar.style.background = `linear-gradient(90deg, ${colorHex}, var(--primary-color))`; // Adjust gradient to aura color
+
+                resultMessage.innerHTML = message;
+
+                loader.style.display = 'none';
+                resultContainer.style.display = 'block';
+            }, 1000); // 1 second delay
+        }
+
+        function restartQuiz() {
+            currentQuestionIndex = 0;
+            userAnswers.fill(null);
+            totalScore = 0;
+            quizProgress.style.width = '0%';
+            loadQuestion();
+            quizContainer.style.display = 'block';
+            resultContainer.style.display = 'none';
+            fab.style.display = 'flex'; // Show FAB again on restart
+        }
+
+        // FAB functionality - allows jumping to the result even if not all questions are answered
+        fab.addEventListener('click', () => {
+            if (userAnswers.some(answer => answer !== null)) { // Only show result if at least one question is answered
+                showResult();
+            } else {
+                alert("Please answer at least one question to see your aura summary.");
+            }
+        });
+
+        prevBtn.addEventListener('click', prevQuestion);
+        nextBtn.addEventListener('click', nextQuestion);
+        submitBtn.addEventListener('click', showResult);
+        restartBtn.addEventListener('click', restartQuiz);
+
+        // Initial load
+        loadQuestion();
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Quiz",
+      "name": "Know Your Aura: Discover Your Energetic Signature Quiz",
+      "description": "A 100-question interactive quiz designed to help individuals understand their dominant aura colors and energetic signatures.",
+      "creator": {
+        "@type": "Organization",
+        "name": "crapd.in",
+        "url": "https://crapd.in"
+      },
+      "url": "https://crapd.in/know-your-aura-quiz.html",
+      "image": "https://crapd.in/images/aura-quiz-social.jpg",
+      "about": {
+        "@type": "Thing",
+        "name": "Aura Colors",
+        "description": "The energetic field believed to surround living beings, often perceived as colored emanations reflecting personality and spiritual state."
+      },
+      "educationalLevel": "General Interest, Self-Discovery",
+      "audience": {
+        "@type": "Audience",
+        "audienceType": "Individuals interested in self-discovery, spirituality, and personal growth"
+      },
+      "interactionStatistic": {
+        "@type": "InteractionCounter",
+        "interactionType": "https://schema.org/TakeAction",
+        "userInteractionCount": "[APPROXIMATE_NUMBER_OF_QUIZ_TAKES]" // Optional: If you track this, helps show popularity
+      }
+    }
+    </script>
+    <style>
+    .floating-home-button {
+      position: fixed;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      background-color: transparent;
+      border: none;
+      z-index: 1000;
+      text-decoration: none;
+    }
+
+    .home-button-inner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
+      height: 70px;
+      width: 23px;
+      background-color: #9C27B0; /* Purple for Home, contrasting with Aura */
+      color: white;
+      font-weight: bold;
+      border-radius: 0 10px 10px 0;
+      box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
+      transition: background-color 0.3s ease;
+      writing-mode: vertical-rl;
+      text-orientation: mixed;
+    }
+
+    .home-button-inner:hover {
+      background-color: #7B1FA2;
+    }
+    </style>
+    <a href="index.html" class="floating-home-button">
+        <div class="home-button-inner">
+            Home
+        </div>
+    </a>
+</body>
+</html>
