@@ -1,0 +1,1190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How Good Are You? - Unveiling Your Inner Light (50 Questions)</title>
+    <meta name="description" content="Discover the true extent of your inner goodness with 50 insightful questions. This quiz helps you understand your kindness, compassion, and positive traits.">
+    <meta name="keywords" content="good inside quiz, inner light test, compassion assessment, positive personality traits, kindness quiz, self-exploration, virtuous quiz">
+    <meta name="author" content="Your Name/Website Name">
+    <meta property="og:title" content="How Good Are You? - Unveiling Your Inner Light">
+    <meta property="og:description" content="Discover the true extent of your inner goodness with 50 insightful questions. This quiz helps you understand your kindness, compassion, and positive traits.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="[Your Website URL]/good_inside.html">
+    <meta property="og:image" content="https://www.shutterstock.com/search/positive-social-media">
+    <link rel="canonical" href="[Your Website URL]/good_inside.html">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #4CAF50; /* Green - for growth/positivity */
+            --secondary-color: #388E3C; /* Darker Green */
+            --accent-color: #FFEB3B; /* Bright Yellow - for light/energy */
+            --light-bg: #F8F8F8; /* Very light background */
+            --dark-text: #333;
+            --light-text: #555;
+            --white: #ffffff;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', 'Arial', sans-serif;
+            background-color: var(--light-bg);
+            color: var(--dark-text);
+            line-height: 1.6;
+            padding: 0;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: var(--white);
+            padding: 2rem 0;
+            text-align: center;
+            border-radius: 0 0 20px 20px;
+            box-shadow: var(--shadow);
+            margin-bottom: 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 70%);
+            transform: rotate(-30deg);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            position: relative;
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            position: relative;
+        }
+
+        .progress-container {
+            width: 100%;
+            background-color: #e0e0e0;
+            border-radius: 10px;
+            margin: 2rem 0;
+            height: 15px;
+            overflow: hidden;
+            box-shadow: inset 0 1px 3px rgba(0,0,0,0.2);
+        }
+
+        .progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, var(--accent-color), var(--primary-color));
+            width: 0%;
+            transition: width 0.5s ease;
+            border-radius: 10px;
+        }
+
+        .quiz-container {
+            background-color: var(--white);
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        .question-counter {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+
+        .question {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            color: var(--secondary-color);
+        }
+
+        .options {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 12px;
+        }
+
+        .option {
+            display: flex;
+            align-items: center;
+            padding: 12px 15px;
+            background-color: #f0f0f0;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .option:hover {
+            background-color: #e5e5e5;
+            border-color: var(--primary-color);
+        }
+
+        .option input {
+            display: none;
+        }
+
+        .option label {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            cursor: pointer;
+            position: relative;
+            padding-left: 35px;
+        }
+
+        .custom-radio {
+            position: absolute;
+            left: 0;
+            height: 22px;
+            width: 22px;
+            background-color: #ccc;
+            border-radius: 50%;
+            border: 2px solid var(--light-text);
+            transition: all 0.3s ease;
+        }
+
+        .option input:checked ~ .custom-radio {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+
+        .custom-radio::after {
+            content: "";
+            position: absolute;
+            display: none;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: var(--white);
+        }
+
+        .option input:checked ~ .custom-radio::after {
+            display: block;
+        }
+
+        .option-text {
+            margin-left: 10px;
+            font-size: 1rem;
+            color: var(--dark-text);
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 2rem;
+        }
+
+        .btn {
+            padding: 12px 25px;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        .btn-secondary {
+            background-color: #ccc;
+            color: var(--dark-text);
+        }
+
+        .btn-secondary:hover {
+            background-color: #bbb;
+        }
+
+        .result-container {
+            background-color: var(--white);
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            padding: 2rem;
+            text-align: center;
+            display: none;
+            animation: fadeIn 0.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .result-title {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 2rem;
+        }
+
+        .score {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin: 1rem 0;
+        }
+
+        .score-bar {
+            height: 30px;
+            background-color: #e0e0e0;
+            border-radius: 15px;
+            margin: 2rem auto;
+            max-width: 500px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .score-progress {
+            height: 100%;
+            background: linear-gradient(90deg, #FFD700, #4CAF50); /* Gold to Green gradient for good */
+            width: 0%;
+            transition: width 1s ease;
+        }
+
+        .score-labels {
+            display: flex;
+            justify-content: space-between;
+            max-width: 500px;
+            margin: 0 auto;
+            font-size: 0.8rem;
+            color: var(--light-text);
+        }
+
+        .result-message {
+            margin-top: 2rem;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--dark-text);
+            padding: 0 1rem;
+        }
+
+        .restart-btn {
+            margin-top: 2rem;
+            background-color: var(--primary-color);
+            color: var(--white);
+        }
+
+        .restart-btn:hover {
+            background-color: var(--secondary-color);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+
+            header {
+                padding: 1.5rem 0;
+                border-radius: 0;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            .subtitle {
+                font-size: 0.9rem;
+            }
+
+            .quiz-container, .result-container {
+                padding: 1.5rem;
+            }
+
+            .question {
+                font-size: 1.1rem;
+            }
+
+            .option-text {
+                font-size: 0.9rem;
+            }
+
+            .btn {
+                padding: 10px 20px;
+                font-size: 0.9rem;
+            }
+
+            .result-title {
+                font-size: 1.5rem;
+            }
+
+            .score {
+                font-size: 2.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            .quiz-container, .result-container {
+                padding: 1rem;
+                border-radius: 10px;
+            }
+
+            .options {
+                gap: 8px;
+            }
+
+            .option {
+                padding: 10px;
+            }
+
+            .custom-radio {
+                height: 18px;
+                width: 18px;
+            }
+
+            .option-text {
+                font-size: 0.85rem;
+                margin-left: 8px;
+            }
+
+            .navigation {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .btn {
+                width: 100%;
+            }
+        }
+
+        /* Animation for options */
+        @keyframes optionAppear {
+            from { opacity: 0; transform: translateX(-10px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        .option {
+            animation: optionAppear 0.3s ease forwards;
+            opacity: 0;
+        }
+
+        .option:nth-child(1) { animation-delay: 0.1s; }
+        .option:nth-child(2) { animation-delay: 0.2s; }
+        .option:nth-child(3) { animation-delay: 0.3s; }
+        .option:nth-child(4) { animation-delay: 0.4s; }
+
+        /* Loading spinner */
+        .loader {
+            display: none;
+            border: 5px solid #ccc;
+            border-top: 5px solid var(--primary-color);
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+            margin: 2rem auto;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Floating action button */
+        .fab {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background-color: var(--primary-color);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            cursor: pointer;
+            z-index: 100;
+            transition: all 0.3s ease;
+        }
+
+        .fab:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 16px rgba(0,0,0,0.3);
+        }
+
+        .floating-home-button {
+            position: fixed;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            background-color: transparent;
+            border: none;
+            z-index: 1000;
+            text-decoration: none;
+        }
+
+        .home-button-inner {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-end;
+            height: 70px;
+            width: 23px;
+            background-color: #1976D2; /* Blue background for Home (contrast with good theme) */
+            color: white;
+            font-weight: bold;
+            border-radius: 0 10px 10px 0;
+            box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.3);
+            transition: background-color 0.3s ease;
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+        }
+
+        .home-button-inner:hover {
+            background-color: #1565C0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><i class="fas fa-lightbulb"></i> How Good Are You?</h1>
+            <p class="subtitle">Unveiling Your Inner Light (50 Questions)</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="progress-container">
+            <div class="progress-bar" id="quiz-progress"></div>
+        </div>
+
+        <div id="quiz" class="quiz-container"></div>
+
+        <div class="navigation">
+            <button class="btn btn-secondary" id="prev-btn" disabled>
+                <i class="fas fa-arrow-left"></i> Previous
+            </button>
+            <button class="btn btn-primary" id="next-btn">
+                Next <i class="fas fa-arrow-right"></i>
+            </button>
+            <button class="btn btn-primary" id="submit-btn" style="display: none;">
+                See Results <i class="fas fa-chart-bar"></i>
+            </button>
+        </div>
+
+        <div class="loader" id="loader"></div>
+
+        <div class="result-container" id="result-container">
+            <h2 class="result-title">Your Inner Goodness Level</h2>
+            <div class="score" id="score">0%</div>
+
+            <div class="score-bar">
+                <div class="score-progress" id="score-progress"></div>
+            </div>
+
+            <div class="score-labels">
+                <span>Very Low</span>
+                <span>Low</span>
+                <span>Moderate</span>
+                <span>High</span>
+                <span>Very High</span>
+            </div>
+
+            <div class="result-message" id="result-message"></div>
+
+            <button class="btn restart-btn" id="restart-btn">
+                <i class="fas fa-redo"></i> Retake Quiz
+            </button>
+        </div>
+    </div>
+
+    <div class="fab" id="fab" title="View Progress">
+        <i class="fas fa-chart-pie"></i>
+    </div>
+
+    <script>
+        const questions = [
+            // Section 1: Behavior Towards Others (10 Questions)
+            {
+                question: "1. Do you intentionally try to hurt other people's feelings?",
+                options: [
+                    { text: "No, never", value: 4 }, // More good
+                    { text: "Sometimes, unintentionally", value: 3 },
+                    { text: "Yes, occasionally", value: 2 },
+                    { text: "Yes, often", value: 1 } // Less good
+                ]
+            },
+            {
+                question: "2. Do you feel joy in helping others, even if there's no personal gain?",
+                options: [
+                    { text: "Yes, always", value: 4 },
+                    { text: "Yes, often", value: 3 },
+                    { text: "Sometimes", value: 2 },
+                    { text: "No, only when it benefits me", value: 1 }
+                ]
+            },
+            {
+                question: "3. Do you talk negatively about others behind their backs?",
+                options: [
+                    { text: "No, never", value: 4 },
+                    { text: "Sometimes, when angry", value: 3 },
+                    { text: "Yes, often", value: 2 },
+                    { text: "Yes, always", value: 1 }
+                ]
+            },
+            {
+                question: "4. Do you genuinely feel happy for someone else's success?",
+                options: [
+                    { text: "Yes, always", value: 4 },
+                    { text: "Yes, often", value: 3 },
+                    { text: "Sometimes, if they are a friend", value: 2 },
+                    { text: "No, I feel envious", value: 1 }
+                ]
+            },
+            {
+                question: "5. Do you admit your mistakes and apologize?",
+                options: [
+                    { text: "Yes, always", value: 4 },
+                    { text: "Yes, often", value: 3 },
+                    { text: "Sometimes, if necessary", value: 2 },
+                    { text: "No, I rarely apologize", value: 1 }
+                ]
+            },
+            {
+                question: "6. Do you take things that belong to others without asking?",
+                options: [
+                    { text: "No, never", value: 4 },
+                    { text: "Maybe, if I really need it", value: 3 },
+                    { text: "Yes, sometimes", value: 2 },
+                    { text: "Yes, often", value: 1 }
+                ]
+            },
+            {
+                question: "7. Do you step in to help those who are weaker or in need?",
+                options: [
+                    { text: "Yes, always", value: 4 },
+                    { text: "Yes, if I get the chance", value: 3 },
+                    { text: "Sometimes", value: 2 },
+                    { text: "No, it's not my responsibility", value: 1 }
+                ]
+            },
+            {
+                question: "8. Do you try to deceive or manipulate others?",
+                options: [
+                    { text: "No, never", value: 4 },
+                    { text: "Sometimes, if it benefits me", value: 3 },
+                    { text: "Yes, often", value: 2 },
+                    { text: "Yes, always", value: 1 }
+                ]
+            },
+            {
+                question: "9. Do you have empathy for others and understand their feelings?",
+                options: [
+                    { text: "Yes, always", value: 4 },
+                    { text: "Yes, often", value: 3 },
+                    { text: "Sometimes", value: 2 },
+                    { text: "No, I don't care", value: 1 }
+                ]
+            },
+            {
+                question: "10. Do you keep other people's secrets or reveal them?",
+                options: [
+                    { text: "I always keep secrets", value: 4 },
+                    { text: "Sometimes, if they upset me", value: 3 },
+                    { text: "Yes, I often reveal them", value: 2 },
+                    { text: "Yes, always", value: 1 }
+                ]
+            },
+
+            // Section 2: Honesty and Integrity (10 Questions)
+            {
+                question: "11. Do you always tell the truth, even if it's difficult for you?",
+                options: [
+                    { text: "Yes, always", value: 4 },
+                    { text: "Yes, often", value: 3 },
+                    { text: "Sometimes, if absolutely necessary", value: 2 },
+                    { text: "No, I lie if it benefits me", value: 1 }
+                ]
+            },
+            {
+                question: "12. Do you steal or take what belongs to others?",
+                options: [
+                    { text: "No, never", value: 4 },
+                    { text: "No, but I might consider it if the opportunity arises", value: 3 },
+                    { text: "Yes, sometimes", value: 2 },
+                    { text: "Yes, whenever I get the chance", value: 1 }
+                ]
+            },
+            {
+                question: "13. Do you blame others for your mistakes?",
+                options: [
+                    { text: "No, I take responsibility", value: 4 },
+                    { text: "Sometimes, if it's easier", value: 3 },
+                    { text: "Yes, often", value: 2 },
+                    { text: "Yes, always", value: 1 }
+                ]
+            },
+            {
+                question: "14. Do you follow rules and laws?",
+                options: [
+                    { text: "Yes, always", value: 4 },
+                    { text: "Yes, often", value: 3 },
+                    { text: "Sometimes, if no one is watching", value: 2 },
+                    { text: "No, I do what I want", value: 1 }
+                ]
+            },
+            {
+                question: "15. Do you take or give bribes?",
+                options: [
+                    { text: "No, never", value: 4 },
+                    { text: "No, but I might consider it if my work is stuck", value: 3 },
+                    { text: "Yes, sometimes", value: 2 },
+                    { text: "Yes, whenever I get the chance", value: 1 }
+                ]
+            },
+            {
+                question: "16. Do you stand by your word, even if it costs you?",
+                options: [
+                    { text: "Yes, always", value: 4 },
+                    { text: "Yes, often", value: 3 },
+                    { text: "Sometimes", value: 2 },
+                    { text: "No, I look out for my own interests", value: 1 }
+                ]
+            },
+            {
+                question: "17. Do you damage other people's property?",
+                options: [
+                    { text: "No, never", value: 4 },
+                    { text: "No, but if I'm angry, it might happen", value: 3 },
+                    { text: "Yes, sometimes", value: 2 },
+                    { text: "Yes, often", value: 1 }
+                ]
+            },
+            {
+                question: "18. Do you forgive others for their mistakes?",
+                options: [
+                    { text: "Yes, always", value: 4 },
+                    { text: "Yes, often", value: 3 },
+                    { text: "Sometimes", value: 2 },
+                    { text: "No, I seek revenge", value: 1 }
+                ]
+            },
+            {
+                question: "19. Do you keep your promises?",
+                options: [
+                    { text: "Yes, always", value: 4 },
+                    { text: "Yes, often", value: 3 },
+                    { text: "Sometimes", value: 2 },
+                    { text: "No, if I don't see a benefit", value: 1 }
+                ]
+            },
+            {
+                question: "20. Do you try to damage other people's reputation?",
+                options: [
+                    { text: "No, never", value: 4 },
+                    { text: "No, but if they have harmed me", value: 3 },
+                    { text: "Yes, sometimes", value: 2 },
+                    { text: "Yes, often", value: 1 }
+                ]
+            },
+
+            // Section 3: Self-Control and Impulses (10 Questions)
+            {
+                question: "21. Are you able to control your anger?",
+                options: [
+                    { text: "Yes, always", value: 4 },
+                    { text: "Yes, often", value: 3 },
+                    { text: "Sometimes", value: 2 },
+                    { text: "No, I get angry easily", value: 1 }
+                ]
+            },
+            {
+                question: "22. Are you kind and patient with others?",
+                options: [
+                    { text: "Yes, always", value: 4 },
+                    { text: "Yes, often", value: 3 },
+                    { text: "Sometimes", value: 2 },
+                    { text: "No, I am impatient", value: 1 }
+                ]
+            },
+            {
+                question: "23. Do you want your desires fulfilled immediately, even if there are bad consequences?",
+                options: [
+                    { text: "No, I am patient", value: 4 },
+                    { text: "Sometimes, if it's a small thing", value: 3 },
+                    { text: "Yes, often", value: 2 },
+                    { text: "Yes, always", value: 1 }
+                ]
+            },
+            {
+                question: "24. Do you put other people's needs before your own?",
+                options: [
+                    { text: "Yes, always", value: 4 },
+                    { text: "Yes, often", value: 3 },
+                    { text: "Sometimes", value: 2 },
+                    { text: "No, I prioritize myself", value: 1 }
+                ]
+            },
+            {
+                question: "25. Do you use hurtful words towards others?",
+                options: [
+                    { text: "No, never", value: 4 },
+                    { text: "Sometimes, if provoked", value: 3 },
+                    { text: "Yes, often", value: 2 },
+                    { text: "Yes, always", value: 1 }
+                ]
+            },
+            {
+                question: "26. Do you harm others for your own pleasure?",
+                options: [
+                    { text: "No, never", value: 4 },
+                    { text: "Maybe, if it greatly benefits me", value: 3 },
+                    { text: "Yes, sometimes", value: 2 },
+                    { text: "Yes, often", value: 1 }
+                ]
+            },
+            {
+                question: "27. Do you feel envious when you see others doing well?",
+                options: [
+                    { text: "No, I am happy for them", value: 4 },
+                    { text: "Sometimes, a little bit", value: 3 },
+                    { text: "Yes, often", value: 2 },
+                    { text: "Yes, a lot", value: 1 }
+                ]
+            },
+            {
+                question: "28. Do you criticize others harshly?",
+                options: [
+                    { text: "No, I respect others", value: 4 },
+                    { text: "Sometimes, if they are wrong", value: 3 },
+                    { text: "Yes, often", value: 2 },
+                    { text: "Yes, always", value: 1 }
+                ]
+            },
+            {
+                question: "29. Do you always want to control others?",
+                options: [
+                    { text: "No, I give others freedom", value: 4 },
+                    { text: "Sometimes, if I think it's right", value: 3 },
+                    { text: "Yes, often", value: 2 },
+                    { text: "Yes, always", value: 1 }
+                ]
+            },
+            {
+                question: "30. Do you take advantage of other people's weaknesses?",
+                options: [
+                    { text: "No, never", value: 4 },
+                    { text: "Maybe, if it's to my advantage", value: 3 },
+                    { text: "Yes, sometimes", value: 2 },
+                    { text: "Yes, often", value: 1 }
+                ]
+            },
+
+            // Section 4: Responsibility and Accountability (10 Questions)
+            {
+                question: "31. Do you avoid your responsibilities?",
+                options: [
+                    { text: "No, I fulfill my responsibilities", value: 4 },
+                    { text: "Sometimes, if they are too difficult", value: 3 },
+                    { text: "Yes, often", value: 2 },
+                    { text: "Yes, always", value: 1 }
+                ]
+            },
+            {
+                question: "32. Do you take responsibility for other people's mistakes?",
+                options: [
+                    { text: "Yes, if I was involved", value: 4 },
+                    { text: "Sometimes", value: 3 },
+                    { text: "No, I only look after myself", value: 2 },
+                    { text: "No, never", value: 1 }
+                ]
+            },
+            {
+                question: "33. Do you think about the consequences of your actions?",
+                options: [
+                    { text: "Yes, always", value: 4 },
+                    { text: "Yes, often", value: 3 },
+                    { text: "Sometimes", value: 2 },
+                    { text: "No, I just do it", value: 1 }
+                ]
+            },
+            {
+                question: "34. Do you respect public property?",
+                options: [
+                    { text: "Yes, always", value: 4 },
+                    { text: "Yes, often", value: 3 },
+                    { text: "Sometimes", value: 2 },
+                    { text: "No, I don't care", value: 1 }
+                ]
+            },
+            {
+                question: "35. Do you tend to encourage or discourage others?",
+                options: [
+                    { text: "I encourage others", value: 4 },
+                    { text: "Both, depending on the situation", value: 3 },
+                    { text: "I often discourage", value: 2 },
+                    { text: "I always discourage", value: 1 }
+                ]
+            },
+            {
+                question: "36. Do you use others for your own selfish purposes?",
+                options: [
+                    { text: "No, never", value: 4 },
+                    { text: "Maybe, if I really need it", value: 3 },
+                    { text: "Yes, sometimes", value: 2 },
+                    { text: "Yes, often", value: 1 }
+                ]
+            },
+            {
+                question: "37. Do you learn from your mistakes?",
+                options: [
+                    { text: "Yes, always", value: 4 },
+                    { text: "Yes, often", value: 3 },
+                    { text: "Sometimes", value: 2 },
+                    { text: "No, I blame others", value: 1 }
+                ]
+            },
+            {
+                question: "38. Do you care about the environment?",
+                options: [
+                    { text: "Yes, always", value: 4 },
+                    { text: "Yes, often", value: 3 },
+                    { text: "Sometimes", value: 2 },
+                    { text: "No, I don't care", value: 1 }
+                ]
+            },
+            {
+                question: "39. Do you like to cooperate with others?",
+                options: [
+                    { text: "Yes, always", value: 4 },
+                    { text: "Yes, often", value: 3 },
+                    { text: "Sometimes, if it benefits me", value: 2 },
+                    { text: "No, I prefer to work alone", value: 1 }
+                ]
+            },
+            {
+                question: "40. Do you respect agreements made with others?",
+                options: [
+                    { text: "Yes, always", value: 4 },
+                    { text: "Yes, often", value: 3 },
+                    { text: "Sometimes, if it benefits me", value: 2 },
+                    { text: "No, I break them", value: 1 }
+                ]
+            },
+
+            // Section 5: Self-Worth and Outlook (10 Questions)
+            {
+                question: "41. Do you consider yourself better than others?",
+                options: [
+                    { text: "No, I respect everyone", value: 4 },
+                    { text: "Sometimes, if I am better in a certain area", value: 3 },
+                    { text: "Yes, often", value: 2 },
+                    { text: "Yes, always", value: 1 }
+                ]
+            },
+            {
+                question: "42. Do you take criticism from others positively?",
+                options: [
+                    { text: "Yes, always", value: 4 },
+                    { text: "Yes, often", value: 3 },
+                    { text: "Sometimes", value: 2 },
+                    { text: "No, I get angry", value: 1 }
+                ]
+            },
+            {
+                question: "43. Do you find your happiness in the happiness of others?",
+                options: [
+                    { text: "Yes, always", value: 4 },
+                    { text: "Yes, often", value: 3 },
+                    { text: "Sometimes", value: 2 },
+                    { text: "No, I only care about my own happiness", value: 1 }
+                ]
+            },
+            {
+                question: "44. Do you harbor feelings of revenge?",
+                options: [
+                    { text: "No, never", value: 4 },
+                    { text: "No, but if I've been hurt", value: 3 },
+                    { text: "Yes, sometimes", value: 2 },
+                    { text: "Yes, often", value: 1 }
+                ]
+            },
+            {
+                question: "45. Do you feel hatred or animosity towards others?",
+                options: [
+                    { text: "No, never", value: 4 },
+                    { text: "No, but if they have harmed me", value: 3 },
+                    { text: "Yes, sometimes", value: 2 },
+                    { text: "Yes, often", value: 1 }
+                ]
+            },
+            {
+                question: "46. Do you work to improve yourself?",
+                options: [
+                    { text: "Yes, always", value: 4 },
+                    { text: "Yes, often", value: 3 },
+                    { text: "Sometimes", value: 2 },
+                    { text: "No, I am fine as I am", value: 1 }
+                ]
+            },
+            {
+                question: "47. Do you try to put others down?",
+                options: [
+                    { text: "No, I respect everyone", value: 4 },
+                    { text: "Maybe, unintentionally", value: 3 },
+                    { text: "Yes, sometimes", value: 2 },
+                    { text: "Yes, often", value: 1 }
+                ]
+            },
+            {
+                question: "48. Do you share your knowledge or skills with others?",
+                options: [
+                    { text: "Yes, always", value: 4 },
+                    { text: "Yes, often", value: 3 },
+                    { text: "Sometimes", value: 2 },
+                    { text: "No, I keep them to myself", value: 1 }
+                ]
+            },
+            {
+                question: "49. Do you forgive others?",
+                options: [
+                    { text: "Yes, always", value: 4 },
+                    { text: "Yes, often", value: 3 },
+                    { text: "Sometimes", value: 2 },
+                    { text: "No, I do not forgive", value: 1 }
+                ]
+            },
+            {
+                question: "50. Do you feel joy in doing good for others?",
+                options: [
+                    { text: "Yes, always", value: 4 },
+                    { text: "Yes, often", value: 3 },
+                    { text: "Sometimes", value: 2 },
+                    { text: "No, I don't care", value: 1 }
+                ]
+            }
+        ];
+
+        let currentQuestionIndex = 0;
+        const userAnswers = {}; // Store answers {questionIndex: selectedValue}
+        const totalQuestions = questions.length;
+        const maxPossibleScore = totalQuestions * 4; // Each question has max 4 points
+        const minPossibleScore = totalQuestions * 1; // Each question has min 1 point
+
+        const quizDiv = document.getElementById('quiz');
+        const prevBtn = document.getElementById('prev-btn');
+        const nextBtn = document.getElementById('next-btn');
+        const submitBtn = document.getElementById('submit-btn');
+        const quizProgress = document.getElementById('quiz-progress');
+        const loader = document.getElementById('loader');
+        const resultContainer = document.getElementById('result-container');
+        const scoreDisplay = document.getElementById('score');
+        const scoreProgress = document.getElementById('score-progress');
+        const resultMessage = document.getElementById('result-message');
+        const restartBtn = document.getElementById('restart-btn');
+        const fab = document.getElementById('fab');
+
+        function loadQuestion() {
+            if (currentQuestionIndex < totalQuestions) {
+                const q = questions[currentQuestionIndex];
+                let optionsHtml = '';
+                q.options.forEach((option, optionIndex) => {
+                    const isChecked = userAnswers[currentQuestionIndex] === option.value;
+                    optionsHtml += `
+                        <div class="option">
+                            <input type="radio" id="q${currentQuestionIndex}o${optionIndex}" name="q${currentQuestionIndex}" value="${option.value}" ${isChecked ? 'checked' : ''}>
+                            <label for="q${currentQuestionIndex}o${optionIndex}">
+                                <span class="custom-radio"></span>
+                                <span class="option-text">${option.text}</span>
+                            </label>
+                        </div>
+                    `;
+                });
+
+                quizDiv.innerHTML = `
+                    <div class="question-counter">Question ${currentQuestionIndex + 1} / ${totalQuestions}</div>
+                    <div class="question">${q.question}</div>
+                    <div class="options">${optionsHtml}</div>
+                `;
+
+                // Add event listeners for radio buttons
+                quizDiv.querySelectorAll('input[type="radio"]').forEach(radio => {
+                    radio.addEventListener('change', (event) => {
+                        userAnswers[currentQuestionIndex] = parseInt(event.target.value);
+                        updateNavigationButtons();
+                    });
+                });
+
+                updateNavigationButtons();
+                updateProgressBar();
+            } else {
+                showResult();
+            }
+        }
+
+        function updateProgressBar() {
+            const progress = ((currentQuestionIndex) / totalQuestions) * 100;
+            quizProgress.style.width = `${progress}%`;
+        }
+
+        function updateNavigationButtons() {
+            prevBtn.disabled = currentQuestionIndex === 0;
+            nextBtn.style.display = currentQuestionIndex === totalQuestions - 1 ? 'none' : 'flex';
+            submitBtn.style.display = currentQuestionIndex === totalQuestions - 1 ? 'flex' : 'none';
+        }
+
+        function prevQuestion() {
+            if (currentQuestionIndex > 0) {
+                currentQuestionIndex--;
+                loadQuestion();
+            }
+        }
+
+        function nextQuestion() {
+            if (currentQuestionIndex < totalQuestions - 1) {
+                // Ensure an option is selected before moving next
+                if (userAnswers[currentQuestionIndex] === undefined) {
+                    alert('Please select an option before moving to the next question.');
+                    return;
+                }
+                currentQuestionIndex++;
+                loadQuestion();
+            }
+        }
+
+        function calculateScore() {
+            let totalScore = 0;
+            for (const key in userAnswers) {
+                totalScore += userAnswers[key];
+            }
+
+            // Normalize score to a percentage (higher percentage means more goodness)
+            const scoreRange = maxPossibleScore - minPossibleScore;
+            const adjustedScore = totalScore - minPossibleScore;
+            const percentage = (adjustedScore / scoreRange) * 100;
+            return Math.round(percentage);
+        }
+
+        function getResultMessage(percentage) {
+            let message = "";
+            let color = "";
+            // Higher percentage means more goodness
+            if (percentage >= 80) {
+                message = "Very High. Your inner light shines brightly! You possess a deep sense of compassion, kindness, and integrity, consistently striving to do good.";
+                color = "#4CAF50"; // Green for very high goodness
+            } else if (percentage >= 60) {
+                message = "High. You are a genuinely good person with strong positive inclinations. Continue nurturing these qualities to make an even greater impact.";
+                color = "#8BC34A"; // Light Green for high goodness
+            } else if (percentage >= 40) {
+                message = "Moderate. Your inner goodness is at a balanced level. You generally act kindly, but there are areas where you can cultivate more positive habits.";
+                color = "#FFD700"; // Gold for moderate goodness
+            } else if (percentage >= 20) {
+                message = "Low. You have some room for growth in nurturing your inner goodness. Focusing on empathy and selfless acts can help you shine brighter.";
+                color = "#FFC107"; // Amber for low goodness
+            } else {
+                message = "Very Low. Your inner light is currently dim. Consider reflecting on your actions and choices to foster more positive and compassionate behaviors.";
+                color = "#FF9800"; // Orange for very low goodness (representing areas to work on)
+            }
+            scoreProgress.style.backgroundColor = color;
+            return message;
+        }
+
+        function showResult() {
+            if (Object.keys(userAnswers).length !== totalQuestions) {
+                if (!confirm('You have not answered all questions. Do you still want to see the results?')) {
+                    return;
+                }
+            }
+
+            quizDiv.style.display = 'none';
+            prevBtn.style.display = 'none';
+            nextBtn.style.display = 'none';
+            submitBtn.style.display = 'none';
+            fab.style.display = 'none'; // Hide FAB on result page
+
+            loader.style.display = 'block';
+
+            setTimeout(() => {
+                loader.style.display = 'none';
+                resultContainer.style.display = 'block';
+                const finalScore = calculateScore();
+                scoreDisplay.textContent = `${finalScore}%`;
+                scoreProgress.style.width = `${finalScore}%`;
+                resultMessage.innerHTML = getResultMessage(finalScore);
+            }, 1500); // Simulate loading time
+        }
+
+        function restartQuiz() {
+            currentQuestionIndex = 0;
+            for (const key in userAnswers) {
+                delete userAnswers[key];
+            }
+            quizDiv.style.display = 'block';
+            resultContainer.style.display = 'none';
+            fab.style.display = 'flex'; // Show FAB on quiz start
+            loadQuestion();
+            updateProgressBar();
+        }
+
+        prevBtn.addEventListener('click', prevQuestion);
+        nextBtn.addEventListener('click', nextQuestion);
+        submitBtn.addEventListener('click', showResult);
+        restartBtn.addEventListener('click', restartQuiz);
+
+        // FAB functionality - allows jumping to the result even if not all questions are answered
+        fab.addEventListener('click', () => {
+            showResult();
+        });
+
+        // Initial load
+        loadQuestion();
+    </script>
+    <a href="index.html" class="floating-home-button">
+        <div class="home-button-inner">
+            Home
+        </div>
+    </a>
+</body>
+</html>
