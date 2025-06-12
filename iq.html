@@ -1,0 +1,1295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What is My IQ? A 50-Question Intelligence Quiz | crapd.in</title>
+    <meta name="description" content="Test your intelligence with our 50-question interactive IQ quiz. Explore various cognitive domains and get an estimated IQ score.">
+    <meta name="keywords" content="IQ test, intelligence quiz, cognitive skills, logical reasoning, problem-solving, brain training, 50 questions, crapd.in">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://crapd.in/what-is-my-iq-quiz.html">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://crapd.in/what-is-my-iq-quiz.html">
+    <meta property="og:title" content="What is My IQ? A 50-Question Intelligence Quiz">
+    <meta property="og:description" content="Test your intelligence with our 50-question interactive IQ quiz. Explore various cognitive domains and get an estimated IQ score.">
+    <meta property="og:image" content="https://crapd.in/images/iq-quiz-social.jpg">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://crapd.in/what-is-my-iq-quiz.html">
+    <meta property="twitter:title" content="What is My IQ? A 50-Question Intelligence Quiz">
+    <meta property="twitter:description" content="Test your intelligence with our 50-question interactive IQ quiz. Explore various cognitive domains and get an estimated IQ score.">
+    <meta property="twitter:image" content="https://crapd.in/images/iq-quiz-social.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #00796B; /* Dark Teal - Wisdom and calm */
+            --secondary-color: #004D40; /* Even Darker Teal */
+            --accent-color: #FFC107; /* Amber/Yellow - Brightness and intellect */
+            --light-bg: #E0F2F7; /* Very light blue-grey */
+            --dark-text: #212121; /* Dark Grey */
+            --light-text: #424242; /* Slightly lighter grey */
+            --white: #ffffff;
+            --shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #F0F8FF; /* Alice Blue - very light, calm background */
+            color: var(--dark-text);
+            line-height: 1.7;
+            padding: 0;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 25px;
+        }
+
+        header {
+            background: linear-gradient(145deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 2.5rem 0;
+            text-align: center;
+            border-radius: 0 0 30px 30px;
+            box-shadow: var(--shadow);
+            margin-bottom: 2.5rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: "";
+            position: absolute;
+            top: -60%;
+            left: -60%;
+            width: 220%;
+            height: 220%;
+            background: radial-gradient(circle, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0) 70%);
+            transform: rotate(-25deg);
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 0.75rem;
+            position: relative;
+            letter-spacing: 0.5px;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.95;
+            position: relative;
+            font-weight: 300;
+        }
+
+        .progress-container {
+            width: 100%;
+            background-color: #B2DFDB; /* Light Teal */
+            border-radius: 12px;
+            margin: 2.5rem 0;
+            height: 18px;
+            overflow: hidden;
+            box-shadow: inset 0 2px 4px rgba(0,0,0,0.15);
+        }
+
+        .progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, var(--accent-color), var(--primary-color));
+            width: 0%;
+            transition: width 0.6s ease-out;
+            border-radius: 12px;
+        }
+
+        .quiz-container {
+            background-color: var(--white);
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+            padding: 2.5rem;
+            margin-bottom: 2.5rem;
+            position: relative;
+            transition: opacity 0.3s ease-out;
+        }
+
+        .question-counter {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 0.6rem 1.2rem;
+            border-radius: 25px;
+            font-weight: 500;
+            display: inline-block;
+            margin-bottom: 1.5rem;
+            font-size: 1rem;
+            animation: fadeInScale 0.4s ease-out;
+        }
+
+        @keyframes fadeInScale {
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        .question {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 2rem;
+            color: var(--secondary-color);
+            line-height: 1.4;
+        }
+
+        .options {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 12px;
+        }
+
+        .option {
+            display: flex;
+            align-items: center;
+            padding: 12px 15px;
+            background-color: var(--light-bg);
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            opacity: 1;
+            animation: fadeInScale 0.3s ease forwards;
+        }
+
+        .option:hover {
+            background-color: #B2EBF2; /* Lighter blue-teal */
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border-color: var(--primary-color);
+        }
+
+        .option input {
+            display: none;
+        }
+
+        .option label {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            cursor: pointer;
+            position: relative;
+            padding-left: 35px;
+        }
+
+        .custom-radio {
+            position: absolute;
+            left: 0;
+            height: 22px;
+            width: 22px;
+            background-color: #eee;
+            border-radius: 50%;
+            border: 2px solid var(--light-text);
+            transition: all 0.3s ease;
+        }
+
+        .option input:checked ~ .custom-radio {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+
+        .custom-radio::after {
+            content: "";
+            position: absolute;
+            display: none;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: white;
+        }
+
+        .option input:checked ~ .custom-radio::after {
+            display: block;
+        }
+
+        .option-text {
+            margin-left: 10px;
+            font-size: 1rem;
+            color: var(--dark-text);
+        }
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 3rem;
+            gap: 15px;
+        }
+
+        .btn {
+            padding: 14px 30px;
+            border: none;
+            border-radius: 10px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            font-size: 1.1rem;
+            flex-grow: 1;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 12px rgba(0,0,0,0.15);
+        }
+
+        .btn-secondary {
+            background-color: #B2DFDB; /* Light Teal */
+            color: var(--dark-text);
+        }
+
+        .btn-secondary:hover {
+            background-color: #80CBC4; /* Slightly darker light teal */
+            transform: translateY(-2px);
+            box-shadow: 0 5px 12px rgba(0,0,0,0.15);
+        }
+
+        .result-container {
+            background-color: var(--white);
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+            padding: 3rem;
+            text-align: center;
+            display: none;
+            animation: fadeIn 0.6s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .result-title {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            font-size: 2.5rem;
+            letter-spacing: 0.5px;
+        }
+
+        .score {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: var(--accent-color);
+            margin: 1.5rem 0;
+            line-height: 1;
+        }
+
+        .score-bar {
+            height: 35px;
+            background-color: #B2DFDB; /* Light Teal */
+            border-radius: 18px;
+            margin: 2.5rem auto;
+            max-width: 600px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: inset 0 2px 6px rgba(0,0,0,0.1);
+        }
+
+        .score-progress {
+            height: 100%;
+            background: linear-gradient(90deg, #FFE082, var(--accent-color)); /* Lighter yellow to accent yellow */
+            width: 0%;
+            transition: width 1.2s ease-out;
+            border-radius: 18px;
+        }
+
+        .score-labels {
+            display: flex;
+            justify-content: space-between;
+            max-width: 600px;
+            margin: 0.75rem auto 0;
+            font-size: 0.9rem;
+            color: var(--light-text);
+            font-weight: 500;
+        }
+
+        .result-message {
+            margin-top: 2.5rem;
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: var(--dark-text);
+            padding: 0 1.5rem;
+        }
+
+        .restart-btn {
+            margin-top: 3rem;
+            background-color: var(--accent-color);
+            color: var(--primary-color);
+            font-weight: 700;
+        }
+
+        .restart-btn:hover {
+            background-color: #FFB300; /* Darker yellow */
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+
+            header {
+                padding: 2rem 0;
+                border-radius: 0;
+            }
+
+            h1 {
+                font-size: 2.2rem;
+            }
+
+            .subtitle {
+                font-size: 1rem;
+            }
+
+            .quiz-container, .result-container {
+                padding: 2rem;
+            }
+
+            .question {
+                font-size: 1.2rem;
+            }
+
+            .option label {
+                font-size: 1rem;
+            }
+
+            .option-text {
+                font-size: 1rem;
+            }
+
+            .btn {
+                padding: 12px 25px;
+                font-size: 1rem;
+            }
+
+            .result-title {
+                font-size: 2rem;
+            }
+
+            .score {
+                font-size: 3rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            .quiz-container, .result-container {
+                padding: 1.5rem;
+                border-radius: 15px;
+            }
+
+            .options {
+                gap: 10px;
+            }
+
+            .option {
+                padding: 12px;
+            }
+
+            .custom-radio {
+                height: 22px;
+                width: 22px;
+            }
+
+            .option label {
+                padding-left: 35px;
+            }
+
+            .option-text {
+                font-size: 0.95rem;
+                margin-left: 8px;
+            }
+
+            .navigation {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .btn {
+                width: 100%;
+            }
+        }
+
+        /* Loading spinner */
+        .loader {
+            display: none;
+            border: 6px solid #f3f3f3;
+            border-top: 6px solid var(--primary-color);
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            animation: spin 1s linear infinite;
+            margin: 3rem auto;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Floating action button */
+        .fab {
+            position: fixed;
+            bottom: 35px;
+            right: 35px;
+            width: 65px;
+            height: 65px;
+            background-color: var(--accent-color);
+            color: var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.25);
+            cursor: pointer;
+            z-index: 100;
+            transition: all 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+        }
+
+        .fab:hover {
+            transform: scale(1.15);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+        }
+
+        .floating-home-button {
+            position: fixed;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            background-color: transparent;
+            border: none;
+            z-index: 1000;
+            text-decoration: none;
+        }
+
+        .home-button-inner {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-end;
+            height: 70px;
+            width: 23px;
+            background-color: var(--primary-color);
+            color: white;
+            font-weight: bold;
+            border-radius: 0 10px 10px 0;
+            box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease;
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+        }
+
+        .home-button-inner:hover {
+            background-color: var(--secondary-color);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><i class="fas fa-brain"></i> What is My IQ?</h1>
+            <p class="subtitle">A 50-Question Intelligence Quiz</p>
+        </div>
+    </header>
+
+    <div class="container">
+
+        <div class="progress-container">
+            <div class="progress-bar" id="quiz-progress"></div>
+        </div>
+
+        <div id="quiz" class="quiz-container"></div>
+
+        <div class="navigation">
+            <button class="btn btn-secondary" id="prev-btn" disabled>
+                <i class="fas fa-arrow-left"></i> Previous
+            </button>
+            <button class="btn btn-primary" id="next-btn">
+                Next <i class="fas fa-arrow-right"></i>
+            </button>
+            <button class="btn btn-primary" id="submit-btn" style="display: none;">
+                See My IQ <i class="fas fa-lightbulb"></i>
+            </button>
+        </div>
+
+        <div class="loader" id="loader"></div>
+
+        <div class="result-container" id="result-container">
+            <h2 class="result-title">Your Estimated IQ Score</h2>
+            <div class="score" id="score">0</div>
+
+            <div class="score-bar">
+                <div class="score-progress" id="score-progress"></div>
+            </div>
+
+            <div class="score-labels">
+                <span>Below Average</span>
+                <span>Average</span>
+                <span>Above Average</span>
+                <span>Gifted</span>
+            </div>
+
+            <div class="result-message" id="result-message"></div>
+
+            <button class="btn restart-btn" id="restart-btn">
+                <i class="fas fa-redo"></i> Retake Quiz
+            </button>
+        </div>
+    </div>
+
+    <a href="https://crapd.in/" class="floating-home-button" aria-label="Go to Home Page">
+        <div class="home-button-inner">
+            <i class="home"></i> HOME
+        </div>
+    </a>
+
+    <div class="fab" id="fab" title="See Your Current Score Estimate">
+        <i class="fas fa-chart-line"></i>
+    </div>
+
+    <script>
+        const questions = [
+            {
+                "question_number": 1,
+                "question": "1. Which number comes next in the sequence: 1, 4, 9, 16, 25, ...?",
+                "options": [
+                    { "text": "30", "value": 0 },
+                    { "text": "32", "value": 0 },
+                    { "text": "36", "value": 1 },
+                    { "text": "40", "value": 0 }
+                ],
+                "correct_value": 1
+            },
+            {
+                "question_number": 2,
+                "question": "2. If all 'flurbs' are 'glerbs', and some 'glerbs' are 'nerbs', what can be concluded?",
+                "options": [
+                    { "text": "All flurbs are nerbs.", "value": 0 },
+                    { "text": "Some flurbs are nerbs.", "value": 0 },
+                    { "text": "Some nerbs are glerbs.", "value": 1 },
+                    { "text": "All glerbs are flurbs.", "value": 0 }
+                ],
+                "correct_value": 1
+            },
+            {
+                "question_number": 3,
+                "question": "3. Which word is the odd one out: Apple, Orange, Banana, Potato, Grape?",
+                "options": [
+                    { "text": "Apple", "value": 0 },
+                    { "text": "Orange", "value": 0 },
+                    { "text": "Banana", "value": 0 },
+                    { "text": "Potato", "value": 1 },
+                    { "text": "Grape", "value": 0 }
+                ],
+                "correct_value": 1
+            },
+            {
+                "question_number": 4,
+                "question": "4. A is to B as 1 is to...?",
+                "options": [
+                    { "text": "2", "value": 1 },
+                    { "text": "A", "value": 0 },
+                    { "text": "B", "value": 0 },
+                    { "text": "1", "value": 0 }
+                ],
+                "correct_value": 1
+            },
+            {
+                "question_number": 5,
+                "question": "5. What is 15% of 200?",
+                "options": [
+                    { "text": "20", "value": 0 },
+                    { "text": "30", "value": 1 },
+                    { "text": "40", "value": 0 },
+                    { "text": "15", "value": 0 }
+                ],
+                "correct_value": 1
+            },
+            {
+                "question_number": 6,
+                "question": "6. If a clock strikes 5 at 5 seconds, how long will it take to strike 10?",
+                "options": [
+                    { "text": "10 seconds", "value": 0 },
+                    { "text": "9 seconds", "value": 0 },
+                    { "text": "11.25 seconds", "value": 1 },
+                    { "text": "12 seconds", "value": 0 }
+                ],
+                "correct_value": 1 // There are 4 intervals for 5 strikes (5s/4 = 1.25s per interval). For 10 strikes, there are 9 intervals (9 * 1.25s = 11.25s)
+            },
+            {
+                "question_number": 7,
+                "question": "7. Which of the following is not a prime number: 2, 7, 11, 15, 19?",
+                "options": [
+                    { "text": "2", "value": 0 },
+                    { "text": "7", "value": 0 },
+                    { "text": "11", "value": 0 },
+                    { "text": "15", "value": 1 },
+                    { "text": "19", "value": 0 }
+                ],
+                "correct_value": 1
+            },
+            {
+                "question_number": 8,
+                "question": "8. What is the next letter in the series: J, F, M, A, M, J, J, A, S, O, N, ...?",
+                "options": [
+                    { "text": "P", "value": 0 },
+                    { "text": "D", "value": 0 },
+                    { "text": "E", "value": 0 },
+                    { "text": "D (for December)", "value": 1 }
+                ],
+                "correct_value": 1 // Months of the year
+            },
+            {
+                "question_number": 9,
+                "question": "9. If 'CAT' is coded as '3120', and 'DOG' is coded as '4157', what is 'FISH' coded as?",
+                "options": [
+                    { "text": "69198", "value": 1 },
+                    { "text": "710189", "value": 0 },
+                    { "text": "58177", "value": 0 },
+                    { "text": "69208", "value": 0 }
+                ],
+                "correct_value": 1 // Letter's position in alphabet: F=6, I=9, S=19, H=8
+            },
+            {
+                "question_number": 10,
+                "question": "10. Which geometric shape has no sides?",
+                "options": [
+                    { "text": "Triangle", "value": 0 },
+                    { "text": "Square", "value": 0 },
+                    { "text": "Circle", "value": 1 },
+                    { "text": "Rectangle", "value": 0 }
+                ],
+                "correct_value": 1
+            },
+            {
+                "question_number": 11,
+                "question": "11. Find the missing number: 7, 14, ?, 28, 35",
+                "options": [
+                    { "text": "20", "value": 0 },
+                    { "text": "21", "value": 1 },
+                    { "text": "22", "value": 0 },
+                    { "text": "24", "value": 0 }
+                ],
+                "correct_value": 1
+            },
+            {
+                "question_number": 12,
+                "question": "12. What is the capital of Australia?",
+                "options": [
+                    { "text": "Sydney", "value": 0 },
+                    { "text": "Melbourne", "value": 0 },
+                    { "text": "Canberra", "value": 1 },
+                    { "text": "Perth", "value": 0 }
+                ],
+                "correct_value": 1
+            },
+            {
+                "question_number": 13,
+                "question": "13. Which of these is a synonym for 'benevolent'?",
+                "options": [
+                    { "text": "Cruel", "value": 0 },
+                    { "text": "Kind", "value": 1 },
+                    { "text": "Selfish", "value": 0 },
+                    { "text": "Mischievous", "value": 0 }
+                ],
+                "correct_value": 1
+            },
+            {
+                "question_number": 14,
+                "question": "14. If you rearrange the letters 'CIFAIPC', what famous ocean would you get?",
+                "options": [
+                    { "text": "Atlantic", "value": 0 },
+                    { "text": "Indian", "value": 0 },
+                    { "text": "Pacific", "value": 1 },
+                    { "text": "Arctic", "value": 0 }
+                ],
+                "correct_value": 1
+            },
+            {
+                "question_number": 15,
+                "question": "15. Mary is twice as old as her brother, John. In 5 years, Mary will be 15. How old is John now?",
+                "options": [
+                    { "text": "5", "value": 1 },
+                    { "text": "10", "value": 0 },
+                    { "text": "7.5", "value": 0 },
+                    { "text": "12.5", "value": 0 }
+                ],
+                "correct_value": 1 // Mary is 10 now, John is 5 now
+            },
+            {
+                "question_number": 16,
+                "question": "16. Which of these is a gas at room temperature?",
+                "options": [
+                    { "text": "Water", "value": 0 },
+                    { "text": "Iron", "value": 0 },
+                    { "text": "Oxygen", "value": 1 },
+                    { "text": "Mercury", "value": 0 }
+                ],
+                "correct_value": 1
+            },
+            {
+                "question_number": 17,
+                "question": "17. What is the product of 12 and 8?",
+                "options": [
+                    { "text": "96", "value": 1 },
+                    { "text": "20", "value": 0 },
+                    { "text": "4", "value": 0 },
+                    { "text": "100", "value": 0 }
+                ],
+                "correct_value": 1
+            },
+            {
+                "question_number": 18,
+                "question": "18. If a full circle is 360 degrees, what is a quarter of a circle in degrees?",
+                "options": [
+                    { "text": "45", "value": 0 },
+                    { "text": "90", "value": 1 },
+                    { "text": "180", "value": 0 },
+                    { "text": "360", "value": 0 }
+                ],
+                "correct_value": 1
+            },
+            {
+                "question_number": 19,
+                "question": "19. Which animal is known for its excellent memory?",
+                "options": [
+                    { "text": "Dog", "value": 0 },
+                    { "text": "Cat", "value": 0 },
+                    { "text": "Elephant", "value": 1 },
+                    { "text": "Rabbit", "value": 0 }
+                ],
+                "correct_value": 1
+            },
+            {
+                "question_number": 20,
+                "question": "20. What is the chemical symbol for gold?",
+                "options": [
+                    { "text": "Ag", "value": 0 },
+                    { "text": "Fe", "value": 0 },
+                    { "text": "Au", "value": 1 },
+                    { "text": "Hg", "value": 0 }
+                ],
+                "correct_value": 1
+            },
+            {
+                "question_number": 21,
+                "question": "21. A car travels at 60 miles per hour. How far does it travel in 30 minutes?",
+                "options": [
+                    { "text": "30 miles", "value": 1 },
+                    { "text": "60 miles", "value": 0 },
+                    { "text": "90 miles", "value": 0 },
+                    { "text": "120 miles", "value": 0 }
+                ],
+                "correct_value": 1
+            },
+            {
+                "question_number": 22,
+                "question": "22. Which planet is known as the 'Red Planet'?",
+                "options": [
+                    { "text": "Venus", "value": 0 },
+                    { "text": "Mars", "value": 1 },
+                    { "text": "Jupiter", "value": 0 },
+                    { "text": "Saturn", "value": 0 }
+                ],
+                "correct_value": 1
+            },
+            {
+                "question_number": 23,
+                "question": "23. If you have 3 apples and you take away 2, how many do you have?",
+                "options": [
+                    { "text": "1", "value": 0 },
+                    { "text": "2", "value": 1 },
+                    { "text": "3", "value": 0 },
+                    { "text": "5", "value": 0 }
+                ],
+                "correct_value": 1 // You 'take away' for yourself, so you have 2. Tricky!
+            },
+            {
+                "question_number": 24,
+                "question": "24. What is the largest ocean on Earth?",
+                "options": [
+                    { "text": "Atlantic Ocean", "value": 0 },
+                    { "text": "Indian Ocean", "value": 0 },
+                    { "text": "Arctic Ocean", "value": 0 },
+                    { "text": "Pacific Ocean", "value": 1 }
+                ],
+                "correct_value": 1
+            },
+            {
+                "question_number": 25,
+                "question": "25. Which instrument is used to measure earthquakes?",
+                "options": [
+                    { "text": "Barometer", "value": 0 },
+                    { "text": "Anemometer", "value": 0 },
+                    { "text": "Seismograph", "value": 1 },
+                    { "text": "Thermometer", "value": 0 }
+                ],
+                "correct_value": 1
+            },
+            {
+                "question_number": 26,
+                "question": "26. What is the square root of 144?",
+                "options": [
+                    { "text": "10", "value": 0 },
+                    { "text": "12", "value": 1 },
+                    { "text": "14", "value": 0 },
+                    { "text": "16", "value": 0 }
+                ],
+                "correct_value": 1
+            },
+            {
+                "question_number": 27,
+                "question": "27. Which sense is not involved in tasting food?",
+                "options": [
+                    { "text": "Smell", "value": 0 },
+                    { "text": "Touch", "value": 0 },
+                    { "text": "Hearing", "value": 1 },
+                    { "text": "Sight", "value": 0 }
+                ],
+                "correct_value": 1 // While you can hear crunch, it's not directly involved in the taste itself.
+            },
+            {
+                "question_number": 28,
+                "question": "28. What is the name of the longest river in the world?",
+                "options": [
+                    { "text": "Amazon River", "value": 0 },
+                    { "text": "Nile River", "value": 1 },
+                    { "text": "Mississippi River", "value": 0 },
+                    { "text": "Yangtze River", "value": 0 }
+                ],
+                "correct_value": 1
+            },
+            {
+                "question_number": 29,
+                "question": "29. What is the smallest prime number?",
+                "options": [
+                    { "text": "0", "value": 0 },
+                    { "text": "1", "value": 0 },
+                    { "text": "2", "value": 1 },
+                    { "text": "3", "value": 0 }
+                ],
+                "correct_value": 1
+            },
+            {
+                "question_number": 30,
+                "question": "30. Which famous scientist developed the theory of relativity?",
+                "options": [
+                    { "text": "Isaac Newton", "value": 0 },
+                    { "text": "Galileo Galilei", "value": 0 },
+                    { "text": "Albert Einstein", "value": 1 },
+                    { "text": "Stephen Hawking", "value": 0 }
+                ],
+                "correct_value": 1
+            },
+            {
+                "question_number": 31,
+                "question": "31. If 'NORTH' is written as 'SUGUR', how would 'SOUTH' be written in the same code?",
+                "options": [
+                    { "text": "VUJUH", "value": 0 },
+                    { "text": "VHJUT", "value": 1 },
+                    { "text": "UHVJ T", "value": 0 },
+                    { "text": "WHJUV", "value": 0 }
+                ],
+                "correct_value": 1 // Each letter shifted by +5 (N->S, O->U, R->G (wrapping), T->U, H->R)
+            },
+            {
+                "question_number": 32,
+                "question": "32. What is the chemical formula for water?",
+                "options": [
+                    { "text": "CO2", "value": 0 },
+                    { "text": "H2O", "value": 1 },
+                    { "text": "O2", "value": 0 },
+                    { "text": "NaCl", "value": 0 }
+                ],
+                "correct_value": 1
+            },
+            {
+                "question_number": 33,
+                "question": "33. Which planet is closest to the Sun?",
+                "options": [
+                    { "text": "Earth", "value": 0 },
+                    { "text": "Mars", "value": 0 },
+                    { "text": "Mercury", "value": 1 },
+                    { "text": "Venus", "value": 0 }
+                ],
+                "correct_value": 1
+            },
+            {
+                "question_number": 34,
+                "question": "34. What is the name of the process by which plants make their food?",
+                "options": [
+                    { "text": "Respiration", "value": 0 },
+                    { "text": "Digestion", "value": 0 },
+                    { "text": "Photosynthesis", "value": 1 },
+                    { "text": "Fermentation", "value": 0 }
+                ],
+                "correct_value": 1
+            },
+            {
+                "question_number": 35,
+                "question": "35. If a bicycle wheel has a diameter of 28 inches, what is its circumference (use π ≈ 22/7)?",
+                "options": [
+                    { "text": "44 inches", "value": 0 },
+                    { "text": "88 inches", "value": 1 },
+                    { "text": "56 inches", "value": 0 },
+                    { "text": "112 inches", "value": 0 }
+                ],
+                "correct_value": 1 // C = πd = (22/7) * 28 = 22 * 4 = 88 inches
+            },
+            {
+                "question_number": 36,
+                "question": "36. Which continent is the largest by land area?",
+                "options": [
+                    { "text": "Africa", "value": 0 },
+                    { "text": "North America", "value": 0 },
+                    { "text": "Asia", "value": 1 },
+                    { "text": "Europe", "value": 0 }
+                ],
+                "correct_value": 1
+            },
+            {
+                "question_number": 37,
+                "question": "37. What is the primary function of red blood cells?",
+                "options": [
+                    { "text": "Fighting infection", "value": 0 },
+                    { "text": "Clotting blood", "value": 0 },
+                    { "text": "Transporting oxygen", "value": 1 },
+                    { "text": "Producing antibodies", "value": 0 }
+                ],
+                "correct_value": 1
+            },
+            {
+                "question_number": 38,
+                "question": "38. Which of these numbers is NOT a factor of 48: 2, 3, 6, 9, 12?",
+                "options": [
+                    { "text": "2", "value": 0 },
+                    { "text": "3", "value": 0 },
+                    { "text": "6", "value": 0 },
+                    { "text": "9", "value": 1 },
+                    { "text": "12", "value": 0 }
+                ],
+                "correct_value": 1
+            },
+            {
+                "question_number": 39,
+                "question": "39. What is the name of the galaxy our solar system is a part of?",
+                "options": [
+                    { "text": "Andromeda", "value": 0 },
+                    { "text": "Triangulum", "value": 0 },
+                    { "text": "Whirlpool", "value": 0 },
+                    { "text": "Milky Way", "value": 1 }
+                ],
+                "correct_value": 1
+            },
+            {
+                "question_number": 40,
+                "question": "40. If a baker sells 12 cakes a day, and each cake uses 0.5 kg of flour, how much flour does he use in 5 days?",
+                "options": [
+                    { "text": "30 kg", "value": 1 },
+                    { "text": "60 kg", "value": 0 },
+                    { "text": "12 kg", "value": 0 },
+                    { "text": "10 kg", "value": 0 }
+                ],
+                "correct_value": 1 // 12 * 0.5 = 6 kg/day. 6 * 5 = 30 kg.
+            },
+            {
+                "question_number": 41,
+                "question": "41. Which of the following is an amphibian?",
+                "options": [
+                    { "text": "Snake", "value": 0 },
+                    { "text": "Turtle", "value": 0 },
+                    { "text": "Frog", "value": 1 },
+                    { "text": "Fish", "value": 0 }
+                ],
+                "correct_value": 1
+            },
+            {
+                "question_number": 42,
+                "question": "42. What is the longest bone in the human body?",
+                "options": [
+                    { "text": "Tibia", "value": 0 },
+                    { "text": "Femur", "value": 1 },
+                    { "text": "Humerus", "value": 0 },
+                    { "text": "Fibula", "value": 0 }
+                ],
+                "correct_value": 1
+            },
+            {
+                "question_number": 43,
+                "question": "43. If a train leaves station A at 10:00 AM and arrives at station B, 300 miles away, at 2:00 PM, what is its average speed?",
+                "options": [
+                    { "text": "60 mph", "value": 0 },
+                    { "text": "75 mph", "value": 1 },
+                    { "text": "80 mph", "value": 0 },
+                    { "text": "100 mph", "value": 0 }
+                ],
+                "correct_value": 1 // 4 hours travel time. 300 miles / 4 hours = 75 mph.
+            },
+            {
+                "question_number": 44,
+                "question": "44. Which ancient wonder was a giant lighthouse?",
+                "options": [
+                    { "text": "Pyramids of Giza", "value": 0 },
+                    { "text": "Hanging Gardens of Babylon", "value": 0 },
+                    { "text": "Colossus of Rhodes", "value": 0 },
+                    { "text": "Lighthouse of Alexandria", "value": 1 }
+                ],
+                "correct_value": 1
+            },
+            {
+                "question_number": 45,
+                "question": "45. What is the collective noun for a group of lions?",
+                "options": [
+                    { "text": "Herd", "value": 0 },
+                    { "text": "Pack", "value": 0 },
+                    { "text": "Pride", "value": 1 },
+                    { "text": "Flock", "value": 0 }
+                ],
+                "correct_value": 1
+            },
+            {
+                "question_number": 46,
+                "question": "46. If a square has an area of 64 square units, what is the length of one of its sides?",
+                "options": [
+                    { "text": "4 units", "value": 0 },
+                    { "text": "8 units", "value": 1 },
+                    { "text": "16 units", "value": 0 },
+                    { "text": "32 units", "value": 0 }
+                ],
+                "correct_value": 1
+            },
+            {
+                "question_number": 47,
+                "question": "47. Which literary device involves a contrast between what is said and what is actually meant?",
+                "options": [
+                    { "text": "Metaphor", "value": 0 },
+                    { "text": "Simile", "value": 0 },
+                    { "text": "Irony", "value": 1 },
+                    { "text": "Alliteration", "value": 0 }
+                ],
+                "correct_value": 1
+            },
+            {
+                "question_number": 48,
+                "question": "48. What is the most common element in the Earth's crust?",
+                "options": [
+                    { "text": "Iron", "value": 0 },
+                    { "text": "Aluminum", "value": 0 },
+                    { "text": "Oxygen", "value": 1 },
+                    { "text": "Silicon", "value": 0 }
+                ],
+                "correct_value": 1
+            },
+            {
+                "question_number": 49,
+                "question": "49. If two men can build a wall in 4 hours, how long would it take four men to build the same wall?",
+                "options": [
+                    { "text": "1 hour", "value": 0 },
+                    { "text": "2 hours", "value": 1 },
+                    { "text": "3 hours", "value": 0 },
+                    { "text": "4 hours", "value": 0 }
+                ],
+                "correct_value": 1 // (2 men * 4 hours) / 4 men = 2 hours
+            },
+            {
+                "question_number": 50,
+                "question": "50. Which of these is a musical instrument with strings?",
+                "options": [
+                    { "text": "Trumpet", "value": 0 },
+                    { "text": "Drums", "value": 0 },
+                    { "text": "Guitar", "value": 1 },
+                    { "text": "Flute", "value": 0 }
+                ],
+                "correct_value": 1
+            }
+        ];
+
+        let currentQuestionIndex = 0;
+        let userAnswers = {}; // Stores chosen option value for each question index
+        let correctAnswersCount = 0; // To track how many questions the user got right
+
+        const quizContainer = document.getElementById('quiz');
+        const progressBar = document.getElementById('quiz-progress');
+        const nextButton = document.getElementById('next-btn');
+        const prevButton = document.getElementById('prev-btn');
+        const submitButton = document.getElementById('submit-btn');
+        const resultContainer = document.getElementById('result-container');
+        const scoreElement = document.getElementById('score');
+        const scoreProgressBar = document.getElementById('score-progress');
+        const resultMessageElement = document.getElementById('result-message');
+        const restartButton = document.getElementById('restart-btn');
+        const fabButton = document.getElementById('fab');
+
+        function loadQuestion() {
+            quizContainer.style.opacity = 0;
+
+            setTimeout(() => {
+                const questionData = questions[currentQuestionIndex];
+                quizContainer.innerHTML = `
+                    <div class="question-counter">Question ${currentQuestionIndex + 1} of ${questions.length}</div>
+                    <div class="question">${questionData.question}</div>
+                    <div class="options">
+                        ${questionData.options.map((option, index) => `
+                            <div class="option">
+                                <input type="radio" id="option-${currentQuestionIndex}-${index}" name="question-${currentQuestionIndex}" value="${option.value}" data-correct="${option.value === questionData.correct_value ? 'true' : 'false'}"
+                                    ${userAnswers[currentQuestionIndex] !== undefined && userAnswers[currentQuestionIndex].value == option.value ? 'checked' : ''}>
+                                <label for="option-${currentQuestionIndex}-${index}">
+                                    <span class="custom-radio"></span>
+                                    <span class="option-text">${option.text}</span>
+                                </label>
+                            </div>
+                        `).join('')}
+                    </div>
+                `;
+                quizContainer.querySelectorAll('.option input').forEach(input => {
+                    input.addEventListener('change', (event) => {
+                        userAnswers[currentQuestionIndex] = {
+                            value: parseInt(event.target.value),
+                            isCorrect: event.target.dataset.correct === 'true'
+                        };
+                    });
+                });
+
+                updateProgressBar();
+                updateNavigationButtons();
+                quizContainer.style.opacity = 1;
+            }, 100);
+        }
+
+        function updateProgressBar() {
+            const progress = ((currentQuestionIndex + 1) / questions.length) * 100;
+            progressBar.style.width = `${progress}%`;
+        }
+
+        function updateNavigationButtons() {
+            prevButton.disabled = currentQuestionIndex === 0;
+            nextButton.style.display = currentQuestionIndex === questions.length - 1 ? 'none' : 'flex';
+            submitButton.style.display = currentQuestionIndex === questions.length - 1 ? 'flex' : 'none';
+        }
+
+        function calculateIQAndDisplayResult() {
+            correctAnswersCount = 0;
+            for (let i = 0; i < questions.length; i++) {
+                if (userAnswers[i] && userAnswers[i].isCorrect) {
+                    correctAnswersCount++;
+                }
+            }
+
+            // Simple IQ estimation based on number of correct answers
+            // This is a simplified model and does not reflect a clinical IQ test.
+            // A typical IQ test would have a standardized mean of 100 and std dev of 15.
+            // For 50 questions, each correct answer could roughly correspond to 2-3 IQ points.
+            let estimatedIQ;
+            const percentageCorrect = (correctAnswersCount / questions.length) * 100;
+
+            if (percentageCorrect < 20) {
+                estimatedIQ = 70; // Below average
+            } else if (percentageCorrect < 40) {
+                estimatedIQ = 85; // Low average
+            } else if (percentageCorrect < 60) {
+                estimatedIQ = 100; // Average
+            } else if (percentageCorrect < 80) {
+                estimatedIQ = 115; // Above average
+            } else if (percentageCorrect < 90) {
+                estimatedIQ = 130; // Gifted
+            } else {
+                estimatedIQ = 145; // Very Gifted
+            }
+
+            scoreElement.textContent = estimatedIQ;
+            scoreProgressBar.style.width = `${(estimatedIQ - 70) / 75 * 100}%`; // Scale for display from 70 to 145
+
+            let message = "";
+            if (estimatedIQ < 85) {
+                message = "Your estimated IQ is in the **Below Average** range. This quiz is a general indicator and doesn't measure all forms of intelligence. Keep challenging your mind with new learning experiences!";
+            } else if (estimatedIQ < 115) {
+                message = "Your estimated IQ is in the **Average** range. This is a common score, indicating solid cognitive abilities. Continue to engage in stimulating activities to maintain and enhance your mental sharpness.";
+            } else if (estimatedIQ < 130) {
+                message = "Your estimated IQ is in the **Above Average** range. You demonstrate strong cognitive skills and problem-solving abilities. Keep nurturing your intellectual curiosity!";
+            } else {
+                message = "Your estimated IQ is in the **Gifted** range. You possess exceptional intellectual capabilities. Continue to challenge yourself with complex problems and explore new areas of knowledge!";
+            }
+            resultMessageElement.innerHTML = message; // Use innerHTML for bold tags
+
+            quizContainer.style.display = 'none';
+            prevButton.style.display = 'none';
+            nextButton.style.display = 'none';
+            submitButton.style.display = 'none';
+            resultContainer.style.display = 'block';
+            fabButton.style.display = 'none';
+        }
+
+        function resetQuiz() {
+            currentQuestionIndex = 0;
+            userAnswers = {};
+            correctAnswersCount = 0;
+            quizContainer.style.display = 'block';
+            resultContainer.style.display = 'none';
+            fabButton.style.display = 'flex';
+            loadQuestion();
+        }
+
+        nextButton.addEventListener('click', () => {
+            if (userAnswers[currentQuestionIndex] === undefined) {
+                alert("Please select an option before proceeding!");
+                return;
+            }
+            if (currentQuestionIndex < questions.length - 1) {
+                currentQuestionIndex++;
+                loadQuestion();
+            }
+        });
+
+        prevButton.addEventListener('click', () => {
+            if (currentQuestionIndex > 0) {
+                currentQuestionIndex--;
+                loadQuestion();
+            }
+        });
+
+        submitButton.addEventListener('click', () => {
+            if (userAnswers[currentQuestionIndex] === undefined) {
+                alert("Please select an option before seeing your results!");
+                return;
+            }
+            calculateIQAndDisplayResult();
+        });
+
+        restartButton.addEventListener('click', resetQuiz);
+
+        fabButton.addEventListener('click', () => {
+            if (Object.keys(userAnswers).length > 0) {
+                calculateIQAndDisplayResult();
+            } else {
+                alert("Please answer at least one question to see your score estimate!");
+            }
+        });
+
+        loadQuestion();
+    </script>
+</body>
+</html>
