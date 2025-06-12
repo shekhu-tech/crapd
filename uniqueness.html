@@ -1,0 +1,1317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What is My Personality Type? (Alpha, Beta, Gamma, Average) | crapd.in</title>
+    <meta name="description" content="Discover your personality type with our 50-question quiz. Explore if you align with Alpha, Beta, Gamma, or Average traits.">
+    <meta name="keywords" content="personality test, alpha personality, beta personality, gamma personality, average personality, psychological quiz, self-discovery, 50 questions, crapd.in">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://crapd.in/personality-type-quiz.html">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://crapd.in/personality-type-quiz.html">
+    <meta property="og:title" content="What is My Personality Type? (Alpha, Beta, Gamma, Average)">
+    <meta property="og:description" content="Discover your personality type with our 50-question quiz. Explore if you align with Alpha, Beta, Gamma, or Average traits.">
+    <meta property="og:image" content="https://crapd.in/images/personality-quiz-social.jpg">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://crapd.in/personality-type-quiz.html">
+    <meta property="twitter:title" content="What is My Personality Type? (Alpha, Beta, Gamma, Average)">
+    <meta property="twitter:description" content="Discover your personality type with our 50-question quiz. Explore if you align with Alpha, Beta, Gamma, or Average traits.">
+    <meta property="twitter:image" content="https://crapd.in/images/personality-quiz-social.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #1A237E; /* Deep Indigo */
+            --secondary-color: #0D47A1; /* Darker Blue */
+            --accent-color: #FF8F00; /* Vibrant Dark Orange */
+            --light-bg: #E3F2FD; /* Light Blue */
+            --dark-text: #263238; /* Dark Charcoal */
+            --light-text: #546E7A; /* Muted Blue-Grey */
+            --white: #ffffff;
+            --shadow: 0 8px 25px rgba(0, 0, 0, 0.2); /* Stronger shadow */
+            --button-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--light-bg); /* Soft light blue */
+            color: var(--dark-text);
+            line-height: 1.7;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 25px;
+            flex-grow: 1; /* Allow container to grow */
+        }
+
+        header {
+            background: linear-gradient(145deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 3rem 0 2.5rem; /* More vertical padding */
+            text-align: center;
+            border-radius: 0 0 40px 40px; /* More pronounced border-radius */
+            box-shadow: var(--shadow);
+            margin-bottom: 3rem; /* Increased margin */
+            position: relative;
+            overflow: hidden;
+            border-bottom: 5px solid var(--accent-color); /* Accent line */
+        }
+
+        header::before {
+            content: "";
+            position: absolute;
+            top: -60%;
+            left: -60%;
+            width: 220%;
+            height: 220%;
+            background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 70%); /* More visible gradient */
+            transform: rotate(-25deg);
+        }
+
+        h1 {
+            font-size: 3rem; /* Larger font size */
+            margin-bottom: 0.8rem;
+            position: relative;
+            letter-spacing: 1px; /* More spacing */
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2); /* Text shadow */
+        }
+
+        .subtitle {
+            font-size: 1.3rem; /* Larger subtitle */
+            opacity: 0.98;
+            position: relative;
+            font-weight: 400;
+        }
+
+        .progress-container {
+            width: 100%;
+            background-color: #BBDEFB; /* Light Blue 200 */
+            border-radius: 15px; /* More rounded */
+            margin: 2.5rem 0;
+            height: 20px; /* Taller progress bar */
+            overflow: hidden;
+            box-shadow: inset 0 2px 5px rgba(0,0,0,0.15);
+        }
+
+        .progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, var(--accent-color), var(--primary-color));
+            width: 0%;
+            transition: width 0.6s ease-out;
+            border-radius: 15px;
+        }
+
+        .quiz-container {
+            background-color: var(--white);
+            border-radius: 25px; /* More rounded */
+            box-shadow: var(--shadow);
+            padding: 3rem; /* More padding */
+            margin-bottom: 3rem;
+            position: relative;
+            transition: opacity 0.4s ease-out; /* Slower transition for smoother fade */
+        }
+
+        .question-counter {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 0.7rem 1.4rem; /* More padding */
+            border-radius: 30px; /* More rounded */
+            font-weight: 500;
+            display: inline-block;
+            margin-bottom: 1.8rem; /* More margin */
+            font-size: 1.05rem; /* Slightly larger text */
+            animation: fadeInScale 0.5s ease-out;
+            box-shadow: var(--button-shadow);
+        }
+
+        @keyframes fadeInScale {
+            from { opacity: 0; transform: scale(0.8); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        .question {
+            font-size: 1.6rem; /* Larger question font */
+            font-weight: 600;
+            margin-bottom: 2.5rem; /* More margin */
+            color: var(--secondary-color);
+            line-height: 1.5;
+        }
+
+        .options {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px; /* More gap */
+        }
+
+        .option {
+            display: flex;
+            align-items: center;
+            padding: 15px 20px; /* More padding */
+            background-color: #E0F2F7; /* Lighter background for options */
+            border-radius: 12px; /* More rounded */
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            opacity: 1;
+            animation: fadeInScale 0.3s ease forwards;
+            font-size: 1.05rem; /* Slightly larger option text */
+        }
+
+        .option:hover {
+            background-color: #BBDEFB; /* Light Blue 200 on hover */
+            transform: translateY(-3px); /* More pronounced lift */
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15); /* Stronger shadow on hover */
+            border-color: var(--accent-color); /* Accent border on hover */
+        }
+
+        .option input {
+            display: none;
+        }
+
+        .option label {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            cursor: pointer;
+            position: relative;
+            padding-left: 40px; /* More padding for radio button */
+        }
+
+        .custom-radio {
+            position: absolute;
+            left: 0;
+            height: 25px; /* Larger radio button */
+            width: 25px; /* Larger radio button */
+            background-color: #CFD8DC; /* Light Grey Blue */
+            border-radius: 50%;
+            border: 3px solid var(--light-text); /* Thicker border */
+            transition: all 0.3s ease;
+            box-shadow: inset 0 1px 3px rgba(0,0,0,0.2);
+        }
+
+        .option input:checked ~ .custom-radio {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+            transform: scale(1.05); /* Slight scale on checked */
+            box-shadow: inset 0 1px 3px rgba(0,0,0,0.3), 0 0 0 4px var(--accent-color); /* Accent glow on checked */
+        }
+
+        .custom-radio::after {
+            content: "";
+            position: absolute;
+            display: none;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 12px; /* Larger inner circle */
+            height: 12px; /* Larger inner circle */
+            border-radius: 50%;
+            background: white;
+        }
+
+        .option input:checked ~ .custom-radio::after {
+            display: block;
+        }
+
+        .option-text {
+            margin-left: 15px; /* More margin */
+            font-size: 1.1rem; /* Slightly larger text */
+            color: var(--dark-text);
+            font-weight: 500;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 3.5rem; /* More margin */
+            gap: 20px; /* Larger gap between buttons */
+        }
+
+        .btn {
+            padding: 16px 35px; /* More padding */
+            border: none;
+            border-radius: 12px; /* More rounded */
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); /* Smoother transition */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px; /* Larger gap for icon */
+            font-size: 1.15rem; /* Larger font */
+            flex-grow: 1;
+            box-shadow: var(--button-shadow);
+            text-transform: uppercase; /* Uppercase text */
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: white;
+            border: 2px solid var(--primary-color);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+            border-color: var(--secondary-color);
+        }
+
+        .btn-secondary {
+            background-color: #BBDEFB; /* Light Blue 200 */
+            color: var(--dark-text);
+            border: 2px solid #BBDEFB;
+        }
+
+        .btn-secondary:hover {
+            background-color: #90CAF9; /* Light Blue 300 */
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+            border-color: #90CAF9;
+        }
+
+        .result-container {
+            background-color: var(--white);
+            border-radius: 25px;
+            box-shadow: var(--shadow);
+            padding: 3.5rem; /* More padding */
+            text-align: center;
+            display: none;
+            animation: fadeIn 0.8s ease-out; /* Slower fade in */
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .result-title {
+            color: var(--primary-color);
+            margin-bottom: 1.8rem;
+            font-size: 2.8rem; /* Larger font */
+            letter-spacing: 0.7px;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+        }
+
+        .score {
+            font-size: 4.5rem; /* Much larger score font */
+            font-weight: 700;
+            color: var(--accent-color);
+            margin: 2rem 0; /* More margin */
+            line-height: 1;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.2);
+        }
+
+        .score-bar {
+            height: 40px; /* Taller score bar */
+            background-color: #BBDEFB;
+            border-radius: 20px; /* More rounded */
+            margin: 3rem auto; /* More margin */
+            max-width: 650px; /* Wider bar */
+            overflow: hidden;
+            position: relative;
+            box-shadow: inset 0 3px 8px rgba(0,0,0,0.15);
+        }
+
+        .score-progress {
+            height: 100%;
+            background: linear-gradient(90deg, #FFD54F, var(--accent-color)); /* Lighter accent to accent */
+            width: 0%;
+            transition: width 1.5s ease-out; /* Slower transition */
+            border-radius: 20px;
+        }
+
+        .score-labels {
+            display: flex;
+            justify-content: space-between;
+            max-width: 650px;
+            margin: 1rem auto 0;
+            font-size: 1rem; /* Slightly larger text */
+            color: var(--light-text);
+            font-weight: 500;
+            padding: 0 10px; /* Padding for labels */
+        }
+
+        .result-message {
+            margin-top: 3rem;
+            font-size: 1.3rem; /* Larger message font */
+            line-height: 1.9;
+            color: var(--dark-text);
+            padding: 0 2rem;
+            font-weight: 400;
+        }
+
+        .restart-btn {
+            margin-top: 3.5rem;
+            background-color: var(--accent-color);
+            color: var(--primary-color);
+            font-weight: 700;
+            border: 2px solid var(--accent-color);
+        }
+
+        .restart-btn:hover {
+            background-color: #FB8C00; /* Slightly darker accent */
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+            border-color: #FB8C00;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+
+            header {
+                padding: 2.5rem 0;
+                border-radius: 0;
+            }
+
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            .subtitle {
+                font-size: 1.1rem;
+            }
+
+            .quiz-container, .result-container {
+                padding: 2.5rem;
+                border-radius: 20px;
+            }
+
+            .question {
+                font-size: 1.3rem;
+                margin-bottom: 2rem;
+            }
+
+            .option {
+                padding: 12px 15px;
+                font-size: 1rem;
+            }
+
+            .option label {
+                padding-left: 35px;
+            }
+
+            .custom-radio {
+                height: 22px;
+                width: 22px;
+                border-width: 2px;
+            }
+
+            .custom-radio::after {
+                width: 10px;
+                height: 10px;
+            }
+
+            .option-text {
+                margin-left: 10px;
+                font-size: 1rem;
+            }
+
+            .navigation {
+                margin-top: 3rem;
+                gap: 15px;
+            }
+
+            .btn {
+                padding: 14px 30px;
+                font-size: 1.05rem;
+                gap: 10px;
+            }
+
+            .result-title {
+                font-size: 2.2rem;
+            }
+
+            .score {
+                font-size: 3.8rem;
+                margin: 1.8rem 0;
+            }
+
+            .score-bar {
+                height: 35px;
+                margin: 2.5rem auto;
+            }
+
+            .score-labels {
+                font-size: 0.85rem;
+            }
+
+            .result-message {
+                margin-top: 2.5rem;
+                font-size: 1.1rem;
+                padding: 0 1rem;
+            }
+
+            .restart-btn {
+                margin-top: 3rem;
+            }
+
+            .fab {
+                width: 55px;
+                height: 55px;
+                font-size: 1.5rem;
+                bottom: 25px;
+                right: 25px;
+            }
+
+            .floating-home-button {
+                display: none; /* Hide floating home button on smaller screens for simplicity */
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .subtitle {
+                font-size: 0.95rem;
+            }
+
+            .quiz-container, .result-container {
+                padding: 2rem;
+                border-radius: 18px;
+            }
+
+            .question {
+                font-size: 1.1rem;
+                margin-bottom: 1.8rem;
+            }
+
+            .options {
+                gap: 10px;
+            }
+
+            .option {
+                padding: 10px 12px;
+                font-size: 0.95rem;
+            }
+
+            .option label {
+                padding-left: 30px;
+            }
+
+            .custom-radio {
+                height: 20px;
+                width: 20px;
+            }
+
+            .custom-radio::after {
+                width: 8px;
+                height: 8px;
+            }
+
+            .option-text {
+                margin-left: 8px;
+                font-size: 0.9rem;
+            }
+
+            .navigation {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .btn {
+                width: 100%;
+                padding: 10px 20px;
+                font-size: 1rem;
+            }
+
+            .result-title {
+                font-size: 1.8rem;
+            }
+
+            .score {
+                font-size: 3.2rem;
+            }
+
+            .result-message {
+                font-size: 1rem;
+                padding: 0;
+            }
+
+            .restart-btn {
+                margin-top: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><i class="fas fa-brain"></i> What's My Personality Type?</h1>
+            <p class="subtitle">Am I Average, Alpha, Gamma, or Beta?</p>
+        </div>
+    </header>
+
+    <div class="container">
+
+        <div class="progress-container">
+            <div class="progress-bar" id="quiz-progress"></div>
+        </div>
+
+        <div id="quiz" class="quiz-container"></div>
+
+        <div class="navigation">
+            <button class="btn btn-secondary" id="prev-btn" disabled>
+                <i class="fas fa-arrow-left"></i> Previous
+            </button>
+            <button class="btn btn-primary" id="next-btn">
+                Next <i class="fas fa-arrow-right"></i>
+            </button>
+            <button class="btn btn-primary" id="submit-btn" style="display: none;">
+                Reveal My Type <i class="fas fa-mask"></i>
+            </button>
+        </div>
+
+        <div class="loader" id="loader"></div>
+
+        <div class="result-container" id="result-container">
+            <h2 class="result-title">Your Personality Profile</h2>
+            <div class="score" id="personality-type"></div>
+
+            <div class="score-bar">
+                <div class="score-progress" id="score-progress"></div>
+            </div>
+
+            <div class="score-labels">
+                <span>Beta</span>
+                <span>Average</span>
+                <span>Gamma</span>
+                <span>Alpha</span>
+            </div>
+
+            <div class="result-message" id="result-message"></div>
+
+            <button class="btn restart-btn" id="restart-btn">
+                <i class="fas fa-redo"></i> Retake Test
+            </button>
+        </div>
+    </div>
+
+    
+
+    <div class="fab" id="fab" title="See Your Current Personality Estimate">
+        <i class="fas fa-user-circle"></i>
+    </div>
+
+    <script>
+        const questions = [
+            {
+                "question_number": 1,
+                "question": "1. When faced with a new group setting (social, work, etc.), what is your typical inclination?",
+                "options": [
+                    { "text": "I observe quietly and wait for others to initiate.", "value": 2 }, // Beta
+                    { "text": "I try to blend in and support whoever takes the lead.", "value": 3 }, // Average/Beta
+                    { "text": "I naturally step forward to introduce myself and facilitate introductions.", "value": 7 }, // Alpha
+                    { "text": "I might stay somewhat aloof, preferring to connect with a select few later.", "value": 5 } // Gamma
+                ]
+            },
+            {
+                "question_number": 2,
+                "question": "2. How do you approach decision-making in a team or group project?",
+                "options": [
+                    { "text": "I prefer to follow the consensus or the designated leader's decision.", "value": 2 }, // Beta
+                    { "text": "I contribute my ideas, but I'm flexible if others have stronger arguments.", "value": 4 }, // Average
+                    { "text": "I take initiative, propose solutions, and guide the group towards a decision.", "value": 7 }, // Alpha
+                    { "text": "I value innovative solutions and might challenge traditional approaches, even if it creates friction.", "value": 6 } // Gamma
+                ]
+            },
+            {
+                "question_number": 3,
+                "question": "3. When a conflict arises within a group, what is your first instinct?",
+                "options": [
+                    { "text": "I try to de-escalate and find common ground, avoiding direct confrontation.", "value": 3 }, // Beta
+                    { "text": "I analyze the situation and try to mediate a fair compromise.", "value": 4 }, // Average
+                    { "text": "I confront the issue directly and work to resolve it efficiently, sometimes assertively.", "value": 7 }, // Alpha
+                    { "text": "I might distance myself from the conflict or express my disagreement indirectly/creatively.", "value": 5 } // Gamma
+                ]
+            },
+            {
+                "question_number": 4,
+                "question": "4. How important is personal independence and autonomy to you?",
+                "options": [
+                    { "text": "It's important, but I also value collaboration and group harmony.", "value": 3 }, // Beta/Average
+                    { "text": "I appreciate having my own space, but I also enjoy being part of a team.", "value": 4 }, // Average
+                    { "text": "My independence is paramount; I prefer to forge my own path.", "value": 7 }, // Gamma
+                    { "text": "I seek independence, but often in a way that allows me to lead or influence others.", "value": 6 } // Alpha (leads to independence through leadership)
+                ]
+            },
+            {
+                "question_number": 5,
+                "question": "5. How do you react to challenges or setbacks?",
+                "options": [
+                    { "text": "I can get discouraged but try to find help or alternative paths.", "value": 3 }, // Beta/Average
+                    { "text": "I assess the situation, learn from it, and adapt my approach.", "value": 4 }, // Average
+                    { "text": "I see them as opportunities to prove myself and push through with determination.", "value": 7 }, // Alpha
+                    { "text": "I might creatively re-evaluate my entire strategy or find an unconventional solution.", "value": 6 } // Gamma
+                ]
+            },
+            {
+                "question_number": 6,
+                "question": "6. How do you feel about being the center of attention?",
+                "options": [
+                    { "text": "I prefer to avoid it; it makes me uncomfortable.", "value": 2 }, // Beta
+                    { "text": "I'm okay with it occasionally, but don't actively seek it.", "value": 4 }, // Average
+                    { "text": "I enjoy it and feel energized by the spotlight.", "value": 7 }, // Alpha
+                    { "text": "I might enjoy it on my own terms, or for a specific performance/expression.", "value": 5 } // Gamma
+                ]
+            },
+            {
+                "question_number": 7,
+                "question": "7. What is your typical role in a social gathering?",
+                "options": [
+                    { "text": "I'm a good listener and enjoy observing others.", "value": 3 }, // Beta
+                    { "text": "I engage in conversations and try to make everyone feel comfortable.", "value": 4 }, // Average
+                    { "text": "I often find myself leading conversations or guiding the group's activities.", "value": 7 }, // Alpha
+                    { "text": "I might drift between groups, engaging in unique conversations or finding quiet corners.", "value": 5 } // Gamma
+                ]
+            },
+            {
+                "question_number": 8,
+                "question": "8. How do you handle criticism?",
+                "options": [
+                    { "text": "I take it to heart and may feel hurt, but try to learn.", "value": 3 }, // Beta
+                    { "text": "I consider it thoughtfully and make adjustments if necessary.", "value": 4 }, // Average
+                    { "text": "I might initially defend myself, but then analyze it for constructive points.", "value": 6 }, // Alpha
+                    { "text": "I often dismiss it if it doesn't align with my own perspective or values.", "value": 7 } // Gamma
+                ]
+            },
+            {
+                "question_number": 9,
+                "question": "9. What drives you most in your professional or personal pursuits?",
+                "options": [
+                    { "text": "Stability and harmonious relationships.", "value": 3 }, // Beta
+                    { "text": "Achieving personal satisfaction and contributing to a positive environment.", "value": 4 }, // Average
+                    { "text": "Success, recognition, and leading others to achieve goals.", "value": 7 }, // Alpha
+                    { "text": "Freedom, personal expression, and pursuing unique passions.", "value": 6 } // Gamma
+                ]
+            },
+            {
+                "question_number": 10,
+                "question": "10. How do you respond to rules and authority?",
+                "options": [
+                    { "text": "I generally respect and follow rules, preferring order.", "value": 3 }, // Beta
+                    { "text": "I follow them if they make sense, but might question them if they don't.", "value": 4 }, // Average
+                    { "text": "I might challenge rules if they impede progress or my vision.", "value": 7 }, // Alpha
+                    { "text": "I tend to operate outside conventional rules, valuing my own principles.", "value": 6 } // Gamma
+                ]
+            },
+            {
+                "question_number": 11,
+                "question": "11. What kind of social circle do you prefer?",
+                "options": [
+                    { "text": "A close-knit group where everyone feels comfortable and supported.", "value": 3 }, // Beta
+                    { "text": "A balanced mix of close friends and broader acquaintances.", "value": 4 }, // Average
+                    { "text": "A wide network of contacts where I can influence and be influential.", "value": 7 }, // Alpha
+                    { "text": "A few very deep, unique connections, or I'm comfortable being solitary.", "value": 6 } // Gamma
+                ]
+            },
+            {
+                "question_number": 12,
+                "question": "12. How do you typically react to unforeseen changes or disruptions?",
+                "options": [
+                    { "text": "I can get stressed, but I try to adapt with guidance.", "value": 3 }, // Beta
+                    { "text": "I adjust fairly well, finding new routines or solutions.", "value": 4 }, // Average
+                    { "text": "I quickly take charge, analyze the situation, and implement a new plan.", "value": 7 }, // Alpha
+                    { "text": "I might see it as an opportunity for novelty or to deviate from the norm.", "value": 6 } // Gamma
+                ]
+            },
+            {
+                "question_number": 13,
+                "question": "13. What best describes your leadership style?",
+                "options": [
+                    { "text": "I prefer to support and facilitate others' leadership.", "value": 2 }, // Beta
+                    { "text": "I lead when necessary, focusing on collaboration and fairness.", "value": 4 }, // Average
+                    { "text": "I am a decisive, visionary leader who inspires and directs.", "value": 7 }, // Alpha
+                    { "text": "I might lead by example or through unconventional approaches, inspiring unique paths.", "value": 6 } // Gamma
+                ]
+            },
+            {
+                "question_number": 14,
+                "question": "14. How do you handle emotional situations, both your own and others'?",
+                "options": [
+                    { "text": "I'm empathetic and try to comfort, sometimes internalizing emotions.", "value": 3 }, // Beta
+                    { "text": "I try to understand and offer practical support or a listening ear.", "value": 4 }, // Average
+                    { "text": "I focus on solutions and moving past the emotion efficiently.", "value": 6 }, // Alpha
+                    { "text": "I express emotions authentically, even if unconventional, and respect others' space.", "value": 5 } // Gamma
+                ]
+            },
+            {
+                "question_number": 15,
+                "question": "15. What role does competition play in your life?",
+                "options": [
+                    { "text": "I generally avoid it, preferring cooperation.", "value": 2 }, // Beta
+                    { "text": "I engage in healthy competition, enjoying the challenge.", "value": 4 }, // Average
+                    { "text": "I thrive on it; it motivates me to excel and win.", "value": 7 }, // Alpha
+                    { "text": "I compete only against myself or against systems, not necessarily other people directly.", "value": 6 } // Gamma
+                ]
+            },
+            {
+                "question_number": 16,
+                "question": "16. How do you typically dress or present yourself?",
+                "options": [
+                    { "text": "Comfortable and appropriate for the situation, aiming to blend in.", "value": 3 }, // Beta/Average
+                    { "text": "Neat and generally in line with current trends, without being overly flashy.", "value": 4 }, // Average
+                    { "text": "Sharp, confident, and perhaps a bit attention-grabbing, reflecting status or power.", "value": 7 }, // Alpha
+                    { "text": "Unique, expressive, and individualistic, often setting my own trends.", "value": 6 } // Gamma
+                ]
+            },
+            {
+                "question_number": 17,
+                "question": "17. What is your reaction to risk-taking?",
+                "options": [
+                    { "text": "I prefer to avoid risks and stick to safe options.", "value": 2 }, // Beta
+                    { "text": "I weigh the pros and cons carefully and take calculated risks.", "value": 4 }, // Average
+                    { "text": "I am willing to take significant risks for significant rewards or leadership opportunities.", "value": 7 }, // Alpha
+                    { "text": "I am drawn to unconventional or experimental risks, often for personal growth or adventure.", "value": 6 } // Gamma
+                ]
+            },
+            {
+                "question_number": 18,
+                "question": "18. How do you react when someone else is in charge?",
+                "options": [
+                    { "text": "I am generally cooperative and follow their instructions.", "value": 3 }, // Beta
+                    { "text": "I respect their authority but will offer suggestions if I see a better way.", "value": 4 }, // Average
+                    { "text": "I respect it if they are competent, but I'm often assessing if I could do it better.", "value": 6 }, // Alpha
+                    { "text": "I might respectfully question their methods or prefer to do things my own way.", "value": 5 } // Gamma
+                ]
+            },
+            {
+                "question_number": 19,
+                "question": "19. How do you handle public speaking or presentations?",
+                "options": [
+                    { "text": "I get nervous and prefer to avoid it if possible.", "value": 2 }, // Beta
+                    { "text": "I can do it, but I need to prepare thoroughly.", "value": 4 }, // Average
+                    { "text": "I feel confident and enjoy engaging an audience.", "value": 7 }, // Alpha
+                    { "text": "I might enjoy it if the topic is something I'm passionate about, and I can be unique.", "value": 5 } // Gamma
+                ]
+            },
+            {
+                "question_number": 20,
+                "question": "20. What is your approach to personal goals and ambitions?",
+                "options": [
+                    { "text": "I have goals, but I'm open to adjusting them based on life's flow.", "value": 3 }, // Beta/Average
+                    { "text": "I set realistic goals and work steadily towards them.", "value": 4 }, // Average
+                    { "text": "I set ambitious goals and pursue them with relentless drive and determination.", "value": 7 }, // Alpha
+                    { "text": "My goals are often unconventional, driven by personal passions or unique aspirations.", "value": 6 } // Gamma
+                ]
+            },
+            {
+                "question_number": 21,
+                "question": "21. How do you react to praise or compliments?",
+                "options": [
+                    { "text": "I appreciate it but might feel a bit shy or uncomfortable.", "value": 3 }, // Beta
+                    { "text": "I accept it gracefully and feel good about my efforts.", "value": 4 }, // Average
+                    { "text": "I accept it as due recognition for my achievements.", "value": 7 }, // Alpha
+                    { "text": "I appreciate genuine recognition, but I'm less concerned with external validation.", "value": 5 } // Gamma
+                ]
+            },
+            {
+                "question_number": 22,
+                "question": "22. What best describes your response to group activities or team sports?",
+                "options": [
+                    { "text": "I enjoy being a supportive team player.", "value": 3 }, // Beta
+                    { "text": "I participate actively and contribute my fair share.", "value": 4 }, // Average
+                    { "text": "I enjoy leading the team to victory or setting the pace.", "value": 7 }, // Alpha
+                    { "text": "I might participate, but often prefer individual pursuits or unique roles within the group.", "value": 5 } // Gamma
+                ]
+            },
+            {
+                "question_number": 23,
+                "question": "23. How do you handle responsibility?",
+                "options": [
+                    { "text": "I fulfill my responsibilities diligently.", "value": 3 }, // Beta
+                    { "text": "I take on responsibilities and manage them competently.", "value": 4 }, // Average
+                    { "text": "I eagerly take on significant responsibilities and thrive under pressure.", "value": 7 }, // Alpha
+                    { "text": "I prefer responsibilities that align with my unique skills or allow for autonomy.", "value": 6 } // Gamma
+                ]
+            },
+            {
+                "question_number": 24,
+                "question": "24. What is your natural inclination when problem-solving?",
+                "options": [
+                    { "text": "I look for established methods or ask for guidance.", "value": 3 }, // Beta
+                    { "text": "I logically analyze options and choose the most practical solution.", "value": 4 }, // Average
+                    { "text": "I quickly identify the core issue and devise a direct, effective solution.", "value": 7 }, // Alpha
+                    { "text": "I seek innovative, unconventional, or out-of-the-box solutions.", "value": 6 } // Gamma
+                ]
+            },
+            {
+                "question_number": 25,
+                "question": "25. How do you view change?",
+                "options": [
+                    { "text": "I find it challenging but try to cope.", "value": 3 }, // Beta
+                    { "text": "I adapt to it as needed, seeing it as part of life.", "value": 4 }, // Average
+                    { "text": "I embrace it as an opportunity for growth and improvement.", "value": 7 }, // Alpha
+                    { "text": "I often initiate it or seek out new experiences for variety and personal evolution.", "value": 6 } // Gamma
+                ]
+            },
+            {
+                "question_number": 26,
+                "question": "26. What is your attitude towards rules and tradition?",
+                "options": [
+                    { "text": "I respect and uphold them to maintain order.", "value": 3 }, // Beta
+                    { "text": "I generally follow them but am open to change if there's a good reason.", "value": 4 }, // Average
+                    { "text": "I might challenge or bend them if they hinder progress or my objectives.", "value": 7 }, // Alpha
+                    { "text": "I often disregard or redefine them based on my own principles and vision.", "value": 6 } // Gamma
+                ]
+            },
+            {
+                "question_number": 27,
+                "question": "27. How do you approach seeking new experiences?",
+                "options": [
+                    { "text": "I prefer familiar experiences and places.", "value": 2 }, // Beta
+                    { "text": "I'm open to new experiences, especially with friends.", "value": 4 }, // Average
+                    { "text": "I actively seek out novel, challenging, and often adventurous experiences.", "value": 6 }, // Gamma/Alpha (depending on the type of adventure)
+                    { "text": "I look for opportunities that expand my influence or knowledge.", "value": 7 } // Alpha (seeking growth through experience)
+                ]
+            },
+            {
+                "question_number": 28,
+                "question": "28. How do you react to receiving orders or being told what to do?",
+                "options": [
+                    { "text": "I generally accept them, understanding the chain of command.", "value": 3 }, // Beta
+                    { "text": "I follow them if they are reasonable and well-explained.", "value": 4 }, // Average
+                    { "text": "I might question them if they don't align with my vision or seem inefficient.", "value": 6 }, // Alpha
+                    { "text": "I often resent them and prefer to decide for myself, or find an alternative way.", "value": 7 } // Gamma
+                ]
+            },
+            {
+                "question_number": 29,
+                "question": "29. What is your core motivation in life?",
+                "options": [
+                    { "text": "To be accepted and maintain harmony.", "value": 3 }, // Beta
+                    { "text": "To live a balanced, fulfilling life.", "value": 4 }, // Average
+                    { "text": "To achieve power, influence, and recognition.", "value": 7 }, // Alpha
+                    { "text": "To live authentically, experience freedom, and pursue unique interests.", "value": 6 } // Gamma
+                ]
+            },
+            {
+                "question_number": 30,
+                "question": "30. How do you handle financial matters?",
+                "options": [
+                    { "text": "I am cautious and save for security.", "value": 3 }, // Beta
+                    { "text": "I manage my finances responsibly, balancing saving and spending.", "value": 4 }, // Average
+                    { "text": "I take calculated risks with investments to maximize returns and opportunities.", "value": 7 }, // Alpha
+                    { "text": "I value financial freedom and might pursue unconventional paths to achieve it.", "value": 6 } // Gamma
+                ]
+            },
+            {
+                "question_number": 31,
+                "question": "31. What is your typical communication style?",
+                "options": [
+                    { "text": "Polite, considerate, and diplomatic.", "value": 3 }, // Beta
+                    { "text": "Clear, direct, and collaborative.", "value": 4 }, // Average
+                    { "text": "Assertive, persuasive, and to the point.", "value": 7 }, // Alpha
+                    { "text": "Often unconventional, expressive, and focused on unique perspectives.", "value": 6 } // Gamma
+                ]
+            },
+            {
+                "question_number": 32,
+                "question": "32. How do you feel about helping others?",
+                "options": [
+                    { "text": "I am happy to help, especially those I care about.", "value": 3 }, // Beta
+                    { "text": "I offer help when I can and it's appropriate.", "value": 4 }, // Average
+                    { "text": "I help strategically, often through leadership or providing resources.", "value": 6 }, // Alpha
+                    { "text": "I help on my own terms, often by sharing unique insights or leading by example.", "value": 5 } // Gamma
+                ]
+            },
+            {
+                "question_number": 33,
+                "question": "33. What type of work environment do you thrive in?",
+                "options": [
+                    { "text": "A supportive and collaborative team environment.", "value": 3 }, // Beta
+                    { "text": "A dynamic environment with clear goals and opportunities for growth.", "value": 4 }, // Average
+                    { "text": "A challenging environment where I can lead, innovate, and achieve significant results.", "value": 7 }, // Alpha
+                    { "text": "An environment that allows for creativity, autonomy, and unconventional approaches.", "value": 6 } // Gamma
+                ]
+            },
+            {
+                "question_number": 34,
+                "question": "34. How do you handle praise and recognition?",
+                "options": [
+                    { "text": "I appreciate it but don't dwell on it.", "value": 3 }, // Beta
+                    { "text": "I accept it as motivation for continued effort.", "value": 4 }, // Average
+                    { "text": "I see it as validation of my efforts and fuel for future success.", "value": 7 }, // Alpha
+                    { "text": "I value genuine appreciation but am not driven by external accolades.", "value": 5 } // Gamma
+                ]
+            },
+            {
+                "question_number": 35,
+                "question": "35. What is your ideal vacation?",
+                "options": [
+                    { "text": "A relaxing trip to a familiar, comforting place.", "value": 3 }, // Beta
+                    { "text": "A mix of relaxation and exploration, with a balance of activities.", "value": 4 }, // Average
+                    { "text": "An adventurous trip where I can challenge myself or lead an expedition.", "value": 6 }, // Alpha/Gamma
+                    { "text": "An off-the-beaten-path adventure, discovering unique cultures or untouched nature.", "value": 7 } // Gamma
+                ]
+            },
+            {
+                "question_number": 36,
+                "question": "36. How do you manage your time and schedule?",
+                "options": [
+                    { "text": "I follow a schedule, preferring routine and predictability.", "value": 3 }, // Beta
+                    { "text": "I plan my time effectively, balancing commitments and flexibility.", "value": 4 }, // Average
+                    { "text": "I meticulously plan to optimize productivity and achieve my ambitious goals.", "value": 7 }, // Alpha
+                    { "text": "I often operate on my own internal clock, valuing spontaneity over strict schedules.", "value": 6 } // Gamma
+                ]
+            },
+            {
+                "question_number": 37,
+                "question": "37. What is your general approach to social norms and trends?",
+                "options": [
+                    { "text": "I tend to follow them to fit in and avoid drawing attention.", "value": 3 }, // Beta
+                    { "text": "I am aware of them but choose what aligns with my comfort and values.", "value": 4 }, // Average
+                    { "text": "I might set them or challenge them if they are outdated or ineffective.", "value": 7 }, // Alpha
+                    { "text": "I often ignore them, preferring to forge my own path and style.", "value": 6 } // Gamma
+                ]
+            },
+            {
+                "question_number": 38,
+                "question": "38. How do you react to making mistakes?",
+                "options": [
+                    { "text": "I feel regret and try to avoid repeating them.", "value": 3 }, // Beta
+                    { "text": "I see them as learning opportunities and strive to improve.", "value": 4 }, // Average
+                    { "text": "I quickly analyze what went wrong and adjust my strategy to ensure future success.", "value": 7 }, // Alpha
+                    { "text": "I might find a unique lesson or unexpected insight from the error.", "value": 5 } // Gamma
+                ]
+            },
+            {
+                "question_number": 39,
+                "question": "39. What is your comfort level with being alone?",
+                "options": [
+                    { "text": "I generally prefer company and collaboration.", "value": 2 }, // Beta
+                    { "text": "I enjoy a balance of social time and solitude.", "value": 4 }, // Average
+                    { "text": "I value my alone time for reflection and strategic planning, but also enjoy social influence.", "value": 6 }, // Alpha
+                    { "text": "I thrive in solitude, using it for deep thought, creativity, and personal projects.", "value": 7 } // Gamma
+                ]
+            },
+            {
+                "question_number": 40,
+                "question": "40. How do you motivate others?",
+                "options": [
+                    { "text": "By offering encouragement and showing appreciation.", "value": 3 }, // Beta
+                    { "text": "By setting a good example and providing clear direction.", "value": 4 }, // Average
+                    { "text": "By inspiring them with a clear vision and challenging them to excel.", "value": 7 }, // Alpha
+                    { "text": "By encouraging them to find their own unique path and potential.", "value": 6 } // Gamma
+                ]
+            },
+            {
+                "question_number": 41,
+                "question": "41. What is your approach to failure?",
+                "options": [
+                    { "text": "It can be disheartening, but I try to move on.", "value": 3 }, // Beta
+                    { "text": "I learn from it and try again.", "value": 4 }, // Average
+                    { "text": "I see it as a temporary setback and redouble my efforts to succeed.", "value": 7 }, // Alpha
+                    { "text": "I might re-evaluate my entire pursuit or pivot to something completely different.", "value": 6 } // Gamma
+                ]
+            },
+            {
+                "question_number": 42,
+                "question": "42. How do you react to authority figures?",
+                "options": [
+                    { "text": "I respect and comply with authority.", "value": 3 }, // Beta
+                    { "text": "I cooperate, but may respectfully question decisions if needed.", "value": 4 }, // Average
+                    { "text": "I engage with them as equals, sometimes challenging or influencing their decisions.", "value": 7 }, // Alpha
+                    { "text": "I tend to distrust or ignore authority if it conflicts with my personal values.", "value": 6 } // Gamma
+                ]
+            },
+            {
+                "question_number": 43,
+                "question": "43. What role does innovation play in your daily life?",
+                "options": [
+                    { "text": "I appreciate new ideas but prefer what's tried and true.", "value": 2 }, // Beta
+                    { "text": "I'm open to new ideas that improve efficiency.", "value": 4 }, // Average
+                    { "text": "I constantly seek to innovate and lead the way with new solutions.", "value": 7 }, // Alpha
+                    { "text": "I am passionate about creating and exploring novel, unconventional approaches.", "value": 6 } // Gamma
+                ]
+            },
+            {
+                "question_number": 44,
+                "question": "44. How do you handle attention from others?",
+                "options": [
+                    { "text": "I feel a bit awkward and try to deflect it.", "value": 2 }, // Beta
+                    { "text": "I accept it politely.", "value": 4 }, // Average
+                    { "text": "I enjoy it and use it to my advantage, commanding the room.", "value": 7 }, // Alpha
+                    { "text": "I appreciate it if it's for something I value, but I don't seek it constantly.", "value": 5 } // Gamma
+                ]
+            },
+            {
+                "question_number": 45,
+                "question": "45. What is your preferred method of learning?",
+                "options": [
+                    { "text": "Through structured teaching and clear instructions.", "value": 3 }, // Beta
+                    { "text": "Through a combination of instruction and practical application.", "value": 4 }, // Average
+                    { "text": "By taking initiative, experimenting, and mastering new skills independently.", "value": 7 }, // Alpha
+                    { "text": "Through self-directed exploration, experimentation, and unconventional resources.", "value": 6 } // Gamma
+                ]
+            },
+            {
+                "question_number": 46,
+                "question": "46. How do you deal with conflict when it arises with a loved one?",
+                "options": [
+                    { "text": "I try to smooth things over and avoid escalation.", "value": 3 }, // Beta
+                    { "text": "I communicate openly to find a resolution that works for both of us.", "value": 4 }, // Average
+                    { "text": "I address the issue directly and work to find a clear path forward.", "value": 6 }, // Alpha
+                    { "text": "I might express my feelings uniquely or need space before reconciliation.", "value": 5 } // Gamma
+                ]
+            },
+            {
+                "question_number": 47,
+                "question": "47. What is your relationship with routines?",
+                "options": [
+                    { "text": "I prefer strong routines for comfort and predictability.", "value": 3 }, // Beta
+                    { "text": "I have routines, but I'm flexible enough to deviate when needed.", "value": 4 }, // Average
+                    { "text": "I create efficient routines to maximize my productivity and achieve goals.", "value": 6 }, // Alpha
+                    { "text": "I dislike rigid routines and prefer spontaneity and flexibility.", "value": 7 } // Gamma
+                ]
+            },
+            {
+                "question_number": 48,
+                "question": "48. How do you feel about taking credit for accomplishments?",
+                "options": [
+                    { "text": "I am humble and prefer to share credit with the team.", "value": 3 }, // Beta
+                    { "text": "I acknowledge my contributions but also appreciate others'.", "value": 4 }, // Average
+                    { "text": "I ensure my leadership and efforts are recognized, for myself and for the group.", "value": 7 }, // Alpha
+                    { "text": "I value the accomplishment itself more than external recognition or credit.", "value": 5 } // Gamma
+                ]
+            },
+            {
+                "question_number": 49,
+                "question": "49. What is your overall approach to life?",
+                "options": [
+                    { "text": "To find happiness through connection and contentment.", "value": 3 }, // Beta
+                    { "text": "To live a balanced, meaningful, and adaptable life.", "value": 4 }, // Average
+                    { "text": "To continuously strive for greatness, leadership, and impactful achievement.", "value": 7 }, // Alpha
+                    { "text": "To live authentically, embracing freedom, uniqueness, and personal exploration.", "value": 6 } // Gamma
+                ]
+            },
+            {
+                "question_number": 50,
+                "question": "50. How important is it for you to be seen as a leader?",
+                "options": [
+                    { "text": "Not important at all; I prefer to support others.", "value": 2 }, // Beta
+                    { "text": "Moderately important, if the situation calls for it.", "value": 4 }, // Average
+                    { "text": "Very important; I naturally gravitate towards and enjoy leading.", "value": 7 }, // Alpha
+                    { "text": "It's not about being a 'leader' but about influencing or creating on my own terms.", "value": 5 } // Gamma
+                ]
+            }
+        ];
+
+        let currentQuestionIndex = 0;
+        let userAnswers = {}; // Stores chosen option value for each question index
+        let totalScore = 0; // Accumulates score for personality type
+
+        const quizContainer = document.getElementById('quiz');
+        const progressBar = document.getElementById('quiz-progress');
+        const nextButton = document.getElementById('next-btn');
+        const prevButton = document.getElementById('prev-btn');
+        const submitButton = document.getElementById('submit-btn');
+        const resultContainer = document.getElementById('result-container');
+        const personalityTypeElement = document.getElementById('personality-type');
+        const scoreProgressBar = document.getElementById('score-progress');
+        const resultMessageElement = document.getElementById('result-message');
+        const restartButton = document.getElementById('restart-btn');
+        const fabButton = document.getElementById('fab');
+
+        function loadQuestion() {
+            quizContainer.style.opacity = 0;
+
+            setTimeout(() => {
+                const questionData = questions[currentQuestionIndex];
+                quizContainer.innerHTML = `
+                    <div class="question-counter">Question ${currentQuestionIndex + 1} of ${questions.length}</div>
+                    <div class="question">${questionData.question}</div>
+                    <div class="options">
+                        ${questionData.options.map((option, index) => `
+                            <div class="option">
+                                <input type="radio" id="option-${currentQuestionIndex}-${index}" name="question-${currentQuestionIndex}" value="${option.value}"
+                                    ${userAnswers[currentQuestionIndex] !== undefined && userAnswers[currentQuestionIndex] == option.value ? 'checked' : ''}>
+                                <label for="option-${currentQuestionIndex}-${index}">
+                                    <span class="custom-radio"></span>
+                                    <span class="option-text">${option.text}</span>
+                                </label>
+                            </div>
+                        `).join('')}
+                    </div>
+                `;
+                quizContainer.querySelectorAll('.option input').forEach(input => {
+                    input.addEventListener('change', (event) => {
+                        userAnswers[currentQuestionIndex] = parseInt(event.target.value);
+                    });
+                });
+
+                updateProgressBar();
+                updateNavigationButtons();
+                quizContainer.style.opacity = 1;
+            }, 100);
+        }
+
+        function updateProgressBar() {
+            const progress = ((currentQuestionIndex + 1) / questions.length) * 100;
+            progressBar.style.width = `${progress}%`;
+        }
+
+        function updateNavigationButtons() {
+            prevButton.disabled = currentQuestionIndex === 0;
+            nextButton.style.display = currentQuestionIndex === questions.length - 1 ? 'none' : 'flex';
+            submitButton.style.display = currentQuestionIndex === questions.length - 1 ? 'flex' : 'none';
+        }
+
+        function calculatePersonalityAndDisplayResult() {
+            totalScore = 0;
+            for (let i = 0; i < questions.length; i++) {
+                if (userAnswers[i] !== undefined) {
+                    totalScore += userAnswers[i];
+                }
+            }
+
+            let personalityType = "Undefined";
+            let message = "";
+            let progressPercentage = 0;
+
+            // Max possible score: 50 questions * 7 (max value per option) = 350
+            // Min possible score: 50 questions * 2 (min value per option) = 100
+
+            // Adjust ranges based on expected distribution:
+            // Beta: Lower scores (more agreeable, less assertive)
+            // Average: Middle scores (balanced, adaptable)
+            // Gamma: Mid-to-high scores (independent, unconventional)
+            // Alpha: Highest scores (leader, confident, dominant)
+
+            if (totalScore <= 170) {
+                personalityType = "Beta";
+                message = "You tend to be **cooperative, supportive, and harmonious**. You are a valuable team player and often prioritize the needs of the group. You thrive in structured environments and prefer to avoid conflict. Embrace your ability to build strong relationships and foster a positive atmosphere!";
+                progressPercentage = ((totalScore - 100) / 70) * 25; // Scale 100-170 to 0-25%
+            } else if (totalScore <= 240) {
+                personalityType = "Average";
+                message = "You exhibit a **balanced blend of personality traits**, adapting well to various situations. You are generally flexible, pragmatic, and able to navigate different social dynamics with ease. Your versatility is a significant strength. Continue to leverage your adaptability!";
+                progressPercentage = 25 + ((totalScore - 171) / 69) * 25; // Scale 171-240 to 25-50%
+            } else if (totalScore <= 300) {
+                personalityType = "Gamma";
+                message = "You are likely **independent, adventurous, and unconventional**. You value freedom, authenticity, and often forge your own path, inspiring others with your unique perspective. You're comfortable with solitude and often a creative problem-solver. Embrace your individuality!";
+                progressPercentage = 50 + ((totalScore - 241) / 59) * 25; // Scale 241-300 to 50-75%
+            } else { // totalScore > 300 (up to 350)
+                personalityType = "Alpha";
+                message = "You are a natural **leader, confident, and assertive**. You are driven by ambition and a desire to achieve, often taking charge and inspiring others to follow. You thrive in challenging situations and are not afraid to take risks. Embrace your powerful influence and leadership potential!";
+                progressPercentage = 75 + ((totalScore - 301) / 49) * 25; // Scale 301-350 to 75-100%
+            }
+
+            personalityTypeElement.textContent = personalityType;
+            scoreProgressBar.style.width = `${Math.min(100, Math.max(0, progressPercentage))}%`; // Ensure percentage is between 0 and 100
+            resultMessageElement.innerHTML = message;
+
+            quizContainer.style.display = 'none';
+            prevButton.style.display = 'none';
+            nextButton.style.display = 'none';
+            submitButton.style.display = 'none';
+            resultContainer.style.display = 'block';
+            fabButton.style.display = 'none';
+        }
+
+        function resetQuiz() {
+            currentQuestionIndex = 0;
+            userAnswers = {};
+            totalScore = 0;
+            quizContainer.style.display = 'block';
+            resultContainer.style.display = 'none';
+            fabButton.style.display = 'flex';
+            loadQuestion();
+        }
+
+        nextButton.addEventListener('click', () => {
+            if (userAnswers[currentQuestionIndex] === undefined) {
+                alert("Please select an option before proceeding!");
+                return;
+            }
+            if (currentQuestionIndex < questions.length - 1) {
+                currentQuestionIndex++;
+                loadQuestion();
+            }
+        });
+
+        prevButton.addEventListener('click', () => {
+            if (currentQuestionIndex > 0) {
+                currentQuestionIndex--;
+                loadQuestion();
+            }
+        });
+
+        submitButton.addEventListener('click', () => {
+            if (userAnswers[currentQuestionIndex] === undefined) {
+                alert("Please select an option before seeing your results!");
+                return;
+            }
+            calculatePersonalityAndDisplayResult();
+        });
+
+        restartButton.addEventListener('click', resetQuiz);
+
+        fabButton.addEventListener('click', () => {
+            if (Object.keys(userAnswers).length > 0 && Object.keys(userAnswers).length === questions.length) {
+                calculatePersonalityAndDisplayResult();
+            } else {
+                alert("Please complete all questions to see your personality type!");
+            }
+        });
+
+        // Initial load
+        loadQuestion();
+    </script>
+    <style>
+    .floating-home-button {
+      position: fixed;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      background-color: transparent;
+      border: none;
+      z-index: 1000;
+      text-decoration: none;
+    }
+
+    .home-button-inner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
+      height: 70px;
+      width: 23px;
+      background-color: #28a745; /* Green background for Home */
+      color: white;
+      font-weight: bold;
+      border-radius: 0 10px 10px 0;
+      box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
+      transition: background-color 0.3s ease;
+      writing-mode: vertical-rl;
+      text-orientation: mixed;
+    }
+
+    .home-button-inner:hover {
+      background-color: #1e7e34;
+    }
+  </style>
+  <a href="index.html" class="floating-home-button">
+    <div class="home-button-inner">
+      Home
+    </div>
+  </a>
+</body>
+</html>
