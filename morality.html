@@ -1,0 +1,1194 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>मैं अच्छा हूँ या बुरा? - नैतिकता कैलकुलेटर (50 प्रश्न) | Am I Good or Evil? - Morality Calculator (50 Questions)</title>
+<meta name="description" content="50 सवालों के साथ अपने अच्छे और बुरे व्यक्तित्व के स्तर का पता लगाएं। यह नैतिकता कैलकुलेटर आपको अपनी आंतरिक अच्छाई या बुराई को समझने में मदद करेगा। Discover your level of good and evil with 50 questions. This morality calculator will help you understand your inner goodness or darkness.">
+<meta name="keywords" content="अच्छा बुरा कैलकुलेटर, नैतिकता परीक्षण, व्यक्तित्व प्रश्नोत्तरी, नैतिक मूल्यांकन, मैं क्या हूँ, अच्छाई, बुराई, आत्म-विश्लेषण, हिंदी प्रश्नोत्तरी, good evil calculator, morality test, personality quiz, ethical assessment, am I, goodness, evil, self-analysis, Hindi quiz">
+<meta name="author" content="Your Name/Website Name">
+<meta property="og:title" content="मैं अच्छा हूँ या बुरा? - नैतिकता कैलकुलेटर | Am I Good or Evil? - Morality Calculator">
+<meta property="og:description" content="50 सवालों के साथ अपने अच्छे और बुरे व्यक्तित्व के स्तर का पता लगाएं। यह नैतिकता कैलकुलेटर आपको अपनी आंतरिक अच्छाई या बुराई को समझने में मदद करेगा। Discover your level of good and evil with 50 questions. This morality calculator will help you understand your inner goodness or darkness.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="[Your Website URL]/good_or_evil.html">
+    <meta property="og:image" content="https://stock.adobe.com/search?k=balance+scale+icon">
+    <link rel="canonical" href="[Your Website URL]/good_or_evil.html">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #673ab7; /* Deep Purple - for balance/morality */
+            --secondary-color: #512da8; /* Darker Purple */
+            --accent-color: #ff4081; /* Pink Accent - for contrast/compassion */
+            --light-bg: #ede7f6; /* Very light purple background */
+            --dark-text: #212121;
+            --light-text: #757575;
+            --white: #ffffff;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', 'Arial', sans-serif;
+            background-color: var(--light-bg);
+            color: var(--dark-text);
+            line-height: 1.6;
+            padding: 0;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            border-radius: 0 0 20px 20px;
+            box-shadow: var(--shadow);
+            margin-bottom: 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%);
+            transform: rotate(30deg);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            position: relative;
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            position: relative;
+        }
+
+        .progress-container {
+            width: 100%;
+            background-color: #e0e0e0;
+            border-radius: 10px;
+            margin: 2rem 0;
+            height: 15px;
+            overflow: hidden;
+            box-shadow: inset 0 1px 3px rgba(0,0,0,0.2);
+        }
+
+        .progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, var(--accent-color), var(--primary-color));
+            width: 0%;
+            transition: width 0.5s ease;
+            border-radius: 10px;
+        }
+
+        .quiz-container {
+            background-color: var(--white);
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        .question-counter {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+
+        .question {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            color: var(--secondary-color);
+        }
+
+        .options {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 12px;
+        }
+
+        .option {
+            display: flex;
+            align-items: center;
+            padding: 12px 15px;
+            background-color: var(--light-bg);
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .option:hover {
+            background-color: #d1c4e9; /* Lighter purple tint on hover */
+            border-color: var(--primary-color);
+        }
+
+        .option input {
+            display: none;
+        }
+
+        .option label {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            cursor: pointer;
+            position: relative;
+            padding-left: 35px;
+        }
+
+        .custom-radio {
+            position: absolute;
+            left: 0;
+            height: 22px;
+            width: 22px;
+            background-color: #eee;
+            border-radius: 50%;
+            border: 2px solid var(--light-text);
+            transition: all 0.3s ease;
+        }
+
+        .option input:checked ~ .custom-radio {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+
+        .custom-radio::after {
+            content: "";
+            position: absolute;
+            display: none;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: white;
+        }
+
+        .option input:checked ~ .custom-radio::after {
+            display: block;
+        }
+
+        .option-text {
+            margin-left: 10px;
+            font-size: 1rem;
+            color: var(--dark-text);
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 2rem;
+        }
+
+        .btn {
+            padding: 12px 25px;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .btn-secondary {
+            background-color: #e0e0e0;
+            color: var(--dark-text);
+        }
+
+        .btn-secondary:hover {
+            background-color: #d0d0d0;
+        }
+
+        .result-container {
+            background-color: var(--white);
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            padding: 2rem;
+            text-align: center;
+            display: none;
+            animation: fadeIn 0.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .result-title {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 2rem;
+        }
+
+        .score {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--accent-color);
+            margin: 1rem 0;
+        }
+
+        .score-bar {
+            height: 30px;
+            background-color: #e0e0e0;
+            border-radius: 15px;
+            margin: 2rem auto;
+            max-width: 500px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .score-progress {
+            height: 100%;
+            background: linear-gradient(90deg, #F44336, #4CAF50); /* Red (more evil) to Green (more good) gradient */
+            width: 0%;
+            transition: width 1s ease;
+        }
+
+        .score-labels {
+            display: flex;
+            justify-content: space-between;
+            max-width: 500px;
+            margin: 0 auto;
+            font-size: 0.8rem;
+            color: var(--light-text);
+        }
+
+        .result-message {
+            margin-top: 2rem;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--dark-text);
+            padding: 0 1rem;
+        }
+
+        .restart-btn {
+            margin-top: 2rem;
+            background-color: var(--accent-color);
+            color: white;
+        }
+
+        .restart-btn:hover {
+            background-color: #e91e63; /* Darker pink */
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            
+            header {
+                padding: 1.5rem 0;
+                border-radius: 0;
+            }
+            
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            .subtitle {
+                font-size: 0.9rem;
+            }
+            
+            .quiz-container, .result-container {
+                padding: 1.5rem;
+            }
+            
+            .question {
+                font-size: 1.1rem;
+            }
+            
+            .option-text {
+                font-size: 0.9rem;
+            }
+            
+            .btn {
+                padding: 10px 20px;
+                font-size: 0.9rem;
+            }
+            
+            .result-title {
+                font-size: 1.5rem;
+            }
+            
+            .score {
+                font-size: 2.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.5rem;
+            }
+            
+            .quiz-container, .result-container {
+                padding: 1rem;
+                border-radius: 10px;
+            }
+            
+            .options {
+                gap: 8px;
+            }
+            
+            .option {
+                padding: 10px;
+            }
+            
+            .custom-radio {
+                height: 18px;
+                width: 18px;
+            }
+            
+            .option-text {
+                font-size: 0.85rem;
+                margin-left: 8px;
+            }
+            
+            .navigation {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .btn {
+                width: 100%;
+            }
+        }
+
+        /* Animation for options */
+        @keyframes optionAppear {
+            from { opacity: 0; transform: translateX(-10px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        .option {
+            animation: optionAppear 0.3s ease forwards;
+            opacity: 0;
+        }
+
+        .option:nth-child(1) { animation-delay: 0.1s; }
+        .option:nth-child(2) { animation-delay: 0.2s; }
+        .option:nth-child(3) { animation-delay: 0.3s; }
+        .option:nth-child(4) { animation-delay: 0.4s; }
+        /* .option:nth-child(5) { animation-delay: 0.5s; } */ /* Removed as we only have 4 options */
+
+        /* Loading spinner */
+        .loader {
+            display: none;
+            border: 5px solid #f3f3f3;
+            border-top: 5px solid var(--primary-color);
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+            margin: 2rem auto;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Floating action button */
+        .fab {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background-color: var(--accent-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            cursor: pointer;
+            z-index: 100;
+            transition: all 0.3s ease;
+        }
+
+        .fab:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 16px rgba(0,0,0,0.3);
+        }
+
+        .floating-home-button {
+            position: fixed;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            background-color: transparent;
+            border: none;
+            z-index: 1000;
+            text-decoration: none;
+        }
+
+        .home-button-inner {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-end;
+            height: 70px;
+            width: 23px;
+            background-color: #28a745; /* Green background for Home */
+            color: white;
+            font-weight: bold;
+            border-radius: 0 10px 10px 0;
+            box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease;
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+        }
+
+        .home-button-inner:hover {
+            background-color: #1e7e34;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><i class="fas fa-balance-scale"></i> मैं अच्छा हूँ या बुरा?</h1>
+            <p class="subtitle">50 प्रश्नों के साथ अपनी नैतिकता का विस्तृत विश्लेषण</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="progress-container">
+            <div class="progress-bar" id="quiz-progress"></div>
+        </div>
+
+        <div id="quiz" class="quiz-container"></div>
+
+        <div class="navigation">
+            <button class="btn btn-secondary" id="prev-btn" disabled>
+                <i class="fas fa-arrow-left"></i> पिछला
+            </button>
+            <button class="btn btn-primary" id="next-btn">
+                अगला <i class="fas fa-arrow-right"></i>
+            </button>
+            <button class="btn btn-primary" id="submit-btn" style="display: none;">
+                परिणाम देखें <i class="fas fa-chart-bar"></i>
+            </button>
+        </div>
+
+        <div class="loader" id="loader"></div>
+
+        <div class="result-container" id="result-container">
+            <h2 class="result-title">आपकी नैतिकता का स्तर</h2>
+            <div class="score" id="score">0%</div>
+            
+            <div class="score-bar">
+                <div class="score-progress" id="score-progress"></div>
+            </div>
+            
+            <div class="score-labels">
+                <span>बहुत बुरा</span>
+                <span>बुरा</span>
+                <span>सामान्य</span>
+                <span>अच्छा</span>
+                <span>बहुत अच्छा</span>
+            </div>
+            
+            <div class="result-message" id="result-message"></div>
+            
+            <button class="btn restart-btn" id="restart-btn">
+                <i class="fas fa-redo"></i> फिर से शुरू करें
+            </button>
+        </div>
+    </div>
+
+    <div class="fab" id="fab" title="प्रगति देखें">
+        <i class="fas fa-chart-pie"></i>
+    </div>
+
+    <script>
+        const questions = [
+            // Section 1: दूसरों के प्रति व्यवहार (10 प्रश्न)
+            {
+                question: "1. क्या आप जानबूझकर दूसरों की भावनाओं को ठेस पहुंचाते हैं?",
+                options: [
+                    { text: "नहीं, कभी नहीं", value: 4 },
+                    { text: "कभी-कभी, अनजाने में", value: 3 },
+                    { text: "हाँ, कभी-कभी", value: 2 },
+                    { text: "हाँ, अक्सर", value: 1 }
+                ]
+            },
+            {
+                question: "2. क्या आप दूसरों की मदद करने में खुशी महसूस करते हैं, भले ही आपको कोई फायदा न हो?",
+                options: [
+                    { text: "हाँ, हमेशा", value: 4 },
+                    { text: "हाँ, अक्सर", value: 3 },
+                    { text: "कभी-कभी", value: 2 },
+                    { text: "नहीं, तभी जब मुझे फायदा हो", value: 1 }
+                ]
+            },
+            {
+                question: "3. क्या आप दूसरों की पीठ पीछे बुराई करते हैं?",
+                options: [
+                    { text: "नहीं, कभी नहीं", value: 4 },
+                    { text: "कभी-कभी, जब गुस्सा हो", value: 3 },
+                    { text: "हाँ, अक्सर", value: 2 },
+                    { text: "हाँ, हमेशा", value: 1 }
+                ]
+            },
+            {
+                question: "4. क्या आप किसी की सफलता पर दिल से खुश होते हैं?",
+                options: [
+                    { text: "हाँ, हमेशा", value: 4 },
+                    { text: "हाँ, अक्सर", value: 3 },
+                    { text: "कभी-कभी, अगर वह मेरा दोस्त हो", value: 2 },
+                    { text: "नहीं, मुझे ईर्ष्या होती है", value: 1 }
+                ]
+            },
+            {
+                question: "5. क्या आप अपनी गलतियों को स्वीकार करते हैं और माफी मांगते हैं?",
+                options: [
+                    { text: "हाँ, हमेशा", value: 4 },
+                    { text: "हाँ, अक्सर", value: 3 },
+                    { text: "कभी-कभी, अगर जरूरी हो", value: 2 },
+                    { text: "नहीं, मैं मुश्किल से माफी मांगता हूँ", value: 1 }
+                ]
+            },
+            {
+                question: "6. क्या आप दूसरों की चीज़ों को बिना पूछे लेते हैं?",
+                options: [
+                    { text: "नहीं, कभी नहीं", value: 4 },
+                    { text: "शायद, अगर मुझे बहुत जरूरत हो", value: 3 },
+                    { text: "हाँ, कभी-कभी", value: 2 },
+                    { text: "हाँ, अक्सर", value: 1 }
+                ]
+            },
+            {
+                question: "7. क्या आप कमजोर या जरूरतमंद लोगों की मदद करने के लिए आगे आते हैं?",
+                options: [
+                    { text: "हाँ, हमेशा", value: 4 },
+                    { text: "हाँ, अगर मुझे मौका मिले", value: 3 },
+                    { text: "कभी-कभी", value: 2 },
+                    { text: "नहीं, यह मेरी जिम्मेदारी नहीं", value: 1 }
+                ]
+            },
+            {
+                question: "8. क्या आप दूसरों को धोखा देने या हेरफेर करने की कोशिश करते हैं?",
+                options: [
+                    { text: "नहीं, कभी नहीं", value: 4 },
+                    { text: "कभी-कभी, अगर मेरा फायदा हो", value: 3 },
+                    { text: "हाँ, अक्सर", value: 2 },
+                    { text: "हाँ, हमेशा", value: 1 }
+                ]
+            },
+            {
+                question: "9. क्या आप दूसरों के साथ सहानुभूति रखते हैं और उनकी भावनाओं को समझते हैं?",
+                options: [
+                    { text: "हाँ, हमेशा", value: 4 },
+                    { text: "हाँ, अक्सर", value: 3 },
+                    { text: "कभी-कभी", value: 2 },
+                    { text: "नहीं, मुझे परवाह नहीं", value: 1 }
+                ]
+            },
+            {
+                question: "10. क्या आप दूसरों के रहस्य रखते हैं या उन्हें उजागर करते हैं?",
+                options: [
+                    { text: "मैं हमेशा रहस्य रखता हूँ", value: 4 },
+                    { text: "कभी-कभी, अगर वे मुझे परेशान करें", value: 3 },
+                    { text: "हाँ, अक्सर उन्हें उजागर करता हूँ", value: 2 },
+                    { text: "हाँ, हमेशा", value: 1 }
+                ]
+            },
+
+            // Section 2: ईमानदारी और सत्यनिष्ठा (10 प्रश्न)
+            {
+                question: "11. क्या आप हमेशा सच बोलते हैं, भले ही वह आपके लिए मुश्किल हो?",
+                options: [
+                    { text: "हाँ, हमेशा", value: 4 },
+                    { text: "हाँ, अक्सर", value: 3 },
+                    { text: "कभी-कभी, अगर बहुत जरूरी हो", value: 2 },
+                    { text: "नहीं, मैं झूठ बोलता हूँ अगर मुझे फायदा हो", value: 1 }
+                ]
+            },
+            {
+                question: "12. क्या आप चोरी करते हैं या दूसरों की चीजों को हड़पते हैं?",
+                options: [
+                    { text: "नहीं, कभी नहीं", value: 4 },
+                    { text: "नहीं, लेकिन अगर मौका मिले तो सोच सकता हूँ", value: 3 },
+                    { text: "हाँ, कभी-कभी", value: 2 },
+                    { text: "हाँ, जब भी मौका मिले", value: 1 }
+                ]
+            },
+            {
+                question: "13. क्या आप अपनी गलतियों के लिए दूसरों को दोषी ठहराते हैं?",
+                options: [
+                    { text: "नहीं, मैं अपनी जिम्मेदारी लेता हूँ", value: 4 },
+                    { text: "कभी-कभी, अगर यह आसान हो", value: 3 },
+                    { text: "हाँ, अक्सर", value: 2 },
+                    { text: "हाँ, हमेशा", value: 1 }
+                ]
+            },
+            {
+                question: "14. क्या आप नियमों और कानूनों का पालन करते हैं?",
+                options: [
+                    { text: "हाँ, हमेशा", value: 4 },
+                    { text: "हाँ, अक्सर", value: 3 },
+                    { text: "कभी-कभी, अगर कोई न देख रहा हो", value: 2 },
+                    { text: "नहीं, मैं अपनी मर्जी का मालिक हूँ", value: 1 }
+                ]
+            },
+            {
+                question: "15. क्या आप रिश्वत लेते या देते हैं?",
+                options: [
+                    { text: "नहीं, कभी नहीं", value: 4 },
+                    { text: "नहीं, लेकिन अगर मेरा काम अटक रहा हो तो सोच सकता हूँ", value: 3 },
+                    { text: "हाँ, कभी-कभी", value: 2 },
+                    { text: "हाँ, जब भी मौका मिले", value: 1 }
+                ]
+            },
+            {
+                question: "16. क्या आप अपनी बात पर कायम रहते हैं, भले ही आपको नुकसान हो?",
+                options: [
+                    { text: "हाँ, हमेशा", value: 4 },
+                    { text: "हाँ, अक्सर", value: 3 },
+                    { text: "कभी-कभी", value: 2 },
+                    { text: "नहीं, मैं अपना फायदा देखता हूँ", value: 1 }
+                ]
+            },
+            {
+                question: "17. क्या आप दूसरों की संपत्ति को नुकसान पहुंचाते हैं?",
+                options: [
+                    { text: "नहीं, कभी नहीं", value: 4 },
+                    { text: "नहीं, लेकिन अगर गुस्से में हूँ तो हो सकता है", value: 3 },
+                    { text: "हाँ, कभी-कभी", value: 2 },
+                    { text: "हाँ, अक्सर", value: 1 }
+                ]
+            },
+            {
+                question: "18. क्या आप दूसरों की गलतियों को माफ कर देते हैं?",
+                options: [
+                    { text: "हाँ, हमेशा", value: 4 },
+                    { text: "हाँ, अक्सर", value: 3 },
+                    { text: "कभी-कभी", value: 2 },
+                    { text: "नहीं, मैं बदला लेता हूँ", value: 1 }
+                ]
+            },
+            {
+                question: "19. क्या आप अपने वादे पूरे करते हैं?",
+                options: [
+                    { text: "हाँ, हमेशा", value: 4 },
+                    { text: "हाँ, अक्सर", value: 3 },
+                    { text: "कभी-कभी", value: 2 },
+                    { text: "नहीं, अगर मुझे लगे कि फायदा नहीं है", value: 1 }
+                ]
+            },
+            {
+                question: "20. क्या आप दूसरों की प्रतिष्ठा को नुकसान पहुंचाने की कोशिश करते हैं?",
+                options: [
+                    { text: "नहीं, कभी नहीं", value: 4 },
+                    { text: "नहीं, लेकिन अगर उन्होंने मुझे नुकसान पहुंचाया हो तो", value: 3 },
+                    { text: "हाँ, कभी-कभी", value: 2 },
+                    { text: "हाँ, अक्सर", value: 1 }
+                ]
+            },
+
+            // Section 3: आत्म-नियंत्रण और आवेग (10 प्रश्न)
+            {
+                question: "21. क्या आप अपने गुस्से को नियंत्रित कर पाते हैं?",
+                options: [
+                    { text: "हाँ, हमेशा", value: 4 },
+                    { text: "हाँ, अक्सर", value: 3 },
+                    { text: "कभी-कभी", value: 2 },
+                    { text: "नहीं, मैं आसानी से गुस्सा हो जाता हूँ", value: 1 }
+                ]
+            },
+            {
+                question: "22. क्या आप दूसरों के प्रति दयालु और धैर्यवान रहते हैं?",
+                options: [
+                    { text: "हाँ, हमेशा", value: 4 },
+                    { text: "हाँ, अक्सर", value: 3 },
+                    { text: "कभी-कभी", value: 2 },
+                    { text: "नहीं, मैं impatient रहता हूँ", value: 1 }
+                ]
+            },
+            {
+                question: "23. क्या आप अपनी इच्छाओं को तुरंत पूरा करना चाहते हैं, भले ही इसके परिणाम बुरे हों?",
+                options: [
+                    { text: "नहीं, मैं धैर्य रखता हूँ", value: 4 },
+                    { text: "कभी-कभी, अगर यह छोटी सी बात हो", value: 3 },
+                    { text: "हाँ, अक्सर", value: 2 },
+                    { text: "हाँ, हमेशा", value: 1 }
+                ]
+            },
+            {
+                question: "24. क्या आप दूसरों की ज़रूरतों को अपनी ज़रूरतों से पहले रखते हैं?",
+                options: [
+                    { text: "हाँ, हमेशा", value: 4 },
+                    { text: "हाँ, अक्सर", value: 3 },
+                    { text: "कभी-कभी", value: 2 },
+                    { text: "नहीं, मैं खुद को प्राथमिकता देता हूँ", value: 1 }
+                ]
+            },
+            {
+                question: "25. क्या आप दूसरों को चोट पहुँचाने वाले शब्दों का प्रयोग करते हैं?",
+                options: [
+                    { text: "नहीं, कभी नहीं", value: 4 },
+                    { text: "कभी-कभी, अगर मुझे उकसाया जाए", value: 3 },
+                    { text: "हाँ, अक्सर", value: 2 },
+                    { text: "हाँ, हमेशा", value: 1 }
+                ]
+            },
+            {
+                question: "26. क्या आप अपने सुख के लिए दूसरों को नुकसान पहुंचाते हैं?",
+                options: [
+                    { text: "नहीं, कभी नहीं", value: 4 },
+                    { text: "शायद, अगर मुझे बहुत फायदा हो", value: 3 },
+                    { text: "हाँ, कभी-कभी", value: 2 },
+                    { text: "हाँ, अक्सर", value: 1 }
+                ]
+            },
+            {
+                question: "27. क्या आप दूसरों को देखकर ईर्ष्या महसूस करते हैं?",
+                options: [
+                    { text: "नहीं, मैं खुश होता हूँ", value: 4 },
+                    { text: "कभी-कभी हल्का सा", value: 3 },
+                    { text: "हाँ, अक्सर", value: 2 },
+                    { text: "हाँ, बहुत ज्यादा", value: 1 }
+                ]
+            },
+            {
+                question: "28. क्या आप दूसरों की निंदा करते हैं?",
+                options: [
+                    { text: "नहीं, मैं दूसरों का सम्मान करता हूँ", value: 4 },
+                    { text: "कभी-कभी, अगर वे गलत हों", value: 3 },
+                    { text: "हाँ, अक्सर", value: 2 },
+                    { text: "हाँ, हमेशा", value: 1 }
+                ]
+            },
+            {
+                question: "29. क्या आप हमेशा दूसरों को नियंत्रित करना चाहते हैं?",
+                options: [
+                    { text: "नहीं, मैं दूसरों को आजादी देता हूँ", value: 4 },
+                    { text: "कभी-कभी, अगर मुझे लगता है कि यह सही है", value: 3 },
+                    { text: "हाँ, अक्सर", value: 2 },
+                    { text: "हाँ, हमेशा", value: 1 }
+                ]
+            },
+            {
+                question: "30. क्या आप दूसरों की कमजोरियों का फायदा उठाते हैं?",
+                options: [
+                    { text: "नहीं, कभी नहीं", value: 4 },
+                    { text: "शायद, अगर यह मेरे फायदे के लिए हो", value: 3 },
+                    { text: "हाँ, कभी-कभी", value: 2 },
+                    { text: "हाँ, अक्सर", value: 1 }
+                ]
+            },
+
+            // Section 4: जिम्मेदारी और जवाबदेही (10 प्रश्न)
+            {
+                question: "31. क्या आप अपनी जिम्मेदारियों से भागते हैं?",
+                options: [
+                    { text: "नहीं, मैं अपनी जिम्मेदारियों को पूरा करता हूँ", value: 4 },
+                    { text: "कभी-कभी, अगर वे बहुत मुश्किल हों", value: 3 },
+                    { text: "हाँ, अक्सर", value: 2 },
+                    { text: "हाँ, हमेशा", value: 1 }
+                ]
+            },
+            {
+                question: "32. क्या आप दूसरों की गलतियों की जिम्मेदारी लेते हैं?",
+                options: [
+                    { text: "हाँ, अगर मैं इसमें शामिल हूँ", value: 4 },
+                    { text: "कभी-कभी", value: 3 },
+                    { text: "नहीं, मैं अपनी ही देखता हूँ", value: 2 },
+                    { text: "नहीं, कभी नहीं", value: 1 }
+                ]
+            },
+            {
+                question: "33. क्या आप अपने कार्यों के परिणामों के बारे में सोचते हैं?",
+                options: [
+                    { text: "हाँ, हमेशा", value: 4 },
+                    { text: "हाँ, अक्सर", value: 3 },
+                    { text: "कभी-कभी", value: 2 },
+                    { text: "नहीं, मैं बस कर देता हूँ", value: 1 }
+                ]
+            },
+            {
+                question: "34. क्या आप सार्वजनिक संपत्ति का सम्मान करते हैं?",
+                options: [
+                    { text: "हाँ, हमेशा", value: 4 },
+                    { text: "हाँ, अक्सर", value: 3 },
+                    { text: "कभी-कभी", value: 2 },
+                    { text: "नहीं, मुझे परवाह नहीं", value: 1 }
+                ]
+            },
+            {
+                question: "35. क्या आप दूसरों को प्रेरित करते हैं या हतोत्साहित करते हैं?",
+                options: [
+                    { text: "मैं दूसरों को प्रेरित करता हूँ", value: 4 },
+                    { text: "दोनों, स्थिति के अनुसार", value: 3 },
+                    { text: "मैं अक्सर हतोत्साहित करता हूँ", value: 2 },
+                    { text: "मैं हमेशा हतोत्साहित करता हूँ", value: 1 }
+                ]
+            },
+            {
+                question: "36. क्या आप अपने स्वार्थ के लिए दूसरों का उपयोग करते हैं?",
+                options: [
+                    { text: "नहीं, कभी नहीं", value: 4 },
+                    { text: "शायद, अगर मुझे बहुत जरूरत हो", value: 3 },
+                    { text: "हाँ, कभी-कभी", value: 2 },
+                    { text: "हाँ, अक्सर", value: 1 }
+                ]
+            },
+            {
+                question: "37. क्या आप अपनी गलतियों से सीखते हैं?",
+                options: [
+                    { text: "हाँ, हमेशा", value: 4 },
+                    { text: "हाँ, अक्सर", value: 3 },
+                    { text: "कभी-कभी", value: 2 },
+                    { text: "नहीं, मैं दूसरों को दोष देता हूँ", value: 1 }
+                ]
+            },
+            {
+                question: "38. क्या आप पर्यावरण की परवाह करते हैं?",
+                options: [
+                    { text: "हाँ, हमेशा", value: 4 },
+                    { text: "हाँ, अक्सर", value: 3 },
+                    { text: "कभी-कभी", value: 2 },
+                    { text: "नहीं, मुझे परवाह नहीं", value: 1 }
+                ]
+            },
+            {
+                question: "39. क्या आप दूसरों के साथ सहयोग करना पसंद करते हैं?",
+                options: [
+                    { text: "हाँ, हमेशा", value: 4 },
+                    { text: "हाँ, अक्सर", value: 3 },
+                    { text: "कभी-कभी, अगर मेरा फायदा हो", value: 2 },
+                    { text: "नहीं, मैं अकेला काम करना पसंद करता हूँ", value: 1 }
+                ]
+            },
+            {
+                question: "40. क्या आप दूसरों के साथ किए गए समझौतों का सम्मान करते हैं?",
+                options: [
+                    { text: "हाँ, हमेशा", value: 4 },
+                    { text: "हाँ, अक्सर", value: 3 },
+                    { text: "कभी-कभी, अगर मुझे फायदा हो", value: 2 },
+                    { text: "नहीं, मैं उन्हें तोड़ देता हूँ", value: 1 }
+                ]
+            },
+
+            // Section 5: आत्म-मूल्य और दृष्टिकोण (10 प्रश्न)
+            {
+                question: "41. क्या आप खुद को दूसरों से बेहतर समझते हैं?",
+                options: [
+                    { text: "नहीं, मैं सभी का सम्मान करता हूँ", value: 4 },
+                    { text: "कभी-कभी, अगर मैं किसी क्षेत्र में बेहतर हूँ", value: 3 },
+                    { text: "हाँ, अक्सर", value: 2 },
+                    { text: "हाँ, हमेशा", value: 1 }
+                ]
+            },
+            {
+                question: "42. क्या आप दूसरों की आलोचना को सकारात्मक रूप से लेते हैं?",
+                options: [
+                    { text: "हाँ, हमेशा", value: 4 },
+                    { text: "हाँ, अक्सर", value: 3 },
+                    { text: "कभी-कभी", value: 2 },
+                    { text: "नहीं, मैं गुस्सा हो जाता हूँ", value: 1 }
+                ]
+            },
+            {
+                question: "43. क्या आप दूसरों की खुशी में अपनी खुशी देखते हैं?",
+                options: [
+                    { text: "हाँ, हमेशा", value: 4 },
+                    { text: "हाँ, अक्सर", value: 3 },
+                    { text: "कभी-कभी", value: 2 },
+                    { text: "नहीं, मुझे अपनी खुशी की परवाह है", value: 1 }
+                ]
+            },
+            {
+                question: "44. क्या आप बदला लेने की भावना रखते हैं?",
+                options: [
+                    { text: "नहीं, कभी नहीं", value: 4 },
+                    { text: "नहीं, लेकिन अगर मुझे चोट लगी हो तो", value: 3 },
+                    { text: "हाँ, कभी-कभी", value: 2 },
+                    { text: "हाँ, अक्सर", value: 1 }
+                ]
+            },
+            {
+                question: "45. क्या आप दूसरों के प्रति घृणा या नफरत महसूस करते हैं?",
+                options: [
+                    { text: "नहीं, कभी नहीं", value: 4 },
+                    { text: "नहीं, लेकिन अगर उन्होंने मुझे नुकसान पहुंचाया हो तो", value: 3 },
+                    { text: "हाँ, कभी-कभी", value: 2 },
+                    { text: "हाँ, अक्सर", value: 1 }
+                ]
+            },
+            {
+                question: "46. क्या आप खुद को बेहतर बनाने के लिए काम करते हैं?",
+                options: [
+                    { text: "हाँ, हमेशा", value: 4 },
+                    { text: "हाँ, अक्सर", value: 3 },
+                    { text: "कभी-कभी", value: 2 },
+                    { text: "नहीं, मैं जैसा हूँ वैसा ही ठीक हूँ", value: 1 }
+                ]
+            },
+            {
+                question: "47. क्या आप दूसरों को नीचा दिखाने की कोशिश करते हैं?",
+                options: [
+                    { text: "नहीं, मैं सभी का सम्मान करता हूँ", value: 4 },
+                    { text: "शायद, अनजाने में", value: 3 },
+                    { text: "हाँ, कभी-कभी", value: 2 },
+                    { text: "हाँ, अक्सर", value: 1 }
+                ]
+            },
+            {
+                question: "48. क्या आप दूसरों के साथ अपने ज्ञान या कौशल को साझा करते हैं?",
+                options: [
+                    { text: "हाँ, हमेशा", value: 4 },
+                    { text: "हाँ, अक्सर", value: 3 },
+                    { text: "कभी-कभी", value: 2 },
+                    { text: "नहीं, मैं उन्हें अपने पास रखता हूँ", value: 1 }
+                ]
+            },
+            {
+                question: "49. क्या आप दूसरों को क्षमा करते हैं?",
+                options: [
+                    { text: "हाँ, हमेशा", value: 4 },
+                    { text: "हाँ, अक्सर", value: 3 },
+                    { text: "कभी-कभी", value: 2 },
+                    { text: "नहीं, मैं माफ नहीं करता", value: 1 }
+                ]
+            },
+            {
+                question: "50. क्या आप दूसरों के लिए अच्छा करने में आनंद महसूस करते हैं?",
+                options: [
+                    { text: "हाँ, हमेशा", value: 4 },
+                    { text: "हाँ, अक्सर", value: 3 },
+                    { text: "कभी-कभी", value: 2 },
+                    { text: "नहीं, मुझे परवाह नहीं", value: 1 }
+                ]
+            }
+        ];
+
+        let currentQuestionIndex = 0;
+        const userAnswers = {}; // Store answers {questionIndex: selectedValue}
+        const totalQuestions = questions.length;
+        const maxPossibleScore = totalQuestions * 4; // Each question has max 4 points
+
+        const quizDiv = document.getElementById('quiz');
+        const prevBtn = document.getElementById('prev-btn');
+        const nextBtn = document.getElementById('next-btn');
+        const submitBtn = document.getElementById('submit-btn');
+        const quizProgress = document.getElementById('quiz-progress');
+        const loader = document.getElementById('loader');
+        const resultContainer = document.getElementById('result-container');
+        const scoreDisplay = document.getElementById('score');
+        const scoreProgress = document.getElementById('score-progress');
+        const resultMessage = document.getElementById('result-message');
+        const restartBtn = document.getElementById('restart-btn');
+        const fab = document.getElementById('fab');
+
+        function loadQuestion() {
+            if (currentQuestionIndex < totalQuestions) {
+                const q = questions[currentQuestionIndex];
+                let optionsHtml = '';
+                q.options.forEach((option, optionIndex) => {
+                    const isChecked = userAnswers[currentQuestionIndex] === option.value;
+                    optionsHtml += `
+                        <div class="option">
+                            <input type="radio" id="q${currentQuestionIndex}o${optionIndex}" name="q${currentQuestionIndex}" value="${option.value}" ${isChecked ? 'checked' : ''}>
+                            <label for="q${currentQuestionIndex}o${optionIndex}">
+                                <span class="custom-radio"></span>
+                                <span class="option-text">${option.text}</span>
+                            </label>
+                        </div>
+                    `;
+                });
+
+                quizDiv.innerHTML = `
+                    <div class="question-counter">प्रश्न ${currentQuestionIndex + 1} / ${totalQuestions}</div>
+                    <div class="question">${q.question}</div>
+                    <div class="options">${optionsHtml}</div>
+                `;
+
+                // Add event listeners for radio buttons
+                quizDiv.querySelectorAll('input[type="radio"]').forEach(radio => {
+                    radio.addEventListener('change', (event) => {
+                        userAnswers[currentQuestionIndex] = parseInt(event.target.value);
+                        updateNavigationButtons();
+                    });
+                });
+
+                updateNavigationButtons();
+                updateProgressBar();
+            } else {
+                showResult();
+            }
+        }
+
+        function updateProgressBar() {
+            const progress = ((currentQuestionIndex) / totalQuestions) * 100;
+            quizProgress.style.width = `${progress}%`;
+        }
+
+        function updateNavigationButtons() {
+            prevBtn.disabled = currentQuestionIndex === 0;
+            nextBtn.style.display = currentQuestionIndex === totalQuestions - 1 ? 'none' : 'flex';
+            submitBtn.style.display = currentQuestionIndex === totalQuestions - 1 ? 'flex' : 'none';
+        }
+
+        function prevQuestion() {
+            if (currentQuestionIndex > 0) {
+                currentQuestionIndex--;
+                loadQuestion();
+            }
+        }
+
+        function nextQuestion() {
+            if (currentQuestionIndex < totalQuestions - 1) {
+                // Ensure an option is selected before moving next
+                if (userAnswers[currentQuestionIndex] === undefined) {
+                    alert('कृपया अगले प्रश्न पर जाने से पहले एक विकल्प चुनें।');
+                    return;
+                }
+                currentQuestionIndex++;
+                loadQuestion();
+            }
+        }
+
+        function calculateScore() {
+            let totalScore = 0;
+            for (const key in userAnswers) {
+                totalScore += userAnswers[key];
+            }
+            // Normalize score to a percentage (higher percentage means more good)
+            // Max score is totalQuestions * 4 (if all are 4 points)
+            // Min score is totalQuestions * 1 (if all are 1 point)
+            // Convert score to a 0-100 scale where 100 is excellent (very good).
+
+            const minPossibleScore = totalQuestions * 1; // 50 * 1 = 50
+            const scoreRange = maxPossibleScore - minPossibleScore; // 200 - 50 = 150
+            const adjustedScore = totalScore - minPossibleScore; // score between 0 and 150
+            const percentage = (adjustedScore / scoreRange) * 100; // normalized to 0-100
+            return Math.round(percentage);
+        }
+
+        function getResultMessage(percentage) {
+            let message = "";
+            let color = "";
+            // Adjust ranges for good/evil: higher % means more good, lower % means more evil
+            if (percentage >= 80) { // High score = Very Good
+                message = "उत्कृष्ट! आप में अच्छाई का स्तर बहुत उच्च है। आप दयालु, ईमानदार और दूसरों के प्रति सहानुभूति रखने वाले व्यक्ति हैं।";
+                color = "#4CAF50"; // Green for very good
+            } else if (percentage >= 60) {
+                message = "अच्छा! आप ज्यादातर स्थितियों में अच्छे और नैतिक रहते हैं, लेकिन कुछ क्षेत्रों में सुधार की गुंजाइश है।";
+                color = "#8BC34A"; // Light Green for good
+            } else if (percentage >= 40) {
+                message = "सामान्य। आपकी नैतिकता का स्तर औसत है। आपको अपनी आंतरिक अच्छाई को बढ़ावा देने और नकारात्मक प्रवृत्तियों को नियंत्रित करने पर काम करने की आवश्यकता है।";
+                color = "#FFC107"; // Amber for normal
+            } else if (percentage >= 20) {
+                message = "चिंताजनक। आप में कुछ नकारात्मक प्रवृत्तियां हावी हो सकती हैं। आपको अपने व्यवहार और दूसरों के प्रति अपने दृष्टिकोण पर गंभीरता से विचार करने की आवश्यकता है।";
+                color = "#FF9800"; // Orange for bad
+            } else { // Low score = Very Evil
+                message = "बहुत चिंताजनक! आप में बुराई का स्तर बहुत उच्च है। यह आपके जीवन और आपके आसपास के लोगों के लिए हानिकारक हो सकता है। आपको तत्काल आत्म-चिंतन और सकारात्मक बदलाव की आवश्यकता है।";
+                color = "#F44336"; // Red for very evil
+            }
+            scoreProgress.style.backgroundColor = color;
+            return message;
+        }
+
+        function showResult() {
+            if (Object.keys(userAnswers).length !== totalQuestions) {
+                if (!confirm('आपने सभी प्रश्नों का उत्तर नहीं दिया है। क्या आप फिर भी परिणाम देखना चाहते हैं?')) {
+                    return;
+                }
+            }
+
+            quizDiv.style.display = 'none';
+            prevBtn.style.display = 'none';
+            nextBtn.style.display = 'none';
+            submitBtn.style.display = 'none';
+            fab.style.display = 'none'; // Hide FAB on result page
+
+            loader.style.display = 'block';
+
+            setTimeout(() => {
+                loader.style.display = 'none';
+                resultContainer.style.display = 'block';
+                const finalScore = calculateScore();
+                scoreDisplay.textContent = `${finalScore}%`;
+                scoreProgress.style.width = `${finalScore}%`;
+                resultMessage.innerHTML = getResultMessage(finalScore);
+            }, 1500); // Simulate loading time
+        }
+
+        function restartQuiz() {
+            currentQuestionIndex = 0;
+            for (const key in userAnswers) {
+                delete userAnswers[key];
+            }
+            quizDiv.style.display = 'block';
+            resultContainer.style.display = 'none';
+            fab.style.display = 'flex'; // Show FAB on quiz start
+            loadQuestion();
+            updateProgressBar();
+        }
+
+        prevBtn.addEventListener('click', prevQuestion);
+        nextBtn.addEventListener('click', nextQuestion);
+        submitBtn.addEventListener('click', showResult);
+        restartBtn.addEventListener('click', restartQuiz);
+
+        // FAB functionality - allows jumping to the result even if not all questions are answered
+        fab.addEventListener('click', () => {
+            showResult();
+        });
+
+        // Initial load
+        loadQuestion();
+    </script>
+    <a href="index.html" class="floating-home-button">
+        <div class="home-button-inner">
+            Home
+        </div>
+    </a>
+</body>
+</html>
