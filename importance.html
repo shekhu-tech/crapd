@@ -1,0 +1,1387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whose Life Am I Important To? A 50-Question Reflection | crapd.in</title>
+    <meta name="description" content="Explore your impact on others with our 50-question interactive quiz. Reflect on your relationships, contributions, and the difference you make in the lives of those around you.">
+    <meta name="keywords" content="importance quiz, relationships, impact on others, self-worth, connection, social bonds, personal contribution, empathy, reflection, 50 questions, crapd.in">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://crapd.in/whose-life-important-quiz.html">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://crapd.in/whose-life-important-quiz.html">
+    <meta property="og:title" content="Whose Life Am I Important To? A 50-Question Reflection">
+    <meta property="og:description" content="Explore your impact on others with our 50-question interactive quiz. Reflect on your relationships, contributions, and the difference you make in the lives of those around you.">
+    <meta property="og:image" content="https://crapd.in/images/importance-quiz-social.jpg">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://crapd.in/whose-life-important-quiz.html">
+    <meta property="twitter:title" content="Whose Life Am I Important To? A 50-Question Reflection">
+    <meta property="twitter:description" content="Explore your impact on others with our 50-question interactive quiz. Reflect on your relationships, contributions, and the difference you make in the lives of those around you.">
+    <meta property="twitter:image" content="https://crapd.in/images/importance-quiz-social.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #3F51B5; /* Indigo/Deep Blue for trust & introspection */
+            --secondary-color: #283593; /* Even Deeper Blue */
+            --accent-color: #FFC107; /* Amber for warmth & connection */
+            --light-bg: #E8EAF6; /* Very light blue background */
+            --dark-text: #263238; /* Darker charcoal */
+            --light-text: #546E7A; /* Muted blue-grey */
+            --white: #ffffff;
+            --shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #F0F4C3; /* Light pastel yellow/green for comfort */
+            color: var(--dark-text);
+            line-height: 1.7;
+            padding: 0;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 25px;
+        }
+
+        header {
+            background: linear-gradient(145deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 2.5rem 0;
+            text-align: center;
+            border-radius: 0 0 30px 30px;
+            box-shadow: var(--shadow);
+            margin-bottom: 2.5rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: "";
+            position: absolute;
+            top: -60%;
+            left: -60%;
+            width: 220%;
+            height: 220%;
+            background: radial-gradient(circle, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0) 70%);
+            transform: rotate(-25deg);
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 0.75rem;
+            position: relative;
+            letter-spacing: 0.5px;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.95;
+            position: relative;
+            font-weight: 300;
+        }
+
+        .progress-container {
+            width: 100%;
+            background-color: #CFD8DC; /* Light grey blue */
+            border-radius: 12px;
+            margin: 2.5rem 0;
+            height: 18px;
+            overflow: hidden;
+            box-shadow: inset 0 2px 4px rgba(0,0,0,0.15);
+        }
+
+        .progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, var(--accent-color), var(--primary-color));
+            width: 0%;
+            transition: width 0.6s ease-out;
+            border-radius: 12px;
+        }
+
+        .quiz-container {
+            background-color: var(--white); /* Changed to white for clarity */
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+            padding: 2.5rem;
+            margin-bottom: 2.5rem;
+            position: relative;
+            transition: opacity 0.3s ease-out; /* Added transition for smooth loading */
+        }
+
+        .question-counter {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 0.6rem 1.2rem;
+            border-radius: 25px;
+            font-weight: 500;
+            display: inline-block;
+            margin-bottom: 1.5rem;
+            font-size: 1rem;
+            animation: fadeInScale 0.4s ease-out;
+        }
+
+        @keyframes fadeInScale {
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        .question {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 2rem;
+            color: var(--secondary-color);
+            line-height: 1.4;
+        }
+
+        .options {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 12px;
+        }
+
+        /* --- Option visibility fix --- */
+        .option {
+            display: flex;
+            align-items: center;
+            padding: 12px 15px;
+            background-color: var(--light-bg);
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            opacity: 1; /* Explicitly set to visible */
+            animation: fadeInScale 0.3s ease forwards; /* Use a simpler animation */
+        }
+
+        /* --- Option hover state improvement --- */
+        .option:hover {
+            background-color: #D1C4E9; /* Light purple */
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border-color: var(--primary-color); /* Added for better feedback */
+        }
+        /* Removed the individual option delays (option:nth-child) as they are no longer needed with fadeInScale */
+
+
+        .option input {
+            display: none;
+        }
+
+        .option label {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            cursor: pointer;
+            position: relative;
+            padding-left: 35px;
+        }
+
+        .custom-radio {
+            position: absolute;
+            left: 0;
+            height: 22px;
+            width: 22px;
+            background-color: #eee;
+            border-radius: 50%;
+            border: 2px solid var(--light-text);
+            transition: all 0.3s ease;
+        }
+
+        .option input:checked ~ .custom-radio {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+
+        .custom-radio::after {
+            content: "";
+            position: absolute;
+            display: none;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: white;
+        }
+
+        .option input:checked ~ .custom-radio::after {
+            display: block;
+        }
+
+        .option-text {
+            margin-left: 10px;
+            font-size: 1rem;
+            color: var(--dark-text);
+        }
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 3rem;
+            gap: 15px; /* Gap between buttons */
+        }
+
+        .btn {
+            padding: 14px 30px;
+            border: none;
+            border-radius: 10px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            font-size: 1.1rem;
+            flex-grow: 1; /* Allow buttons to grow */
+            box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 12px rgba(0,0,0,0.15);
+        }
+
+        .btn-secondary {
+            background-color: #CFD8DC;
+            color: var(--dark-text);
+        }
+
+        .btn-secondary:hover {
+            background-color: #B0BEC5;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 12px rgba(0,0,0,0.15);
+        }
+
+        .result-container {
+            background-color: var(--white);
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+            padding: 3rem;
+            text-align: center;
+            display: none;
+            animation: fadeIn 0.6s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .result-title {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            font-size: 2.5rem;
+            letter-spacing: 0.5px;
+        }
+
+        .score {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: var(--accent-color);
+            margin: 1.5rem 0;
+            line-height: 1;
+        }
+
+        .score-bar {
+            height: 35px;
+            background-color: #CFD8DC;
+            border-radius: 18px;
+            margin: 2.5rem auto;
+            max-width: 600px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: inset 0 2px 6px rgba(0,0,0,0.1);
+        }
+
+        .score-progress {
+            height: 100%;
+            background: linear-gradient(90deg, #A7FFEB, var(--accent-color)); /* Light aqua to amber */
+            width: 0%;
+            transition: width 1.2s ease-out;
+            border-radius: 18px;
+        }
+
+        .score-labels {
+            display: flex;
+            justify-content: space-between;
+            max-width: 600px;
+            margin: 0.75rem auto 0;
+            font-size: 0.9rem;
+            color: var(--light-text);
+            font-weight: 500;
+        }
+
+        .result-message {
+            margin-top: 2.5rem;
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: var(--dark-text);
+            padding: 0 1.5rem;
+        }
+
+        .restart-btn {
+            margin-top: 3rem;
+            background-color: var(--accent-color);
+            color: var(--primary-color); /* Contrasting text */
+            font-weight: 700;
+        }
+
+        .restart-btn:hover {
+            background-color: #FFB300; /* Darker amber */
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+
+            header {
+                padding: 2rem 0;
+                border-radius: 0;
+            }
+
+            h1 {
+                font-size: 2.2rem;
+            }
+
+            .subtitle {
+                font-size: 1rem;
+            }
+
+            .quiz-container, .result-container {
+                padding: 2rem;
+            }
+
+            .question {
+                font-size: 1.2rem;
+            }
+
+            .option label {
+                font-size: 1rem;
+            }
+
+            .option-text {
+                font-size: 1rem;
+            }
+
+            .btn {
+                padding: 12px 25px;
+                font-size: 1rem;
+            }
+
+            .result-title {
+                font-size: 2rem;
+            }
+
+            .score {
+                font-size: 3rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            .quiz-container, .result-container {
+                padding: 1.5rem;
+                border-radius: 15px;
+            }
+
+            .options {
+                gap: 10px;
+            }
+
+            .option {
+                padding: 12px;
+            }
+
+            .custom-radio {
+                height: 22px;
+                width: 22px;
+            }
+
+            .option label {
+                padding-left: 35px;
+            }
+
+            .option-text {
+                font-size: 0.95rem;
+                margin-left: 8px;
+            }
+
+            .navigation {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .btn {
+                width: 100%;
+            }
+        }
+
+        /* Loading spinner */
+        .loader {
+            display: none;
+            border: 6px solid #f3f3f3;
+            border-top: 6px solid var(--primary-color);
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            animation: spin 1s linear infinite;
+            margin: 3rem auto;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Floating action button */
+        .fab {
+            position: fixed;
+            bottom: 35px;
+            right: 35px;
+            width: 65px;
+            height: 65px;
+            background-color: var(--accent-color);
+            color: var(--primary-color); /* Icon color contrasting with amber */
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.25);
+            cursor: pointer;
+            z-index: 100;
+            transition: all 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55); /* Springy transition */
+        }
+
+        .fab:hover {
+            transform: scale(1.15);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+        }
+
+        .floating-home-button {
+            position: fixed;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            background-color: transparent;
+            border: none;
+            z-index: 1000;
+            text-decoration: none;
+        }
+
+        .home-button-inner {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-end;
+            height: 70px;
+            width: 23px;
+            background-color: #673AB7; /* Deep Purple for Home */
+            color: white;
+            font-weight: bold;
+            border-radius: 0 10px 10px 0;
+            box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease;
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+        }
+
+        .home-button-inner:hover {
+            background-color: #512DA8;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><i class="fas fa-heart-circle-check"></i> Whose Life Am I Important To?</h1>
+            <p class="subtitle">A 50-Question Reflection on Your Impact</p>
+        </div>
+    </header>
+
+    <div class="container">
+
+        <div class="progress-container">
+            <div class="progress-bar" id="quiz-progress"></div>
+        </div>
+
+        <div id="quiz" class="quiz-container"></div>
+
+        <div class="navigation">
+            <button class="btn btn-secondary" id="prev-btn" disabled>
+                <i class="fas fa-arrow-left"></i> Previous
+            </button>
+            <button class="btn btn-primary" id="next-btn">
+                Next <i class="fas fa-arrow-right"></i>
+            </button>
+            <button class="btn btn-primary" id="submit-btn" style="display: none;">
+                See Your Impact <i class="fas fa-user-group"></i>
+            </button>
+        </div>
+
+        <div class="loader" id="loader"></div>
+
+        <div class="result-container" id="result-container">
+            <h2 class="result-title">Your Impact on Others</h2>
+            <div class="score" id="score">0%</div>
+
+            <div class="score-bar">
+                <div class="score-progress" id="score-progress"></div>
+            </div>
+
+            <div class="score-labels">
+                <span>Building Bridges</span>
+                <span>Connecting Hearts</span>
+                <span>Radiating Influence</span>
+                <span>Essential Presence</span>
+            </div>
+
+            <div class="result-message" id="result-message"></div>
+
+            <button class="btn restart-btn" id="restart-btn">
+                <i class="fas fa-redo"></i> Restart Reflection
+            </button>
+        </div>
+    </div>
+
+    <a href="https://crapd.in/" class="floating-home-button" aria-label="Go to Home Page">
+        <div class="home-button-inner">
+            <i class="home"></i> HOME
+        </div>
+    </a>
+
+    <div class="fab" id="fab" title="See Your Current Impact Summary">
+        <i class="fas fa-users-viewfinder"></i>
+    </div>
+
+    <script>
+        const questions = [
+            {
+                "question_number": 1,
+                "question": "How often do you initiate contact (calls, texts, visits) with friends or family members?",
+                "options": [
+                    { "text": "Almost never, I always wait for others to reach out.", "value": 1 },
+                    { "text": "Rarely, only when there's a specific need.", "value": 2 },
+                    { "text": "Sometimes, maybe once a month or so.", "value": 3 },
+                    { "text": "Regularly, a few times a month.", "value": 4 },
+                    { "text": "Often, multiple times a week.", "value": 5 },
+                    { "text": "Very often, daily or almost daily with key people.", "value": 6 },
+                    { "text": "Constantly, I'm a primary initiator in many relationships.", "value": 7 }
+                ]
+            },
+            {
+                "question_number": 2,
+                "question": "When someone shares a personal problem or challenge, how do you typically respond?",
+                "options": [
+                    { "text": "I avoid the topic or try to change the subject.", "value": 1 },
+                    { "text": "I listen passively but don't offer much.", "value": 2 },
+                    { "text": "I listen and offer generic advice.", "value": 3 },
+                    { "text": "I listen attentively and offer some support.", "value": 4 },
+                    { "text": "I listen, empathize, and offer concrete help or advice if asked.", "value": 5 },
+                    { "text": "I actively listen, validate their feelings, and explore solutions together.", "value": 6 },
+                    { "text": "I become a deeply trusted confidant, offering comprehensive support and guidance.", "value": 7 }
+                ]
+            },
+            {
+                "question_number": 3,
+                "question": "Do people often seek your advice or perspective on important matters?",
+                "options": [
+                    { "text": "Never.", "value": 1 },
+                    { "text": "Rarely.", "value": 2 },
+                    { "text": "Occasionally, for minor things.", "value": 3 },
+                    { "text": "Sometimes, for specific topics.", "value": 4 },
+                    { "text": "Often, for various issues.", "value": 5 },
+                    { "text": "Very often, I'm a go-to person for many.", "value": 6 },
+                    { "text": "Almost always, my counsel is highly valued and sought after.", "value": 7 }
+                ]
+            },
+            {
+                "question_number": 4,
+                "question": "How comfortable are you expressing affection or appreciation to others (verbally or physically)?",
+                "options": [
+                    { "text": "Very uncomfortable, I avoid it.", "value": 1 },
+                    { "text": "Uncomfortable, I find it awkward.", "value": 2 },
+                    { "text": "Moderately comfortable, I do it if necessary.", "value": 3 },
+                    { "text": "Comfortable, I express it when I feel it.", "value": 4 },
+                    { "text": "Quite comfortable, I do it regularly.", "value": 5 },
+                    { "text": "Very comfortable, I freely express my feelings.", "value": 6 },
+                    { "text": "Extremely comfortable, I'm openly affectionate and appreciative.", "value": 7 }
+                ]
+            },
+            {
+                "question_number": 5,
+                "question": "When you are absent from a planned gathering or event, how do people typically react?",
+                "options": [
+                    { "text": "No one seems to notice or care.", "value": 1 },
+                    { "text": "A few people might notice, but that's it.", "value": 2 },
+                    { "text": "Some express mild disappointment.", "value": 3 },
+                    { "text": "Several people express that they missed you.", "value": 4 },
+                    { "text": "Many express genuine disappointment and ask where you were.", "value": 5 },
+                    { "text": "People actively reach out to see if you're okay and missed your presence.", "value": 6 },
+                    { "text": "Your absence is strongly felt, and people often say the event wasn't the same without you.", "value": 7 }
+                ]
+            },
+            {
+                "question_number": 6,
+                "question": "How often do you offer practical help or assistance to friends or family (e.g., helping them move, running errands, childcare)?",
+                "options": [
+                    { "text": "Never.", "value": 1 },
+                    { "text": "Rarely, only if directly asked and it's no inconvenience.", "value": 2 },
+                    { "text": "Sometimes, if it fits perfectly into my schedule.", "value": 3 },
+                    { "text": "Regularly, when I see a clear need.", "value": 4 },
+                    { "text": "Often, I actively look for ways to help.", "value": 5 },
+                    { "text": "Very often, I prioritize helping my loved ones.", "value": 6 },
+                    { "text": "Constantly, I'm known as a first responder for practical support.", "value": 7 }
+                ]
+            },
+            {
+                "question_number": 7,
+                "question": "Do you feel that your presence makes a noticeable positive difference in group settings (social, work, volunteer)?",
+                "options": [
+                    { "text": "No, I blend into the background.", "value": 1 },
+                    { "text": "Sometimes, if I'm in a specific role.", "value": 2 },
+                    { "text": "Mildly, I contribute a little.", "value": 3 },
+                    { "text": "Yes, I usually contribute positively.", "value": 4 },
+                    { "text": "Strongly, my contributions are often noted.", "value": 5 },
+                    { "text": "Very strongly, I often shape the dynamic or outcome positively.", "value": 6 },
+                    { "text": "Fundamentally, my presence is a cornerstone of the group's success/enjoyment.", "value": 7 }
+                ]
+            },
+            {
+                "question_number": 8,
+                "question": "How often do people confide in you about their deepest thoughts or feelings?",
+                "options": [
+                    { "text": "Never.", "value": 1 },
+                    { "text": "Extremely rarely.", "value": 2 },
+                    { "text": "Occasionally, after a lot of prompting.", "value": 3 },
+                    { "text": "Sometimes, with people I'm very close to.", "value": 4 },
+                    { "text": "Often, I'm seen as a good listener.", "value": 5 },
+                    { "text": "Very often, I am a natural confidant for many.", "value": 6 },
+                    { "text": "Almost universally, I'm trusted with highly personal information.", "value": 7 }
+                ]
+            },
+            {
+                "question_number": 9,
+                "question": "Do you go out of your way to celebrate others' successes, big or small?",
+                "options": [
+                    { "text": "Never.", "value": 1 },
+                    { "text": "Rarely.", "value": 2 },
+                    { "text": "Sometimes, with a quick congratulation.", "value": 3 },
+                    { "text": "Regularly, I'll send a text or make a call.", "value": 4 },
+                    { "text": "Often, I'll plan a small celebration or thoughtful gesture.", "value": 5 },
+                    { "text": "Very often, I genuinely invest in celebrating their joy.", "value": 6 },
+                    { "text": "Always, I'm a passionate advocate and cheerleader for others' achievements.", "value": 7 }
+                ]
+            },
+            {
+                "question_number": 10,
+                "question": "How often do you think about how your actions or words affect others?",
+                "options": [
+                    { "text": "Almost never, I focus on myself.", "value": 1 },
+                    { "text": "Rarely, only after a negative consequence.", "value": 2 },
+                    { "text": "Sometimes, but not consistently.", "value": 3 },
+                    { "text": "Often, I try to be mindful.", "value": 4 },
+                    { "text": "Very often, I consider impact before acting.", "value": 5 },
+                    { "text": "Almost always, empathy guides my interactions.", "value": 6 },
+                    { "text": "Constantly, understanding my impact is central to my interactions.", "value": 7 }
+                ]
+            },
+            {
+                "question_number": 11,
+                "question": "Do people generally remember specific things you've told them or experiences you've shared together?",
+                "options": [
+                    { "text": "No, they seem to forget easily.", "value": 1 },
+                    { "text": "Rarely, unless it was very dramatic.", "value": 2 },
+                    { "text": "Occasionally, if prompted.", "value": 3 },
+                    { "text": "Sometimes, with close friends/family.", "value": 4 },
+                    { "text": "Often, they recall details.", "value": 5 },
+                    { "text": "Very often, my stories/experiences stick with them.", "value": 6 },
+                    { "text": "Consistently, my shared moments become cherished memories for them.", "value": 7 }
+                ]
+            },
+            {
+                "question_number": 12,
+                "question": "How willing are you to compromise your own desires for the sake of someone else's happiness (e.g., in shared decisions)?",
+                "options": [
+                    { "text": "Not willing at all, my desires come first.", "value": 1 },
+                    { "text": "Rarely willing, only under extreme pressure.", "value": 2 },
+                    { "text": "Slightly willing, for minor things.", "value": 3 },
+                    { "text": "Moderately willing, for close relationships.", "value": 4 },
+                    { "text": "Quite willing, if it means a lot to them.", "value": 5 },
+                    { "text": "Very willing, I find joy in their happiness.", "value": 6 },
+                    { "text": "Extremely willing, I prioritize their well-being in joint matters.", "value": 7 }
+                ]
+            },
+            {
+                "question_number": 13,
+                "question": "When you cancel plans, do people seem genuinely disappointed?",
+                "options": [
+                    { "text": "No, they don't seem to mind.", "value": 1 },
+                    { "text": "Rarely, it's usually just an acknowledgment.", "value": 2 },
+                    { "text": "Some express mild regret.", "value": 3 },
+                    { "text": "A few express noticeable disappointment.", "value": 4 },
+                    { "text": "Many express genuine disappointment.", "value": 5 },
+                    { "text": "People actively reach out to see if you're okay and missed your presence.", "value": 6 },
+                    { "text": "Your absence significantly impacts their enjoyment, and they make it known.", "value": 7 }
+                ]
+            },
+            {
+                "question_number": 14,
+                "question": "How actively do you try to resolve conflicts or misunderstandings in your relationships?",
+                "options": [
+                    { "text": "I avoid conflict entirely.", "value": 1 },
+                    { "text": "I let things resolve on their own.", "value": 2 },
+                    { "text": "I address it if it becomes unavoidable.", "value": 3 },
+                    { "text": "I make an effort to discuss it if it's important.", "value": 4 },
+                    { "text": "I proactively seek to understand and resolve issues.", "value": 5 },
+                    { "text": "I am a skilled mediator, always striving for harmonious resolution.", "value": 6 },
+                    { "text": "I actively initiate difficult conversations to ensure relationship health.", "value": 7 }
+                ]
+            },
+            {
+                "question_number": 15,
+                "question": "Do you enjoy teaching or sharing your knowledge/skills with others?",
+                "options": [
+                    { "text": "No, I prefer to keep my knowledge to myself.", "value": 1 },
+                    { "text": "Rarely, only if someone specifically asks.", "value": 2 },
+                    { "text": "Sometimes, if it's a casual topic.", "value": 3 },
+                    { "text": "Yes, I like to help others learn.", "value": 4 },
+                    { "text": "Often, I feel a sense of purpose in sharing.", "value": 5 },
+                    { "text": "Very often, I actively look for opportunities to mentor or teach.", "value": 6 },
+                    { "text": "Absolutely, it's a core part of how I connect and contribute.", "value": 7 }
+                ]
+            },
+            {
+                "question_number": 16,
+                "question": "How important is it for you to be seen as reliable and dependable by others?",
+                "options": [
+                    { "text": "Not important at all.", "value": 1 },
+                    { "text": "Slightly important, but I don't stress over it.", "value": 2 },
+                    { "text": "Moderately important, I try to be.", "value": 3 },
+                    { "text": "Important, I make an effort to follow through.", "value": 4 },
+                    { "text": "Very important, I pride myself on being dependable.", "value": 5 },
+                    { "text": "Extremely important, it's a key aspect of my character.", "value": 6 },
+                    { "text": "Crucial, my trustworthiness is foundational to my relationships.", "value": 7 }
+                ]
+            },
+            {
+                "question_number": 17,
+                "question": "When you give gifts, how much thought do you put into what the recipient would truly appreciate?",
+                "options": [
+                    { "text": "I give generic gifts without much thought.", "value": 1 },
+                    { "text": "Some thought, but often focused on convenience.", "value": 2 },
+                    { "text": "A fair amount of thought, trying to match their interests.", "value": 3 },
+                    { "text": "Considerable thought, aiming for something they'd genuinely like.", "value": 4 },
+                    { "text": "Significant thought, often involving research or personal touches.", "value": 5 },
+                    { "text": "Extensive thought, aiming for meaningful, personalized gifts.", "value": 6 },
+                    { "text": "My gifts are known to be deeply thoughtful, often surprising recipients with how well I know them.", "value": 7 }
+                ]
+            },
+            {
+                "question_number": 18,
+                "question": "How often do people spontaneously share good news or successes with you?",
+                "options": [
+                    { "text": "Never.", "value": 1 },
+                    { "text": "Rarely.", "value": 2 },
+                    { "text": "Occasionally.", "value": 3 },
+                    { "text": "Sometimes.", "value": 4 },
+                    { "text": "Often.", "value": 5 },
+                    { "text": "Very often.", "value": 6 },
+                    { "text": "Almost always, I'm among the first they tell.", "value": 7 }
+                ]
+            },
+            {
+                "question_number": 19,
+                "question": "How often do you make people laugh or bring a sense of lightness to conversations?",
+                "options": [
+                    { "text": "Never.", "value": 1 },
+                    { "text": "Rarely.", "value": 2 },
+                    { "text": "Sometimes.", "value": 3 },
+                    { "text": "Often.", "value": 4 },
+                    { "text": "Very often.", "value": 5 },
+                    { "text": "Almost always.", "value": 6 },
+                    { "text": "Constantly, I'm known for my humor and uplifting presence.", "value": 7 }
+                ]
+            },
+            {
+                "question_number": 20,
+                "question": "How willing are you to stand up for others, even when it's difficult or unpopular?",
+                "options": [
+                    { "text": "Not willing at all.", "value": 1 },
+                    { "text": "Rarely, I prefer to avoid confrontation.", "value": 2 },
+                    { "text": "Sometimes, if I feel very strongly.", "value": 3 },
+                    { "text": "Often, I'll speak up if I see injustice.", "value": 4 },
+                    { "text": "Very often, I'm known as an advocate.", "value": 5 },
+                    { "text": "Almost always, I prioritize protecting others' well-being.", "value": 6 },
+                    { "text": "Always, I am a fierce and unwavering defender of those I care about.", "value": 7 }
+                ]
+            },
+            {
+                "question_number": 21,
+                "question": "Do people seek you out for comfort or reassurance during difficult times?",
+                "options": [
+                    { "text": "No, they usually go to someone else.", "value": 1 },
+                    { "text": "Rarely.", "value": 2 },
+                    { "text": "Occasionally.", "value": 3 },
+                    { "text": "Sometimes, if others aren't available.", "value": 4 },
+                    { "text": "Often, I'm a source of comfort.", "value": 5 },
+                    { "text": "Very often, I'm a natural comforter.", "value": 6 },
+                    { "text": "Always, I am known as a pillar of emotional support.", "value": 7 }
+                ]
+            },
+            {
+                "question_number": 22,
+                "question": "How good are you at remembering important dates or details about others' lives (birthdays, anniversaries, significant events)?",
+                "options": [
+                    { "text": "Terrible, I forget almost everything.", "value": 1 },
+                    { "text": "Poor, I remember only a few key things.", "value": 2 },
+                    { "text": "Average, I remember some but miss others.", "value": 3 },
+                    { "text": "Good, I remember most important dates.", "value": 4 },
+                    { "text": "Very good, I often surprise people with my memory.", "value": 5 },
+                    { "text": "Excellent, I rarely forget anything important.", "value": 6 },
+                    { "text": "Phenomenal, I'm like a personal calendar and historian for my loved ones.", "value": 7 }
+                ]
+            },
+            {
+                "question_number": 23,
+                "question": "Do people explicitly tell you that you've had a positive impact on their life?",
+                "options": [
+                    { "text": "Never.", "value": 1 },
+                    { "text": "Extremely rarely.", "value": 2 },
+                    { "text": "Once or twice.", "value": 3 },
+                    { "text": "A few times, usually indirectly.", "value": 4 },
+                    { "text": "Several times, clearly and directly.", "value": 5 },
+                    { "text": "Often, I receive heartfelt affirmations of my impact.", "value": 6 },
+                    { "text": "Regularly and profoundly, my positive impact is a recurring theme.", "value": 7 }
+                ]
+            },
+            {
+                "question_number": 24,
+                "question": "How often do you make an effort to connect with people from different social circles or backgrounds?",
+                "options": [
+                    { "text": "Never, I stick to my existing circle.", "value": 1 },
+                    { "text": "Rarely, unless it's unavoidable.", "value": 2 },
+                    { "text": "Sometimes, if the opportunity arises naturally.", "value": 3 },
+                    { "text": "Often, I enjoy meeting new people.", "value": 4 },
+                    { "text": "Very often, I actively seek diverse connections.", "value": 5 },
+                    { "text": "Almost always, I believe in bridging divides.", "value": 6 },
+                    { "text": "Constantly, my social network is a vibrant tapestry of diverse individuals.", "value": 7 }
+                ]
+            },
+            {
+                "question_number": 25,
+                "question": "When you're facing a challenge, do people offer their support or help without you asking?",
+                "options": [
+                    { "text": "Never.", "value": 1 },
+                    { "text": "Rarely.", "value": 2 },
+                    { "text": "Sometimes.", "value": 3 },
+                    { "text": "Often, some people offer help.", "value": 4 },
+                    { "text": "Very often, I have a strong support system.", "value": 5 },
+                    { "text": "Almost always, people rally to support me.", "value": 6 },
+                    { "text": "Constantly, I am surrounded by an incredible network of proactive support.", "value": 7 }
+                ]
+            },
+            {
+                "question_number": 26,
+                "question": "How well do you genuinely listen to others, even when you disagree with them?",
+                "options": [
+                    { "text": "Poorly, I often interrupt or just wait to speak.", "value": 1 },
+                    { "text": "Fairly, but I get distracted or defensive easily.", "value": 2 },
+                    { "text": "Moderately well, I try to understand their point.", "value": 3 },
+                    { "text": "Well, I actively listen and try to understand.", "value": 4 },
+                    { "text": "Very well, I focus on their perspective even if it's different from mine.", "value": 5 },
+                    { "text": "Excellently, I can listen deeply and empathetically without judgment.", "value": 6 },
+                    { "text": "Exceptionally, I am a master of active and non-judgmental listening.", "value": 7 }
+                ]
+            },
+            {
+                "question_number": 27,
+                "question": "Do you often receive invitations to social events, gatherings, or activities?",
+                "options": [
+                    { "text": "Almost never.", "value": 1 },
+                    { "text": "Rarely.", "value": 2 },
+                    { "text": "Occasionally, for large group events.", "value": 3 },
+                    { "text": "Sometimes, by close friends/family.", "value": 4 },
+                    { "text": "Often, I'm included in many plans.", "value": 5 },
+                    { "text": "Very often, my calendar is usually quite full.", "value": 6 },
+                    { "text": "Constantly, I'm a highly sought-after guest for all types of occasions.", "value": 7 }
+                ]
+            },
+            {
+                "question_number": 28,
+                "question": "How proactive are you in checking in on friends or family members you haven't heard from in a while?",
+                "options": [
+                    { "text": "Not at all, I assume they'll reach out.", "value": 1 },
+                    { "text": "Rarely, only if I'm concerned.", "value": 2 },
+                    { "text": "Sometimes, a quick text or message.", "value": 3 },
+                    { "text": "Often, I make an effort to stay in touch.", "value": 4 },
+                    { "text": "Very often, I try to ensure everyone is doing well.", "value": 5 },
+                    { "text": "Almost always, I act as a relational caretaker.", "value": 6 },
+                    { "text": "Constantly, maintaining strong connections is a top priority for me.", "value": 7 }
+                ]
+            },
+            {
+                "question_number": 29,
+                "question": "How often do you make an effort to remember and ask about details of others' lives (e.g., their job, hobbies, pets)?",
+                "options": [
+                    { "text": "Never.", "value": 1 },
+                    { "text": "Rarely.", "value": 2 },
+                    { "text": "Sometimes, for very close people.", "value": 3 },
+                    { "text": "Often, I try to show interest.", "value": 4 },
+                    { "text": "Very often, it helps me connect.", "value": 5 },
+                    { "text": "Almost always, I remember specific details to foster deeper connections.", "value": 6 },
+                    { "text": "Consistently, people are often amazed by how much I recall about their lives.", "value": 7 }
+                ]
+            },
+            {
+                "question_number": 30,
+                "question": "Do people readily share their vulnerabilities or fears with you?",
+                "options": [
+                    { "text": "Never.", "value": 1 },
+                    { "text": "Rarely.", "value": 2 },
+                    { "text": "Occasionally.", "value": 3 },
+                    { "text": "Sometimes.", "value": 4 },
+                    { "text": "Often, I'm seen as a safe space.", "value": 5 },
+                    { "text": "Very often, I build deep trust.", "value": 6 },
+                    { "text": "Almost universally, I am a trusted holder of people's deepest emotions.", "value": 7 }
+                ]
+            },
+            {
+                "question_number": 31,
+                "question": "How often do you offer constructive feedback or guidance to others when you see them struggling?",
+                "options": [
+                    { "text": "Never, I avoid interfering.", "value": 1 },
+                    { "text": "Rarely, unless it's my direct responsibility.", "value": 2 },
+                    { "text": "Sometimes, if asked directly.", "value": 3 },
+                    { "text": "Often, I try to help them improve.", "value": 4 },
+                    { "text": "Very often, I believe in nurturing growth.", "value": 5 },
+                    { "text": "Almost always, I provide insightful and supportive guidance.", "value": 6 },
+                    { "text": "Consistently, I'm a dedicated mentor and guide for others' development.", "value": 7 }
+                ]
+            },
+            {
+                "question_number": 32,
+                "question": "Do people seem to genuinely enjoy your company at social gatherings?",
+                "options": [
+                    { "text": "No, I often feel like an outsider.", "value": 1 },
+                    { "text": "Rarely, I'm usually quiet.", "value": 2 },
+                    { "text": "Sometimes, if we have a lot in common.", "value": 3 },
+                    { "text": "Often, people seem to enjoy my presence.", "value": 4 },
+                    { "text": "Very often, I contribute positively to the atmosphere.", "value": 5 },
+                    { "text": "Almost always, my presence enhances social situations.", "value": 6 },
+                    { "text": "Consistently, I am a source of joy and positive energy for those around me.", "value": 7 }
+                ]
+            },
+            {
+                "question_number": 33,
+                "question": "How often do you express gratitude to others for their efforts or kindness?",
+                "options": [
+                    { "text": "Never.", "value": 1 },
+                    { "text": "Rarely.", "value": 2 },
+                    { "text": "Sometimes, but not consistently.", "value": 3 },
+                    { "text": "Often, I try to say thank you.", "value": 4 },
+                    { "text": "Very often, I make an effort to acknowledge their kindness.", "value": 5 },
+                    { "text": "Almost always, I am highly appreciative and vocal about it.", "value": 6 },
+                    { "text": "Constantly, expressing gratitude is a core part of my daily interactions.", "value": 7 }
+                ]
+            },
+            {
+                "question_number": 34,
+                "question": "Do people miss you or ask about you if you haven't been around for a while?",
+                "options": [
+                    { "text": "No, I don't think so.", "value": 1 },
+                    { "text": "Rarely, maybe one person.", "value": 2 },
+                    { "text": "Sometimes, a few people might notice.", "value": 3 },
+                    { "text": "Often, several people express missing me.", "value": 4 },
+                    { "text": "Very often, my absence is felt by many.", "value": 5 },
+                    { "text": "Almost always, people actively reach out and express how much they miss me.", "value": 6 },
+                    { "text": "Consistently, my absence creates a noticeable void that people actively try to fill.", "value": 7 }
+                ]
+            },
+            {
+                "question_number": 35,
+                "question": "How willing are you to forgive others who have wronged you?",
+                "options": [
+                    { "text": "Not willing at all, I hold grudges.", "value": 1 },
+                    { "text": "Rarely, it's very difficult for me.", "value": 2 },
+                    { "text": "Sometimes, after a long time.", "value": 3 },
+                    { "text": "Moderately willing, if they apologize.", "value": 4 },
+                    { "text": "Quite willing, I believe in moving on.", "value": 5 },
+                    { "text": "Very willing, I prioritize healing relationships.", "value": 6 },
+                    { "text": "Extremely willing, I practice radical forgiveness for my own and others' peace.", "value": 7 }
+                ]
+            },
+            {
+                "question_number": 36,
+                "question": "Do you often feel like you're the one who keeps certain friendships or family connections alive?",
+                "options": [
+                    { "text": "No, others usually drive the connection.", "value": 1 },
+                    { "text": "Rarely, it's a mutual effort.", "value": 2 },
+                    { "text": "Sometimes, I do a fair share.", "value": 3 },
+                    { "text": "Often, I feel I put in more effort.", "value": 4 },
+                    { "text": "Very often, I'm a primary maintainer.", "value": 5 },
+                    { "text": "Almost always, I am the backbone of several relationships.", "value": 6 },
+                    { "text": "Consistently, without my efforts, many important connections would likely fade.", "value": 7 }
+                ]
+            },
+            {
+                "question_number": 37,
+                "question": "How often do people ask you to mediate disputes or help solve problems between others?",
+                "options": [
+                    { "text": "Never.", "value": 1 },
+                    { "text": "Rarely.", "value": 2 },
+                    { "text": "Occasionally, if it's a minor issue.", "value": 3 },
+                    { "text": "Sometimes, within my close circle.", "value": 4 },
+                    { "text": "Often, I'm seen as impartial and fair.", "value": 5 },
+                    { "text": "Very often, I'm a respected conflict resolver.", "value": 6 },
+                    { "text": "Almost always, I am a trusted and effective peacemaker.", "value": 7 }
+                ]
+            },
+            {
+                "question_number": 38,
+                "question": "Do you make an effort to introduce people from different parts of your life to each other?",
+                "options": [
+                    { "text": "No, I keep my circles separate.", "value": 1 },
+                    { "text": "Rarely.", "value": 2 },
+                    { "text": "Sometimes, if it feels natural.", "value": 3 },
+                    { "text": "Often, I enjoy fostering new connections.", "value": 4 },
+                    { "text": "Very often, I believe in expanding people's networks.", "value": 5 },
+                    { "text": "Almost always, I'm a social connector and network builder.", "value": 6 },
+                    { "text": "Consistently, I actively weave together different threads of my social fabric.", "value": 7 }
+                ]
+            },
+            {
+                "question_number": 39,
+                "question": "How often do people compliment your positive attitude or outlook?",
+                "options": [
+                    { "text": "Never.", "value": 1 },
+                    { "text": "Rarely.", "value": 2 },
+                    { "text": "Occasionally.", "value": 3 },
+                    { "text": "Sometimes.", "value": 4 },
+                    { "text": "Often.", "value": 5 },
+                    { "text": "Very often.", "value": 6 },
+                    { "text": "Almost constantly, it's a defining trait.", "value": 7 }
+                ]
+            },
+            {
+                "question_number": 40,
+                "question": "Do you feel that your opinions or thoughts are valued and considered by others?",
+                "options": [
+                    { "text": "No, I feel ignored.", "value": 1 },
+                    { "text": "Rarely.", "value": 2 },
+                    { "text": "Sometimes, by a select few.", "value": 3 },
+                    { "text": "Often, in specific contexts.", "value": 4 },
+                    { "text": "Very often, my input is respected.", "value": 5 },
+                    { "text": "Almost always, my views carry significant weight.", "value": 6 },
+                    { "text": "Consistently, my insights are highly valued and often shape outcomes.", "value": 7 }
+                ]
+            },
+            {
+                "question_number": 41,
+                "question": "How often do you go out of your way to make new people feel welcome and included in a group?",
+                "options": [
+                    { "text": "Never, I expect them to fit in.", "value": 1 },
+                    { "text": "Rarely.", "value": 2 },
+                    { "text": "Sometimes, a polite greeting.", "value": 3 },
+                    { "text": "Often, I'll say hello and introduce them.", "value": 4 },
+                    { "text": "Very often, I actively integrate them.", "value": 5 },
+                    { "text": "Almost always, I make an intentional effort to ensure their comfort and inclusion.", "value": 6 },
+                    { "text": "Consistently, I am the first to welcome and ensure everyone feels like they belong.", "value": 7 }
+                ]
+            },
+            {
+                "question_number": 42,
+                "question": "When people are feeling down, do they tend to gravitate towards you for comfort or a pick-me-up?",
+                "options": [
+                    { "text": "No, they avoid me.", "value": 1 },
+                    { "text": "Rarely.", "value": 2 },
+                    { "text": "Occasionally.", "value": 3 },
+                    { "text": "Sometimes, if I initiate.", "value": 4 },
+                    { "text": "Often, I'm seen as a source of upliftment.", "value": 5 },
+                    { "text": "Very often, I have a calming and positive influence.", "value": 6 },
+                    { "text": "Almost always, I am a beacon of hope and support during tough times.", "value": 7 }
+                ]
+            },
+            {
+                "question_number": 43,
+                "question": "How often do you offer compliments or genuine praise to others?",
+                "options": [
+                    { "text": "Never.", "value": 1 },
+                    { "text": "Rarely.", "value": 2 },
+                    { "text": "Sometimes.", "value": 3 },
+                    { "text": "Often, when it feels earned.", "value": 4 },
+                    { "text": "Very often, I like to acknowledge good things.", "value": 5 },
+                    { "text": "Almost always, I'm generous with sincere praise.", "value": 6 },
+                    { "text": "Constantly, I actively seek opportunities to highlight others' strengths and achievements.", "value": 7 }
+                ]
+            },
+            {
+                "question_number": 44,
+                "question": "Do people consider you a reliable source of information or guidance in your areas of expertise?",
+                "options": [
+                    { "text": "No, I'm not consulted.", "value": 1 },
+                    { "text": "Rarely.", "value": 2 },
+                    { "text": "Sometimes, for basic questions.", "value": 3 },
+                    { "text": "Often, for specific topics.", "value": 4 },
+                    { "text": "Very often, I'm a go-to expert.", "value": 5 },
+                    { "text": "Almost always, my expertise is highly trusted and sought after.", "value": 6 },
+                    { "text": "Universally, I am seen as a leading authority in my field(s).", "value": 7 }
+                ]
+            },
+            {
+                "question_number": 45,
+                "question": "How often do you voluntarily take on responsibilities or tasks that benefit your community (local, online, etc.)?",
+                "options": [
+                    { "text": "Never.", "value": 1 },
+                    { "text": "Rarely.", "value": 2 },
+                    { "text": "Occasionally, if easy.", "value": 3 },
+                    { "text": "Sometimes, for causes I care about.", "value": 4 },
+                    { "text": "Often, I seek ways to contribute.", "value": 5 },
+                    { "text": "Very often, I'm an active community member.", "value": 6 },
+                    { "text": "Constantly, I am a driving force behind community improvement and well-being.", "value": 7 }
+                ]
+            },
+            {
+                "question_number": 46,
+                "question": "When you share personal news (good or bad), how do people typically react?",
+                "options": [
+                    { "text": "Indifferently.", "value": 1 },
+                    { "text": "Mildly, a brief acknowledgment.", "value": 2 },
+                    { "text": "With some interest.", "value": 3 },
+                    { "text": "With genuine interest and a desire to know more.", "value": 4 },
+                    { "text": "With noticeable care and engagement.", "value": 5 },
+                    { "text": "With deep empathy and strong emotional support.", "value": 6 },
+                    { "text": "With profound, heartfelt reactions, showing your news truly matters to them.", "value": 7 }
+                ]
+            },
+            {
+                "question_number": 47,
+                "question": "Do you often find yourself encouraging others to pursue their goals or dreams?",
+                "options": [
+                    { "text": "Never.", "value": 1 },
+                    { "text": "Rarely.", "value": 2 },
+                    { "text": "Sometimes.", "value": 3 },
+                    { "text": "Often, I try to be supportive.", "value": 4 },
+                    { "text": "Very often, I'm a strong motivator.", "value": 5 },
+                    { "text": "Almost always, I believe in empowering others.", "value": 6 },
+                    { "text": "Consistently, I am a dedicated catalyst for others' personal and professional growth.", "value": 7 }
+                ]
+            },
+            {
+                "question_number": 48,
+                "question": "How often do you initiate or organize social gatherings or activities for others?",
+                "options": [
+                    { "text": "Never.", "value": 1 },
+                    { "text": "Rarely.", "value": 2 },
+                    { "text": "Occasionally, if I have to.", "value": 3 },
+                    { "text": "Sometimes, for close friends.", "value": 4 },
+                    { "text": "Often, I enjoy bringing people together.", "value": 5 },
+                    { "text": "Very often, I'm a primary organizer.", "value": 6 },
+                    { "text": "Consistently, I am the social glue that brings many groups together.", "value": 7 }
+                ]
+            },
+            {
+                "question_number": 49,
+                "question": "Do you believe that your life has a significant, positive impact on the well-being of at least one other person?",
+                "options": [
+                    { "text": "No, I don't think so.", "value": 1 },
+                    { "text": "Unsure, maybe a little.", "value": 2 },
+                    { "text": "Possibly, on one or two people.", "value": 3 },
+                    { "text": "Yes, on a few people.", "value": 4 },
+                    { "text": "Yes, on many people.", "value": 5 },
+                    { "text": "Absolutely, I am indispensable to the well-being of several individuals.", "value": 6 },
+                    { "text": "Definitely, my impact is profound and widespread, affecting many lives positively.", "value": 7 }
+                ]
+            },
+            {
+                "question_number": 50,
+                "question": "If you were to disappear tomorrow, how many people do you think would be significantly impacted?",
+                "options": [
+                    { "text": "None, or very few.", "value": 1 },
+                    { "text": "A small handful (1-3).", "value": 2 },
+                    { "text": "A few close individuals (4-6).", "value": 3 },
+                    { "text": "Several people (7-10).", "value": 4 },
+                    { "text": "Many people (11-20).", "value": 5 },
+                    { "text": "A significant number of people (21-50).", "value": 6 },
+                    { "text": "A very large, broad network of individuals, both directly and indirectly.", "value": 7 }
+                ]
+            }
+        ];
+
+        let currentQuestionIndex = 0;
+        let userAnswers = {};
+        const quizContainer = document.getElementById('quiz');
+        const progressBar = document.getElementById('quiz-progress');
+        const nextButton = document.getElementById('next-btn');
+        const prevButton = document.getElementById('prev-btn');
+        const submitButton = document.getElementById('submit-btn');
+        const resultContainer = document.getElementById('result-container');
+        const scoreElement = document.getElementById('score');
+        const scoreProgressBar = document.getElementById('score-progress');
+        const resultMessageElement = document.getElementById('result-message');
+        const restartButton = document.getElementById('restart-btn');
+        const fabButton = document.getElementById('fab'); // Assuming fab is also a button for summary
+
+
+        // --- Load Question Function with Delay ---
+        function loadQuestion() {
+            quizContainer.style.opacity = 0; // Fade out current content
+
+            setTimeout(() => {
+                const questionData = questions[currentQuestionIndex];
+                quizContainer.innerHTML = `
+                    <div class="question-counter">Question ${currentQuestionIndex + 1} of ${questions.length}</div>
+                    <div class="question">${questionData.question}</div>
+                    <div class="options">
+                        ${questionData.options.map((option, index) => `
+                            <div class="option">
+                                <input type="radio" id="option-${currentQuestionIndex}-${index}" name="question-${currentQuestionIndex}" value="${option.value}"
+                                    ${userAnswers[currentQuestionIndex] == option.value ? 'checked' : ''}>
+                                <label for="option-${currentQuestionIndex}-${index}">
+                                    <span class="custom-radio"></span>
+                                    <span class="option-text">${option.text}</span>
+                                </label>
+                            </div>
+                        `).join('')}
+                    </div>
+                `;
+                // Add event listeners to newly created options
+                quizContainer.querySelectorAll('.option input').forEach(input => {
+                    input.addEventListener('change', (event) => {
+                        userAnswers[currentQuestionIndex] = parseInt(event.target.value);
+                    });
+                });
+
+                updateProgressBar();
+                updateNavigationButtons();
+                quizContainer.style.opacity = 1; // Fade in new content
+            }, 100); // Small delay for smooth transition
+        }
+
+
+        function updateProgressBar() {
+            const progress = ((currentQuestionIndex + 1) / questions.length) * 100;
+            progressBar.style.width = `${progress}%`;
+        }
+
+        function updateNavigationButtons() {
+            prevButton.disabled = currentQuestionIndex === 0;
+            nextButton.style.display = currentQuestionIndex === questions.length - 1 ? 'none' : 'flex';
+            submitButton.style.display = currentQuestionIndex === questions.length - 1 ? 'flex' : 'none';
+        }
+
+        function calculateScoreAndDisplayResult() {
+            const totalQuestions = questions.length;
+            let totalPossibleScore = 0;
+            questions.forEach(q => {
+                // Find the maximum value among options for this question
+                const maxOptionValue = Math.max(...q.options.map(o => o.value));
+                totalPossibleScore += maxOptionValue;
+            });
+
+            let userTotalScore = 0;
+            for (let i = 0; i < totalQuestions; i++) {
+                if (userAnswers[i] !== undefined) {
+                    userTotalScore += userAnswers[i];
+                }
+            }
+
+            const percentageScore = (userTotalScore / totalPossibleScore) * 100;
+            const formattedScore = percentageScore.toFixed(0);
+
+            scoreElement.textContent = `${formattedScore}%`;
+            scoreProgressBar.style.width = `${formattedScore}%`;
+
+            let message = "";
+            if (percentageScore < 20) {
+                message = "Your impact may be subtle or you might feel disconnected. This is a chance to reflect on how you can foster deeper connections and let your value shine through. Small actions can make a big difference.";
+            } else if (percentageScore < 40) {
+                message = "You're beginning to make your mark. People appreciate your presence, but there's room to further engage and deepen your relationships. Consider actively reaching out and sharing more of yourself.";
+            } else if (percentageScore < 60) {
+                message = "You have a noticeable positive impact on many lives. Your presence is valued and you contribute meaningfully. Keep nurturing these connections; your efforts are truly making a difference.";
+            } else if (percentageScore < 80) {
+                message = "Your influence is significant! You are a central figure in the lives of many, providing support, guidance, and joy. Your absence is genuinely felt, and your contributions are highly appreciated.";
+            } else {
+                message = "You are an indispensable force in the lives of others, radiating influence and connecting hearts. Your presence is essential, and you consistently bring immense value, support, and positive transformation to those around you. Keep shining!";
+            }
+            resultMessageElement.textContent = message;
+
+            quizContainer.style.display = 'none';
+            prevButton.style.display = 'none';
+            nextButton.style.display = 'none';
+            submitButton.style.display = 'none';
+            resultContainer.style.display = 'block';
+            fabButton.style.display = 'none'; // Hide FAB on result screen
+        }
+
+        function resetQuiz() {
+            currentQuestionIndex = 0;
+            userAnswers = {};
+            quizContainer.style.display = 'block';
+            resultContainer.style.display = 'none';
+            fabButton.style.display = 'flex'; // Show FAB when restarting
+            loadQuestion();
+        }
+
+        nextButton.addEventListener('click', () => {
+            if (userAnswers[currentQuestionIndex] === undefined) {
+                alert("Please select an option before proceeding!");
+                return;
+            }
+            if (currentQuestionIndex < questions.length - 1) {
+                currentQuestionIndex++;
+                loadQuestion();
+            }
+        });
+
+        prevButton.addEventListener('click', () => {
+            if (currentQuestionIndex > 0) {
+                currentQuestionIndex--;
+                loadQuestion();
+            }
+        });
+
+        submitButton.addEventListener('click', () => {
+            if (userAnswers[currentQuestionIndex] === undefined) {
+                alert("Please select an option before seeing your results!");
+                return;
+            }
+            calculateScoreAndDisplayResult();
+        });
+
+        restartButton.addEventListener('click', resetQuiz);
+
+        fabButton.addEventListener('click', () => {
+            if (Object.keys(userAnswers).length > 0) {
+                calculateScoreAndDisplayResult(); // Show results if any questions answered
+            } else {
+                alert("Please answer at least one question to see your impact summary!");
+            }
+        });
+
+        // Initial load
+        loadQuestion();
+    </script>
+</body>
+</html>
