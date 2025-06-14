@@ -9,6 +9,7 @@ document.getElementById('site-header').innerHTML = `
 
     <nav id="nav">
       <button id="closeNav" class="close-btn">×</button>
+      <a href="after12th.html"><i class="fas fa-book"></i>Find your path after 12th</a>
       <a href="gyan.html"><i class="fas fa-question-circle"></i> Why was I born?</a>
       <a href="sevenchor.html"><i class="fas fa-child"></i> My Body Control</a>
       <a href="career.html"><i class="fas fa-briefcase"></i> Career Counseling</a>
@@ -60,7 +61,8 @@ document.getElementById('site-footer').innerHTML = `
   <div class="footer-container">
     <div class="footer-section">
       <div class="footer-buttons">
-        <a href="gyan.html" class="footer-btn" title="Why was I born?"><i class="fas fa-question-circle"></i> Why was I born?</a>
+<a href="gyan.html" class="footer-btn" title="Find your path after 12th"><i class="fas fa-road"></i> Find your path after 12th</a>
+<a href="gyan.html" class="footer-btn" title="Why was I born?"><i class="fas fa-question-circle"></i> Why was I born?</a>
 <a href="sevenchor.html" class="footer-btn" title="My Body Control"><i class="fas fa-child"></i> My Body Control</a>
 <a href="career.html" class="footer-btn" title="Career Counseling"><i class="fas fa-briefcase"></i> Career Counseling</a>
 <a href="aura.html" class="footer-btn" title="Know Your Aura"><i class="fas fa-hand-sparkles"></i> Know Your Aura</a>
