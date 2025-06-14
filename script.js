@@ -9,7 +9,7 @@ document.getElementById('site-header').innerHTML = `
 
     <nav id="nav">
       <button id="closeNav" class="close-btn">×</button>
-      <a href="after10th.html"><i class="fas fa-book"></i>Find Your Perfect Stream After 10th!</a>
+      <a href="after10th.html"><i class="fas fa-book"></i>Find Perfect Stream After 10th!</a>
       <a href="after12th.html"><i class="fas fa-book"></i>Find your path after 12th</a>
       <a href="gyan.html"><i class="fas fa-question-circle"></i> Why was I born?</a>
       <a href="sevenchor.html"><i class="fas fa-child"></i> My Body Control</a>
