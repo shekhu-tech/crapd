@@ -9,7 +9,8 @@ document.getElementById('site-header').innerHTML = `
 
     <nav id="nav">
       <button id="closeNav" class="close-btn">×</button>
-      <a href="after10th.html"><i class="fas fa-book"></i>Find Perfect Stream After 10th!</a>
+       <a href="aftergraduation.html"><i class="fas fa-book"></i>After Graduation</a>
+      <a href="after10th.html"><i class="fas fa-book"></i>Find Perfect After 10th!</a>
       <a href="after12th.html"><i class="fas fa-book"></i>Find your path after 12th</a>
       <a href="gyan.html"><i class="fas fa-question-circle"></i> Why was I born?</a>
       <a href="sevenchor.html"><i class="fas fa-child"></i> My Body Control</a>
@@ -62,6 +63,7 @@ document.getElementById('site-footer').innerHTML = `
   <div class="footer-container">
     <div class="footer-section">
       <div class="footer-buttons">
+<a href="aftergraduation.html" class="footer-btn" title="Find your path after 12th"><i class="fas fa-road"></i>After Graduation</a>
 <a href="after10th.html" class="footer-btn" title="Find your path after 12th"><i class="fas fa-road"></i> Find Your Perfect Stream After 10th!</a>
 <a href="after12th.html" class="footer-btn" title="Find your path after 12th"><i class="fas fa-road"></i> Find your path after 12th</a>
 <a href="gyan.html" class="footer-btn" title="Why was I born?"><i class="fas fa-question-circle"></i> Why was I born?</a>
