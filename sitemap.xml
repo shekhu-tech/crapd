@@ -8,6 +8,24 @@
         <priority>1.0</priority>
         <changefreq>daily</changefreq>
     </url>
+    <url>
+        <loc>https://crapd.in/after12th.html</loc>
+        <lastmod>2025-06-12T14:00:00+05:30</lastmod> <!-- Adjust to your actual deployment date/time -->
+        <priority>1.0</priority>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
+        <loc>https://crapd.in/aftergraduation.html</loc>
+        <lastmod>2025-06-12T14:00:00+05:30</lastmod> <!-- Adjust to your actual deployment date/time -->
+        <priority>1.0</priority>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
+        <loc>https://crapd.in/after10th.html</loc>
+        <lastmod>2025-06-12T14:00:00+05:30</lastmod> <!-- Adjust to your actual deployment date/time -->
+        <priority>1.0</priority>
+        <changefreq>daily</changefreq>
+    </url>
    <!-- why i was born -->
       <url>
         <loc>https://crapd.in/gyan.html</loc>
