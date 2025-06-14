@@ -1,0 +1,2035 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stream Selector After 10th | Find Your Path - CRAPD</title>
+    <meta name="description" content="Confused about stream selection after 10th? Answer our comprehensive 50-question assessment to get personalized recommendations for Science, Commerce, Arts, or Vocational streams based on your interests, strengths, and personality.">
+    <meta name="keywords" content="stream selection after 10th, career quiz, stream guidance, science stream, commerce stream, arts stream, vocational stream, career assessment">
+    <meta property="og:title" content="Stream Selector After 10th | Find Your Path - CRAPD">
+    <meta property="og:description" content="Comprehensive 50-question assessment for stream selection after 10th grade. Get personalized recommendations for Science, Commerce, Arts, or Vocational streams.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://crapd.in/after10th.html">
+    <meta property="og:image" content="https://crapd.in/images/social-share-image.jpg">
+    <meta property="og:site_name" content="CRAPD">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Stream Selector After 10th | Find Your Path - CRAPD">
+    <meta name="twitter:description" content="Comprehensive 50-question assessment for stream selection after 10th grade. Get personalized recommendations.">
+    <meta name="twitter:image" content="https://crapd.in/images/social-share-image.jpg">
+    <meta name="twitter:creator" content="@YourTwitterHandle">
+    <link rel="canonical" href="https://crapd.in/after10th.html">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+    <style>
+        /* Base Colors (keeping previously chosen purple/teal/gold for distinction) */
+        :root {
+            --primary-color: #673ab7; /* Deep Purple */
+            --secondary-color: #00897b; /* Teal Green */
+            --accent-color: #ffd700; /* Gold */
+            --background-light: #ede7f6; /* Very light purple */
+            --background-dark: #e0f2f7; /* Light cyan */
+            --card-background: #ffffff;
+            --text-color: #333;
+            --light-text-color: #555;
+            --border-color: #e0e0e0;
+            --shadow-light: rgba(0, 0, 0, 0.08);
+            --shadow-medium: rgba(0, 0, 0, 0.15);
+            --shadow-strong: rgba(0, 0, 0, 0.25);
+            --transition-speed: 0.3s;
+
+            /* Additional colors for a richer look */
+            --button-bg-primary: #5e35b1; /* Darker purple for buttons */
+            --button-hover-primary: #4527a0; /* Even darker purple */
+            --button-bg-secondary: #00695c; /* Darker teal */
+            --button-hover-secondary: #004d40;
+            --progress-bar-bg: #e0e0e0;
+            --progress-bar-fill: var(--secondary-color);
+            --section-bg-gradient: linear-gradient(145deg, #f3e5f5, #e1f5fe); /* Light purple to light blue */
+            --science-color: #3f51b5;
+            --commerce-color: #4caf50;
+            --arts-color: #e91e63;
+            --vocational-color: #ff9800;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, var(--background-light) 0%, var(--background-dark) 100%);
+            color: var(--text-color);
+            line-height: 1.7;
+            min-height: 100vh;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        /* --- Header Styling --- */
+        header {
+            background: linear-gradient(135deg, #4527a0 0%, #673ab7 100%); /* Darker purple gradient */
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            box-shadow: 0 6px 25px rgba(0, 0, 0, 0.25);
+            margin-bottom: 30px;
+            position: relative;
+            overflow: hidden;
+            border-bottom: 5px solid var(--accent-color);
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at top left, rgba(255, 255, 255, 0.05) 0%, transparent 50%),
+                        radial-gradient(circle at bottom right, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        header h1 {
+            font-family: 'Montserrat', sans-serif;
+            color: white;
+            margin-bottom: 20px;
+            font-size: 3.8em;
+            letter-spacing: -1.5px;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+            position: relative;
+            z-index: 2;
+            animation: fadeInDown 1s ease-out forwards;
+        }
+
+        header p.intro-text {
+            color: #e8eaf6; /* Lighter text for contrast */
+            font-size: 1.3em;
+            max-width: 900px;
+            margin: 0 auto;
+            line-height: 1.6;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+            position: relative;
+            z-index: 2;
+            animation: fadeInUp 1.2s ease-out forwards;
+        }
+
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* --- Footer Styling --- */
+        footer {
+            background-color: #313131; /* Dark charcoal */
+            color: #bdbdbd;
+            padding: 40px 20px;
+            text-align: center;
+            margin-top: 50px;
+            box-shadow: 0 -5px 25px rgba(0, 0, 0, 0.2);
+            border-top: 3px solid var(--accent-color);
+            font-size: 0.95em;
+            line-height: 1.5;
+            position: relative;
+            overflow: hidden;
+        }
+
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient(45deg, rgba(255,255,255,0.05) 25%, transparent 25%, transparent 50%, rgba(255,255,255,0.05) 50%, rgba(255,255,255,0.05) 75%, transparent 75%, transparent);
+            background-size: 20px 20px;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        footer p.disclaimer {
+            font-size: 0.9em;
+            color: #cccccc;
+            margin-bottom: 0;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        footer p.disclaimer a {
+            color: var(--accent-color);
+            text-decoration: none;
+            transition: color var(--transition-speed) ease;
+        }
+
+        footer p.disclaimer a:hover {
+            color: white;
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 980px;
+            width: 100%;
+            background-color: var(--card-background);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 15px 50px var(--shadow-medium);
+            animation: fadeIn 0.8s ease-out;
+            box-sizing: border-box;
+            position: relative;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+            margin-top: -100px; /* Overlap with header */
+            z-index: 10; /* Ensure it's above the header's effects */
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h2 {
+            font-size: 2.2em;
+            color: var(--primary-color);
+            text-align: center;
+            margin-bottom: 40px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+        }
+
+        .hidden {
+            display: none !important;
+        }
+
+        /* Progress Bar */
+        .progress-container {
+            width: 80%;
+            max-width: 600px;
+            margin: 0 auto 40px auto;
+            background-color: var(--progress-bar-bg);
+            border-radius: 10px;
+            height: 12px;
+            overflow: hidden;
+            box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .progress-bar {
+            height: 100%;
+            width: 0%;
+            background: var(--progress-bar-fill);
+            border-radius: 10px;
+            transition: width 0.4s ease-in-out;
+        }
+
+        /* Form Styling */
+        .question-section {
+            background: var(--section-bg-gradient);
+            border: 1px solid #d1c4e9;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px var(--shadow-light);
+            transition: transform var(--transition-speed) ease-out, box-shadow var(--transition-speed) ease;
+        }
+
+        .question-section:not(.active) {
+            display: none;
+        }
+
+        .question-section h3 {
+            color: var(--secondary-color);
+            margin-top: 0;
+            margin-bottom: 25px;
+            font-size: 1.6em;
+            font-weight: 600;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--accent-color);
+            text-align: center;
+        }
+
+        .question-option {
+            background-color: #fcfcfc;
+            border: 1px solid #e0e0e0;
+            border-radius: 10px;
+            padding: 15px 20px;
+            margin-bottom: 15px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .question-option:hover {
+            background-color: #f0f8ff; /* Light blue on hover */
+            border-color: var(--secondary-color);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .question-option input[type="radio"] {
+            margin-right: 15px;
+            transform: scale(1.3);
+            accent-color: var(--primary-color);
+        }
+
+        .question-option.selected {
+            background-color: #e8eaf6; /* Light purple when selected */
+            border-color: var(--primary-color);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        .navigation-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+            gap: 15px;
+        }
+
+        .navigation-buttons button {
+            padding: 12px 25px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1.1em;
+            font-weight: 600;
+            transition: background-color var(--transition-speed) ease, transform 0.1s ease;
+            flex-grow: 1;
+        }
+
+        .navigation-buttons button#prevBtn {
+            background-color: #bdbdbd; /* Gray */
+            color: var(--text-color);
+        }
+
+        .navigation-buttons button#prevBtn:hover {
+            background-color: #a0a0a0;
+            transform: translateY(-1px);
+        }
+
+        .navigation-buttons button#nextBtn,
+        .navigation-buttons button#submitBtn {
+            background-color: var(--button-bg-primary);
+            color: white;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .navigation-buttons button#nextBtn:hover,
+        .navigation-buttons button#submitBtn:hover {
+            background-color: var(--button-hover-primary);
+            transform: translateY(-1px);
+        }
+
+        .navigation-buttons button:disabled {
+            background-color: #e0e0e0;
+            color: #9e9e9e;
+            cursor: not-allowed;
+            box-shadow: none;
+        }
+
+        /* Recommendation Section */
+        #results {
+            padding: 30px;
+            background: var(--section-bg-gradient);
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 0.8s ease-out;
+            margin-top: 40px;
+        }
+
+        #results h2 {
+            color: var(--secondary-color);
+            margin-bottom: 25px;
+            font-size: 2em;
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 10px;
+            text-align: center;
+        }
+
+        .recommendation {
+            background-color: var(--card-background);
+            border: 1px solid var(--border-color);
+            border-left: 5px solid var(--primary-color);
+            padding: 20px 25px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .recommendation:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+        }
+
+        .recommendation h3 {
+            color: var(--primary-color);
+            font-size: 1.5em;
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .recommendation strong {
+            color: var(--secondary-color);
+        }
+
+        .recommendation p {
+            margin: 5px 0;
+            color: var(--light-text-color);
+        }
+
+        .disclaimer-text {
+            font-size: 0.9em;
+            color: #777;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        /* Stream-specific colors */
+        .science-bg {
+            border-left-color: var(--science-color) !important;
+        }
+        .science-text {
+            color: var(--science-color) !important;
+        }
+        .commerce-bg {
+            border-left-color: var(--commerce-color) !important;
+        }
+        .commerce-text {
+            color: var(--commerce-color) !important;
+        }
+        .arts-bg {
+            border-left-color: var(--arts-color) !important;
+        }
+        .arts-text {
+            color: var(--arts-color) !important;
+        }
+        .vocational-bg {
+            border-left-color: var(--vocational-color) !important;
+        }
+        .vocational-text {
+            color: var(--vocational-color) !important;
+        }
+
+        /* Personality type indicator */
+        .personality-type {
+            display: inline-block;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            font-size: 0.9em;
+        }
+        .science-type {
+            background-color: rgba(63, 81, 181, 0.1);
+            color: var(--science-color);
+        }
+        .commerce-type {
+            background-color: rgba(76, 175, 80, 0.1);
+            color: var(--commerce-color);
+        }
+        .arts-type {
+            background-color: rgba(233, 30, 99, 0.1);
+            color: var(--arts-color);
+        }
+        .vocational-type {
+            background-color: rgba(255, 152, 0, 0.1);
+            color: var(--vocational-color);
+        }
+
+        /* Stream score bars */
+        .score-container {
+            margin: 20px 0;
+        }
+        .score-bar {
+            height: 20px;
+            border-radius: 10px;
+            margin-bottom: 8px;
+            position: relative;
+            overflow: hidden;
+            background-color: #f5f5f5;
+        }
+        .score-fill {
+            height: 100%;
+            border-radius: 10px;
+            transition: width 1s ease-in-out;
+        }
+        .science-fill {
+            background-color: var(--science-color);
+        }
+        .commerce-fill {
+            background-color: var(--commerce-color);
+        }
+        .arts-fill {
+            background-color: var(--arts-color);
+        }
+        .vocational-fill {
+            background-color: var(--vocational-color);
+        }
+        .score-label {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.9em;
+            margin-bottom: 15px;
+        }
+
+        /* Save results button */
+        #saveResults {
+            display: block;
+            margin: 30px auto 0 auto;
+            padding: 12px 30px;
+            background-color: var(--button-bg-secondary);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        #saveResults:hover {
+            background-color: var(--button-hover-secondary);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            header { padding: 40px 15px; }
+            header h1 { font-size: 2.8em; }
+            header p.intro-text { font-size: 1.15em; }
+            .container { padding: 30px; margin-top: -50px; }
+            h2 { font-size: 1.8em; margin-bottom: 30px; }
+            .question-section { padding: 25px; margin-bottom: 25px; }
+            .question-section h3 { font-size: 1.4em; margin-bottom: 20px; }
+            .question-option { padding: 12px 15px; font-size: 0.95em; }
+            .navigation-buttons button { padding: 10px 20px; font-size: 1em; }
+            #results h2 { font-size: 1.8em; }
+            .recommendation h3 { font-size: 1.3em; }
+            footer { padding: 30px 15px; }
+        }
+
+        @media (max-width: 480px) {
+            header { padding: 30px 10px; }
+            header h1 { font-size: 2.2em; letter-spacing: -1px; }
+            header p.intro-text { font-size: 1em; }
+            .container { padding: 20px; border-radius: 15px; margin-top: -30px; }
+            .progress-container { width: 95%; margin-bottom: 30px; }
+            .question-section { padding: 20px; }
+            .question-option input[type="radio"] { transform: scale(1.1); margin-right: 10px; }
+            .navigation-buttons { flex-direction: column; }
+            .navigation-buttons button { font-size: 0.95em; padding: 12px; }
+            footer { padding: 25px 10px; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Find Your Perfect Stream After 10th!</h1>
+        <p class="intro-text">
+            Our comprehensive 50-question assessment evaluates your academic interests, personality traits, and career aspirations to provide personalized recommendations for Science, Commerce, Arts, or Vocational streams. Take your time and answer honestly for the most accurate results.
+        </p>
+    </header>
+
+    <div class="container">
+        <h2>Your Stream Selection Journey</h2>
+
+        <div class="progress-container">
+            <div class="progress-bar" id="progressBar"></div>
+        </div>
+
+        <form id="streamSelectionForm">
+            <!-- Section 1: Academic Interests (10 questions) -->
+            <div class="question-section active" id="question1">
+                <h3>1. Which subjects do you enjoy studying the most?</h3>
+                <div class="question-option">
+                    <input type="radio" name="q1" value="science_math" id="q1_option1">
+                    <label for="q1_option1">Science (Physics, Chemistry, Biology) & Mathematics</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q1" value="commerce_finance" id="q1_option2">
+                    <label for="q1_option2">Business, Economics, Accounting, Finance</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q1" value="arts_social" id="q1_option3">
+                    <label for="q1_option3">History, Political Science, Literature, Psychology, Arts</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q1" value="practical_skills" id="q1_option4">
+                    <label for="q1_option4">Hands-on practical subjects, technology, specific trades</label>
+                </div>
+            </div>
+
+            <div class="question-section" id="question2">
+                <h3>2. What kind of problems do you like to solve?</h3>
+                <div class="question-option">
+                    <input type="radio" name="q2" value="analytical_technical" id="q2_option1">
+                    <label for="q2_option1">Complex logical or technical problems (e.g., puzzles, coding, scientific experiments)</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q2" value="financial_business" id="q2_option2">
+                    <label for="q2_option2">Financial planning, market analysis, business strategies</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q2" value="human_social" id="q2_option3">
+                    <label for="q2_option3">Understanding human behavior, societal issues, historical analysis, creative challenges</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q2" value="hands_on_practical" id="q2_option4">
+                    <label for="q2_option4">Building, fixing, designing, or performing specific practical tasks</label>
+                </div>
+            </div>
+
+            <div class="question-section" id="question3">
+                <h3>3. What career paths excite you the most?</h3>
+                <div class="question-option">
+                    <input type="radio" name="q3" value="engineering_medical" id="q3_option1">
+                    <label for="q3_option1">Engineering, Medicine, Research, Software Development</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q3" value="management_finance" id="q3_option2">
+                    <label for="q3_option2">Business Management, Chartered Accountancy, Investment Banking, Marketing</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q3" value="creative_public" id="q3_option3">
+                    <label for="q3_option3">Journalism, Law, Civil Services, Teaching, Design, Arts</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q3" value="skilled_trade" id="q3_option4">
+                    <label for="q3_option4">Technician, Chef, Hair Stylist, Graphic Designer (specific skill-based roles)</label>
+                </div>
+            </div>
+
+            <div class="question-section" id="question4">
+                <h3>4. How do you prefer to learn and demonstrate your understanding?</h3>
+                <div class="question-option">
+                    <input type="radio" name="q4" value="theories_experiments" id="q4_option1">
+                    <label for="q4_option1">Through theories, equations, and conducting experiments</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q4" value="case_studies_discussions" id="q4_option2">
+                    <label for="q4_option2">Through real-world case studies, group discussions, and financial analysis</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q4" value="reading_debates_projects" id="q4_option3">
+                    <label for="q4_option3">Through reading, writing, debates, and creative projects</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q4" value="doing_making_applying" id="q4_option4">
+                    <label for="q4_option4">By doing, making, applying skills, and solving practical problems</label>
+                </div>
+            </div>
+
+            <div class="question-section" id="question5">
+                <h3>5. Which extracurricular activities interest you most?</h3>
+                <div class="question-option">
+                    <input type="radio" name="q5" value="science_clubs_olympiads" id="q5_option1">
+                    <label for="q5_option1">Science clubs, math olympiads, robotics, coding competitions</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q5" value="business_debate_quiz" id="q5_option2">
+                    <label for="q5_option2">Business clubs, debate, quiz competitions, entrepreneurship events</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q5" value="arts_literature_drama" id="q5_option3">
+                    <label for="q5_option3">Drama, literature clubs, art exhibitions, social service</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q5" value="technical_workshops" id="q5_option4">
+                    <label for="q5_option4">Technical workshops, craft activities, hands-on projects</label>
+                </div>
+            </div>
+
+            <div class="question-section" id="question6">
+                <h3>6. What type of books/movies do you prefer?</h3>
+                <div class="question-option">
+                    <input type="radio" name="q6" value="sci_tech_fiction" id="q6_option1">
+                    <label for="q6_option1">Science fiction, technology, discovery documentaries</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q6" value="business_biographies" id="q6_option2">
+                    <label for="q6_option2">Business success stories, economic trends, biographies of entrepreneurs</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q6" value="literature_history" id="q6_option3">
+                    <label for="q6_option3">Classic literature, historical fiction, psychological dramas</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q6" value="how_to_guides" id="q6_option4">
+                    <label for="q6_option4">How-to guides, DIY shows, practical skill demonstrations</label>
+                </div>
+            </div>
+
+            <div class="question-section" id="question7">
+                <h3>7. How would your teachers describe you?</h3>
+                <div class="question-option">
+                    <input type="radio" name="q7" value="analytical_logical" id="q7_option1">
+                    <label for="q7_option1">Analytical, logical, good at problem-solving</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q7" value="organized_practical" id="q7_option2">
+                    <label for="q7_option2">Organized, practical, good with numbers</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q7" value="creative_expressive" id="q7_option3">
+                    <label for="q7_option3">Creative, expressive, good communicator</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q7" value="hands_on_skillful" id="q7_option4">
+                    <label for="q7_option4">Hands-on, skillful, learns by doing</label>
+                </div>
+            </div>
+
+            <div class="question-section" id="question8">
+                <h3>8. What are your strongest skills?</h3>
+                <div class="question-option">
+                    <input type="radio" name="q8" value="math_science_analysis" id="q8_option1">
+                    <label for="q8_option1">Mathematical ability, scientific analysis, logical reasoning</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q8" value="financial_management" id="q8_option2">
+                    <label for="q8_option2">Financial understanding, management, organization</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q8" value="communication_creativity" id="q8_option3">
+                    <label for="q8_option3">Communication, creativity, language skills</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q8" value="technical_manual" id="q8_option4">
+                    <label for="q8_option4">Technical, manual dexterity, practical application</label>
+                </div>
+            </div>
+
+            <div class="question-section" id="question9">
+                <h3>9. What kind of school projects do you enjoy most?</h3>
+                <div class="question-option">
+                    <input type="radio" name="q9" value="science_experiments" id="q9_option1">
+                    <label for="q9_option1">Science experiments, math modeling, technology projects</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q9" value="business_simulations" id="q9_option2">
+                    <label for="q9_option2">Business simulations, market surveys, economic analyses</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q9" value="creative_writing_art" id="q9_option3">
+                    <label for="q9_option3">Creative writing, art projects, historical research</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q9" value="building_designing" id="q9_option4">
+                    <label for="q9_option4">Building models, designing, hands-on creations</label>
+                </div>
+            </div>
+
+            <div class="question-section" id="question10">
+                <h3>10. How do you approach new challenges?</h3>
+                <div class="question-option">
+                    <input type="radio" name="q10" value="systematic_analysis" id="q10_option1">
+                    <label for="q10_option1">Systematic analysis and logical problem-solving</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q10" value="practical_planning" id="q10_option2">
+                    <label for="q10_option2">Practical planning and step-by-step execution</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q10" value="creative_solutions" id="q10_option3">
+                    <label for="q10_option3">Creative thinking and innovative solutions</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q10" value="hands_on_trial" id="q10_option4">
+                    <label for="q10_option4">Hands-on trial and error approach</label>
+                </div>
+            </div>
+
+            <!-- Section 2: Personality Traits (10 questions) -->
+            <div class="question-section" id="question11">
+                <h3>11. Which word best describes you?</h3>
+                <div class="question-option">
+                    <input type="radio" name="q11" value="inquisitive" id="q11_option1">
+                    <label for="q11_option1">Inquisitive (always asking why and how things work)</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q11" value="organized" id="q11_option2">
+                    <label for="q11_option2">Organized (like things planned and structured)</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q11" value="expressive" id="q11_option3">
+                    <label for="q11_option3">Expressive (enjoy sharing ideas and emotions)</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q11" value="practical" id="q11_option4">
+                    <label for="q11_option4">Practical (focused on real-world applications)</label>
+                </div>
+            </div>
+
+            <div class="question-section" id="question12">
+                <h3>12. How do you make decisions?</h3>
+                <div class="question-option">
+                    <input type="radio" name="q12" value="logic_data" id="q12_option1">
+                    <label for="q12_option1">Based on logic and data analysis</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q12" value="practical_outcomes" id="q12_option2">
+                    <label for="q12_option2">Considering practical outcomes and benefits</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q12" value="values_feelings" id="q12_option3">
+                    <label for="q12_option3">Considering values, feelings, and impact on people</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q12" value="hands_on_experience" id="q12_option4">
+                    <label for="q12_option4">Through hands-on experience and testing</label>
+                </div>
+            </div>
+
+            <div class="question-section" id="question13">
+                <h3>13. What's your ideal work environment?</h3>
+                <div class="question-option">
+                    <input type="radio" name="q13" value="research_lab" id="q13_option1">
+                    <label for="q13_option1">Research lab or technical workspace</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q13" value="corporate_office" id="q13_option2">
+                    <label for="q13_option2">Corporate office or business setting</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q13" value="creative_community" id="q13_option3">
+                    <label for="q13_option3">Creative space or community environment</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q13" value="workshop_site" id="q13_option4">
+                    <label for="q13_option4">Workshop or active work site</label>
+                </div>
+            </div>
+
+            <div class="question-section" id="question14">
+                <h3>14. How do you handle stress?</h3>
+                <div class="question-option">
+                    <input type="radio" name="q14" value="analyze_solve" id="q14_option1">
+                    <label for="q14_option1">Analyze the problem and find solutions</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q14" value="plan_organize" id="q14_option2">
+                    <label for="q14_option2">Make a plan and organize my approach</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q14" value="express_creatively" id="q14_option3">
+                    <label for="q14_option3">Express myself creatively or talk to others</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q14" value="physical_activity" id="q14_option4">
+                    <label for="q14_option4">Engage in physical activity or hands-on work</label>
+                </div>
+            </div>
+
+            <div class="question-section" id="question15">
+                <h3>15. What motivates you most?</h3>
+                <div class="question-option">
+                    <input type="radio" name="q15" value="discovery_innovation" id="q15_option1">
+                    <label for="q15_option1">Discovery, innovation, and solving complex problems</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q15" value="achievement_success" id="q15_option2">
+                    <label for="q15_option2">Achievement, success, and financial rewards</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q15" value="expression_impact" id="q15_option3">
+                    <label for="q15_option3">Creative expression and making a social impact</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q15" value="tangible_results" id="q15_option4">
+                    <label for="q15_option4">Creating tangible results and mastering skills</label>
+                </div>
+            </div>
+
+            <div class="question-section" id="question16">
+                <h3>16. How do you prefer to communicate?</h3>
+                <div class="question-option">
+                    <input type="radio" name="q16" value="facts_data" id="q16_option1">
+                    <label for="q16_option1">Through facts, data, and logical arguments</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q16" value="direct_practical" id="q16_option2">
+                    <label for="q16_option2">Directly and practically, focusing on outcomes</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q16" value="stories_analogies" id="q16_option3">
+                    <label for="q16_option3">Through stories, analogies, and expressive language</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q16" value="demonstrations" id="q16_option4">
+                    <label for="q16_option4">Through demonstrations and showing rather than telling</label>
+                </div>
+            </div>
+
+            <div class="question-section" id="question17">
+                <h3>17. What's your learning style?</h3>
+                <div class="question-option">
+                    <input type="radio" name="q17" value="conceptual_theoretical" id="q17_option1">
+                    <label for="q17_option1">Conceptual and theoretical understanding</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q17" value="structured_organized" id="q17_option2">
+                    <label for="q17_option2">Structured and organized information</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q17" value="discussion_exploration" id="q17_option3">
+                    <label for="q17_option3">Discussion and exploration of ideas</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q17" value="kinesthetic_experiential" id="q17_option4">
+                    <label for="q17_option4">Kinesthetic and experiential learning</label>
+                </div>
+            </div>
+
+            <div class="question-section" id="question18">
+                <h3>18. How do you approach teamwork?</h3>
+                <div class="question-option">
+                    <input type="radio" name="q18" value="specialized_role" id="q18_option1">
+                    <label for="q18_option1">Prefer a specialized role where I can contribute expertise</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q18" value="lead_organize" id="q18_option2">
+                    <label for="q18_option2">Like to lead or organize the team's efforts</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q18" value="collaborate_brainstorm" id="q18_option3">
+                    <label for="q18_option3">Enjoy collaborating and brainstorming ideas</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q18" value="hands_on_contributor" id="q18_option4">
+                    <label for="q18_option4">Prefer being a hands-on contributor to the task</label>
+                </div>
+            </div>
+
+            <div class="question-section" id="question19">
+                <h3>19. What type of thinker are you?</h3>
+                <div class="question-option">
+                    <input type="radio" name="q19" value="analytical_critical" id="q19_option1">
+                    <label for="q19_option1">Analytical and critical thinker</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q19" value="practical_strategic" id="q19_option2">
+                    <label for="q19_option2">Practical and strategic thinker</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q19" value="creative_intuitive" id="q19_option3">
+                    <label for="q19_option3">Creative and intuitive thinker</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q19" value="applied_problem_solver" id="q19_option4">
+                    <label for="q19_option4">Applied problem-solver</label>
+                </div>
+            </div>
+
+            <div class="question-section" id="question20">
+                <h3>20. How do you view rules and structure?</h3>
+                <div class="question-option">
+                    <input type="radio" name="q20" value="understand_purpose" id="q20_option1">
+                    <label for="q20_option1">Want to understand their purpose and logic</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q20" value="appreciate_guidelines" id="q20_option2">
+                    <label for="q20_option2">Appreciate guidelines that help efficiency</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q20" value="flexible_interpretation" id="q20_option3">
+                    <label for="q20_option3">Prefer flexible interpretation based on context</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q20" value="practical_application" id="q20_option4">
+                    <label for="q20_option4">Focus on their practical application</label>
+                </div>
+            </div>
+
+            <!-- Section 3: Career Aspirations (10 questions) -->
+            <div class="question-section" id="question21">
+                <h3>21. What's most important in your future career?</h3>
+                <div class="question-option">
+                    <input type="radio" name="q21" value="intellectual_challenge" id="q21_option1">
+                    <label for="q21_option1">Intellectual challenge and discovery</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q21" value="financial_security" id="q21_option2">
+                    <label for="q21_option2">Financial security and growth opportunities</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q21" value="creative_fulfillment" id="q21_option3">
+                    <label for="q21_option3">Creative fulfillment and social impact</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q21" value="tangible_skills" id="q21_option4">
+                    <label for="q21_option4">Tangible skills and direct results</label>
+                </div>
+            </div>
+
+            <div class="question-section" id="question22">
+                <h3>22. What work schedule appeals to you?</h3>
+                <div class="question-option">
+                    <input type="radio" name="q22" value="research_projects" id="q22_option1">
+                    <label for="q22_option1">Flexible hours focused on research/projects</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q22" value="structured_business" id="q22_option2">
+                    <label for="q22_option2">Structured business hours with clear goals</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q22" value="variable_creative" id="q22_option3">
+                    <label for="q22_option3">Variable schedule based on creative needs</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q22" value="hands_on_shifts" id="q22_option4">
+                    <label for="q22_option4">Hands-on work with possible shift patterns</label>
+                </div>
+            </div>
+
+            <div class="question-section" id="question23">
+                <h3>23. What salary expectation aligns with your goals?</h3>
+                <div class="question-option">
+                    <input type="radio" name="q23" value="high_after_qualification" id="q23_option1">
+                    <label for="q23_option1">High earning potential after qualification</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q23" value="steady_growth" id="q23_option2">
+                    <label for="q23_option2">Steady growth with good benefits</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q23" value="variable_fulfillment" id="q23_option3">
+                    <label for="q23_option3">Variable based on creative/social fulfillment</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q23" value="skill_dependent" id="q23_option4">
+                    <label for="q23_option4">Directly dependent on my skill level</label>
+                </div>
+            </div>
+
+            <div class="question-section" id="question24">
+                <h3>24. What work-life balance do you prefer?</h3>
+                <div class="question-option">
+                    <input type="radio" name="q24" value="intense_periods" id="q24_option1">
+                    <label for="q24_option1">Intense work periods with research/study time</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q24" value="structured_balance" id="q24_option2">
+                    <label for="q24_option2">Structured hours with clear separation</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q24" value="flexible_integrated" id="q24_option3">
+                    <label for="q24_option3">Flexible schedule integrating work and life</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q24" value="project_based" id="q24_option4">
+                    <label for="q24_option4">Project-based with busy and light periods</label>
+                </div>
+            </div>
+
+            <div class="question-section" id="question25">
+                <h3>25. What type of workplace culture do you prefer?</h3>
+                <div class="question-option">
+                    <input type="radio" name="q25" value="intellectual_merit" id="q25_option1">
+                    <label for="q25_option1">Intellectual, merit-based, and innovative</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q25" value="professional_efficient" id="q25_option2">
+                    <label for="q25_option2">Professional, efficient, and results-driven</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q25" value="collaborative_expressive" id="q25_option3">
+                    <label for="q25_option3">Collaborative, expressive, and values-driven</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q25" value="practical_hands_on" id="q25_option4">
+                    <label for="q25_option4">Practical, hands-on, and skill-focused</label>
+                </div>
+            </div>
+
+            <div class="question-section" id="question26">
+                <h3>26. How important is job stability to you?</h3>
+                <div class="question-option">
+                    <input type="radio" name="q26" value="research_driven" id="q26_option1">
+                    <label for="q26_option1">Important, but willing to pursue research/innovation</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q26" value="very_important" id="q26_option2">
+                    <label for="q26_option2">Very important - prefer established career paths</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q26" value="flexible_creative" id="q26_option3">
+                    <label for="q26_option3">Less important than creative/social fulfillment</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q26" value="skill_dependent_stability" id="q26_option4">
+                    <label for="q26_option4">Depends on demand for my specific skills</label>
+                </div>
+            </div>
+
+            <div class="question-section" id="question27">
+                <h3>27. What role do you see yourself in?</h3>
+                <div class="question-option">
+                    <input type="radio" name="q27" value="specialist_expert" id="q27_option1">
+                    <label for="q27_option1">Specialist or technical expert</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q27" value="manager_leader" id="q27_option2">
+                    <label for="q27_option2">Manager or business leader</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q27" value="creator_communicator" id="q27_option3">
+                    <label for="q27_option3">Creator, communicator, or influencer</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q27" value="craftsman_performer" id="q27_option4">
+                    <label for="q27_option4">Craftsman, performer, or skilled technician</label>
+                </div>
+            </div>
+
+            <div class="question-section" id="question28">
+                <h3>28. How do you feel about further education?</h3>
+                <div class="question-option">
+                    <input type="radio" name="q28" value="essential_specialization" id="q28_option1">
+                    <label for="q28_option1">Essential for specialization in my field</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q28" value="valuable_certifications" id="q28_option2">
+                    <label for="q28_option2">Valuable for career advancement and certifications</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q28" value="optional_enrichment" id="q28_option3">
+                    <label for="q28_option3">Optional for personal enrichment and growth</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q28" value="specific_skills" id="q28_option4">
+                    <label for="q28_option4">Focused on specific skills I need for my work</label>
+                </div>
+            </div>
+
+            <div class="question-section" id="question29">
+                <h3>29. What kind of impact do you want to make?</h3>
+                <div class="question-option">
+                    <input type="radio" name="q29" value="scientific_technological" id="q29_option1">
+                    <label for="q29_option1">Scientific or technological advancements</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q29" value="business_economic" id="q29_option2">
+                    <label for="q29_option2">Business and economic contributions</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q29" value="cultural_social" id="q29_option3">
+                    <label for="q29_option3">Cultural, artistic, or social change</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q29" value="practical_services" id="q29_option4">
+                    <label for="q29_option4">Practical services and tangible products</label>
+                </div>
+            </div>
+
+            <div class="question-section" id="question30">
+                <h3>30. How do you view career risks?</h3>
+                <div class="question-option">
+                    <input type="radio" name="q30" value="calculated_risks" id="q30_option1">
+                    <label for="q30_option1">Willing to take calculated risks for innovation</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q30" value="minimal_risks" id="q30_option2">
+                    <label for="q30_option2">Prefer minimal risks with steady progress</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q30" value="creative_risks" id="q30_option3">
+                    <label for="q30_option3">Willing to take creative/social risks</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q30" value="skill_based_risks" id="q30_option4">
+                    <label for="q30_option4">Comfortable with risks based on my skills</label>
+                </div>
+            </div>
+
+            <!-- Section 4: Learning Preferences (10 questions) -->
+            <div class="question-section" id="question31">
+                <h3>31. How do you prefer to study?</h3>
+                <div class="question-option">
+                    <input type="radio" name="q31" value="deep_dive_topics" id="q31_option1">
+                    <label for="q31_option1">Deep dive into specific topics</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q31" value="structured_syllabus" id="q31_option2">
+                    <label for="q31_option2">Follow a structured syllabus</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q31" value="exploratory_discussions" id="q31_option3">
+                    <label for="q31_option3">Exploratory through discussions</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q31" value="practical_applications" id="q31_option4">
+                    <label for="q31_option4">Through practical applications</label>
+                </div>
+            </div>
+
+            <div class="question-section" id="question32">
+                <h3>32. What type of exams do you prefer?</h3>
+                <div class="question-option">
+                    <input type="radio" name="q32" value="problem_solving" id="q32_option1">
+                    <label for="q32_option1">Problem-solving and analytical questions</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q32" value="case_studies" id="q32_option2">
+                    <label for="q32_option2">Case studies and applied concepts</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q32" value="essay_discursive" id="q32_option3">
+                    <label for="q32_option3">Essay and discursive questions</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q32" value="practical_demonstrations" id="q32_option4">
+                    <label for="q32_option4">Practical demonstrations and projects</label>
+                </div>
+            </div>
+
+            <div class="question-section" id="question33">
+                <h3>33. How do you handle academic pressure?</h3>
+                <div class="question-option">
+                    <input type="radio" name="q33" value="systematic_approach" id="q33_option1">
+                    <label for="q33_option1">Systematic study approach and time management</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q33" value="organized_planning" id="q33_option2">
+                    <label for="q33_option2">Organized planning and preparation</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q33" value="creative_outlets" id="q33_option3">
+                    <label for="q33_option3">Balance with creative outlets and discussions</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q33" value="hands_on_breaks" id="q33_option4">
+                    <label for="q33_option4">Take hands-on activity breaks</label>
+                </div>
+            </div>
+
+            <div class="question-section" id="question34">
+                <h3>34. What teaching style works best for you?</h3>
+                <div class="question-option">
+                    <input type="radio" name="q34" value="logical_progressive" id="q34_option1">
+                    <label for="q34_option1">Logical, progressive building of concepts</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q34" value="structured_clear" id="q34_option2">
+                    <label for="q34_option2">Structured with clear expectations</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q34" value="interactive_discursive" id="q34_option3">
+                    <label for="q34_option3">Interactive and discursive</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q34" value="demonstration_practice" id="q34_option4">
+                    <label for="q34_option4">Demonstration and practice-based</label>
+                </div>
+            </div>
+
+            <div class="question-section" id="question35">
+                <h3>35. How do you approach group projects?</h3>
+                <div class="question-option">
+                    <input type="radio" name="q35" value="technical_contributor" id="q35_option1">
+                    <label for="q35_option1">Focus on technical/research contribution</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q35" value="organize_coordinate" id="q35_option2">
+                    <label for="q35_option2">Organize and coordinate the project</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q35" value="creative_direction" id="q35_option3">
+                    <label for="q35_option3">Provide creative direction and ideas</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q35" value="hands_on_execution" id="q35_option4">
+                    <label for="q35_option4">Focus on hands-on execution</label>
+                </div>
+            </div>
+
+            <div class="question-section" id="question36">
+                <h3>36. What type of assignments do you enjoy?</h3>
+                <div class="question-option">
+                    <input type="radio" name="q36" value="research_papers" id="q36_option1">
+                    <label for="q36_option1">Research papers and technical reports</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q36" value="case_analyses" id="q36_option2">
+                    <label for="q36_option2">Case analyses and business plans</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q36" value="creative_writing" id="q36_option3">
+                    <label for="q36_option3">Creative writing and artistic projects</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q36" value="practical_builds" id="q36_option4">
+                    <label for="q36_option4">Practical builds and demonstrations</label>
+                </div>
+            </div>
+
+            <div class="question-section" id="question37">
+                <h3>37. How do you prefer to receive feedback?</h3>
+                <div class="question-option">
+                    <input type="radio" name="q37" value="technical_constructive" id="q37_option1">
+                    <label for="q37_option1">Technical and constructive on my work</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q37" value="specific_measurable" id="q37_option2">
+                    <label for="q37_option2">Specific and measurable against criteria</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q37" value="holistic_encouraging" id="q37_option3">
+                    <label for="q37_option3">Holistic and encouraging of creativity</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q37" value="practical_hands_on" id="q37_option4">
+                    <label for="q37_option4">Practical and hands-on demonstration</label>
+                </div>
+            </div>
+
+            <div class="question-section" id="question38">
+                <h3>38. What classroom environment suits you best?</h3>
+                <div class="question-option">
+                    <input type="radio" name="q38" value="focused_intellectual" id="q38_option1">
+                    <label for="q38_option1">Focused and intellectually stimulating</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q38" value="structured_professional" id="q38_option2">
+                    <label for="q38_option2">Structured and professional</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q38" value="interactive_dynamic" id="q38_option3">
+                    <label for="q38_option3">Interactive and dynamic</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q38" value="active_practical" id="q38_option4">
+                    <label for="q38_option4">Active and practical</label>
+                </div>
+            </div>
+
+            <div class="question-section" id="question39">
+                <h3>39. How do you approach challenging concepts?</h3>
+                <div class="question-option">
+                    <input type="radio" name="q39" value="break_down_logically" id="q39_option1">
+                    <label for="q39_option1">Break them down logically step by step</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q39" value="relate_practical_applications" id="q39_option2">
+                    <label for="q39_option2">Relate to practical applications</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q39" value="discuss_interpretations" id="q39_option3">
+                    <label for="q39_option3">Discuss different interpretations</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q39" value="experiment_hands_on" id="q39_option4">
+                    <label for="q39_option4">Experiment with hands-on approaches</label>
+                </div>
+            </div>
+
+            <div class="question-section" id="question40">
+                <h3>40. What motivates your academic performance?</h3>
+                <div class="question-option">
+                    <input type="radio" name="q40" value="intellectual_curiosity" id="q40_option1">
+                    <label for="q40_option1">Intellectual curiosity and mastery</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q40" value="career_preparation" id="q40_option2">
+                    <label for="q40_option2">Career preparation and qualifications</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q40" value="personal_expression" id="q40_option3">
+                    <label for="q40_option3">Personal expression and growth</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q40" value="skill_development" id="q40_option4">
+                    <label for="q40_option4">Skill development and practical abilities</label>
+                </div>
+            </div>
+
+            <!-- Section 5: Personal Values (10 questions) -->
+            <div class="question-section" id="question41">
+                <h3>41. What values are most important to you?</h3>
+                <div class="question-option">
+                    <input type="radio" name="q41" value="truth_knowledge" id="q41_option1">
+                    <label for="q41_option1">Truth, knowledge, and innovation</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q41" value="success_security" id="q41_option2">
+                    <label for="q41_option2">Success, security, and efficiency</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q41" value="creativity_compassion" id="q41_option3">
+                    <label for="q41_option3">Creativity, compassion, and expression</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q41" value="practicality_skill" id="q41_option4">
+                    <label for="q41_option4">Practicality, skill, and craftsmanship</label>
+                </div>
+            </div>
+
+            <div class="question-section" id="question42">
+                <h3>42. How do you define success?</h3>
+                <div class="question-option">
+                    <input type="radio" name="q42" value="discoveries_contributions" id="q42_option1">
+                    <label for="q42_option1">Through discoveries and contributions to knowledge</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q42" value="achievements_recognition" id="q42_option2">
+                    <label for="q42_option2">Through professional achievements and recognition</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q42" value="expression_impact" id="q42_option3">
+                    <label for="q42_option3">Through creative expression and social impact</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q42" value="mastery_products" id="q42_option4">
+                    <label for="q42_option4">Through skill mastery and tangible products</label>
+                </div>
+            </div>
+
+            <div class="question-section" id="question43">
+                <h3>43. What social role appeals to you?</h3>
+                <div class="question-option">
+                    <input type="radio" name="q43" value="innovator_researcher" id="q43_option1">
+                    <label for="q43_option1">Innovator or researcher pushing boundaries</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q43" value="leader_provider" id="q43_option2">
+                    <label for="q43_option2">Leader or provider creating stability</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q43" value="artist_advocate" id="q43_option3">
+                    <label for="q43_option3">Artist or advocate inspiring change</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q43" value="craftsman_specialist" id="q43_option4">
+                    <label for="q43_option4">Craftsman or specialist providing services</label>
+                </div>
+            </div>
+
+            <div class="question-section" id="question44">
+                <h3>44. How important is work independence to you?</h3>
+                <div class="question-option">
+                    <input type="radio" name="q44" value="high_autonomy" id="q44_option1">
+                    <label for="q44_option1">Very important - prefer autonomy in my work</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q44" value="structured_independence" id="q44_option2">
+                    <label for="q44_option2">Important within a structured framework</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q44" value="collaborative_balance" id="q44_option3">
+                    <label for="q44_option3">Prefer a balance of independence and collaboration</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q44" value="task_based_freedom" id="q44_option4">
+                    <label for="q44_option4">Freedom in how I complete my tasks</label>
+                </div>
+            </div>
+
+            <div class="question-section" id="question45">
+                <h3>45. What community role do you see yourself in?</h3>
+                <div class="question-option">
+                    <input type="radio" name="q45" value="technical_expert" id="q45_option1">
+                    <label for="q45_option1">Technical expert solving complex problems</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q45" value="organizer_contributor" id="q45_option2">
+                    <label for="q45_option2">Organizer and economic contributor</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q45" value="cultural_creator" id="q45_option3">
+                    <label for="q45_option3">Cultural creator and communicator</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q45" value="skilled_provider" id="q45_option4">
+                    <label for="q45_option4">Skilled service provider</label>
+                </div>
+            </div>
+
+            <div class="question-section" id="question46">
+                <h3>46. How do you view competition?</h3>
+                <div class="question-option">
+                    <input type="radio" name="q46" value="intellectual_challenge" id="q46_option1">
+                    <label for="q46_option1">As an intellectual challenge to improve</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q46" value="motivation_success" id="q46_option2">
+                    <label for="q46_option2">As motivation to achieve success</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q46" value="less_important" id="q46_option3">
+                    <label for="q46_option3">Less important than collaboration</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q46" value="skill_benchmark" id="q46_option4">
+                    <label for="q46_option4">As a benchmark for my skills</label>
+                </div>
+            </div>
+
+            <div class="question-section" id="question47">
+                <h3>47. What type of recognition do you value?</h3>
+                <div class="question-option">
+                    <input type="radio" name="q47" value="intellectual_contributions" id="q47_option1">
+                    <label for="q47_option1">For intellectual contributions</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q47" value="professional_achievements" id="q47_option2">
+                    <label for="q47_option2">For professional achievements</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q47" value="creative_expression" id="q47_option3">
+                    <label for="q47_option3">For creative expression</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q47" value="skill_mastery" id="q47_option4">
+                    <label for="q47_option4">For skill mastery and craftsmanship</label>
+                </div>
+            </div>
+
+            <div class="question-section" id="question48">
+                <h3>48. How important is work-life balance?</h3>
+                <div class="question-option">
+                    <input type="radio" name="q48" value="integrated_balance" id="q48_option1">
+                    <label for="q48_option1">Important but willing to integrate work and life</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q48" value="clear_separation" id="q48_option2">
+                    <label for="q48_option2">Very important with clear separation</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q48" value="creative_flow" id="q48_option3">
+                    <label for="q48_option3">Prefer fluid boundaries for creative flow</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q48" value="project_based" id="q48_option4">
+                    <label for="q48_option4">Varies based on projects and deadlines</label>
+                </div>
+            </div>
+
+            <div class="question-section" id="question49">
+                <h3>49. What legacy do you want to leave?</h3>
+                <div class="question-option">
+                    <input type="radio" name="q49" value="scientific_contributions" id="q49_option1">
+                    <label for="q49_option1">Scientific or technological contributions</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q49" value="professional_impact" id="q49_option2">
+                    <label for="q49_option2">Professional and economic impact</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q49" value="cultural_influence" id="q49_option3">
+                    <label for="q49_option3">Cultural or social influence</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q49" value="tangible_creations" id="q49_option4">
+                    <label for="q49_option4">Tangible creations and services</label>
+                </div>
+            </div>
+
+            <div class="question-section" id="question50">
+                <h3>50. How do you want to be remembered?</h3>
+                <div class="question-option">
+                    <input type="radio" name="q50" value="innovator_thinker" id="q50_option1">
+                    <label for="q50_option1">As an innovator and thinker</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q50" value="achiever_provider" id="q50_option2">
+                    <label for="q50_option2">As an achiever and provider</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q50" value="creator_inspirer" id="q50_option3">
+                    <label for="q50_option3">As a creator and inspirer</label>
+                </div>
+                <div class="question-option">
+                    <input type="radio" name="q50" value="craftsman_doer" id="q50_option4">
+                    <label for="q50_option4">As a craftsman and doer</label>
+                </div>
+            </div>
+
+            <div class="navigation-buttons">
+                <button type="button" id="prevBtn" class="hidden">Previous</button>
+                <button type="button" id="nextBtn">Next</button>
+                <button type="submit" id="submitBtn" class="hidden">Get Recommendations</button>
+            </div>
+        </form>
+
+        <div id="results" class="hidden">
+            <h2>Your Stream Recommendation Report</h2>
+            <div id="recommendationList"></div>
+            <button id="saveResults">Save My Results</button>
+            <p class="disclaimer-text">
+                Note: These recommendations are based on your responses to our comprehensive assessment. For a detailed career plan, we recommend consulting with a professional career counselor who can provide personalized guidance based on your unique strengths and aspirations.
+            </p>
+        </div>
+    </div>
+
+    <footer>
+        <p class="disclaimer">
+            &copy; 2025 CRAPD. All rights reserved. This assessment is designed for educational purposes only and should not be considered as definitive career advice. For personalized guidance, please consult a qualified career counselor.
+            <a href="https://crapd.in/privacy-policy.html">Privacy Policy</a> | <a href="https://crapd.in/terms-of-service.html">Terms of Service</a>
+        </p>
+    </footer>
+
+    <script>
+        const questions = document.querySelectorAll('.question-section');
+        const progressBar = document.getElementById('progressBar');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const submitBtn = document.getElementById('submitBtn');
+        const form = document.getElementById('streamSelectionForm');
+        const resultsDiv = document.getElementById('results');
+        const recommendationListDiv = document.getElementById('recommendationList');
+        const saveResultsBtn = document.getElementById('saveResults');
+
+        let currentQuestionIndex = 0;
+        const totalQuestions = questions.length;
+        let userAnswers = Array(totalQuestions).fill(null); // Initialize with null values
+
+        // Initialize progress bar
+        updateProgress();
+
+        function updateProgress() {
+            const progress = ((currentQuestionIndex + 1) / totalQuestions) * 100;
+            progressBar.style.width = `${progress}%`;
+        }
+
+        function showQuestion(index) {
+            // Hide all questions first
+            questions.forEach(q => q.classList.remove('active'));
+            
+            // Show the current question
+            questions[index].classList.add('active');
+            
+            // Update navigation buttons
+            updateNavigationButtons();
+            
+            // Update progress bar
+            updateProgress();
+            
+            // Scroll to the current question
+            questions[index].scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        function updateNavigationButtons() {
+            // Show/hide previous button
+            prevBtn.classList.toggle('hidden', currentQuestionIndex === 0);
+            
+            // Show/hide next/submit buttons
+            const isLastQuestion = currentQuestionIndex === totalQuestions - 1;
+            nextBtn.classList.toggle('hidden', isLastQuestion);
+            submitBtn.classList.toggle('hidden', !isLastQuestion);
+        }
+
+        function collectAnswer() {
+            const currentQuestion = questions[currentQuestionIndex];
+            const selectedOption = currentQuestion.querySelector('input[type="radio"]:checked');
+            
+            if (selectedOption) {
+                userAnswers[currentQuestionIndex] = selectedOption.value;
+            }
+        }
+
+        // Event listeners for option selection
+        questions.forEach((question, index) => {
+            const options = question.querySelectorAll('.question-option');
+            options.forEach(option => {
+                option.addEventListener('click', () => {
+                    const radio = option.querySelector('input[type="radio"]');
+                    if (radio) {
+                        radio.checked = true;
+                        
+                        // Update visual selection
+                        options.forEach(opt => opt.classList.remove('selected'));
+                        option.classList.add('selected');
+                        
+                        // Store the answer
+                        userAnswers[index] = radio.value;
+                    }
+                });
+            });
+        });
+
+        // Navigation button event listeners
+        prevBtn.addEventListener('click', () => {
+            if (currentQuestionIndex > 0) {
+                currentQuestionIndex--;
+                showQuestion(currentQuestionIndex);
+            }
+        });
+
+        nextBtn.addEventListener('click', () => {
+            // Validate that an answer is selected
+            if (userAnswers[currentQuestionIndex] === null) {
+                alert('Please select an option before proceeding.');
+                return;
+            }
+            
+            if (currentQuestionIndex < totalQuestions - 1) {
+                currentQuestionIndex++;
+                showQuestion(currentQuestionIndex);
+            }
+        });
+
+        // Form submission
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Validate the last answer
+            if (userAnswers[totalQuestions - 1] === null) {
+                alert('Please answer the last question before submitting.');
+                return;
+            }
+            
+            // Generate recommendations
+            recommendStreams();
+        });
+
+        // Save results button
+        saveResultsBtn.addEventListener('click', () => {
+            // In a real implementation, this would save to a database or local storage
+            alert('Your results have been saved. In a full implementation, this would store your results for future reference.');
+            
+            // Optionally generate a PDF or email the results
+            // generatePDFReport();
+        });
+
+        function recommendStreams() {
+            // Initialize scores for each stream
+            const scores = {
+                science: 0,
+                commerce: 0,
+                arts: 0,
+                vocational: 0
+            };
+
+            // Define scoring patterns for each question
+            const scoringPatterns = [
+                // Question 1-10: Academic Interests
+                { science_math: 3, commerce_finance: 3, arts_social: 3, practical_skills: 2 },
+                { analytical_technical: 3, financial_business: 3, human_social: 3, hands_on_practical: 2 },
+                { engineering_medical: 3, management_finance: 3, creative_public: 3, skilled_trade: 2 },
+                { theories_experiments: 3, case_studies_discussions: 3, reading_debates_projects: 3, doing_making_applying: 2 },
+                { science_clubs_olympiads: 3, business_debate_quiz: 3, arts_literature_drama: 3, technical_workshops: 2 },
+                { sci_tech_fiction: 3, business_biographies: 3, literature_history: 3, how_to_guides: 2 },
+                { analytical_logical: 3, organized_practical: 3, creative_expressive: 3, hands_on_skillful: 2 },
+                { math_science_analysis: 3, financial_management: 3, communication_creativity: 3, technical_manual: 2 },
+                { science_experiments: 3, business_simulations: 3, creative_writing_art: 3, building_designing: 2 },
+                { systematic_analysis: 3, practical_planning: 3, creative_solutions: 3, hands_on_trial: 2 },
+                
+                // Question 11-20: Personality Traits
+                { inquisitive: 3, organized: 3, expressive: 3, practical: 2 },
+                { logic_data: 3, practical_outcomes: 3, values_feelings: 3, hands_on_experience: 2 },
+                { research_lab: 3, corporate_office: 3, creative_community: 3, workshop_site: 2 },
+                { analyze_solve: 3, plan_organize: 3, express_creatively: 3, physical_activity: 2 },
+                { discovery_innovation: 3, achievement_success: 3, expression_impact: 3, tangible_results: 2 },
+                { facts_data: 3, direct_practical: 3, stories_analogies: 3, demonstrations: 2 },
+                { conceptual_theoretical: 3, structured_organized: 3, discussion_exploration: 3, kinesthetic_experiential: 2 },
+                { specialized_role: 3, lead_organize: 3, collaborate_brainstorm: 3, hands_on_contributor: 2 },
+                { analytical_critical: 3, practical_strategic: 3, creative_intuitive: 3, applied_problem_solver: 2 },
+                { understand_purpose: 3, appreciate_guidelines: 3, flexible_interpretation: 3, practical_application: 2 },
+                
+                // Question 21-30: Career Aspirations
+                { intellectual_challenge: 3, financial_security: 3, creative_fulfillment: 3, tangible_skills: 2 },
+                { research_projects: 3, structured_business: 3, variable_creative: 3, hands_on_shifts: 2 },
+                { high_after_qualification: 3, steady_growth: 3, variable_fulfillment: 3, skill_dependent: 2 },
+                { intense_periods: 3, structured_balance: 3, flexible_integrated: 3, project_based: 2 },
+                { intellectual_merit: 3, professional_efficient: 3, collaborative_expressive: 3, practical_hands_on: 2 },
+                { research_driven: 3, very_important: 3, flexible_creative: 3, skill_dependent_stability: 2 },
+                { specialist_expert: 3, manager_leader: 3, creator_communicator: 3, craftsman_performer: 2 },
+                { essential_specialization: 3, valuable_certifications: 3, optional_enrichment: 3, specific_skills: 2 },
+                { scientific_technological: 3, business_economic: 3, cultural_social: 3, practical_services: 2 },
+                { calculated_risks: 3, minimal_risks: 3, creative_risks: 3, skill_based_risks: 2 },
+                
+                // Question 31-40: Learning Preferences
+                { deep_dive_topics: 3, structured_syllabus: 3, exploratory_discussions: 3, practical_applications: 2 },
+                { problem_solving: 3, case_studies: 3, essay_discursive: 3, practical_demonstrations: 2 },
+                { systematic_approach: 3, organized_planning: 3, creative_outlets: 3, hands_on_breaks: 2 },
+                { logical_progressive: 3, structured_clear: 3, interactive_discursive: 3, demonstration_practice: 2 },
+                { technical_contributor: 3, organize_coordinate: 3, creative_direction: 3, hands_on_execution: 2 },
+                { research_papers: 3, case_analyses: 3, creative_writing: 3, practical_builds: 2 },
+                { technical_constructive: 3, specific_measurable: 3, holistic_encouraging: 3, practical_hands_on: 2 },
+                { focused_intellectual: 3, structured_professional: 3, interactive_dynamic: 3, active_practical: 2 },
+                { break_down_logically: 3, relate_practical_applications: 3, discuss_interpretations: 3, experiment_hands_on: 2 },
+                { intellectual_curiosity: 3, career_preparation: 3, personal_expression: 3, skill_development: 2 },
+                
+                // Question 41-50: Personal Values
+                { truth_knowledge: 3, success_security: 3, creativity_compassion: 3, practicality_skill: 2 },
+                { discoveries_contributions: 3, achievements_recognition: 3, expression_impact: 3, mastery_products: 2 },
+                { innovator_researcher: 3, leader_provider: 3, artist_advocate: 3, craftsman_specialist: 2 },
+                { high_autonomy: 3, structured_independence: 3, collaborative_balance: 3, task_based_freedom: 2 },
+                { technical_expert: 3, organizer_contributor: 3, cultural_creator: 3, skilled_provider: 2 },
+                { intellectual_challenge: 3, motivation_success: 3, less_important: 3, skill_benchmark: 2 },
+                { intellectual_contributions: 3, professional_achievements: 3, creative_expression: 3, skill_mastery: 2 },
+                { integrated_balance: 3, clear_separation: 3, creative_flow: 3, project_based: 2 },
+                { scientific_contributions: 3, professional_impact: 3, cultural_influence: 3, tangible_creations: 2 },
+                { innovator_thinker: 3, achiever_provider: 3, creator_inspirer: 3, craftsman_doer: 2 }
+            ];
+
+            // Calculate scores based on user answers
+            userAnswers.forEach((answer, index) => {
+                if (answer && scoringPatterns[index][answer]) {
+                    if (answer.includes('science') || answer.includes('math') || answer.includes('technical') || answer.includes('analytical')) {
+                        scores.science += scoringPatterns[index][answer];
+                    } else if (answer.includes('commerce') || answer.includes('business') || answer.includes('financial') || answer.includes('economic')) {
+                        scores.commerce += scoringPatterns[index][answer];
+                    } else if (answer.includes('arts') || answer.includes('creative') || answer.includes('social') || answer.includes('humanities')) {
+                        scores.arts += scoringPatterns[index][answer];
+                    } else if (answer.includes('practical') || answer.includes('hands_on') || answer.includes('vocational') || answer.includes('skill')) {
+                        scores.vocational += scoringPatterns[index][answer];
+                    }
+                }
+            });
+
+            // Stream details with comprehensive information
+            const streamDetails = {
+                science: {
+                    name: "Science Stream",
+                    color: "science",
+                    description: "Focuses on Physics, Chemistry, Mathematics/Biology with options for Computer Science, Electronics, etc.",
+                    personality: "Analytical, curious, problem-solver, enjoys research and experimentation",
+                    careers: "Engineering, Medicine, Research, Data Science, Biotechnology, Architecture, Pharmacy",
+                    subjects: ["Physics", "Chemistry", "Mathematics / Biology", "English", "Optional: Computer Science, Electronics, Physical Education"],
+                    best_for: "Students who enjoy logical reasoning, scientific inquiry, and mathematics",
+                    further_studies: "B.Tech, MBBS, B.Sc, B.Arch, B.Pharma, and research-oriented programs",
+                    advantages: [
+                        "Widest range of career options after graduation",
+                        "Strong foundation for technical and medical fields",
+                        "Develops analytical and problem-solving skills",
+                        "Highly valued in competitive exams"
+                    ],
+                    challenges: [
+                        "Can be academically demanding",
+                        "Requires strong mathematical skills",
+                        "Long educational path for some careers (like medicine)"
+                    ]
+                },
+                commerce: {
+                    name: "Commerce Stream",
+                    color: "commerce",
+                    description: "Focuses on Business Studies, Accountancy, Economics, and Mathematics with various combinations",
+                    personality: "Organized, numerically inclined, interested in business and finance",
+                    careers: "Chartered Accountancy, Company Secretary, Business Management, Banking, Finance, Entrepreneurship",
+                    subjects: ["Accountancy", "Business Studies", "Economics", "English", "Optional: Mathematics, Informatics Practices, Entrepreneurship"],
+                    best_for: "Students interested in business, finance, and economics with good numerical ability",
+                    further_studies: "B.Com, BBA, CA, CS, CFA, MBA, and various finance-related programs",
+                    advantages: [
+                        "Direct path to professional courses like CA, CS, CFA",
+                        "Good balance of theory and practical knowledge",
+                        "Strong career prospects in growing financial sector",
+                        "Entrepreneurship opportunities"
+                    ],
+                    challenges: [
+                        "Requires strong numerical and analytical skills",
+                        "Competitive professional courses",
+                        "Need to stay updated with economic trends"
+                    ]
+                },
+                arts: {
+                    name: "Arts/Humanities Stream",
+                    color: "arts",
+                    description: "Wide range of subjects including History, Political Science, Geography, Psychology, Languages, and Fine Arts",
+                    personality: "Creative, expressive, socially aware, strong communication skills",
+                    careers: "Civil Services, Law, Journalism, Teaching, Psychology, Design, Social Work, Languages",
+                    subjects: ["History", "Political Science", "Geography", "Economics", "Psychology", "Sociology", "English", "Optional: Fine Arts, Home Science, Languages"],
+                    best_for: "Students with strong language skills, creative thinking, and social awareness",
+                    further_studies: "BA in various specializations, Law, Mass Communication, Design, Social Work, Education",
+                    advantages: [
+                        "Diverse career options in growing creative industries",
+                        "Develops critical thinking and communication skills",
+                        "Flexibility in subject combinations",
+                        "Good foundation for civil services and law"
+                    ],
+                    challenges: [
+                        "Career paths may require additional specialization",
+                        "Need to proactively build professional skills",
+                        "Some fields may have fewer structured career paths"
+                    ]
+                },
+                vocational: {
+                    name: "Vocational/Skill-Based Stream",
+                    color: "vocational",
+                    description: "Focuses on practical skills and specific trades with various specializations available",
+                    personality: "Practical, hands-on, enjoys creating and fixing things, skill-oriented",
+                    careers: "Technicians, Chefs, Graphic Designers, Healthcare Workers, IT Support, Beauticians, Automotive",
+                    subjects: ["Varies by specialization (e.g., IT, Healthcare, Tourism, Retail, Automotive, Beauty)"],
+                    best_for: "Students who prefer practical learning and want to enter workforce sooner",
+                    further_studies: "Diploma courses, certification programs, apprenticeships, some university programs",
+                    advantages: [
+                        "Direct path to employment with practical skills",
+                        "Shorter duration to start earning",
+                        "Hands-on learning experience",
+                        "Growing demand for skilled professionals"
+                    ],
+                    challenges: [
+                        "May limit options for higher academic studies",
+                        "Need to continuously upgrade skills",
+                        "Physical demands in some trades"
+                    ]
+                }
+            };
+
+            // Convert scores to array and sort
+            const sortedStreams = Object.keys(scores).map(key => ({
+                stream: key,
+                score: scores[key],
+                percentage: Math.round((scores[key] / (totalQuestions * 3)) * 100) // Max possible score is questions*3
+            })).sort((a, b) => b.score - a.score);
+
+            // Generate results HTML
+            recommendationListDiv.innerHTML = '';
+            
+            // Overall results summary
+            const summaryDiv = document.createElement('div');
+            summaryDiv.classList.add('recommendation');
+            summaryDiv.innerHTML = `
+                <h3>Your Stream Compatibility Scores</h3>
+                <p>Based on your responses, here's how compatible you are with each stream:</p>
+                
+                <div class="score-container">
+                    <div class="score-label">
+                        <span>Science Stream</span>
+                        <span>${sortedStreams.find(s => s.stream === 'science').percentage}%</span>
+                    </div>
+                    <div class="score-bar">
+                        <div class="score-fill science-fill" style="width: ${sortedStreams.find(s => s.stream === 'science').percentage}%"></div>
+                    </div>
+                    
+                    <div class="score-label">
+                        <span>Commerce Stream</span>
+                        <span>${sortedStreams.find(s => s.stream === 'commerce').percentage}%</span>
+                    </div>
+                    <div class="score-bar">
+                        <div class="score-fill commerce-fill" style="width: ${sortedStreams.find(s => s.stream === 'commerce').percentage}%"></div>
+                    </div>
+                    
+                    <div class="score-label">
+                        <span>Arts/Humanities Stream</span>
+                        <span>${sortedStreams.find(s => s.stream === 'arts').percentage}%</span>
+                    </div>
+                    <div class="score-bar">
+                        <div class="score-fill arts-fill" style="width: ${sortedStreams.find(s => s.stream === 'arts').percentage}%"></div>
+                    </div>
+                    
+                    <div class="score-label">
+                        <span>Vocational Stream</span>
+                        <span>${sortedStreams.find(s => s.stream === 'vocational').percentage}%</span>
+                    </div>
+                    <div class="score-bar">
+                        <div class="score-fill vocational-fill" style="width: ${sortedStreams.find(s => s.stream === 'vocational').percentage}%"></div>
+                    </div>
+                </div>
+                
+                <p>Your strongest compatibility is with the <strong>${streamDetails[sortedStreams[0].stream].name}</strong> stream.</p>
+            `;
+            recommendationListDiv.appendChild(summaryDiv);
+
+            // Detailed recommendations for each stream
+            sortedStreams.forEach(item => {
+                if (item.score > 0) {
+                    const rec = streamDetails[item.stream];
+                    const recDiv = document.createElement('div');
+                    recDiv.classList.add('recommendation', `${rec.color}-bg`);
+                    recDiv.innerHTML = `
+                        <div class="personality-type ${rec.color}-type">${rec.personality}</div>
+                        <h3 class="${rec.color}-text">${rec.name}</h3>
+                        <p><strong>Description:</strong> ${rec.description}</p>
+                        
+                        <p><strong>Best For:</strong> ${rec.best_for}</p>
+                        
+                        <p><strong>Key Subjects:</strong> ${rec.subjects.join(', ')}</p>
+                        
+                        <p><strong>Career Paths:</strong></p>
+                        <ul>
+                            ${rec.careers.split(', ').map(c => `<li>${c}</li>`).join('')}
+                        </ul>
+                        
+                        <p><strong>Further Studies Options:</strong> ${rec.further_studies}</p>
+                        
+                        <p><strong>Advantages:</strong></p>
+                        <ul>
+                            ${rec.advantages.map(a => `<li>${a}</li>`).join('')}
+                        </ul>
+                        
+                        <p><strong>Challenges:</strong></p>
+                        <ul>
+                            ${rec.challenges.map(c => `<li>${c}</li>`).join('')}
+                        </ul>
+                        
+                        <p style="font-size: 0.9em; color: #666; margin-top: 15px;">
+                            <em>(Compatibility Score: ${item.percentage}%)</em>
+                        </p>
+                    `;
+                    recommendationListDiv.appendChild(recDiv);
+                }
+            });
+
+            // Next steps section
+            const nextStepsDiv = document.createElement('div');
+            nextStepsDiv.classList.add('recommendation');
+            nextStepsDiv.innerHTML = `
+                <h3>Next Steps</h3>
+                <p>Based on your results, here are recommended next steps:</p>
+                <ol>
+                    <li><strong>Research your top stream:</strong> Learn more about the ${streamDetails[sortedStreams[0].stream].name} and its career paths</li>
+                    <li><strong>Talk to professionals:</strong> Connect with people working in fields that interest you</li>
+                    <li><strong>Explore subjects:</strong> Look at syllabus details for the recommended stream</li>
+                    <li><strong>Consider combinations:</strong> Some schools allow mixing subjects from different streams</li>
+                    <li><strong>Consult a counselor:</strong> Schedule a session with a career counselor for personalized advice</li>
+                </ol>
+                <p>Remember that stream selection is important but not irreversible. Many career paths allow for transitions between fields with additional education or training.</p>
+            `;
+            recommendationListDiv.appendChild(nextStepsDiv);
+
+            // Show results and scroll to them
+            form.classList.add('hidden');
+            resultsDiv.classList.remove('hidden');
+            resultsDiv.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Initialize the first question
+        showQuestion(currentQuestionIndex);
+    </script>
+  <style>
+    .floating-home-button {
+      position: fixed;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      background-color: transparent;
+      border: none;
+      z-index: 1000;
+      text-decoration: none;
+    }
+
+    .home-button-inner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
+      height: 70px;
+      width: 23px;
+      background-color: #28a745; /* Green background for Home */
+      color: white;
+      font-weight: bold;
+      border-radius: 0 10px 10px 0;
+      box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
+      transition: background-color 0.3s ease;
+      writing-mode: vertical-rl;
+      text-orientation: mixed;
+    }
+
+    .home-button-inner:hover {
+      background-color: #1e7e34;
+    }
+  </style>
+  <a href="index.html" class="floating-home-button">
+    <div class="home-button-inner">
+      Home
+    </div>
+  </a>
+</body>
+</html>
