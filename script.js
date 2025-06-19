@@ -64,7 +64,7 @@ document.getElementById('site-footer').innerHTML = `
   <div class="footer-container">
     <div class="footer-section">
       <div class="footer-buttons">
-<a href="sevenchakras.html.html" class="footer-btn" title="Find your path after 12th"><i class="fas fa-yin-yang"></i>Check Your Chakras</a>
+<a href="sevenchakras.html" class="footer-btn" title="Find your path after 12th"><i class="fas fa-yin-yang"></i>Check Your Chakras</a>
 <a href="aftergraduation.html" class="footer-btn" title="Find your path after 12th"><i class="fas fa-road"></i>After Graduation</a>
 <a href="after10th.html" class="footer-btn" title="Find your path after 12th"><i class="fas fa-road"></i> Find Your Perfect Stream After 10th!</a>
 <a href="after12th.html" class="footer-btn" title="Find your path after 12th"><i class="fas fa-road"></i> Find your path after 12th</a>
