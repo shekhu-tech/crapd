@@ -334,6 +334,13 @@
                 grid-template-columns: repeat(2, 1fr);
             }
         }
+        @media (max-width: 375px) {
+            :root {
+                --grid-gap: 20px;
+                --container-padding: 40px 20px;
+                --card-height: 130px;
+            }
+        }
 
         /* For PCs: 3 columns */
         @media (min-width: 1200px) {
