@@ -175,10 +175,11 @@
             position: relative;
             overflow: hidden;
             border: 1px solid rgba(255, 255, 255, 0.08);
-            background: var(--card-bg, linear-gradient(145deg, #222, #111));
+            background-color: #111; /* fallback base */
+            background-image: var(--card-gradient), var(--card-image);
             background-size: cover;
             background-position: center;
-            background-blend-mode: overlay; /* Blends the gradient over the image */
+            background-blend-mode: overlay;
             transition: transform var(--transition-smooth), box-shadow var(--transition-smooth);
             transform-style: preserve-3d; /* Enable 3D transforms */
             will-change: transform;
@@ -351,7 +352,7 @@
     <main>
         <div class="card-container" id="card-container">
             <!-- Card 1: Root Chakra -->
-            <a href="root-chakra.html" class="card" style="--card-bg: linear-gradient(145deg, #6A0000, #9A0000), url('ml.png'); --glow-color: #C00000;" aria-label="Explore the Root Chakra, Muladhara">
+                <a href="root-chakra.html" class="card"style="--card-gradient: linear-gradient(145deg, #6A0000, #9A0000);--card-image: url('ml.png');--glow-color: #C00000;">
                 <div class="card-inner">
                     <h2>Muladhara (Root)</h2>
                     <p>Foundation, security, stability.</p>
