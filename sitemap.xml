@@ -145,4 +145,52 @@
         <priority>0.9</priority>
         <changefreq>monthly</changefreq>
     </url>
+    <url>
+        <loc>https://crapd.in/sevenchakras.html</loc>
+        <lastmod>2025-06-12T14:00:00+05:30</lastmod>
+        <priority>0.9</priority>
+        <changefreq>monthly</changefreq>
+    </url>
+     <url>
+        <loc>https://crapd.in/sevenchakras/root-chakra.html</loc>
+        <lastmod>2025-06-12T14:00:00+05:30</lastmod>
+        <priority>0.9</priority>
+        <changefreq>monthly</changefreq>
+    </url>
+     <url>
+        <loc>https://crapd.in/sevenchakras/sacral-chakra.html</loc>
+        <lastmod>2025-06-12T14:00:00+05:30</lastmod>
+        <priority>0.9</priority>
+        <changefreq>monthly</changefreq>
+    </url>
+     <url>
+        <loc>https://crapd.in/sevenchakras/solar-plexus.html</loc>
+        <lastmod>2025-06-12T14:00:00+05:30</lastmod>
+        <priority>0.9</priority>
+        <changefreq>monthly</changefreq>
+    </url>
+    <url>
+        <loc>https://crapd.in/sevenchakras/heart-chakra.html</loc>
+        <lastmod>2025-06-12T14:00:00+05:30</lastmod>
+        <priority>0.9</priority>
+        <changefreq>monthly</changefreq>
+    </url>
+    <url>
+        <loc>https://crapd.in/sevenchakras/throat-chakra.html</loc>
+        <lastmod>2025-06-12T14:00:00+05:30</lastmod>
+        <priority>0.9</priority>
+        <changefreq>monthly</changefreq>
+    </url>
+     <url>
+        <loc>https://crapd.in/sevenchakras/third-eye-chakra.html</loc>
+        <lastmod>2025-06-12T14:00:00+05:30</lastmod>
+        <priority>0.9</priority>
+        <changefreq>monthly</changefreq>
+    </url>
+    <url>
+        <loc>https://crapd.in/sevenchakras/crown-chakra.html</loc>
+        <lastmod>2025-06-12T14:00:00+05:30</lastmod>
+        <priority>0.9</priority>
+        <changefreq>monthly</changefreq>
+    </url>
 </urlset>
